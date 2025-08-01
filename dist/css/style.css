@@ -1,0 +1,360 @@
+@charset "UTF-8";
+/*
+ * 参考
+ * https://github.com/Andy-set-studio/modern-css-reset/blob/master/src/reset.css
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --font-base: "Noto Sans JP", sans-serif;
+  --base-font-size: 16px;
+  --color-black:#333;
+  --color-white:#FFF;
+  --color-gray: #7C7C7C;
+  --color-red:#e00;
+  --color-blue: #315097;
+}
+
+html {
+  position: relative;
+  font-size: 62.5%;
+}
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 2.6666666667vw !important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  html {
+    font-size: 0.6944444444vw !important;
+  }
+}
+
+body {
+  font-feature-settings: "palt";
+  font-family: var(--font-base);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--color-black);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  line-break: strict;
+}
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 1.6rem;
+  }
+}
+
+* {
+  min-inline-size: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s;
+}
+
+@media (any-hover: hover) {
+  a:hover {
+    opacity: 0.8;
+  }
+}
+@media screen and (any-hover: hover) and (min-width: 768px) {
+  a:hover {
+    opacity: 1;
+  }
+}
+img {
+  display: inline-block;
+  height: auto;
+  vertical-align: middle;
+}
+
+address {
+  font-style: normal;
+}
+
+summary {
+  list-style: none;
+  cursor: pointer;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+
+em {
+  font-weight: 700;
+  font-style: normal;
+}
+
+figure {
+  margin: 0;
+}
+
+.js-animation {
+  opacity: 0;
+  transform: translateY(0.625rem);
+}
+
+.wrapper {
+  width: 85%;
+  max-width: 90rem;
+  margin-inline: auto;
+}
+
+.inner {
+  width: 100%;
+  max-width: 75rem;
+  margin-inline: auto;
+}
+
+.u-color-white {
+  color: var(--color-white);
+}
+
+.u-color-black {
+  color: var(--color-black);
+}
+
+.u-color-gray {
+  color: var(--color-gray);
+}
+
+.u-color-red {
+  color: var(--color-red);
+}
+
+.u-color-blue {
+  color: var(--color-blue);
+}
+
+.u-color-green {
+  color: var(--color-green);
+}
+
+.u-color-yellow {
+  color: var(--color-yellow);
+}
+
+.u-color-orange {
+  color: var(--color-orange);
+}
+
+.u-color-purple {
+  color: var(--color-purple);
+}
+
+.u-color-pink {
+  color: var(--color-pink);
+}
+
+@media screen and (min-width: 768px) {
+  .u-hide-pc {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .u-hide-sp {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-show-pc {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .u-show-sp {
+    display: block !important;
+  }
+}
+
+.u-show-br-sp {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .u-show-br-sp {
+    display: inline-block !important;
+  }
+}
+
+.u-show-br-pc {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .u-show-br-pc {
+    display: inline-block !important;
+  }
+}
+
+/* font-family
+---------------------------------------- */
+/* text-align
+---------------------------------------- */
+.u-al-left {
+  text-align: left !important;
+}
+.u-al-left.sp-center {
+  text-align: center !important;
+}
+@media screen and (min-width: 768px) {
+  .u-al-left.sp-center {
+    text-align: left !important;
+  }
+}
+
+.u-al-center {
+  text-align: center !important;
+}
+.u-al-center.sp-left {
+  text-align: left !important;
+}
+@media screen and (min-width: 768px) {
+  .u-al-center.sp-left {
+    text-align: center !important;
+  }
+}
+
+.u-al-right {
+  text-align: right !important;
+}
+.u-al-right.sp-left {
+  text-align: left !important;
+}
+@media screen and (min-width: 768px) {
+  .u-al-right.sp-left {
+    text-align: right !important;
+  }
+}
+
+/* letter spacing
+---------------------------------------- */
+@media screen and (max-width: 767px) {
+  .u-ls-narrow-sp {
+    letter-spacing: -0.05em;
+  }
+}
+
+/* writing-mode
+---------------------------------------- */
+.u-wm-rl {
+  writing-mode: vertical-rl !important;
+}
+
+/* font-weight
+---------------------------------------- */
+.u-fw-regular {
+  font-weight: 400 !important;
+}
+
+.u-fw-medium {
+  font-weight: 500 !important;
+}
+
+.u-fw-semib {
+  font-weight: 600 !important;
+}
+
+.u-fw-bold {
+  font-weight: 700 !important;
+}
+
+/* text margin
+---------------------------------------- */
+.u-no-margin {
+  margin: 0;
+}
+
+.u-link {
+  color: var(--color-blue);
+  text-decoration: underline;
+}
+@media (any-hover: hover) {
+  .u-link:hover {
+    text-decoration: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

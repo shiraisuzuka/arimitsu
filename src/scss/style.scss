@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+@use "./foundation/**";
+
+@use "./layout/l-main.scss";
+
+@use "./object/component/**";
+
+@use "./object/utility/**";
+
+@use "./layout/l-header.scss";
+
+@use "./object/project/**";
+
+// @use "./layout/l-cta.scss";
+
+@use "./layout/l-footer.scss";

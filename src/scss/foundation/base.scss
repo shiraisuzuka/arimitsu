@@ -1,0 +1,81 @@
+@use 'variables' as *;
+@use 'mixin' as *;
+@use 'functions' as *;
+
+html {
+  position: relative;
+  font-size: 62.5%;
+  @include mq(sp) {
+		font-size: calcvw(10, 375) !important;
+	}
+	@include mq(md) {
+		font-size: calcvw(10, 1440) !important;
+	}
+}
+
+body {
+  font-feature-settings: "palt";
+  font-family: var(--font-base);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--color-black);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  line-break: strict;
+	@include mq(ovsp) {
+		font-size: 1.6rem;
+	}
+}
+
+* {
+  min-inline-size: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s;
+}
+
+@media (any-hover: hover) {
+  a:hover {
+    opacity: 0.8;
+    @include mq(ovsp) {
+      opacity: 1;
+    }
+  }
+}
+
+img {
+  display: inline-block;
+  height: auto;
+  vertical-align: middle;
+}
+
+address {
+  font-style: normal;
+}
+
+summary {
+	list-style: none;
+	cursor: pointer;
+    
+	&::-webkit-details-marker {
+		display:none;
+	}
+}
+
+em {
+	font-weight: 700;
+	font-style: normal;
+}
+
+figure {
+	margin: 0;
+}
+
+.js-animation {
+  opacity: 0;
+  transform: translateY(prem(10));
+}

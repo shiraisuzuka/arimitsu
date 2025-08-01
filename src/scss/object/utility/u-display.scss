@@ -1,0 +1,39 @@
+@use 'foundation' as *;
+
+.u-hide-pc {
+	@include mq(ovsp) {
+		display: none !important;
+	}
+}
+
+.u-hide-sp {
+	@include mq(sp) {
+		display: none !important;
+	}
+}
+
+.u-show-pc {
+	@include mq(ovsp) {
+		display: block !important;
+	}
+}
+
+.u-show-sp {
+	@include mq(sp) {
+		display: block !important;
+	}
+}
+
+.u-show-br-sp {
+	display: none;
+	@include mq(sp) {
+		display: inline-block !important;
+	}
+}
+
+.u-show-br-pc {
+	display: none;
+	@include mq(ovsp) {
+		display: inline-block !important;
+	}
+}

@@ -1,0 +1,107 @@
+@use 'foundation' as *;
+
+/* font-family
+---------------------------------------- */
+
+// .u-font-en {
+// 	font-family: var(--font-en) !important;
+// }
+
+// .u-font-num {
+// 	font-family: var(--font-num) !important;
+// }
+
+// .u-font-ja {
+// 	font-family: var(--font-base) !important;
+// }
+
+
+/* text-align
+---------------------------------------- */
+
+.u-al-left {
+	text-align: left !important;
+
+	&.sp-center {
+		text-align: center !important;
+
+		@include mq(ovsp) {
+			text-align: left !important;
+		}
+	}
+}
+
+.u-al-center {
+	text-align: center !important;
+
+	&.sp-left {
+		text-align: left !important;
+
+		@include mq(ovsp) {
+			text-align: center !important;
+		}
+	}
+}
+
+.u-al-right {
+	text-align: right !important;
+
+	&.sp-left {
+		text-align: left !important;
+
+		@include mq(ovsp) {
+			text-align: right !important;
+		}
+	}
+}
+
+
+/* letter spacing
+---------------------------------------- */
+
+.u-ls-narrow-sp {
+	@include mq(sp) {
+		letter-spacing: -0.05em;
+	}
+}
+
+
+/* writing-mode
+---------------------------------------- */
+
+.u-wm-rl {
+	writing-mode: vertical-rl !important;
+}
+
+
+
+/* font-weight
+---------------------------------------- */
+.u-fw-regular {
+	font-weight: 400 !important;
+}
+.u-fw-medium {
+	font-weight: 500 !important;
+}
+.u-fw-semib {
+	font-weight: 600 !important;
+}
+.u-fw-bold {
+	font-weight: 700 !important;
+}
+
+/* text margin
+---------------------------------------- */
+.u-no-margin {
+	margin: 0;
+}
+
+.u-link {
+	color: var(--color-blue);
+	text-decoration: underline;
+	@media (any-hover: hover) {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

@@ -1,0 +1,12 @@
+@use 'foundation' as *;
+
+.wrapper {
+  width: 85%;
+  max-width: prem(1440);
+  margin-inline: auto;
+}
+.inner {
+  width: 100%;
+  max-width: prem(1200);
+  margin-inline: auto;
+}

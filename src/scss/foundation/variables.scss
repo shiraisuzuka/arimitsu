@@ -1,0 +1,43 @@
+@use "sass:math";
+
+// ブレイクポイントの設定
+$breakpoints: (
+	'sp': 'screen and (max-width: 767px)',
+	'ovsp': 'screen and (min-width: 768px)',
+	'tb': 'screen and (max-width: 1439px)',
+	'md': 'screen and (min-width: 768px) and (max-width: 1439px)',
+	'pc': 'screen and (min-width: 1440px)',
+	'print': 'print',
+) !default;
+
+
+// // ベースフォントサイズ
+$base-font-size: 16px;
+
+// z-index
+$z-index: (
+	min,
+	wrapper,
+	contents,
+	main,
+	footer,
+	pagetop,
+	header,
+	navHeader,
+	navSide,
+	selectNav,
+	overlay,
+	modal,
+	max,
+);
+
+
+:root {
+  --font-base: 'Noto Sans JP', sans-serif;
+  --base-font-size: 16px;
+  --color-black:#333;
+  --color-white:#FFF;
+  --color-gray: #7C7C7C;
+  --color-red:#e00;
+  --color-blue: #315097;
+}

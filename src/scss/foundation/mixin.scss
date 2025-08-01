@@ -1,0 +1,25 @@
+@use "sass:math";
+@use "sass:map";
+@use 'variables' as *;
+
+// ----
+// * メディアクエリ
+// * ex)
+//   @include mq(sp) {}
+//   @include mq(pc) {}
+// ----
+@mixin mq($breakpoint: pc) {
+	@media #{map.get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+// ----
+// * vw計算式
+// * ex)
+//   width: calcvw(200)
+$sp-design-width: 750; // SPデザインの幅を設定
+
+@function calcvw($num, $width: $sp-design-width) {
+	@return calc(1vw * $num / $width * 100);
+}
