@@ -5,21 +5,22 @@
 html {
   position: relative;
   font-size: 62.5%;
-  @include mq(sp) {
-		font-size: calcvw(10, 375) !important;
-	}
-	@include mq(md) {
-		font-size: calcvw(10, 1440) !important;
-	}
+  // @include mq(sp) {
+	// 	font-size: calcvw(10, 375) !important;
+	// }
+	// @include mq(md) {
+	// 	font-size: calcvw(10, 1440) !important;
+	// }
 }
 
 body {
   font-feature-settings: "palt";
   font-family: var(--font-base);
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--color-black);
-  line-height: 1.5;
+  letter-spacing: 0.04em;
+  line-height: 1.75;
   overflow-wrap: anywhere;
   word-break: normal;
   line-break: strict;

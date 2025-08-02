@@ -1,1 +1,155 @@
 @use 'foundation' as *;
+
+.l-footer {
+  padding: 8rem 0;
+  color: #FFF;
+  background-color: var(--color-green);
+
+  &-inner {
+    display: grid;
+    gap: 5rem;
+    @include mq(ovsp) {
+      display: flex;
+      gap: 3rem 8rem;
+    }
+    @media (min-width: 768px) and (max-width: 1280px) {
+      // gap: 3rem calc(80 / 1280 * 100vw);
+      justify-content: center;
+    }
+  }
+
+  &-info {
+    @include mq(sp) {
+      text-align: center;
+    }
+  }
+
+  &-logo {
+    display: block;
+    width: 18.6rem;
+    line-height: 1;
+    @include mq(sp) {
+      margin-inline: auto;
+    }
+  }
+
+  &-company {
+    margin: 3rem 0 0;
+  }
+
+  &-address {
+    font-size: 1.4rem;
+  }
+
+  &-copyright {
+    margin: 3rem 0 0;
+
+    small {
+      display: block;
+      font-size: 1.1rem;
+      text-align: center;
+      @include mq(ovsp) {
+        font-size: 1.2rem;
+        text-align: left;
+      }
+    }
+  }
+
+  &-nav {
+    display: flex;
+    gap: 5rem;
+    @media (max-width: 1280px) {
+      // justify-content: flex-end;
+      // flex-wrap: wrap;
+      display: grid;
+    }
+
+    &-list {
+      @include mq(ovsp) {
+        min-width: 36.9rem;
+      }
+      @media (min-width: 768px) and (max-width: 1280px) {
+        // min-width: calc(300 / 1280 * 100vw);
+        min-width: 31rem;
+      }
+    }
+
+    &-item {
+      & + & {
+        margin: 5rem 0 0;
+      }
+
+      > a {
+        display: block;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #FFF;
+
+        &:not(.no-arrow) {
+          position: relative;
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            width: 0.5rem;
+            height: 0.9rem;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='レイヤー 2' viewBox='0 0 5.78 8.73'%3E%3Cpath d='m.71.71 3.66 3.66L.71 8.02' data-name='レイヤー 1' style='fill:none;stroke:%23fff;stroke-miterlimit:10;stroke-width:2px'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            transform: translateY(-50%);
+            transition: none;
+          }
+        }
+      }
+
+      ul {
+        display: grid;
+        gap: 1rem;
+        margin: 3rem 0 0;
+
+        a {
+          position: relative;
+          display: block;
+
+          &::before {
+            content: "・";
+            margin-right: 0.8rem;
+          }
+          
+          &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            width: 0.5rem;
+            height: 0.9rem;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='レイヤー 2' viewBox='0 0 5.78 8.73'%3E%3Cpath d='m.71.71 3.66 3.66L.71 8.02' data-name='レイヤー 1' style='fill:none;stroke:%23fff;stroke-miterlimit:10;stroke-width:2px'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            transform: translateY(-50%);
+            transition: none;
+          }
+
+          span {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  &-bottom {
+    margin: 5rem 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 3rem;
+    
+    a {
+      font-size: 1.3rem;
+    }
+  }
+}

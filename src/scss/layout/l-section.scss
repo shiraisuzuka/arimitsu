@@ -1,0 +1,16 @@
+@use 'foundation' as *;
+
+.l-section {
+  padding: 8rem 0;
+
+  &-inner {
+    width: 100%;
+    max-width: calc(58rem + 2rem * 2);
+    padding-inline: 2rem;
+    margin-inline: auto;
+    @include mq(ovsp) {
+      max-width: calc(120rem + 3rem * 2);
+      padding-inline: 3rem;
+    }
+  }
+}

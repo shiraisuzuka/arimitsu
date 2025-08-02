@@ -1,1 +1,16 @@
 @use 'foundation' as *;
+
+.c-title {
+  &-ja {
+    font-size: 3.6rem;
+    font-weight: 500;
+  }
+
+  &-en {
+    font-family: var(--font-en);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-green);
+  }
+}

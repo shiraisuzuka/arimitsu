@@ -4,9 +4,9 @@
 $breakpoints: (
 	'sp': 'screen and (max-width: 767px)',
 	'ovsp': 'screen and (min-width: 768px)',
-	'tb': 'screen and (max-width: 1439px)',
-	'md': 'screen and (min-width: 768px) and (max-width: 1439px)',
-	'pc': 'screen and (min-width: 1440px)',
+	'tb': 'screen and (max-width: 1000px)',
+	'md': 'screen and (min-width: 768px) and (max-width: 1600px)',
+	'pc': 'screen and (min-width: 1601px)',
 	'print': 'print',
 ) !default;
 
@@ -34,10 +34,13 @@ $z-index: (
 
 :root {
   --font-base: 'Noto Sans JP', sans-serif;
+  --font-biz: "BIZ UDPMincho", serif;
+  --font-en: "Roboto", sans-serif;
   --base-font-size: 16px;
-  --color-black:#333;
+  --color-black:#000  ;
   --color-white:#FFF;
-  --color-gray: #7C7C7C;
-  --color-red:#e00;
-  --color-blue: #315097;
+  --color-gray: #c8c8c8;
+  --color-gray2: #787878;
+  --color-gray-light: #fafafa;
+  --color-green: #64be37;
 }

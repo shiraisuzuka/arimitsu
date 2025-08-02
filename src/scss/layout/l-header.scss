@@ -1,1 +1,85 @@
 @use 'foundation' as *;
+
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--color-white);
+  
+  &-inner {
+    max-width: 120rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem 3rem;
+    margin-inline: auto;
+    padding: 2.6rem 0 2.6rem 1.8rem;
+  }
+
+  &-logo {
+    width: 33.6xrem;
+    
+    a {
+      display: block;
+      line-height: 1;
+    }
+  }
+
+  &-nav {
+    display: flex;
+    @include mq(sp) {
+      display: none;
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+      gap: 2.8rem;
+    }
+
+    &-item {
+      &:not(.news) {
+        a {
+          &::after {
+            content: "";
+            display: inline-block;
+            width: 0.8rem;
+            height: 0.8rem;
+            margin-left: 1rem;
+            background: no-repeat 50% 50% / contain;
+            background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='レイヤー 2' viewBox='0 0 8.02 4.51'%3E%3Cpath d='M7.67.35 4.01 4.01.35.35' data-name='レイヤー 1' style='fill:none;stroke:%23000;stroke-linejoin:round'/%3E%3C/svg%3E");
+            transform: translateY(-0.2rem);
+          }
+        }
+      }
+    }
+
+    &-btns {
+      display: flex;
+      gap: 0.8rem;
+      margin-left: 4.4rem;
+    }
+
+    &-contact {
+      width: 15.2rem;
+
+      &::after {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+      }
+    }
+
+    &-select {
+      min-width: 6.5rem;
+      height: 4.8rem;
+      text-align: center;
+      border-color: var(--color-gray);
+      border-radius: 0.4rem;
+    }
+  }
+}
