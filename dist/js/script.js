@@ -1,5 +1,6 @@
-// ビューポートの処理
 (function() {
+  // ビューポートの処理
+  // ----------------------------------------------//
   const viewport = document.querySelector('meta[name="viewport"]');
   const switchViewport = () => {
     const value = window.outerWidth > 370 ? 'width=device-width,initial-scale=1' : 'width=370';
@@ -96,8 +97,28 @@
           }, 300);
         }
       });
-
-      
     });
   }
+
+  // GSAPフェードインアニメーション
+  // ----------------------------------------------//
+  const animationElements = document.querySelectorAll('.js-animation');
+
+  if (animationElements.length > 0) {
+    gsap.set(animationElements, {autoAlpha: 0, y: 20});
+
+    animationElements.forEach((element, index) => {
+      gsap.to(element, {
+        autoAlpha: 1,
+        y: 0,
+        delay: 0.1,
+        duration: 0.6,
+        scrollTrigger: {
+          trigger: element,
+          start: '20% bottom',
+        }
+      });
+    });
+  }
+
 })();
