@@ -15,9 +15,13 @@
 
   &.arrow-right {
     position: relative;
-    width: 2rem;
-    height: 2rem;
+    width: 1.4rem;
+    height: 1.4rem;
     overflow: hidden;
+    @include mq(ovsp) {
+      width: 2rem;
+      height: 2rem;
+    }
 
     &::before {
       background-color: var(--color-green);
@@ -30,14 +34,18 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 0.5rem;
-      height: 0.9rem;
+      width: 0.4rem;
+      height: 0.8rem;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='レイヤー 2' viewBox='0 0 5.78 8.73'%3E%3Cpath d='m.71.71 3.66 3.66L.71 8.02' data-name='レイヤー 1' style='fill:none;stroke:%23fff;stroke-miterlimit:10;stroke-width:2px'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
       transform: translate(-50%, -50%);
       transition: none;
+      @include mq(ovsp) {
+        width: 0.5rem;
+        height: 0.9rem;
+      }
     }
 
     &.cl-green {

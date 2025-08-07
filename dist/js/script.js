@@ -1,17 +1,4 @@
 (function() {
-  // ビューポートの処理
-  // ----------------------------------------------//
-  const viewport = document.querySelector('meta[name="viewport"]');
-  const switchViewport = () => {
-    const value = window.outerWidth > 370 ? 'width=device-width,initial-scale=1' : 'width=370';
-    if (viewport.getAttribute('content') !== value) {
-      viewport.setAttribute('content', value);
-    }
-  };
-  
-  window.addEventListener('resize', switchViewport, { passive: true });
-  switchViewport();
-
   // mainタグmargin-topを追加
   // ----------------------------------------------//
   function setMainMarginTop() {
@@ -61,18 +48,18 @@
 
   // 製品セクションのホバーアニメーション
   // ----------------------------------------------//
-  const productItems = document.querySelectorAll('.p-top-products-item');
-  const productImage = document.querySelector('.p-top-products-image.is-pc img');
-  const productImageText = document.querySelector('.p-top-products-image-text.is-pc');
+  const productItems = document.querySelectorAll('.p-top-product-item');
+  const productImage = document.querySelector('.p-top-product-image.is-pc img');
+  const productImageText = document.querySelector('.p-top-product-image-text.is-pc');
   
   // 各製品項目に対応する画像とテキストのデータ
   const productData = [
-    { image: 'images/img_products_01.jpg', text: 'agriculture' },
-    { image: 'images/img_products_02.jpg', text: 'pump' },
-    { image: 'images/img_products_03.jpg', text: 'washer' },
-    { image: 'images/img_products_04.jpg', text: 'attachment' },
-    { image: 'images/img_products_05.jpg', text: 'mist' },
-    { image: 'images/img_products_06.jpg', text: 'other' }
+    { image: 'images/img_product_01.jpg', text: 'agriculture' },
+    { image: 'images/img_product_02.jpg', text: 'pump' },
+    { image: 'images/img_product_03.jpg', text: 'washer' },
+    { image: 'images/img_product_04.jpg', text: 'attachment' },
+    { image: 'images/img_product_05.jpg', text: 'mist' },
+    { image: 'images/img_product_06.jpg', text: 'other' }
   ];
 
   // デフォルトの画像とテキストを保存
@@ -83,20 +70,104 @@
     productItems.forEach((item, index) => {
       item.addEventListener('mouseenter', function() {
         if (productData[index]) {
-          productImage.style.transition = 'transform 0.3s ease';
-          productImage.style.transform = 'scale(1.1)';
+          productImage.style.transition = 'opacity 0.3s ease';
+          productImage.style.opacity = '0';
+          productImageText.style.transition = 'opacity 0.3s ease';
+          productImageText.style.opacity = '0';
           
           setTimeout(() => {
             productImage.src = productData[index].image;
             productImageText.textContent = productData[index].text;
-            productImage.style.transform = 'scale(0.9)';
-            
-            setTimeout(() => {
-              productImage.style.transform = 'scale(1)';
-            }, 50);
+            productImage.style.opacity = '1';
+            productImageText.style.opacity = '1';
           }, 300);
         }
       });
+    });
+  }
+
+  // ハンバーガーメニューの開閉
+  // ----------------------------------------------//
+  const hamburgerBtn = document.querySelector('.l-header-nav-btn');
+  const hamburgerNav = document.querySelector('.l-header-nav-hamburger');
+  const body = document.body;
+
+  if (hamburgerBtn && hamburgerNav) {
+    let isOpen = false;
+
+    hamburgerBtn.addEventListener('click', function() {
+      if (!isOpen) {
+        // メニューを開く
+        hamburgerNav.classList.add('is-active');
+        hamburgerBtn.classList.add('is-active');
+        body.classList.add('is-menu-open');
+        isOpen = true;
+      } else {
+        // メニューを閉じる
+        hamburgerNav.classList.remove('is-active');
+        hamburgerBtn.classList.remove('is-active');
+        body.classList.remove('is-menu-open');
+        isOpen = false;
+      }
+    });
+
+    // メニュー外をクリックした時に閉じる
+    document.addEventListener('click', function(e) {
+      if (isOpen && !hamburgerNav.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+        hamburgerNav.classList.remove('is-active');
+        hamburgerBtn.classList.remove('is-active');
+        body.classList.remove('is-menu-open');
+        isOpen = false;
+      }
+    });
+
+    // ESCキーでメニューを閉じる
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && isOpen) {
+        hamburgerNav.classList.remove('is-active');
+        hamburgerBtn.classList.remove('is-active');
+        body.classList.remove('is-menu-open');
+        isOpen = false;
+      }
+    });
+
+    // サブメニューの開閉
+    const hamburgerItems = hamburgerNav.querySelectorAll('.l-header-nav-hamburger-item');
+    hamburgerItems.forEach(item => {
+      const link = item.querySelector('a.no-arrow');
+      const submenu = item.querySelector('ul');
+      
+      if (link && submenu) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          // 他のサブメニューを閉じる
+          hamburgerItems.forEach(otherItem => {
+            if (otherItem !== item) {
+              otherItem.classList.remove('is-open');
+            }
+          });
+          
+          // 現在のサブメニューをトグル
+          item.classList.toggle('is-open');
+        });
+      }
+    });
+  }
+
+  // 言語選択による遷移
+  // ----------------------------------------------//
+  const languageSelect = document.querySelector('.l-header-nav-select');
+  
+  if (languageSelect) {
+    languageSelect.addEventListener('change', function() {
+      const selectedValue = this.value;
+      
+      if (selectedValue === 'en') {
+        window.location.href = '/english';
+      } else if (selectedValue === 'jp') {
+        window.location.href = '/';
+      }
     });
   }
 

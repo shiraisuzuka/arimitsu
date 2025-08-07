@@ -4,4 +4,14 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  transition: color 0.3s ease;
+  @include mq(sp) {
+    font-size: 1.1rem;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--color-green);
+    }
+  }
 }

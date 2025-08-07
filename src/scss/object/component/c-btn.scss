@@ -5,12 +5,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: 31.2rem;
+  width: 31.2rem;
   height: 4.8rem;
   color: #FFF;
   background-color: var(--color-green);
+  border: 1px solid var(--color-green);
   border-radius: 0.4rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  @include mq(ovsp) {
+    width: 100%;
+    max-width: 31.2rem;
+  }
 
   &::after {
     content: "";
@@ -24,5 +29,17 @@
     margin-left: 1rem;
     background: no-repeat 50% 50% / contain;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='レイヤー 2' viewBox='0 0 5.78 8.73'%3E%3Cpath d='m.71.71 3.66 3.66L.71 8.02' data-name='レイヤー 1' style='fill:none;stroke:%23fff;stroke-miterlimit:10;stroke-width:2px'/%3E%3C/svg%3E");
+    transition: background 0.3s ease;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: #FFF;
+      color: var(--color-green);
+
+      &::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='レイヤー 2' viewBox='0 0 5.78 8.73'%3E%3Cpath d='m.71.71 3.66 3.66L.71 8.02' data-name='レイヤー 1' style='fill:none;stroke:%2364be37;stroke-miterlimit:10;stroke-width:2px'/%3E%3C/svg%3E");
+      }
+    }
   }
 }

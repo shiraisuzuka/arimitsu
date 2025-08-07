@@ -5,18 +5,19 @@
 html {
   position: relative;
   font-size: 62.5%;
-  // @include mq(sp) {
-	// 	font-size: calcvw(10, 375) !important;
-	// }
-	// @include mq(md) {
-	// 	font-size: calcvw(10, 1440) !important;
-	// }
+  @include mq(sp) {
+		// font-size: 13.3333px !important;
+    font-size: calcvw(10, 375) !important;
+	}
+  // @media (max-width: 500px) {
+  //   font-size: calcvw(10, 375) !important;
+  // }
 }
 
 body {
   font-feature-settings: "palt";
   font-family: var(--font-base);
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: var(--color-black);
   letter-spacing: 0.04em;
@@ -27,6 +28,10 @@ body {
 	@include mq(ovsp) {
 		font-size: 1.6rem;
 	}
+
+  &.is-menu-open {
+    overflow: hidden;
+  }
 }
 
 * {
