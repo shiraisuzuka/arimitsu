@@ -86,6 +86,29 @@
     });
   }
 
+  // ハンバーガーメニューの位置とサイズを調整
+  // ----------------------------------------------//
+  function setHamburgerMenuPosition() {
+    const headerHeight = $(".l-header").outerHeight();
+    const hamburgerNav = document.querySelector('.l-header-nav-hamburger');
+    
+    if (hamburgerNav) {
+      hamburgerNav.style.top = headerHeight + "px";
+      hamburgerNav.style.height = `calc(100vh - ${headerHeight}px)`;
+    }
+  }
+
+  // 初期設定とリサイズ時の調整
+  setHamburgerMenuPosition();
+
+  $(window).on("load resize", function() {
+    setHamburgerMenuPosition();
+  });
+
+  $(window).on("scroll", function() {
+    setHamburgerMenuPosition();
+  });
+
   // ハンバーガーメニューの開閉
   // ----------------------------------------------//
   const hamburgerBtn = document.querySelector('.l-header-nav-btn');
@@ -130,29 +153,6 @@
         isOpen = false;
       }
     });
-
-    // サブメニューの開閉
-    const hamburgerItems = hamburgerNav.querySelectorAll('.l-header-nav-hamburger-item');
-    hamburgerItems.forEach(item => {
-      const link = item.querySelector('a.no-arrow');
-      const submenu = item.querySelector('ul');
-      
-      if (link && submenu) {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          
-          // 他のサブメニューを閉じる
-          hamburgerItems.forEach(otherItem => {
-            if (otherItem !== item) {
-              otherItem.classList.remove('is-open');
-            }
-          });
-          
-          // 現在のサブメニューをトグル
-          item.classList.toggle('is-open');
-        });
-      }
-    });
   }
 
   // 言語選択による遷移
@@ -189,6 +189,69 @@
           start: '20% bottom',
         }
       });
+    });
+  }
+
+  // 製品検索詳細の開閉
+  // ----------------------------------------------//
+  const searchDetailBtn = document.querySelector('.p-product-search-detail-spbtn');
+  const searchDetailWrapper = document.querySelector('.p-product-search-detail-contents-wrapper');
+  
+  if (searchDetailBtn && searchDetailWrapper) {
+    searchDetailBtn.addEventListener('click', function() {
+      const isVisible = searchDetailWrapper.style.display === 'block';
+      
+      if (isVisible) {
+        // 閉じる
+        searchDetailWrapper.style.display = 'none';
+        searchDetailBtn.classList.remove('is-open');
+      } else {
+        // 開く
+        searchDetailWrapper.style.display = 'block';
+        searchDetailBtn.classList.add('is-open');
+      }
+    });
+  }
+
+  // 製品検索チェックボックスの背景色変更
+  // ----------------------------------------------//
+  const checkboxes = document.querySelectorAll('.p-product-search-detail-contents-item .checkbox');
+  
+  if (checkboxes.length > 0) {
+    checkboxes.forEach(checkbox => {
+      const parentItem = checkbox.closest('.p-product-search-detail-contents-item');
+      
+      if (checkbox.checked) {
+        parentItem.classList.add('is-checked');
+      }
+      
+      checkbox.addEventListener('change', function() {
+        if (this.checked) {
+          parentItem.classList.add('is-checked');
+        } else {
+          parentItem.classList.remove('is-checked');
+        }
+      });
+    });
+  }
+
+  // 製品検索リセットボタンの処理
+  // ----------------------------------------------//
+  const resetBtn = document.querySelector('.p-product-search-detail-reset');
+  
+  if (resetBtn && checkboxes.length > 0) {
+    resetBtn.addEventListener('click', function() {
+
+      setTimeout(() => {
+        checkboxes.forEach(checkbox => {
+          const parentItem = checkbox.closest('.p-product-search-detail-contents-item');
+          if (checkbox.checked) {
+            parentItem.classList.add('is-checked');
+          } else {
+            parentItem.classList.remove('is-checked');
+          }
+        });
+      }, 0);
     });
   }
 

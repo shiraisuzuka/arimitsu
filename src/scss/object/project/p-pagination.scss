@@ -1,0 +1,88 @@
+@use 'foundation' as *;
+
+.p-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin: 6rem auto 0;
+  @include mq(ovsp) {
+    max-width: 31.5rem;
+  }
+
+  .page-numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    outline: 1px solid var(--color-gray);
+    transition: outline 0.1s ease;
+
+    &.current {
+      color: var(--color-green);
+      outline: 2px solid var(--color-green);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--color-green);
+        outline: 2px solid var(--color-green);
+      }
+    }
+
+    &.prev,
+    &.next {
+      outline: none;
+      transition: opacity 0.3s ease;
+      
+      @media (any-hover: hover) {
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    &.prev {
+      margin-right: auto;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        background: no-repeat 50% 50% / contain;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='レイヤー 2' viewBox='0 0 5.78 8.73'%3E%3Cpath d='m5.07.71-3.66 3.66 3.66 3.65' data-name='レイヤー 1' style='fill:none;stroke:%2364be37;stroke-miterlimit:10;stroke-width:2px'/%3E%3C/svg%3E");
+      }
+
+      &.non-active {
+        pointer-events: none;
+
+        &::before {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='レイヤー 2' viewBox='0 0 5.78 8.73'%3E%3Cpath d='m5.07.71-3.66 3.66 3.66 3.65' data-name='レイヤー 1' style='fill:none;stroke:%23c8c8c8;stroke-miterlimit:10;stroke-width:2px'/%3E%3C/svg%3E");
+        }
+      }
+    }
+
+    &.next {
+      margin-left: auto;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        background: no-repeat 50% 50% / contain;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='レイヤー 2' viewBox='0 0 5.78 8.73'%3E%3Cpath d='m.71.71 3.66 3.66L.71 8.02' data-name='レイヤー 1' style='fill:none;stroke:%2364be37;stroke-miterlimit:10;stroke-width:2px'/%3E%3C/svg%3E");
+      }
+
+      &.non-active {
+        pointer-events: none;
+
+        &::before {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='レイヤー 2' viewBox='0 0 5.78 8.73'%3E%3Cpath d='m.71.71 3.66 3.66L.71 8.02' data-name='レイヤー 1' style='fill:none;stroke:%23c8c8c8;stroke-miterlimit:10;stroke-width:2px'/%3E%3C/svg%3E");
+        }
+      }
+    }
+  }
+}

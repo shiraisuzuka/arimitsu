@@ -1,0 +1,12 @@
+@use 'foundation' as *;
+
+.p-link-contact {
+  display: grid;
+  margin: 6rem 0 0;
+
+  .p-product-wrapper & {
+    @include mq(ovsp) {
+      margin: 12rem 0 0;
+    }
+  }
+}

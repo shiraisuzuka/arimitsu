@@ -6,12 +6,8 @@ html {
   position: relative;
   font-size: 62.5%;
   @include mq(sp) {
-		// font-size: 13.3333px !important;
     font-size: calcvw(10, 375) !important;
 	}
-  // @media (max-width: 500px) {
-  //   font-size: calcvw(10, 375) !important;
-  // }
 }
 
 body {
@@ -55,6 +51,7 @@ a {
 
 img {
   display: inline-block;
+  max-width: 100%;
   height: auto;
   vertical-align: middle;
 }

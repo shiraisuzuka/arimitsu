@@ -17,14 +17,14 @@
     gap: 1rem 3rem;
     margin-inline: auto;
     padding: 2.5rem 3rem 2.5rem 1.5rem;
-    @include mq(ovsp) {
-      padding: 2.5rem 0 2.5rem 1.8rem;
+    @media (min-width: 1121px) {
+      padding: 2.5rem 1rem 2.5rem 1.8rem;
     }
   }
 
   &-logo {
     width: 23.6rem;
-    @include mq(ovsp) {
+    @media (min-width: 1121px) {
       width: 33.6rem;
     }
     
@@ -32,11 +32,16 @@
       display: block;
       line-height: 1;
     }
+
+    img {
+      width: 100%;
+    }
   }
 
   &-nav {
     display: flex;
-    @include mq(sp) {
+    margin-left: auto;
+    @media (max-width: 1120px) {
       display: none;
     }
 
@@ -47,7 +52,7 @@
       cursor: pointer;
       z-index: 110;
       position: relative;
-      @include mq(ovsp) {
+      @media (min-width: 1121px) {
         display: none;
       }
 
@@ -127,15 +132,15 @@
     }
 
     &-contact {
-      @include mq(sp) {
+      @media (max-width: 1120px) {
         margin-inline: auto;
       }
-      @include mq(ovsp) {
+      @media (min-width: 1121px) {
         width: 15.2rem;
       }
 
       &::after {
-        @include mq(ovsp) {
+        @media (min-width: 1121px) {
           position: relative;
           top: auto;
           right: auto;
@@ -163,10 +168,10 @@
 
     &-hamburger {
       position: fixed;
-      top: 7.8rem;
+      top: 0;
       left: 0;
       width: 100%;
-      height: calc(100vh - 7.8rem);
+      height: 100vh;
       padding: 0 1.5rem 4.5rem;
       background-color: #FFF;
       overflow-y: auto;
@@ -174,7 +179,7 @@
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.3s ease, visibility 0.3s ease;
-      @include mq(ovsp) {
+      @media (min-width: 1121px) {
         display: none;
       }
 

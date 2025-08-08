@@ -1,0 +1,22 @@
+@use 'foundation' as *;
+
+.p-product-wrapper {
+  padding: 2rem 0 6rem;
+  @include mq(ovsp) {
+    padding: 4rem 0 16rem;
+  }
+
+  &-col {
+    display: grid;
+    gap: 5.5rem;
+    @include mq(ovsp) {
+      display: grid;
+      grid-template-columns: max(30rem, calc(388 / 1260 * 100vw)) 1fr;
+      align-items: start;
+      gap: 2rem;
+    }
+    @media (min-width: 1261px) {
+      grid-template-columns: 38.8rem 1fr;
+    }
+  }
+}
