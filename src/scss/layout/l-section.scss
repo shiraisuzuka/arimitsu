@@ -6,6 +6,13 @@
     padding: 8rem 0;
   }
 
+  &-small {
+    padding: 4rem 0 6rem;
+    @include mq(ovsp) {
+      padding: 6rem 0 10rem;
+    }
+  }
+
   &-inner {
     width: 100%;
     max-width: calc(58rem + 1.5rem * 2);

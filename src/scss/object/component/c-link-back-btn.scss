@@ -1,0 +1,14 @@
+@use 'foundation' as *;
+
+.c-link-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: color 0.3s ease;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--color-green);
+    }
+  }
+}
