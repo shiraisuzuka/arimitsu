@@ -110,15 +110,15 @@
         }
       }
 
-      span {
-        transition: color 0.3s ease;
+      // span {
+      //   transition: color 0.3s ease;
 
-        @media (any-hover: hover) {
-          &:hover {
-            color: var(--color-green);
-          }
-        }
-      }
+      //   @media (any-hover: hover) {
+      //     &:hover {
+      //       color: var(--color-green);
+      //     }
+      //   }
+      // }
       
       a {
         transition: color 0.3s ease;
@@ -151,7 +151,7 @@
       visibility: hidden;
       transform: translateY(-1rem);
       transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-      padding: 1rem 0;
+      // padding: 1rem 0;
       margin-top: 0.5rem;
 
       @media (max-width: 1180px) {
@@ -206,17 +206,7 @@
           }
 
           span {
-            display: block;
             font-size: 1.2rem;
-            color: #666;
-            margin-top: 0.2rem;
-            transition: color 0.2s ease;
-          }
-
-          @media (any-hover: hover) {
-            &:hover span {
-              color: #555;
-            }
           }
         }
       }

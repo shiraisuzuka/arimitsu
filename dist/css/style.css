@@ -764,14 +764,6 @@ figure {
   transform: translateY(-0.2rem);
   transition: background 0.3s ease;
 }
-.l-header-nav-item span {
-  transition: color 0.3s ease;
-}
-@media (any-hover: hover) {
-  .l-header-nav-item span:hover {
-    color: var(--color-green);
-  }
-}
 .l-header-nav-item a {
   transition: color 0.3s ease;
 }
@@ -800,7 +792,6 @@ figure {
   visibility: hidden;
   transform: translateY(-1rem);
   transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-  padding: 1rem 0;
   margin-top: 0.5rem;
 }
 @media (max-width: 1180px) {
@@ -850,16 +841,7 @@ figure {
   display: none;
 }
 .l-header-nav-sub-list li a span {
-  display: block;
   font-size: 1.2rem;
-  color: #666;
-  margin-top: 0.2rem;
-  transition: color 0.2s ease;
-}
-@media (any-hover: hover) {
-  .l-header-nav-sub-list li a:hover span {
-    color: #555;
-  }
 }
 .l-header-nav-sub-list.is-visible {
   opacity: 1;
