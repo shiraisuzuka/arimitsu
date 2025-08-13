@@ -2422,16 +2422,16 @@ figure {
 .l-footer-nav-item + .l-footer-nav-item {
   margin: 5rem 0 0;
 }
-.l-footer-nav-item > a {
+.l-footer-nav-item > span {
   display: block;
   padding-bottom: 1rem;
   font-size: 1.8rem;
   border-bottom: 1px solid #FFF;
 }
-.l-footer-nav-item > a:not(.no-arrow) {
+.l-footer-nav-item > span:not(.no-arrow) {
   position: relative;
 }
-.l-footer-nav-item > a:not(.no-arrow)::after {
+.l-footer-nav-item > span:not(.no-arrow)::after {
   content: "";
   position: absolute;
   top: 50%;

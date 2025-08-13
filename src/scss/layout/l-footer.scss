@@ -73,8 +73,6 @@
     display: flex;
     gap: 5rem;
     @media (max-width: 1280px) {
-      // justify-content: flex-end;
-      // flex-wrap: wrap;
       display: grid;
     }
 
@@ -83,7 +81,6 @@
         min-width: 36.9rem;
       }
       @media (min-width: 768px) and (max-width: 1280px) {
-        // min-width: calc(300 / 1280 * 100vw);
         min-width: 31rem;
       }
     }
@@ -93,7 +90,7 @@
         margin: 5rem 0 0;
       }
 
-      > a {
+      > span {
         display: block;
         padding-bottom: 1rem;
         font-size: 1.8rem;
