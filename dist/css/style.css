@@ -1138,6 +1138,15 @@ figure {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='レイヤー 2' viewBox='0 0 5.78 8.73'%3E%3Cpath d='m.71.71 3.66 3.66L.71 8.02' data-name='レイヤー 1' style='fill:none;stroke:%23c8c8c8;stroke-miterlimit:10;stroke-width:2px'/%3E%3C/svg%3E");
 }
 
+@media screen and (max-width: 767px) {
+  .p-product-detail .c-link-btn {
+    font-size: 1.4rem;
+  }
+  .p-product-detail .c-link-btn .c-icon.arrow-right {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}
 .p-product-detail-inner {
   display: grid;
   gap: 4rem;
@@ -1213,17 +1222,11 @@ figure {
 .p-product-detail-future .c-link-btn span::after {
   content: "";
   display: inline-block;
-  width: 0.9rem;
-  height: 0.9rem;
+  width: 1.1rem;
+  height: 1.1rem;
   margin-left: 0.5rem;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='_レイヤー_2' data-name='レイヤー 2' viewBox='0 0 12 12'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;stroke:%23000;stroke-linejoin:round%7D%3C/style%3E%3C/defs%3E%3Cg id='_レイヤー_1-2' data-name='レイヤー 1'%3E%3Cpath d='M6.33.5h5.17v5.17M9.5 7.5v4h-9v-9h4M11.5.5l-7 7' class='cls-1'/%3E%3C/g%3E%3C/svg%3E");
   transition: background 0.3s ease;
-}
-@media screen and (min-width: 768px) {
-  .p-product-detail-future .c-link-btn span::after {
-    width: 1.1rem;
-    height: 1.1rem;
-  }
 }
 @media (any-hover: hover) {
   .p-product-detail-future .c-link-btn:hover span::after {
