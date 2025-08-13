@@ -49,8 +49,8 @@
   // 製品セクションのホバーアニメーション
   // ----------------------------------------------//
   const productItems = document.querySelectorAll('.p-top-product-item');
-  const productImage = document.querySelector('.p-top-product-image.is-pc img');
-  const productImageText = document.querySelector('.p-top-product-image-text.is-pc');
+  const productImage = document.querySelector('.p-top-product-image img');
+  const productImageText = document.querySelector('.p-top-product-image-text');
   
   // 各製品項目に対応する画像とテキストのデータ
   const productData = [
