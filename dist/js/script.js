@@ -171,6 +171,42 @@
     });
   }
 
+  // ヘッダーナビゲーションのサブメニュー表示
+  // ----------------------------------------------//
+  const navItems = document.querySelectorAll('.l-header-nav-item');
+  
+  if (navItems.length > 0) {
+    navItems.forEach(item => {
+      const span = item.querySelector('span');
+      const subList = item.querySelector('.l-header-nav-sub-list');
+      let fadeTimer = null;
+      
+      if (span && subList) {
+        span.addEventListener('mouseenter', function() {
+          if (fadeTimer) {
+            clearTimeout(fadeTimer);
+            fadeTimer = null;
+          }
+          
+          subList.classList.add('is-visible');
+        });
+        
+        item.addEventListener('mouseleave', function() {
+          fadeTimer = setTimeout(() => {
+            subList.classList.remove('is-visible');
+          }, 100);
+        });
+        
+        subList.addEventListener('mouseenter', function() {
+          if (fadeTimer) {
+            clearTimeout(fadeTimer);
+            fadeTimer = null;
+          }
+        });
+      }
+    });
+  }
+
   // GSAPフェードインアニメーション
   // ----------------------------------------------//
   const animationElements = document.querySelectorAll('.js-animation');
