@@ -5,7 +5,9 @@
   const searchDetailWrapper = document.querySelector('.p-product-search-detail-contents-wrapper');
   
   if (searchDetailBtn && searchDetailWrapper) {
-    searchDetailBtn.addEventListener('click', function() {
+    searchDetailBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      
       const isVisible = searchDetailWrapper.style.display === 'block';
       
       if (isVisible) {
