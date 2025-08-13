@@ -893,17 +893,32 @@ figure {
   min-width: 6.5rem;
   height: 4.8rem;
   text-align: center;
-  border-color: var(--color-gray);
+  border: 1px solid var(--color-gray);
   border-radius: 0.4rem;
   cursor: pointer;
-  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  padding-right: 1rem;
+  appearance: none;
+  padding: 0 2.4rem 0 1rem;
+  background-color: var(--color-white);
   background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='レイヤー 2' viewBox='0 0 8.02 4.51'%3E%3Cpath d='M7.67.35 4.01 4.01.35.35' data-name='レイヤー 1' style='fill:none;stroke:%23000;stroke-linejoin:round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 0.8rem center;
   background-size: 0.8rem;
+  font-size: inherit;
+  line-height: 1;
+  color: var(--color-black);
+}
+.l-header-nav-select::-webkit-appearance {
+  -webkit-appearance: none;
+}
+.l-header-nav-select:focus {
+  outline: 2px solid var(--color-green);
+  outline-offset: -2px;
+}
+.l-header-nav-select option {
+  color: var(--color-black);
+  background-color: var(--color-white);
 }
 .l-header-nav-hamburger {
   position: fixed;
