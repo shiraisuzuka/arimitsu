@@ -53,6 +53,13 @@
         margin-inline: auto;
       }
     }
+
+    .c-scroll-down {
+      margin-top: 6rem;
+      @include mq(ovsp) {
+        margin-top: 8rem;
+      }
+    }
   }
 
   &-news {

@@ -361,6 +361,117 @@ figure {
   }
 }
 
+.c-scroll-down {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 6rem auto 0;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media screen and (min-width: 768px) {
+  .c-scroll-down {
+    gap: 1.5rem;
+    margin: 8rem auto 0;
+  }
+}
+.c-scroll-down-line {
+  position: relative;
+  width: 1px;
+  height: 4rem;
+  background-color: var(--color-gray2);
+}
+@media screen and (min-width: 768px) {
+  .c-scroll-down-line {
+    height: 6rem;
+  }
+}
+.c-scroll-down-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2rem;
+  background-color: var(--color-green);
+  animation: scrollLineMove 2s ease-in-out infinite;
+}
+@media screen and (min-width: 768px) {
+  .c-scroll-down-line::before {
+    height: 3rem;
+  }
+}
+.c-scroll-down-text {
+  font-family: var(--font-en);
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: var(--color-gray2);
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .c-scroll-down-text {
+    font-size: 1.4rem;
+  }
+}
+
+@keyframes scrollLineMove {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(2rem);
+    opacity: 0;
+    @media screen and (min-width: 768px) {
+      transform: translateY(3rem);
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  @keyframes scrollLineMove {
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(2rem);
+      opacity: 0;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  @keyframes scrollLineMove {
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(3rem);
+      opacity: 0;
+    }
+  }
+}
 .c-title-ja {
   font-size: 2.4rem;
   font-weight: 500;
@@ -1670,6 +1781,14 @@ figure {
 }
 .p-top-company-btn .c-btn {
   margin-inline: auto;
+}
+.p-top-company .c-scroll-down {
+  margin-top: 6rem;
+}
+@media screen and (min-width: 768px) {
+  .p-top-company .c-scroll-down {
+    margin-top: 8rem;
+  }
 }
 .p-top-news {
   background-color: var(--color-gray-light);

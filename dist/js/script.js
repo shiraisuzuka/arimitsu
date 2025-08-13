@@ -207,6 +207,35 @@
     });
   }
 
+  // スクロールダウンパーツ
+  // ----------------------------------------------//
+  const scrollDownBtn = document.querySelector('.c-scroll-down');
+  
+  if (scrollDownBtn) {
+    scrollDownBtn.addEventListener('click', function() {
+      const nextSection = document.querySelector('.p-top-news');
+      if (nextSection) {
+        const headerHeight = document.querySelector('.l-header').offsetHeight;
+        const targetPosition = nextSection.offsetTop - headerHeight;
+        
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+
+    scrollDownBtn.style.cursor = 'pointer';
+    scrollDownBtn.addEventListener('mouseenter', function() {
+      this.style.opacity = '0.7';
+      this.style.transition = 'opacity 0.3s ease';
+    });
+    
+    scrollDownBtn.addEventListener('mouseleave', function() {
+      this.style.opacity = '1';
+    });
+  }
+
   // GSAPフェードインアニメーション
   // ----------------------------------------------//
   const animationElements = document.querySelectorAll('.js-animation');
