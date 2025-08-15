@@ -1504,6 +1504,15 @@ figure {
     font-size: 1.8rem;
   }
 }
+.p-product-list-no-results {
+  margin: 5rem 0 0;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .p-product-list-no-results {
+    margin: 10rem 0 0;
+  }
+}
 
 .p-product-search {
   display: grid;

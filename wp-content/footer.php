@@ -139,10 +139,6 @@
   <script src="<?php assets_path(); ?>/js/jquery.matchHeight-min.js"></script>
   <?php endif; ?>
 
-  <?php if ( is_post_type_archive('product') || is_singular('product') ) : ?>
-  <script src="<?php assets_path(); ?>/js/product.js?<?php echo date('YmdHi', filemtime(get_template_directory() . '/assets/js/product.js')); ?>"></script>
-  <?php endif; ?>
-
   <?php wp_footer(); ?>
 
 </body>

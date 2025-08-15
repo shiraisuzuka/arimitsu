@@ -21,6 +21,21 @@ function my_script_init()
     'templateUrl' => get_template_directory_uri(),
     'assetsUrl' => get_template_directory_uri() . '/assets'
   ));
+  
+  // AJAX用のURLをJavaScriptに渡す
+  wp_localize_script('my-script', 'ajax_object', array(
+    'ajax_url' => admin_url('admin-ajax.php')
+  ));
+  
+  // 製品ページ用のJavaScript（条件付き読み込み）
+  if (is_post_type_archive('product') || is_singular('product')) {
+    wp_enqueue_script('product-script', get_template_directory_uri() . '/assets/js/product.js', array(), filemtime(get_theme_file_path('assets/js/product.js')), true);
+    
+    // product.jsにもAJAX URLを渡す
+    wp_localize_script('product-script', 'ajax_object', array(
+      'ajax_url' => admin_url('admin-ajax.php')
+    ));
+  }
 }
 add_action('wp_enqueue_scripts', 'my_script_init');
 
@@ -308,4 +323,10 @@ include get_template_directory() . '/inc/breadcrumb.php';
   - カスタム投稿「製品」の設定
 */
 include get_template_directory() . '/inc/product.php';
+
+/*
+  inc/ajax.php
+  - AJAX処理の設定
+*/
+include get_template_directory() . '/inc/ajax.php';
 ?>

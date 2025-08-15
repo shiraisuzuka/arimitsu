@@ -73,7 +73,7 @@
             <div class="p-top-product-item-inner">
               <span class="p-top-product-item-number">01</span>
               <div class="p-top-product-item-content">
-                <a href="DUMMY">
+                <a href="<?php echo esc_url(get_post_type_archive_link('product') . '?product_categories[]=agricultural_machinery'); ?>">
                   <h3 class="p-top-product-item-title">農業機械</h3>
                 </a>
                 <div class="p-top-product-item-col">
@@ -87,7 +87,7 @@
             <div class="p-top-product-item-inner">
               <span class="p-top-product-item-number">02</span>
               <div class="p-top-product-item-content">
-                <a href="DUMMY">
+                <a href="<?php echo esc_url(get_post_type_archive_link('product') . '?product_categories[]=pump'); ?>">
                   <h3 class="p-top-product-item-title">ポンプ</h3>
                 </a>
                 <div class="p-top-product-item-col">
@@ -101,7 +101,7 @@
             <div class="p-top-product-item-inner">
               <span class="p-top-product-item-number">03</span>
               <div class="p-top-product-item-content">
-                <a href="DUMMY">
+                <a href="<?php echo esc_url(get_post_type_archive_link('product') . '?product_categories[]=cleaning_machine'); ?>">
                   <h3 class="p-top-product-item-title">洗浄機</h3>
                 </a>
                 <div class="p-top-product-item-col">
@@ -115,7 +115,7 @@
             <div class="p-top-product-item-inner">
               <span class="p-top-product-item-number">04</span>
               <div class="p-top-product-item-content">
-                <a href="DUMMY">
+                <a href="<?php echo esc_url(get_post_type_archive_link('product') . '?product_categories[]=attachment'); ?>">
                   <h3 class="p-top-product-item-title">アタッチメント <span>（洗浄機のノズル等）</span></h3>
                 </a>
                 <div class="p-top-product-item-col">
@@ -129,8 +129,8 @@
             <div class="p-top-product-item-inner">
               <span class="p-top-product-item-number">05</span>
               <div class="p-top-product-item-content">
-                <a href="DUMMY">
-                  <h3 class="p-top-product-item-title">ミスト</span></h3>
+                <a href="<?php echo esc_url(get_post_type_archive_link('product') . '?product_categories[]=mist'); ?>">
+                  <h3 class="p-top-product-item-title">ミスト</h3>
                 </a>
                 <div class="p-top-product-item-col">
                   <a href="DUMMY">カタログ一覧</a>
@@ -143,7 +143,7 @@
             <div class="p-top-product-item-inner">
               <span class="p-top-product-item-number">06</span>
               <div class="p-top-product-item-content">
-                <a href="DUMMY">
+                <a href="<?php echo esc_url(get_post_type_archive_link('product') . '?product_categories[]=other_product'); ?>">
                   <h3 class="p-top-product-item-title">その他 <span>（オートマット、トルミング等）</span></h3>
                 </a>
                 <div class="p-top-product-item-col">

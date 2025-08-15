@@ -95,7 +95,7 @@ if (!is_array($current_product_categories)) {
   $current_product_categories = array();
 }
 
-// 同じカテゴリーの製品を取得（現在の投稿を除く）
+// 同じカテゴリーの製品を取得
 $related_products = array();
 if (!empty($current_product_categories)) {
   $args = array(
@@ -137,13 +137,11 @@ if (!empty($related_products)): ?>
         $product = $related_products[$i];
         $product_id = $product->ID;
         
-        // 各製品のカスタムフィールドを取得
         $lineup_image = get_post_meta($product_id, '_product_lineup_image', true);
         $lineup_model = get_post_meta($product_id, '_product_lineup_model', true);
         $lineup_name = get_post_meta($product_id, '_product_lineup_name', true);
         $lineup_link = get_post_meta($product_id, '_product_lineup_link', true);
         
-        // アイキャッチ画像がない場合は製品画像1を使用
         if (!$lineup_image) {
           $lineup_image = get_post_meta($product_id, '_product_image1', true);
         }
@@ -181,7 +179,7 @@ if (!empty($related_products)): ?>
       <?php endfor; ?>
       
       <?php 
-      // 隠れているアイテムを追加（JavaScript用）
+      // 隠れているアイテムを追加
       if ($total_count > $initial_count):
         for ($i = $initial_count; $i < $total_count; $i++):
           $product = $related_products[$i];
