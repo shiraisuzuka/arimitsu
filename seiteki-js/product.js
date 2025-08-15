@@ -67,29 +67,34 @@
 
   // 製品詳細ページのスライド
   // ----------------------------------------------//
-  const main = new Splide("#main-slide", {
-    type: "fade",
-    rewind: true,
-    pagination: false,
-    arrows: false,
-  });
+  const mainSlideElement = document.querySelector("#main-slide");
+  const thumbnailSlideElement = document.querySelector("#thumbnail-slide");
+  
+  if (mainSlideElement && thumbnailSlideElement) {
+    const main = new Splide("#main-slide", {
+      type: "fade",
+      rewind: true,
+      pagination: false,
+      arrows: false,
+    });
 
-  const thumbnails = new Splide("#thumbnail-slide", {
-    perPage: 5,
-    pagination: false,
-    arrows: false,
-    isNavigation: true,
-    drag: false,
-    gap: '1rem',
-    breakpoints: {
-      767: {
-        gap: '0.4rem',
+    const thumbnails = new Splide("#thumbnail-slide", {
+      perPage: 5,
+      pagination: false,
+      arrows: false,
+      isNavigation: true,
+      drag: false,
+      gap: '1rem',
+      breakpoints: {
+        767: {
+          gap: '0.4rem',
+        }
       }
-    }
-  });
-  main.sync(thumbnails);
-  main.mount();
-  thumbnails.mount();
+    });
+    main.sync(thumbnails);
+    main.mount();
+    thumbnails.mount();
+  }
 
   // 製品ラインナップの高さを揃える
   // ----------------------------------------------//
