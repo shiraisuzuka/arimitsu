@@ -36,16 +36,16 @@
                     農業機械
                   </label>
                   <label class="p-product-search-detail-contents-item">
+                    <input type="checkbox" name="checkbox" value="ポンプ" class="checkbox">
+                    ポンプ
+                  </label>
+                  <label class="p-product-search-detail-contents-item">
                     <input type="checkbox" name="checkbox" value="洗浄機" class="checkbox">
                     洗浄機
                   </label>
                   <label class="p-product-search-detail-contents-item">
                     <input type="checkbox" name="checkbox" value="アタッチメント（洗浄機のノズル等）" class="checkbox">
                     アタッチメント（洗浄機のノズル等）
-                  </label>
-                  <label class="p-product-search-detail-contents-item">
-                    <input type="checkbox" name="checkbox" value="ポンプ" class="checkbox">
-                    ポンプ
                   </label>
                   <label class="p-product-search-detail-contents-item">
                     <input type="checkbox" name="checkbox" value="ミスト" class="checkbox">
