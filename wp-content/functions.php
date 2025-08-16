@@ -279,7 +279,7 @@ function slug_auto_setting( $slug, $post_ID, $post_status, $post_type ) {
   $post = get_post($post_ID);
 
   if ( $post_type == 'news' && $post->post_date_gmt == '0000-00-00 00:00:00' ) {
-    $slug = $post_ID;
+    $slug = generate_news_sequential_slug();
     return $slug;
   }
 
@@ -291,6 +291,26 @@ function slug_auto_setting( $slug, $post_ID, $post_status, $post_type ) {
 
   return $slug;
 }
+
+/**
+ * 最新情報投稿用の連番スラッグを生成
+ */
+function generate_news_sequential_slug() {
+  global $wpdb;
+  
+  $max_number = $wpdb->get_var(
+    "SELECT MAX(CAST(post_name AS UNSIGNED)) 
+     FROM {$wpdb->posts} 
+     WHERE post_type = 'news' 
+     AND post_status IN ('publish', 'draft', 'private', 'pending') 
+     AND post_name REGEXP '^[0-9]+$'"
+  );
+  
+  $next_number = $max_number ? intval($max_number) + 1 : 1;
+  
+  return sprintf('%02d', $next_number);
+}
+add_filter( 'wp_unique_post_slug', 'slug_auto_setting', 10, 4 );
 
 /**
  * 製品投稿用の連番スラッグを生成
@@ -323,6 +343,12 @@ include get_template_directory() . '/inc/breadcrumb.php';
   - カスタム投稿「製品」の設定
 */
 include get_template_directory() . '/inc/product.php';
+
+/*
+  inc/product.php
+  - カスタム投稿「最新情報」の設定
+*/
+include get_template_directory() . '/inc/news.php';
 
 /*
   inc/ajax.php

@@ -29,27 +29,42 @@
       <p class="c-title-en">information</p>
     </hgroup>
     <ul class="p-top-news-list js-animation">
+      <?php
+      $news_query = new WP_Query(array(
+        'post_type' => 'news',
+        'posts_per_page' => 3,
+        'post_status' => 'publish',
+        'orderby' => 'date',
+        'order' => 'DESC'
+      ));
+
+      if ($news_query->have_posts()) :
+        while ($news_query->have_posts()) : $news_query->the_post();
+          // カテゴリーを取得
+          $categories = get_the_terms(get_the_ID(), 'news_cat');
+          $category_name = '';
+          if ($categories && !is_wp_error($categories)) {
+            $category_name = $categories[0]->name;
+          }
+      ?>
       <li>
-        <a href="DUMMY" class="p-top-news-item">
-          <time datetime="2025-06-19" class="p-top-news-item-date">2025.06.19</time>
-          <div class="p-top-news-item-category-wrap"><span class="p-top-news-item-category">お知らせ</span></div>
-          <h3 class="p-top-news-item-title">会社説明会の日程を更新しました！</h3>
+        <a href="<?php the_permalink(); ?>" class="p-top-news-item">
+          <time datetime="<?php echo get_the_date('Y-m-d'); ?>" class="p-top-news-item-date"><?php echo get_the_date('Y.m.d'); ?></time>
+          <?php if ($category_name) : ?>
+          <div class="p-top-news-item-category-wrap"><span class="p-top-news-item-category"><?php echo esc_html($category_name); ?></span></div>
+          <?php endif; ?>
+          <h3 class="p-top-news-item-title"><?php the_title(); ?></h3>
         </a>
       </li>
+      <?php
+        endwhile;
+        wp_reset_postdata();
+      else :
+      ?>
       <li>
-        <a href="DUMMY" class="p-top-news-item">
-          <time datetime="2025-06-02" class="p-top-news-item-date">2025.06.02</time>
-          <div class="p-top-news-item-category-wrap"><span class="p-top-news-item-category">その他</span></div>
-          <h3 class="p-top-news-item-title">ラトビア企業団来訪情報を掲載しました</h3>
-        </a>
+        <p>最新情報がありません</p>
       </li>
-      <li>
-        <a href="DUMMY" class="p-top-news-item">
-          <time datetime="2025-05-26" class="p-top-news-item-date">2025.05.26</time>
-          <div class="p-top-news-item-category-wrap"><span class="p-top-news-item-category">展示会情報</span></div>
-          <h3 class="p-top-news-item-title">展示会情報を追加しました</h3>
-        </a>
-      </li>
+      <?php endif; ?>
     </ul>
     <div class="p-top-news-btn js-animation">
       <a href="<?php page_path('news'); ?>" class="c-link-btn">一覧はこちら<i class="c-icon arrow-right"></i></a>
