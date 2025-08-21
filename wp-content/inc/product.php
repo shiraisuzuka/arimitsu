@@ -41,7 +41,7 @@ function register_product_post_type() {
         'label'                 => '製品',
         'description'           => '製品の投稿タイプ',
         'labels'                => $labels,
-        'supports'              => array('title'),
+        'supports'              => array('title', 'editor'),
         'hierarchical'          => false,
         'public'                => true,
         'show_ui'               => true,
@@ -134,10 +134,24 @@ add_action('add_meta_boxes', 'add_product_custom_fields');
 function product_basic_info_callback($post) {
     wp_nonce_field(basename(__FILE__), 'product_nonce');
     
+    $listing_image = get_post_meta($post->ID, '_product_listing_image', true);
     $basic_copy = get_post_meta($post->ID, '_product_basic_copy', true);
     $catalog_pdf = get_post_meta($post->ID, '_product_catalog_pdf', true);
     ?>
     <table class="form-table">
+        <tr>
+            <th><label for="product_listing_image">一覧画像 <span style="color: red;">*</span></label></th>
+            <td>
+                <input type="hidden" id="product_listing_image" name="product_listing_image" value="<?php echo esc_attr($listing_image); ?>" required />
+                <div id="listing_image_preview">
+                    <?php if ($listing_image): ?>
+                        <img src="<?php echo wp_get_attachment_url($listing_image); ?>" style="max-width: 200px; height: auto;" />
+                    <?php endif; ?>
+                </div>
+                <button type="button" class="button" onclick="openMediaUploader('product_listing_image', 'listing_image_preview')">画像を選択</button>
+                <button type="button" class="button" onclick="removeImage('product_listing_image', 'listing_image_preview')">画像を削除</button>
+            </td>
+        </tr>
         <tr>
             <th><label for="product_basic_copy">コピー <span style="color: red;">*</span></label></th>
             <td>
@@ -384,6 +398,9 @@ function save_product_custom_fields($post_id) {
     $errors = array();
     
     // 基本情報の必須チェック
+    if (empty($_POST['product_listing_image'])) {
+        $errors[] = '一覧画像は必須項目です。';
+    }
     if (empty($_POST['product_basic_copy'])) {
         $errors[] = 'コピーは必須項目です。';
     }
@@ -416,6 +433,9 @@ function save_product_custom_fields($post_id) {
     }
     
     // 基本情報
+    if (isset($_POST['product_listing_image'])) {
+        update_post_meta($post_id, '_product_listing_image', intval($_POST['product_listing_image']));
+    }
     if (isset($_POST['product_basic_copy'])) {
         update_post_meta($post_id, '_product_basic_copy', sanitize_textarea_field($_POST['product_basic_copy']));
     }
@@ -486,15 +506,20 @@ add_action('save_post', 'save_product_custom_fields');
 function product_enqueue_admin_scripts($hook) {
     global $post_type;
     
+    // 製品の投稿編集画面でのみ実行
     if (($hook == 'post-new.php' || $hook == 'post.php') && $post_type == 'product') {
+        // メディアアップローダーを有効化
         wp_enqueue_media();
         
+        // 必要なスクリプトを確実に読み込む
         wp_enqueue_script('media-upload');
         wp_enqueue_script('thickbox');
         wp_enqueue_style('thickbox');
         
+        // カスタムスクリプトを読み込み
         wp_add_inline_script('media-upload', '
             jQuery(document).ready(function($) {
+                // メディアアップローダーが正しく初期化されるまで待機
                 if (typeof wp !== "undefined" && typeof wp.media !== "undefined") {
                     console.log("WordPress media library is loaded");
                 } else {
@@ -515,6 +540,7 @@ function product_admin_scripts() {
         ?>
         <script type="text/javascript">
         jQuery(document).ready(function($) {
+            // メディアアップローダーが利用可能かチェック
             if (typeof wp === 'undefined' || typeof wp.media === 'undefined') {
                 console.error('WordPress media library is not available');
                 return;

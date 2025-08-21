@@ -298,17 +298,17 @@
           <?php while ($product_query->have_posts()) : $product_query->the_post(); ?>
             <?php
             $basic_copy = get_post_meta(get_the_ID(), '_product_basic_copy', true);
-            $lineup_image = get_post_meta(get_the_ID(), '_product_lineup_image', true);
+            $listing_image = get_post_meta(get_the_ID(), '_product_listing_image', true);
             
-            if (!$lineup_image) {
-              $lineup_image = get_post_meta(get_the_ID(), '_product_image1', true);
+            if (!$listing_image) {
+              $listing_image = get_post_meta(get_the_ID(), '_product_image1', true);
             }
             ?>
             <li class="p-product-list-item">
               <a href="<?php the_permalink(); ?>">
-                <?php if ($lineup_image): ?>
+                <?php if ($listing_image): ?>
                   <figure class="p-product-list-item-img">
-                    <img src="<?php echo esc_url(wp_get_attachment_url($lineup_image)); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" loading="lazy" width="424" height="282">
+                    <img src="<?php echo esc_url(wp_get_attachment_url($listing_image)); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" loading="lazy" width="424" height="282">
                   </figure>
                 <?php else: ?>
                   <figure class="p-product-list-item-img">
