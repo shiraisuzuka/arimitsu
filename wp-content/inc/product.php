@@ -481,36 +481,71 @@ function save_product_custom_fields($post_id) {
 add_action('save_post', 'save_product_custom_fields');
 
 /**
+ * 管理画面でメディアライブラリを有効化
+ */
+function product_enqueue_admin_scripts($hook) {
+    global $post_type;
+    
+    if (($hook == 'post-new.php' || $hook == 'post.php') && $post_type == 'product') {
+        wp_enqueue_media();
+        
+        wp_enqueue_script('media-upload');
+        wp_enqueue_script('thickbox');
+        wp_enqueue_style('thickbox');
+        
+        wp_add_inline_script('media-upload', '
+            jQuery(document).ready(function($) {
+                if (typeof wp !== "undefined" && typeof wp.media !== "undefined") {
+                    console.log("WordPress media library is loaded");
+                } else {
+                    console.error("WordPress media library is not loaded");
+                }
+            });
+        ');
+    }
+}
+add_action('admin_enqueue_scripts', 'product_enqueue_admin_scripts');
+
+/**
  * 管理画面にメディアアップローダーのJavaScriptを追加
  */
 function product_admin_scripts() {
     global $post_type;
     if ($post_type == 'product') {
-        wp_enqueue_media();
         ?>
-        <script>
-        function openMediaUploader(inputId, previewId) {
-            var mediaUploader = wp.media({
-                title: '画像を選択',
-                button: {
-                    text: '選択'
-                },
-                multiple: false
-            });
+        <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            if (typeof wp === 'undefined' || typeof wp.media === 'undefined') {
+                console.error('WordPress media library is not available');
+                return;
+            }
             
-            mediaUploader.on('select', function() {
-                var attachment = mediaUploader.state().get('selection').first().toJSON();
-                document.getElementById(inputId).value = attachment.id;
-                document.getElementById(previewId).innerHTML = '<img src="' + attachment.url + '" style="max-width: 200px; height: auto;" />';
-            });
+            window.openMediaUploader = function(inputId, previewId) {
+                var mediaUploader = wp.media({
+                    title: '画像を選択',
+                    button: {
+                        text: '選択'
+                    },
+                    multiple: false,
+                    library: {
+                        type: 'image'
+                    }
+                });
+                
+                mediaUploader.on('select', function() {
+                    var attachment = mediaUploader.state().get('selection').first().toJSON();
+                    $('#' + inputId).val(attachment.id);
+                    $('#' + previewId).html('<img src="' + attachment.url + '" style="max-width: 200px; height: auto;" />');
+                });
+                
+                mediaUploader.open();
+            };
             
-            mediaUploader.open();
-        }
-        
-        function removeImage(inputId, previewId) {
-            document.getElementById(inputId).value = '';
-            document.getElementById(previewId).innerHTML = '';
-        }
+            window.removeImage = function(inputId, previewId) {
+                $('#' + inputId).val('');
+                $('#' + previewId).html('');
+            };
+        });
         </script>
         <?php
     }

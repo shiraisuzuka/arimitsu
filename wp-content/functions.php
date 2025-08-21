@@ -355,4 +355,18 @@ include get_template_directory() . '/inc/news.php';
   - AJAX処理の設定
 */
 include get_template_directory() . '/inc/ajax.php';
+
+
+/**
+ * 管理画面でjQueryを有効化（メディアアップローダー用）
+ */
+function admin_enqueue_jquery($hook) {
+    if (($hook == 'post-new.php' || $hook == 'post.php')) {
+        global $post_type;
+        if ($post_type == 'product') {
+            wp_enqueue_script('jquery');
+        }
+    }
+}
+add_action('admin_enqueue_scripts', 'admin_enqueue_jquery');
 ?>
