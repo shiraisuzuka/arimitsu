@@ -102,9 +102,9 @@
                 <li>
                   <a href="<?php page_path('recruit/recruitment'); ?>">募集要項</a>
                 </li>
-                <li>
+                <!-- <li>
                   <a href="<?php page_path('recruit/interview'); ?>">有光を知る</a>
-                </li>
+                </li> -->
                 <li>
                   <a href="<?php page_path('recruit/qanda'); ?>">Q&A</a>
                 </li>
