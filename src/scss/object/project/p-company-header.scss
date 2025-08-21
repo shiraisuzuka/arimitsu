@@ -1,0 +1,58 @@
+@use 'foundation' as *;
+
+.p-company-header {
+  overflow: hidden;
+
+  &-inner {
+    display: grid;
+    gap: 5rem 0;
+    @include mq(ovsp) {
+      display: flex;
+      justify-content: space-between;
+      gap: 0 10rem;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      padding-left: calc(50vw - 50%);
+    }
+  }
+
+  &-contents {
+    flex-shrink: 0;
+  }
+
+  &-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: calc(77/56);
+    @include mq(ovsp) {
+      font-size: 5.6rem;
+    }
+  }
+
+  &-text {
+    margin: 5rem 0 0;
+    font-family: var(--font-biz);
+    font-size: 1.6rem;
+    line-height: calc(42/18);
+    @include mq(ovsp) {
+      font-size: 1.8rem;
+    }
+  }
+
+  figure {
+    width: 100%;
+    aspect-ratio: 994 / 600;
+    border-radius: 2.4rem 0 0 2.4rem;
+    overflow: hidden;
+    @include mq(ovsp) {
+      width: 99.4rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 2.4rem 0 0 2.4rem;
+    }
+  }
+}

@@ -54,12 +54,12 @@
   
   // 各製品項目に対応する画像とテキストのデータ
   const productData = [
-    { image: themeData.assetsUrl + '/images/img_product_01.jpg', text: 'agriculture' },
-    { image: themeData.assetsUrl + '/images/img_product_02.jpg', text: 'pump' },
-    { image: themeData.assetsUrl + '/images/img_product_03.jpg', text: 'washer' },
-    { image: themeData.assetsUrl + '/images/img_product_04.jpg', text: 'attachment' },
-    { image: themeData.assetsUrl + '/images/img_product_05.jpg', text: 'mist' },
-    { image: themeData.assetsUrl + '/images/img_product_06.jpg', text: 'other' }
+    { image: 'images/img_product_01.jpg', text: 'agriculture' },
+    { image: 'images/img_product_02.jpg', text: 'pump' },
+    { image: 'images/img_product_03.jpg', text: 'washer' },
+    { image: 'images/img_product_04.jpg', text: 'attachment' },
+    { image: 'images/img_product_05.jpg', text: 'mist' },
+    { image: 'images/img_product_06.jpg', text: 'other' }
   ];
 
   // デフォルトの画像とテキストを保存
@@ -256,4 +256,21 @@
       });
     });
   }
+
+  // 内部リンクスクロールアニメーション ----------------------------------------------//
+  const anchorLinks = document.querySelectorAll('a[href^="#"]');
+  const anchorLinksArr = Array.prototype.slice.call(anchorLinks);
+  
+  anchorLinksArr.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const targetId = link.hash;
+      const targetElement = document.querySelector(targetId);
+      const targetOffsetTop = window.pageYOffset + targetElement.getBoundingClientRect().top;
+      window.scrollTo({
+        top: targetOffsetTop,
+        behavior: "smooth"
+      });
+    });
+  });
 })();
