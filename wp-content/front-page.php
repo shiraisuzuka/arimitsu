@@ -81,7 +81,10 @@
             <h2 class="c-title-ja">製品</h2>
             <p class="c-title-en">products</p>
           </hgroup>
-          <a href="<?php page_path('product'); ?>" class="c-link-btn u-hide-sp">製品一覧<i class="c-icon arrow-right"></i></a>
+          <div class="p-top-product-header-btn">
+            <a href="<?php page_path('product'); ?>" class="c-link-btn u-hide-sp">製品一覧<i class="c-icon arrow-right"></i></a>
+            <a href="<?php page_path('catalog'); ?>" class="c-link-btn u-hide-sp">カタログ一覧<i class="c-icon arrow-right"></i></a>
+          </div>
         </div>
         <ul class="p-top-product-list">
           <li class="p-top-product-item js-animation">
@@ -92,7 +95,7 @@
                   <h3 class="p-top-product-item-title">農業機械</h3>
                 </a>
                 <div class="p-top-product-item-col">
-                  <a href="DUMMY">カタログ一覧</a>
+                  <a href="DUMMY">カタログ</a>
                   <a href="DUMMY" target="_blank">動画一覧</a>
                 </div>
               </div>
@@ -106,7 +109,7 @@
                   <h3 class="p-top-product-item-title">ポンプ</h3>
                 </a>
                 <div class="p-top-product-item-col">
-                  <a href="DUMMY">カタログ一覧</a>
+                  <a href="DUMMY">カタログ</a>
                   <a href="DUMMY" target="_blank">動画一覧</a>
                 </div>
               </div>
@@ -120,7 +123,7 @@
                   <h3 class="p-top-product-item-title">洗浄機</h3>
                 </a>
                 <div class="p-top-product-item-col">
-                  <a href="DUMMY">カタログ一覧</a>
+                  <a href="DUMMY">カタログ</a>
                   <a href="DUMMY" target="_blank">動画一覧</a>
                 </div>
               </div>
@@ -134,7 +137,7 @@
                   <h3 class="p-top-product-item-title">アタッチメント <span>（洗浄機のノズル等）</span></h3>
                 </a>
                 <div class="p-top-product-item-col">
-                  <a href="DUMMY">カタログ一覧</a>
+                  <a href="DUMMY">カタログ</a>
                   <a href="DUMMY" target="_blank">動画一覧</a>
                 </div>
               </div>
@@ -148,7 +151,7 @@
                   <h3 class="p-top-product-item-title">ミスト</h3>
                 </a>
                 <div class="p-top-product-item-col">
-                  <a href="DUMMY">カタログ一覧</a>
+                  <a href="DUMMY">カタログ</a>
                   <a href="DUMMY" target="_blank">動画一覧</a>
                 </div>
               </div>
@@ -162,7 +165,7 @@
                   <h3 class="p-top-product-item-title">その他 <span>（オートマット、トルミング等）</span></h3>
                 </a>
                 <div class="p-top-product-item-col">
-                  <a href="DUMMY">カタログ一覧</a>
+                  <a href="DUMMY">カタログ</a>
                   <a href="DUMMY" target="_blank">動画一覧</a>
                 </div>
               </div>
@@ -170,6 +173,7 @@
           </li>
         </ul>
         <a href="<?php page_path('product'); ?>" class="c-link-btn u-hide-pc js-animation">製品一覧<i class="c-icon arrow-right"></i></a>
+        <a href="<?php page_path('catalog'); ?>" class="c-link-btn u-hide-pc js-animation">カタログ一覧<i class="c-icon arrow-right"></i></a>
       </div>
     </div>
     <figure class="p-top-product-image js-animation">

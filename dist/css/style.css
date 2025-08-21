@@ -2387,6 +2387,10 @@ figure {
 .p-top-product-header .c-title {
   text-align: center;
 }
+.p-top-product-header-btn {
+  display: grid;
+  gap: 1rem;
+}
 .p-top-product-contents {
   width: 100%;
 }

@@ -223,6 +223,11 @@
       .c-title {
         text-align: center;
       }
+
+      &-btn {
+        display: grid;
+        gap: 1rem;
+      }
     }
 
     &-contents {
