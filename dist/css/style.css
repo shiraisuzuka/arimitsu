@@ -252,6 +252,37 @@ figure {
   }
 }
 
+.c-header {
+  padding: 6rem 0 0;
+}
+.c-header .l-section-inner {
+  display: grid;
+  gap: 2rem 5rem;
+}
+@media screen and (min-width: 768px) {
+  .c-header .l-section-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.c-header hgroup {
+  flex-shrink: 0;
+}
+.c-header figure {
+  width: 100%;
+  max-width: 79.4rem;
+  aspect-ratio: 794/300;
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+.c-header figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1.2rem;
+}
+
 .c-icon {
   display: inline-block;
   transition: background 0.3s ease;
@@ -490,6 +521,34 @@ figure {
   .c-table th {
     width: 19.5rem;
   }
+}
+.c-table td ul li {
+  margin-left: 1em;
+  text-indent: -1em;
+}
+.c-table td ul li::before {
+  content: "●";
+}
+.c-table td a {
+  padding-left: 0.5rem;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+@media (any-hover: hover) {
+  .c-table td a:hover {
+    text-decoration: none;
+    color: var(--color-green);
+  }
+}
+.c-table .map {
+  margin: 2rem 0 0;
+  aspect-ratio: 560/200;
+}
+.c-table .map iframe {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .c-title-ja {
@@ -1258,6 +1317,44 @@ figure {
   }
 }
 
+.p-company-tab {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.p-company-tab .tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12.3rem;
+  height: 4.8rem;
+  padding: 1rem;
+  border: 1px solid var(--color-gray);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+.p-company-tab .tab.is-active {
+  background-color: var(--color-green);
+  color: var(--color-white);
+  border-color: var(--color-green);
+}
+@media (any-hover: hover) {
+  .p-company-tab .tab:hover {
+    background-color: var(--color-green);
+    color: var(--color-white);
+    border-color: var(--color-green);
+  }
+}
+.p-company-tab-panel .panel {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.p-company-tab-panel .panel.is-show {
+  display: block;
+  opacity: 1;
+}
+
 .p-link-contact {
   display: grid;
   margin: 6rem 0 0;
@@ -1297,6 +1394,84 @@ figure {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--color-green);
+}
+
+.p-organization {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  line-height: 1.5;
+}
+.p-organization span {
+  display: block;
+}
+.p-organization .row1 {
+  grid-column: span 4/span 4;
+}
+.p-organization .row2 {
+  grid-column: span 4/span 4;
+  grid-row-start: 2;
+}
+.p-organization .col1 {
+  grid-row-start: 3;
+}
+.p-organization .col1 > * + * {
+  margin-top: 1rem;
+}
+.p-organization .col2 {
+  grid-column: span 2/span 2;
+  grid-row-start: 3;
+}
+.p-organization .col2 .col {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem 0;
+  margin: 1.5rem 0 0;
+}
+.p-organization .col2 .col > div > div + div {
+  margin-top: 1rem;
+}
+.p-organization .col2 .col > div ul {
+  padding-left: 2rem;
+}
+.p-organization .col3 {
+  grid-column-start: 4;
+  grid-row-start: 3;
+}
+.p-organization .col3 > * + * {
+  margin-top: 1rem;
+}
+.p-organization .col3 > * > * + * {
+  margin-top: 1rem;
+}
+.p-organization .gl1 {
+  padding: 1rem 2rem;
+  background-color: #bde3aa;
+}
+.p-organization .gl2 {
+  padding: 1rem 2rem;
+  background-color: #c8eadc;
+}
+.p-organization .wh1 {
+  color: #4a7850;
+  background-color: #FFF;
+  padding: 0.5rem 1.5rem;
+}
+.p-organization ul {
+  margin: 1rem 0 0;
+}
+.p-organization ul li {
+  font-size: 1.3rem;
+}
+.p-organization ul li::before {
+  content: "";
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #FFF;
+  border-radius: 50%;
+  margin-right: 0.8rem;
 }
 
 .p-pagination {
