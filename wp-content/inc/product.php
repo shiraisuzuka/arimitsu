@@ -445,82 +445,7 @@ function product_description_callback($post) {
     <?php
 }
 
-/**
- * 製品の必須項目バリデーション（保存前チェック）
- */
-function validate_product_required_fields($post_id, $post, $update) {
-    try {
-        if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
-        if (function_exists('wp_is_post_revision') && wp_is_post_revision($post_id)) return;
-        
-        if (!isset($post->post_type) || $post->post_type !== 'product') return;
-        
-        if (!current_user_can('edit_post', $post_id)) return;        
-        
-        if (!isset($_POST) || empty($_POST)) {
-            error_log("No POST data found, skipping validation");
-            return;
-        }
-        
-        error_log("POST data keys: " . implode(', ', array_keys($_POST)));
-        
-        if (!isset($_POST['product_nonce'])) {
-            error_log("No nonce found, skipping validation");
-            return;
-        }
-        
-        if (!wp_verify_nonce($_POST['product_nonce'], basename(__FILE__))) {
-            error_log("Nonce verification failed");
-            return;
-        }
-        
-        error_log("Starting validation checks...");
-        
-        if (isset($_POST['product_listing_image']) && empty($_POST['product_listing_image'])) {
-            error_log("Validation failed: empty listing image");
-            wp_die('必須項目「一覧画像」が未入力です。<br><a href="javascript:history.back()">戻る</a>');
-        }
-        if (isset($_POST['product_basic_copy']) && empty($_POST['product_basic_copy'])) {
-            error_log("Validation failed: empty basic copy");
-            wp_die('必須項目「コピー」が未入力です。<br><a href="javascript:history.back()">戻る</a>');
-        }
-        if (isset($_POST['product_catalog_pdf']) && empty($_POST['product_catalog_pdf'])) {
-            error_log("Validation failed: empty catalog PDF");
-            wp_die('必須項目「カタログのPDFリンク」が未入力です。<br><a href="javascript:history.back()">戻る</a>');
-        }
-        
-        if (isset($_POST['product_lineup']) && is_array($_POST['product_lineup']) && !empty($_POST['product_lineup'])) {
-            foreach ($_POST['product_lineup'] as $index => $lineup) {
-                if (!is_array($lineup)) continue;
-                
-                $lineup_num = $index + 1;
-                
-                $has_any_content = (!empty($lineup['image']) || 
-                                   !empty($lineup['model']) || 
-                                   !empty($lineup['name']) || 
-                                   !empty($lineup['link']));
-                
-                if ($has_any_content) {
-                    if (empty($lineup['image'])) {
-                        error_log("Validation failed: lineup $lineup_num missing image");
-                        wp_die("必須項目「製品ラインナップ {$lineup_num} の画像」が未入力です。<br><a href=\"javascript:history.back()\">戻る</a>");
-                    }
-                    if (empty($lineup['link'])) {
-                        error_log("Validation failed: lineup $lineup_num missing link");
-                        wp_die("必須項目「製品ラインナップ {$lineup_num} のリンク設定」が未入力です。<br><a href=\"javascript:history.back()\">戻る</a>");
-                    }
-                }
-            }
-        }
-        
-        error_log("Validation passed successfully");
-        
-    } catch (Exception $e) {
-        error_log("Validation error: " . $e->getMessage());
-        error_log("Stack trace: " . $e->getTraceAsString());
-        return;
-    }
-}
+
 
 /**
  * 製品のカスタムフィールド保存処理
@@ -628,73 +553,7 @@ function save_product_custom_fields($post_id, $post, $update) {
     }
 }
 
-// REST API経由での保存時のバリデーション（ブロックエディタ用）
-function validate_product_rest_api($prepared_post, $request) {
-    // productタイプ以外はスキップ
-    if ($prepared_post->post_type !== 'product') {
-        return $prepared_post;
-    }
-    
-    // 下書きや自動保存はスキップ
-    if ($prepared_post->post_status === 'auto-draft' || 
-        (isset($request['meta']) && empty($request['meta']))) {
-        return $prepared_post;
-    }
-    
-    try {
-        $errors = array();
-        
-        $meta = isset($request['meta']) ? $request['meta'] : array();
-        
-        // 基本情報の必須チェック
-        $listing_image = isset($meta['_product_listing_image']) ? $meta['_product_listing_image'] : '';
-        $basic_copy = isset($meta['_product_basic_copy']) ? $meta['_product_basic_copy'] : '';
-        $catalog_pdf = isset($meta['_product_catalog_pdf']) ? $meta['_product_catalog_pdf'] : '';
-        
-        if (empty($listing_image)) {
-            $errors[] = '一覧画像は必須項目です。';
-        }
-        if (empty($basic_copy)) {
-            $errors[] = 'コピーは必須項目です。';
-        }
-        if (empty($catalog_pdf)) {
-            $errors[] = 'カタログのPDFリンクは必須項目です。';
-        }
-        
-        // 製品ラインナップのバリデーション
-        $lineup_data = isset($meta['_product_lineup_data']) ? $meta['_product_lineup_data'] : array();
-        if (!empty($lineup_data) && is_array($lineup_data)) {
-            foreach ($lineup_data as $index => $lineup) {
-                $has_content = !empty($lineup['image']) || !empty($lineup['model']) || 
-                              !empty($lineup['name']) || !empty($lineup['link']);
-                
-                if ($has_content) {
-                    $lineup_num = $index + 1;
-                    if (empty($lineup['image'])) {
-                        $errors[] = "製品ラインナップ {$lineup_num} の画像は必須項目です。";
-                    }
-                    if (empty($lineup['link'])) {
-                        $errors[] = "製品ラインナップ {$lineup_num} のリンク設定は必須項目です。";
-                    }
-                }
-            }
-        }
-        
-        if (!empty($errors)) {
-            error_log('Product REST API validation failed: ' . print_r($errors, true));
-            return new WP_Error(
-                'product_validation_failed',
-                '保存できませんでした。必須項目を確認してください：' . implode(' ', $errors),
-                array('status' => 400)
-            );
-        }
-        
-    } catch (Exception $e) {
-        error_log('Product validation exception: ' . $e->getMessage());
-    }
-    
-    return $prepared_post;
-}
+
 add_action('save_post', 'save_product_custom_fields', 10, 3);
 
 
@@ -713,16 +572,7 @@ function product_enqueue_admin_scripts($hook) {
         wp_enqueue_script('thickbox');
         wp_enqueue_style('thickbox');
         
-        wp_add_inline_script('media-upload', '
-            jQuery(document).ready(function($) {
-                // メディアアップローダーが正しく初期化されるまで待機
-                if (typeof wp !== "undefined" && typeof wp.media !== "undefined") {
-                    console.log("WordPress media library is loaded");
-                } else {
-                    console.error("WordPress media library is not loaded");
-                }
-            });
-        ');
+
     }
 }
 add_action('admin_enqueue_scripts', 'product_enqueue_admin_scripts');
@@ -737,7 +587,6 @@ function product_admin_scripts() {
         <script type="text/javascript">
         jQuery(document).ready(function($) {
             if (typeof wp === 'undefined' || typeof wp.media === 'undefined') {
-                console.error('WordPress media library is not available');
                 return;
             }
             
@@ -883,7 +732,8 @@ function product_admin_scripts() {
             
             toggleRemoveButtons();
             
-            $('form#post').on('submit', function(e) {
+            // バリデーション関数を統合
+            function validateProductFields() {
                 var hasError = false;
                 var errorMessages = [];
                 
@@ -909,11 +759,11 @@ function product_admin_scripts() {
                 $('.lineup-entry').each(function(index) {
                     var $entry = $(this);
                     var image = $entry.find('.lineup-image-input').val();
-                    var model = $entry.find('.lineup-model').val().trim();
-                    var name = $entry.find('.lineup-name').val().trim();
-                    var link = $entry.find('.lineup-link').val().trim();
+                    var model = $entry.find('.lineup-model').val();
+                    var name = $entry.find('.lineup-name').val();
+                    var link = $entry.find('.lineup-link').val();
                     
-                    var hasAnyContent = image || model || name || link;
+                    var hasAnyContent = image || (model && model.trim()) || (name && name.trim()) || (link && link.trim());
                     
                     if (hasAnyContent) {
                         var lineupNum = index + 1;
@@ -921,130 +771,40 @@ function product_admin_scripts() {
                             hasError = true;
                             errorMessages.push('製品ラインナップ ' + lineupNum + ' の画像は必須項目です。');
                         }
-                        if (!link) {
+                        if (!link || !link.trim()) {
                             hasError = true;
                             errorMessages.push('製品ラインナップ ' + lineupNum + ' のリンク設定は必須項目です。');
                         }
                     }
                 });
                 
-                if (hasError) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    alert('保存できませんでした。以下の項目を確認してください：\n\n• ' + errorMessages.join('\n• '));
-                    return false;
-                }
-            });
+                return { hasError: hasError, errorMessages: errorMessages };
+            }
             
-            $('#publish, #save-post').on('click', function(e) {
-                var hasError = false;
-                var errorMessages = [];
+            // フォーム送信時とボタンクリック時の共通処理
+            function handleValidation(e) {
+                var validation = validateProductFields();
                 
-                // 基本情報の必須チェック
-                if (!$('#product_listing_image').val()) {
-                    hasError = true;
-                    errorMessages.push('一覧画像は必須項目です。');
-                }
-                if (!$('#product_basic_copy').val().trim()) {
-                    hasError = true;
-                    errorMessages.push('コピーは必須項目です。');
-                }
-                if (!$('#product_catalog_pdf').val().trim()) {
-                    hasError = true;
-                    errorMessages.push('カタログのPDFリンクは必須項目です。');
-                }
-                
-                // 製品ラインナップのバリデーション
-                $('.lineup-entry').each(function(index) {
-                    var $entry = $(this);
-                    var image = $entry.find('.lineup-image-input').val();
-                    var model = $entry.find('.lineup-model').val().trim();
-                    var name = $entry.find('.lineup-name').val().trim();
-                    var link = $entry.find('.lineup-link').val().trim();
-                    
-                    var hasAnyContent = image || model || name || link;
-                    
-                    if (hasAnyContent) {
-                        var lineupNum = index + 1;
-                        if (!image) {
-                            hasError = true;
-                            errorMessages.push('製品ラインナップ ' + lineupNum + ' の画像は必須項目です。');
-                        }
-                        if (!link) {
-                            hasError = true;
-                            errorMessages.push('製品ラインナップ ' + lineupNum + ' のリンク設定は必須項目です。');
-                        }
-                    }
-                });
-                
-                if (hasError) {
+                if (validation.hasError) {
                     e.preventDefault();
                     e.stopImmediatePropagation();
-                    alert('保存できませんでした。以下の項目を確認してください：\n\n• ' + errorMessages.join('\n• '));
+                    alert('保存できませんでした。以下の項目を確認してください：\n\n• ' + validation.errorMessages.join('\n• '));
                     return false;
                 }
-            });
+            }
             
+            $('form#post').on('submit', handleValidation);
+            $('#publish, #save-post').on('click', handleValidation);
+            
+            // ブロックエディタ用のAPI Fetchインターセプト
             if (typeof wp !== 'undefined' && wp.data && wp.apiFetch) {
-                
-                function validateProductFields() {
-                    var hasError = false;
-                    var errorMessages = [];
-                    
-                    // 基本情報の必須チェック
-                    var listingImage = $('#product_listing_image').val();
-                    var basicCopy = $('#product_basic_copy').val();
-                    var catalogPdf = $('#product_catalog_pdf').val();
-                    
-                    if (!listingImage) {
-                        hasError = true;
-                        errorMessages.push('一覧画像は必須項目です。');
-                    }
-                    if (!basicCopy || !basicCopy.trim()) {
-                        hasError = true;
-                        errorMessages.push('コピーは必須項目です。');
-                    }
-                    if (!catalogPdf || !catalogPdf.trim()) {
-                        hasError = true;
-                        errorMessages.push('カタログのPDFリンクは必須項目です。');
-                    }
-                    
-                    // 製品ラインナップのバリデーション
-                    $('.lineup-entry').each(function(index) {
-                        var $entry = $(this);
-                        var image = $entry.find('.lineup-image-input').val();
-                        var model = $entry.find('.lineup-model').val();
-                        var name = $entry.find('.lineup-name').val();
-                        var link = $entry.find('.lineup-link').val();
-                        
-                        var hasAnyContent = image || (model && model.trim()) || (name && name.trim()) || (link && link.trim());
-                        
-                        if (hasAnyContent) {
-                            var lineupNum = index + 1;
-                            if (!image) {
-                                hasError = true;
-                                errorMessages.push('製品ラインナップ ' + lineupNum + ' の画像は必須項目です。');
-                            }
-                            if (!link || !link.trim()) {
-                                hasError = true;
-                                errorMessages.push('製品ラインナップ ' + lineupNum + ' のリンク設定は必須項目です。');
-                            }
-                        }
-                    });
-                    
-                    return { hasError: hasError, errorMessages: errorMessages };
-                }
-                
-                // API Fetchをインターセプトして保存をブロック
                 wp.apiFetch.use(function(options, next) {
-                    // product投稿の保存/更新リクエストをチェック
                     if (options.path && options.path.includes('/wp/v2/product') && 
                         (options.method === 'POST' || options.method === 'PUT')) {
                         
                         var validation = validateProductFields();
                         
                         if (validation.hasError) {
-                            
                             wp.data.dispatch('core/notices').createErrorNotice(
                                 '保存できませんでした。必須項目を確認してください。',
                                 { id: 'product-validation-error', isDismissible: true }
@@ -1097,12 +857,6 @@ function get_product_lineup_data($post_id) {
     return array();
 }
 
-/**
- * 製品ラインナップの最初のエントリーを取得するヘルパー関数
- */
-function get_product_first_lineup($post_id) {
-    $lineup_data = get_product_lineup_data($post_id);
-    return !empty($lineup_data) ? $lineup_data[0] : null;
-}
+
 ?>
 
