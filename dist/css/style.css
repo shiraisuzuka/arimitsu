@@ -1205,6 +1205,9 @@ figure {
   font-weight: 500;
   border-bottom: 1px solid var(--color-gray);
 }
+.p-company-row-title span {
+  font-size: 2.4rem;
+}
 .p-company-row-text > * + * {
   margin-top: 4rem;
 }
