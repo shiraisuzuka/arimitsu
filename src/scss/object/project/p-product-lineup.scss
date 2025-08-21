@@ -75,13 +75,18 @@
       }
     }
 
-    &-text {
+    &-contents {
       margin: 1.5rem 0 0;
+      @include mq(ovsp) {
+        margin: 2rem 0 0;
+      }
+    }
+
+    &-text {
       font-size: 1.2rem;
       font-weight: 500;
       line-height: calc(18 / 12);
       @include mq(ovsp) {
-        margin: 2rem 0 0;
         font-size: 1.8rem;
       }
     }

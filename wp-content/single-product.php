@@ -88,62 +88,40 @@
   </div>
 </section>
 
-<?php 
-// 現在の投稿の「製品から選ぶ」カテゴリーを取得
-$current_product_categories = get_post_meta(get_the_ID(), '_product_categories', true);
-if (!is_array($current_product_categories)) {
-  $current_product_categories = array();
-}
-
-// 同じカテゴリーの製品を取得
-$related_products = array();
-if (!empty($current_product_categories)) {
-  $args = array(
-    'post_type' => 'product',
-    'posts_per_page' => -1,
-    'post_status' => 'publish',
-    'post__not_in' => array(get_the_ID()),
-    'meta_query' => array(
-      'relation' => 'OR'
-    )
-  );
-  
-  // 各カテゴリーに対してメタクエリを追加
-  foreach ($current_product_categories as $category) {
-    $args['meta_query'][] = array(
-      'key' => '_product_categories',
-      'value' => $category,
-      'compare' => 'LIKE'
-    );
-  }
-  
-  $query = new WP_Query($args);
-  if ($query->have_posts()) {
-    $related_products = $query->posts;
-  }
-  wp_reset_postdata();
-}
-
-if (!empty($related_products)): ?>
 <section class="p-product-lineup l-section-small">
+<?php 
+// 現在の投稿の製品ラインナップデータを取得
+$lineup_data = get_product_lineup_data(get_the_ID());
+
+// 空でないエントリーがあるかチェック
+$has_valid_lineup = false;
+if (!empty($lineup_data)) {
+  foreach ($lineup_data as $lineup) {
+    if (!empty($lineup['image']) || !empty($lineup['model']) || !empty($lineup['name']) || !empty($lineup['link'])) {
+      $has_valid_lineup = true;
+      break;
+    }
+  }
+}
+
+if ($has_valid_lineup): ?>
   <div class="p-product-lineup-inner l-section-inner">
     <h2 class="p-product-lineup-title">製品ラインナップ</h2>
     <ul class="p-product-lineup-list" id="product-lineup-list">
       <?php 
       $initial_count = 10;
-      $total_count = count($related_products);
+      $total_count = count($lineup_data);
       
       for ($i = 0; $i < min($initial_count, $total_count); $i++):
-        $product = $related_products[$i];
-        $product_id = $product->ID;
+        $lineup = $lineup_data[$i];
+        $lineup_image = $lineup['image'];
+        $lineup_model = $lineup['model'];
+        $lineup_name = $lineup['name'];
+        $lineup_link = $lineup['link'];
         
-        $lineup_image = get_post_meta($product_id, '_product_lineup_image', true);
-        $lineup_model = get_post_meta($product_id, '_product_lineup_model', true);
-        $lineup_name = get_post_meta($product_id, '_product_lineup_name', true);
-        $lineup_link = get_post_meta($product_id, '_product_lineup_link', true);
-        
+        // 画像が設定されていない場合は製品画像1を使用
         if (!$lineup_image) {
-          $lineup_image = get_post_meta($product_id, '_product_image1', true);
+          $lineup_image = get_post_meta(get_the_ID(), '_product_image1', true);
         }
         
         $item_class = $i >= $initial_count ? 'p-product-lineup-item hidden-item' : 'p-product-lineup-item';
@@ -152,11 +130,11 @@ if (!empty($related_products)): ?>
         <?php if ($lineup_link): ?>
         <a href="<?php echo esc_url($lineup_link); ?>" target="_blank">
         <?php else: ?>
-        <a href="<?php echo esc_url(get_permalink($product_id)); ?>">
+        <a href="<?php echo esc_url(get_permalink()); ?>">
         <?php endif; ?>
           <?php if ($lineup_image): ?>
           <figure class="p-product-lineup-item-img">
-            <img src="<?php echo esc_url(wp_get_attachment_url($lineup_image)); ?>" alt="<?php echo esc_attr($lineup_name ? $lineup_name : get_the_title($product_id)); ?>" loading="lazy" width="424" height="282">
+            <img src="<?php echo esc_url(wp_get_attachment_url($lineup_image)); ?>" alt="<?php echo esc_attr($lineup_name ? $lineup_name : get_the_title()); ?>" loading="lazy" width="424" height="282">
           </figure>
           <?php endif; ?>
           <div class="p-product-lineup-item-contents">
@@ -165,14 +143,10 @@ if (!empty($related_products)): ?>
             <?php endif; ?>
             <?php if ($lineup_name): ?>
               <h3 class="p-product-lineup-item-title"><?php echo nl2br(esc_html($lineup_name)); ?></h3>
-            <?php else: ?>
-              <h3 class="p-product-lineup-item-title"><?php echo esc_html(get_the_title($product_id)); ?></h3>
             <?php endif; ?>
           </div>
           <?php if ($lineup_link): ?>
             <div class="c-link-btn">仕様表［PDF］<i class="c-icon arrow-right"></i></div>
-          <?php else: ?>
-            <div class="c-link-btn">詳細を見る<i class="c-icon arrow-right"></i></div>
           <?php endif; ?>
         </a>
       </li>
@@ -182,27 +156,26 @@ if (!empty($related_products)): ?>
       // 隠れているアイテムを追加
       if ($total_count > $initial_count):
         for ($i = $initial_count; $i < $total_count; $i++):
-          $product = $related_products[$i];
-          $product_id = $product->ID;
+          $lineup = $lineup_data[$i];
+          $lineup_image = $lineup['image'];
+          $lineup_model = $lineup['model'];
+          $lineup_name = $lineup['name'];
+          $lineup_link = $lineup['link'];
           
-          $lineup_image = get_post_meta($product_id, '_product_lineup_image', true);
-          $lineup_model = get_post_meta($product_id, '_product_lineup_model', true);
-          $lineup_name = get_post_meta($product_id, '_product_lineup_name', true);
-          $lineup_link = get_post_meta($product_id, '_product_lineup_link', true);
-          
+          // 画像が設定されていない場合は製品画像1を使用
           if (!$lineup_image) {
-            $lineup_image = get_post_meta($product_id, '_product_image1', true);
+            $lineup_image = get_post_meta(get_the_ID(), '_product_image1', true);
           }
       ?>
       <li class="p-product-lineup-item hidden-item" style="display: none;">
         <?php if ($lineup_link): ?>
         <a href="<?php echo esc_url($lineup_link); ?>" target="_blank">
         <?php else: ?>
-        <a href="<?php echo esc_url(get_permalink($product_id)); ?>">
+        <a href="<?php echo esc_url(get_permalink()); ?>">
         <?php endif; ?>
           <?php if ($lineup_image): ?>
           <figure class="p-product-lineup-item-img">
-            <img src="<?php echo esc_url(wp_get_attachment_url($lineup_image)); ?>" alt="<?php echo esc_attr($lineup_name ? $lineup_name : get_the_title($product_id)); ?>" loading="lazy" width="424" height="282">
+            <img src="<?php echo esc_url(wp_get_attachment_url($lineup_image)); ?>" alt="<?php echo esc_attr($lineup_name ? $lineup_name : get_the_title()); ?>" loading="lazy" width="424" height="282">
           </figure>
           <?php endif; ?>
           <div class="p-product-lineup-item-contents">
@@ -212,7 +185,7 @@ if (!empty($related_products)): ?>
             <?php if ($lineup_name): ?>
               <h3 class="p-product-lineup-item-title"><?php echo nl2br(esc_html($lineup_name)); ?></h3>
             <?php else: ?>
-              <h3 class="p-product-lineup-item-title"><?php echo esc_html(get_the_title($product_id)); ?></h3>
+              <h3 class="p-product-lineup-item-title"><?php echo esc_html(get_the_title()); ?></h3>
             <?php endif; ?>
           </div>
           <?php if ($lineup_link): ?>

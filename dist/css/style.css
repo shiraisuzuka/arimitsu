@@ -1762,15 +1762,21 @@ figure {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.p-product-lineup-item-text {
+.p-product-lineup-item-contents {
   margin: 1.5rem 0 0;
+}
+@media screen and (min-width: 768px) {
+  .p-product-lineup-item-contents {
+    margin: 2rem 0 0;
+  }
+}
+.p-product-lineup-item-text {
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.5;
 }
 @media screen and (min-width: 768px) {
   .p-product-lineup-item-text {
-    margin: 2rem 0 0;
     font-size: 1.8rem;
   }
 }
