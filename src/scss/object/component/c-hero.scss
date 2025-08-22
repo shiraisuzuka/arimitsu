@@ -20,6 +20,11 @@
     flex-shrink: 0;
   }
 
+  &-sub {
+    display: block;
+    color: var(--color-green);
+  }
+
   &-title {
     font-size: 3.2rem;
     font-weight: 700;

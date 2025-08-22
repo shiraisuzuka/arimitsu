@@ -396,3 +396,136 @@
     }
   }
 }
+
+
+/* 採用ページ用 */
+.l-header.recruit {
+  background-color: var(--color-green);
+
+  .l-header-logo {
+    width: 18.6rem;
+  }
+
+  .l-header-nav-btn {
+    span {
+      background-color: #FFF;
+    }
+  }
+
+  .l-header-nav-hamburger {
+    padding: 4.5rem 1.5rem;
+    background-color: var(--color-green);
+    color: #FFF;
+  }
+
+  .l-header-nav-hamburger-item {
+    > span {
+      border-color: #FFF;
+    }
+
+    ul {
+      li {
+        a {
+          &::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='レイヤー 2' viewBox='0 0 5.78 8.73'%3E%3Cpath d='m.71.71 3.66 3.66L.71 8.02' data-name='レイヤー 1' style='fill:none;stroke:%23FFF;stroke-miterlimit:10;stroke-width:2px'/%3E%3C/svg%3E");
+          }
+        }
+      }
+    }
+  }
+
+  .l-header-nav-item {
+    > *:not(ul) {
+      &::after {
+        display: none;
+      }
+    }
+
+    a {
+      color: var(--color-white);
+      transition: opacity 0.3s ease;
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: var(--color-white);
+          opacity: 0.8;
+        }
+      }
+    }
+
+    a[target="_blank"] {
+      position: relative;
+      padding-right: 1.8rem;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        display: inline-block;
+        transform: translateY(-50%);
+        width: 0.9rem;
+        height: 0.9rem;
+        background: no-repeat 50% 50% / contain;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='_レイヤー_2' data-name='レイヤー 2' viewBox='0 0 12 12'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;stroke:%23FFF;stroke-linejoin:round%7D%3C/style%3E%3C/defs%3E%3Cg id='_レイヤー_1-2' data-name='レイヤー 1'%3E%3Cpath d='M6.33.5h5.17v5.17M9.5 7.5v4h-9v-9h4M11.5.5l-7 7' class='cls-1'/%3E%3C/g%3E%3C/svg%3E");
+            transition: background 0.3s ease;
+        transition: background 0.3s ease;
+        @include mq(ovsp) {
+          width: 1.1rem;
+          height: 1.1rem;
+        }
+      }
+    }
+  }
+
+  .l-header-nav-recruit {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 5rem;
+  }
+
+  .recruit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 18.2rem;
+    height: 4.8rem;
+    border-radius: 0.4rem;
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+    transition: filter 0.3s ease, background-color 0.3s ease;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 0.4rem;
+      height: 0.8rem;
+      background: no-repeat 50% 50% / contain;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='レイヤー 2' viewBox='0 0 4.51 8.02'%3E%3Cpath d='m.35.35 3.66 3.66L.35 7.67' data-name='レイヤー 1' style='fill:none;stroke:%23000;stroke-linejoin:round'/%3E%3C/svg%3E");
+      transition: background 0.3s ease;
+      @include mq(ovsp) {
+        width: 0.6rem;
+        height: 1rem;
+      }
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        filter: brightness(0.85);
+        background-color: var(--color-green);
+      }
+    }
+  }
+
+  .l-header-nav-hamburger-contact {
+    display: grid;
+    gap: 2rem;
+
+    .recruit-btn {
+      width: 100%;
+      height: 5.6rem;
+    }
+  }
+}

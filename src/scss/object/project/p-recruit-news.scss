@@ -1,0 +1,96 @@
+@use 'foundation' as *;
+
+.p-recruit-news {
+  display: grid;
+  gap: 3rem;
+  grid-area: list;
+  @include mq(ovsp) {
+    gap: 4rem;
+  }
+
+  a {
+    display: grid;
+    gap: 1rem 1.5rem;
+    @include mq(ovsp) {
+      grid-template-areas: "date title";
+      grid-template-columns: max-content 1fr;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        h3 {
+          color: var(--color-green);
+
+          &::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='レイヤー 2' viewBox='0 0 4.51 8.02'%3E%3Cpath d='m.35.35 3.66 3.66L.35 7.67' data-name='レイヤー 1' style='fill:none;stroke:%2364be37;stroke-linejoin:round'/%3E%3C/svg%3E");
+          }
+        }
+      }
+    }
+
+    time {
+      color: var(--color-gray2);
+      font-size: 1.2rem;
+      line-height: 1;
+      @include mq(ovsp) {
+        grid-area: date;
+        font-size: 1.4rem;
+      }
+    }
+
+    h3 {
+      position: relative;
+      font-size: 1.6rem;
+      font-weight: 500;
+      padding-right: 3rem;
+      transition: color 0.3s ease;
+      @include mq(ovsp) {
+        grid-area: title;
+        padding-right: 5rem;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        display: inline-block;
+        transform: translateY(-50%);
+        width: 0.6rem;
+        height: 1rem;
+        background: no-repeat 50% 50% / contain;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='レイヤー 2' viewBox='0 0 4.51 8.02'%3E%3Cpath d='m.35.35 3.66 3.66L.35 7.67' data-name='レイヤー 1' style='fill:none;stroke:%23000;stroke-linejoin:round'/%3E%3C/svg%3E");
+        transition: background 0.3s ease;
+        @include mq(ovsp) {
+          right: 1.8rem;
+        }
+      }
+    }
+  }
+
+  &-btn {
+    display: block;
+    width: 18.5rem;
+    height: 4.8rem;
+    margin: 4rem auto 0;
+    padding: 0;
+    background-color: transparent;
+    border: 1px solid var(--color-gray);
+    border-radius: 0.4rem;
+    text-align: center;
+    cursor: pointer;
+    transition: border 0.1s ease;
+
+    @media (any-hover: hover) {
+      &:hover {
+        border: 2px solid var(--color-green);
+      }
+    }
+
+    @include mq(ovsp) {
+      margin: 6rem auto 0;
+    }
+  }
+}
