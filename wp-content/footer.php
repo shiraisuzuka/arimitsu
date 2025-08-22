@@ -32,9 +32,6 @@
                   <a href="<?php page_path('product'); ?>">製品一覧</a>
                 </li>
                 <li>
-                  <a href="<?php page_path('product'); ?>">製品一覧</a>
-                </li>
-                <li>
                   <a href="<?php echo esc_url(get_post_type_archive_link('product') . '?product_categories[]=agricultural_machinery'); ?>">01農業機械</a>
                 </li>
                 <li>
