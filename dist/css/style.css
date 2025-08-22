@@ -86,6 +86,7 @@ select {
   --font-base: "Noto Sans JP", sans-serif;
   --font-biz: "BIZ UDPMincho", serif;
   --font-en: "Roboto", sans-serif;
+  --font-lato: "Lato", sans-serif;
   --base-font-size: 16px;
   --color-black:#000 ;
   --color-white:#FFF;
@@ -269,6 +270,9 @@ figure {
 }
 .c-header hgroup {
   flex-shrink: 0;
+}
+.c-header hgroup .c-title-en {
+  text-transform: capitalize;
 }
 .c-header figure {
   width: 100%;
@@ -2320,6 +2324,84 @@ figure {
   .p-product-wrapper-col {
     grid-template-columns: 38.8rem 1fr;
   }
+}
+
+@media screen and (min-width: 768px) {
+  .p-qanda .l-section-inner {
+    max-width: 85.4rem;
+  }
+}
+.p-qanda-lead {
+  font-weight: 400;
+}
+.p-qanda-accordion {
+  display: grid;
+  gap: 2rem;
+  margin: 4rem 0 0;
+}
+.p-qanda-accordion li {
+  background-color: #FFF;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  border-radius: 1.2rem;
+}
+.p-qanda-accordion-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 3rem 2rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .p-qanda-accordion-title {
+    padding: 3rem;
+  }
+}
+.p-qanda-accordion-title::before {
+  content: "Q";
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  font-family: var(--font-lato);
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFF;
+  background-color: var(--color-green);
+  border-radius: 50%;
+}
+.p-qanda-accordion-title::after {
+  content: "";
+  display: block;
+  margin-left: auto;
+  width: 1rem;
+  height: 1rem;
+  background: no-repeat 50% 50%/contain;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='レイヤー 2' viewBox='0 0 8.73 5.78'%3E%3Cpath d='M8.02.71 4.37 4.37.71.71' data-name='レイヤー 1' style='fill:none;stroke:%2364be37;stroke-miterlimit:10;stroke-width:2px'/%3E%3C/svg%3E");
+  transition: transform 0.3s ease;
+}
+.p-qanda-accordion-title.open::after {
+  transform: rotate(180deg);
+}
+.p-qanda-accordion-content {
+  position: relative;
+  padding: 3rem;
+  font-weight: 400;
+  display: none;
+}
+.p-qanda-accordion-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: calc(100% - 6rem);
+  height: 1px;
+  background-color: var(--color-gray);
+  transform: translateX(-50%);
 }
 
 .p-recruit-business {
