@@ -3073,6 +3073,12 @@ figure {
   display: grid;
   gap: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .p-top-product-header-btn {
+    display: flex;
+    align-items: center;
+  }
+}
 .p-top-product-contents {
   width: 100%;
 }

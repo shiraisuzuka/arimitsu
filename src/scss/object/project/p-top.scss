@@ -227,6 +227,10 @@
       &-btn {
         display: grid;
         gap: 1rem;
+        @include mq(ovsp) {
+          display: flex;
+          align-items: center;
+        }
       }
     }
 

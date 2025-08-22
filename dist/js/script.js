@@ -405,8 +405,38 @@
     });
   }
   
+  // ハッシュリンクでの遷移時のオフセット処理
+  // ----------------------------------------------//
+  function handleHashNavigation() {
+    const hash = window.location.hash;
+    if (hash) {
+      const targetElement = document.querySelector(hash);
+      if (targetElement) {
+        // 少し遅延させてヘッダーの高さが確定してから実行
+        setTimeout(() => {
+          const headerHeight = document.querySelector('.l-header').offsetHeight || 0;
+          const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+          
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }, 100);
+      }
+    }
+  }
+
+  // ハッシュ変更時の処理
+  window.addEventListener('hashchange', function() {
+    handleHashNavigation();
+  });
+
   document.addEventListener('DOMContentLoaded', function() {
     initStickyNavigation();
     initTabMessage();
+    // ページロード時にハッシュがある場合の処理
+    handleHashNavigation();
   });
+
+
 })();
