@@ -1211,7 +1211,7 @@ figure {
   padding-left: 0.5rem;
 }
 .p-company-row-text > * + * {
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 .p-company-row-president {
   display: flex;
