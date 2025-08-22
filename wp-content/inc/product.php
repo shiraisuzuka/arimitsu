@@ -466,6 +466,56 @@ function save_product_custom_fields($post_id, $post, $update) {
         return;
     }
     
+    // 公開時または公開済み投稿の編集時に必須項目をチェック
+    $original_post_status = isset($_POST['original_post_status']) ? $_POST['original_post_status'] : '';
+    $current_post_status = $post->post_status;
+    
+    // 新規公開または既に公開済みの投稿の場合はバリデーション実行
+    if ($current_post_status === 'publish' || $original_post_status === 'publish') {
+        $errors = array();
+        
+        // 基本情報の必須チェック
+        if (empty($_POST['product_listing_image']) || $_POST['product_listing_image'] === '0' || !intval($_POST['product_listing_image'])) {
+            $errors[] = '一覧画像は必須項目です。';
+        }
+        if (empty($_POST['product_basic_copy']) || !trim($_POST['product_basic_copy'])) {
+            $errors[] = 'コピーは必須項目です。';
+        }
+        if (empty($_POST['product_catalog_pdf']) || !trim($_POST['product_catalog_pdf'])) {
+            $errors[] = 'カタログのPDFリンクは必須項目です。';
+        }
+        
+        // 製品ラインナップのバリデーション
+        if (isset($_POST['product_lineup']) && is_array($_POST['product_lineup'])) {
+            foreach ($_POST['product_lineup'] as $index => $lineup) {
+                $has_content = !empty($lineup['image']) || !empty($lineup['model']) || !empty($lineup['name']) || !empty($lineup['link']);
+                
+                if ($has_content) {
+                    $lineup_num = $index + 1;
+                    if (empty($lineup['image']) || $lineup['image'] === '0' || !intval($lineup['image'])) {
+                        $errors[] = "製品ラインナップ {$lineup_num} の画像は必須項目です。";
+                    }
+                    if (empty($lineup['link']) || !trim($lineup['link'])) {
+                        $errors[] = "製品ラインナップ {$lineup_num} のリンク設定は必須項目です。";
+                    }
+                }
+            }
+        }
+        
+        // エラーがある場合は保存を中止
+        if (!empty($errors)) {
+            $error_message = ($current_post_status === 'publish' && $original_post_status === 'publish') 
+                ? '必須項目が未入力のため保存できません。' 
+                : '必須項目が未入力のため公開できません。';
+            
+            wp_die(
+                $error_message . '<br><br>• ' . implode('<br>• ', $errors) . '<br><br><a href="javascript:history.back()">戻る</a>',
+                '保存エラー',
+                array('back_link' => true)
+            );
+        }
+    }
+    
     // 基本情報
     if (isset($_POST['product_listing_image'])) {
         update_post_meta($post_id, '_product_listing_image', intval($_POST['product_listing_image']));
@@ -732,17 +782,43 @@ function product_admin_scripts() {
             
             toggleRemoveButtons();
             
-            // バリデーション関数を統合
-            function validateProductFields() {
+            // バリデーション関数を統合（公開時のみ）
+            function validateProductFields(forceValidation) {
                 var hasError = false;
                 var errorMessages = [];
                 
-                // 基本情報の必須チェック
+                // forceValidationがtrueの場合は強制的にバリデーション実行
+                if (!forceValidation) {
+                    // 投稿ステータスを確認
+                    var currentPostStatus = $('#post_status').val();
+                    var originalPostStatus = $('#original_post_status').val();
+                    var publishButton = $('#publish');
+                    var isPublishing = false;
+                    
+                    // 公開ボタンの状態を詳細にチェック
+                    if (publishButton.length > 0) {
+                        var buttonText = publishButton.val();
+                        isPublishing = (buttonText === '公開' || buttonText === '更新' || buttonText === 'Publish' || buttonText === 'Update');
+                    }
+                    
+                    // 新規公開または既に公開済みの投稿の編集の場合
+                    if (currentPostStatus === 'publish' || originalPostStatus === 'publish') {
+                        isPublishing = true;
+                    }
+                    
+                    // 下書き保存の場合はバリデーションをスキップ
+                    if (!isPublishing) {
+                        return { hasError: false, errorMessages: [] };
+                    }
+                }
+                
+                // 基本情報の必須チェック（公開時のみ）
                 var listingImage = $('#product_listing_image').val();
                 var basicCopy = $('#product_basic_copy').val();
                 var catalogPdf = $('#product_catalog_pdf').val();
                 
-                if (!listingImage) {
+                // 一覧画像のバリデーション（空文字、0、null、undefinedをすべてチェック）
+                if (!listingImage || listingImage === '' || listingImage === '0') {
                     hasError = true;
                     errorMessages.push('一覧画像は必須項目です。');
                 }
@@ -755,7 +831,7 @@ function product_admin_scripts() {
                     errorMessages.push('カタログのPDFリンクは必須項目です。');
                 }
                 
-                // 製品ラインナップのバリデーション
+                // 製品ラインナップのバリデーション（公開時のみ）
                 $('.lineup-entry').each(function(index) {
                     var $entry = $(this);
                     var image = $entry.find('.lineup-image-input').val();
@@ -767,7 +843,7 @@ function product_admin_scripts() {
                     
                     if (hasAnyContent) {
                         var lineupNum = index + 1;
-                        if (!image) {
+                        if (!image || image === '' || image === '0') {
                             hasError = true;
                             errorMessages.push('製品ラインナップ ' + lineupNum + ' の画像は必須項目です。');
                         }
@@ -783,38 +859,112 @@ function product_admin_scripts() {
             
             // フォーム送信時とボタンクリック時の共通処理
             function handleValidation(e) {
-                var validation = validateProductFields();
+                // クリックされたボタンを確認
+                var clickedButton = $(e.target);
+                var isDraftSave = clickedButton.attr('id') === 'save-post' || clickedButton.val() === '下書きとして保存';
+                
+                // 下書き保存の場合はバリデーションをスキップ
+                if (isDraftSave) {
+                    return true;
+                }
+                
+                // 公開時は強制的にバリデーション実行
+                var validation = validateProductFields(true);
                 
                 if (validation.hasError) {
                     e.preventDefault();
                     e.stopImmediatePropagation();
-                    alert('保存できませんでした。以下の項目を確認してください：\n\n• ' + validation.errorMessages.join('\n• '));
+                    alert('公開できませんでした。以下の項目を確認してください：\n\n• ' + validation.errorMessages.join('\n• '));
                     return false;
                 }
             }
             
-            $('form#post').on('submit', handleValidation);
-            $('#publish, #save-post').on('click', handleValidation);
+            // フォーム送信時のバリデーション
+            $('form#post').on('submit', function(e) {
+                // 送信トリガーを確認
+                var submitButton = $('input[type="submit"]:focus, button[type="submit"]:focus');
+                if (submitButton.length === 0) {
+                    submitButton = $('#publish');
+                }
+                
+                var isDraftSave = submitButton.attr('id') === 'save-post' || submitButton.val() === '下書きとして保存';
+                var currentPostStatus = $('#post_status').val();
+                var originalPostStatus = $('#original_post_status').val();
+                
+                // 下書き保存でない場合、または公開済み投稿の編集の場合はバリデーション実行
+                var shouldValidate = !isDraftSave || (currentPostStatus === 'publish' || originalPostStatus === 'publish');
+                
+                if (shouldValidate) {
+                    var validation = validateProductFields(true);
+                    if (validation.hasError) {
+                        e.preventDefault();
+                        e.stopImmediatePropagation();
+                        
+                        var errorTitle = (currentPostStatus === 'publish' && originalPostStatus === 'publish') 
+                            ? '保存できませんでした。' 
+                            : '公開できませんでした。';
+                        
+                        alert(errorTitle + '以下の項目を確認してください：\n\n• ' + validation.errorMessages.join('\n• '));
+                        return false;
+                    }
+                }
+            });
             
-            // ブロックエディタ用のAPI Fetchインターセプト
+            // 公開ボタンクリック時のバリデーション
+            $('#publish').on('click', function(e) {
+                var validation = validateProductFields(true);
+                if (validation.hasError) {
+                    e.preventDefault();
+                    e.stopImmediatePropagation();
+                    
+                    var currentPostStatus = $('#post_status').val();
+                    var originalPostStatus = $('#original_post_status').val();
+                    var errorTitle = (currentPostStatus === 'publish' && originalPostStatus === 'publish') 
+                        ? '保存できませんでした。' 
+                        : '公開できませんでした。';
+                    
+                    alert(errorTitle + '以下の項目を確認してください：\n\n• ' + validation.errorMessages.join('\n• '));
+                    return false;
+                }
+            });
+            
+            // 下書き保存ボタンはバリデーションをスキップ
+            
+            // ブロックエディタ用のAPI Fetchインターセプト（公開時のみ）
             if (typeof wp !== 'undefined' && wp.data && wp.apiFetch) {
                 wp.apiFetch.use(function(options, next) {
                     if (options.path && options.path.includes('/wp/v2/product') && 
                         (options.method === 'POST' || options.method === 'PUT')) {
                         
-                        var validation = validateProductFields();
+                        // 投稿ステータスを確認
+                        var postStatus = options.data && options.data.status;
+                        var currentPostStatus = $('#post_status').val();
+                        var originalPostStatus = $('#original_post_status').val();
                         
-                        if (validation.hasError) {
-                            wp.data.dispatch('core/notices').createErrorNotice(
-                                '保存できませんでした。必須項目を確認してください。',
-                                { id: 'product-validation-error', isDismissible: true }
-                            );
+                        // 公開時または公開済み投稿の編集時にバリデーション実行
+                        if (postStatus === 'publish' || currentPostStatus === 'publish' || originalPostStatus === 'publish') {
+                            var validation = validateProductFields(true);
                             
-                            alert('保存できませんでした。以下の項目を確認してください：\n\n• ' + validation.errorMessages.join('\n• '));
-                            
-                            return Promise.reject(new Error('バリデーションエラー: ' + validation.errorMessages.join(', ')));
-                        } else {
-                            wp.data.dispatch('core/notices').removeNotice('product-validation-error');
+                            if (validation.hasError) {
+                                var errorMessage = (currentPostStatus === 'publish' && originalPostStatus === 'publish') 
+                                    ? '保存できませんでした。必須項目を確認してください。' 
+                                    : '公開できませんでした。必須項目を確認してください。';
+                                
+                                wp.data.dispatch('core/notices').createErrorNotice(
+                                    errorMessage,
+                                    { id: 'product-validation-error', isDismissible: true }
+                                );
+                                
+                                var alertMessage = (currentPostStatus === 'publish' && originalPostStatus === 'publish') 
+                                    ? '保存できませんでした。以下の項目を確認してください：\n\n• ' 
+                                    : '公開できませんでした。以下の項目を確認してください：\n\n• ';
+                                
+                                alert(alertMessage + validation.errorMessages.join('\n• '));
+                                
+                                return Promise.reject(new Error('バリデーションエラー: ' + validation.errorMessages.join(', ')));
+                            } else {
+                                wp.data.dispatch('core/notices').removeNotice('product-validation-error');
+                            }
                         }
                     }
                     
