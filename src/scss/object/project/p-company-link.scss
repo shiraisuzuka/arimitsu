@@ -17,12 +17,20 @@
     font-size: 2.2rem;
     font-weight: 500;
     border-radius: 1.2rem;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
     @include mq(ovsp) {
       height: 16.7rem;
       font-size: 2.8rem;
     }
     @include mq(tb) {
       padding: 2rem 3rem;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-color: var(--color-green);
+      }
     }
   }
 }

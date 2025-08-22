@@ -1,0 +1,10 @@
+@use 'foundation' as *;
+
+.p-recruit-business {
+  padding: 6rem;
+  border-radius: 1.2rem;
+  background-color: var(--color-gray-light2);
+  @include mq(tb) {
+    padding: 3rem;
+  }
+}
