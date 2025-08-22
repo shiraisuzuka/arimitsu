@@ -1,0 +1,55 @@
+@use 'foundation' as *;
+
+.p-recruitment-tab {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: calc(58rem + 1.5rem * 2);
+  padding-inline: 1.5rem;
+  margin: 0 auto 8rem;
+  @include mq(ovsp) {
+    max-width: calc(120rem + 3rem * 2);
+    padding-right: 3rem;
+    padding-left: calc(3rem + 34.8rem + 6rem); // 3rem+固定リンク+余白
+  }
+  @include mq(tb) {
+    padding-left: calc(3rem + 26.7rem + 6rem);
+  }
+  @include mq(sp) {
+    padding-inline: 1.5rem;
+  }
+
+  .tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24.8rem;
+    height: 4.8rem;
+    background-color: #FFF;
+    border: 1px solid var(--color-gray);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+    &.is-active {
+      background-color: var(--color-green);
+      color: #FFF;
+      border-color: var(--color-green);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--color-green);
+        color: #FFF;
+        border-color: var(--color-green);
+      }
+    }
+  }
+}
+
+.p-recruitment-panel {
+  .c-table {
+    a {
+      padding-left: 0;
+    }
+  }
+}

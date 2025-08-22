@@ -1,0 +1,72 @@
+@use 'foundation' as *;
+
+.p-recruitment-list {
+  > div {
+    padding-bottom: 4rem;
+    margin-bottom: 4rem;
+    border-bottom: 1px solid var(--color-gray);
+  }
+
+  dt {
+    font-size: 2rem;
+    color: var(--color-green);
+  }
+
+  dd {
+    margin: 1rem 0 0;
+    font-weight: 400;
+
+    ul {
+      li {
+        margin-left: 1em;
+        text-indent: -1em;
+        
+        &::before {
+          content: "・";
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .table {
+    padding-bottom: 0.5rem;
+    overflow-x: auto;
+  }
+
+  table {
+    width: 79.2rem;
+    border-collapse: collapse;
+    table-layout: fixed;
+
+    th, td {
+      padding: 1rem 2rem;
+      font-size: 1.4rem;
+      font-weight: 400;
+      border: 1px solid var(--color-gray);
+    }
+  
+    th {
+      text-align: left;
+      background-color: var(--color-gray-light);
+    }
+
+    td {
+      text-align: center;
+    }
+
+    tr {
+      &:nth-child(1) {
+        th {
+          &:nth-of-type(n+3):nth-of-type(-n+6) {
+            padding: 1rem 0.4rem;
+          }
+
+          &:not(:first-child) {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

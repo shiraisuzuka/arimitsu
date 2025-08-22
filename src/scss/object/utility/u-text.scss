@@ -97,10 +97,11 @@
 }
 
 .u-link {
-	color: var(--color-blue);
 	text-decoration: underline;
+  transition: color 0.3s ease;
 	@media (any-hover: hover) {
 		&:hover {
+      color: var(--color-green);
 			text-decoration: none;
 		}
 	}
