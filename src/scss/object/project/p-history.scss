@@ -1,0 +1,31 @@
+@use 'foundation' as *;
+
+.p-history {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0 2rem;
+
+  &.fig {
+    grid-template-columns: max-content 1fr 16rem;
+  }
+
+  &-year {
+    padding-right: 0.5rem;
+  }
+
+  p {
+    font-weight: 400;
+  }
+
+  figure {
+    width: 16rem;
+    aspect-ratio: 160 / 120;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
