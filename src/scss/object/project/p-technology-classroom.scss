@@ -37,21 +37,9 @@
     }
 
     > figure {
-      width: 100%;
+      width: fit-content;
       margin-inline: auto;
       border: 1px solid var(--color-gray);
-
-      &.fig01 {
-        max-width: 35rem;
-      }
-
-      &.fig02 {
-        max-width: 25rem;
-      }
-
-      img {
-        width: 100%;
-      }
     }
 
     ul {
@@ -74,6 +62,12 @@
         list-style: decimal;
         font-weight: 400;
       }
+
+      ul {
+        li {
+          list-style: disc;
+        }
+      }
     }
 
     .gray-box {
@@ -95,6 +89,14 @@
       figure {
         flex-shrink: 0;
       }
+    }
+
+    .image-col {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
     }
   }
 }

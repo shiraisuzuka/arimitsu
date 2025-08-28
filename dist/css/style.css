@@ -2893,18 +2893,10 @@ figure {
   font-weight: 400;
 }
 .p-technology-classroom-row > figure {
-  width: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
   margin-inline: auto;
   border: 1px solid var(--color-gray);
-}
-.p-technology-classroom-row > figure.fig01 {
-  max-width: 35rem;
-}
-.p-technology-classroom-row > figure.fig02 {
-  max-width: 25rem;
-}
-.p-technology-classroom-row > figure img {
-  width: 100%;
 }
 .p-technology-classroom-row ul {
   display: grid;
@@ -2924,6 +2916,9 @@ figure {
   list-style: decimal;
   font-weight: 400;
 }
+.p-technology-classroom-row ol ul li {
+  list-style: disc;
+}
 .p-technology-classroom-row .gray-box {
   padding: 2rem;
   margin: 1rem 0 0;
@@ -2940,6 +2935,13 @@ figure {
 }
 .p-technology-classroom-row .col figure {
   flex-shrink: 0;
+}
+.p-technology-classroom-row .image-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .p-technology-slide {
