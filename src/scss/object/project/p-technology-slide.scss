@@ -1,0 +1,76 @@
+@use 'foundation' as *;
+
+.p-technology-slide {
+  margin: 4rem 0 0;
+
+  .splide__slide {
+    padding: 1rem;
+  }
+
+  .splide__arrow {
+    background-color: transparent;
+    opacity: 1;
+
+    &:disabled {
+      opacity: 0.3;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 1rem;
+      height: 2rem;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='レイヤー 2' viewBox='0 0 12.04 22.66'%3E%3Cpath d='M11.68 22.3.71 11.33 11.68.35' data-name='レイヤー 1' style='fill:none;stroke:%23000;stroke-miterlimit:10'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    svg {
+      display: none;
+    }
+
+    &.splide__arrow--prev {
+      left: -3rem;
+    }
+
+    &.splide__arrow--next {
+      right: -3rem;
+
+      &::before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  a {
+    display: block;
+    padding: 2rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    
+    @media (any-hover: hover) {
+      &:hover {
+        border-color: var(--color-green);
+      }
+    }
+
+    h2 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-inline: 1rem;
+      margin: 3rem 0 0;
+      font-size: 2rem;
+      line-height: 1.5;
+      font-weight: 500;
+
+      .small {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
