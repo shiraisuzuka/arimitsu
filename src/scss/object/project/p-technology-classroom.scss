@@ -38,12 +38,41 @@
 
     > figure {
       width: 100%;
-      max-width: 35rem;
       margin-inline: auto;
       border: 1px solid var(--color-gray);
 
+      &.fig01 {
+        max-width: 35rem;
+      }
+
+      &.fig02 {
+        max-width: 25rem;
+      }
+
       img {
         width: 100%;
+      }
+    }
+
+    ul {
+      display: grid;
+      gap: 1rem;
+      margin-left: 1.6rem;
+
+      li {
+        list-style: disc;
+        font-weight: 400;
+      }
+    }
+
+    ol {
+      display: grid;
+      gap: 1rem;
+      margin-left: 1.6rem;
+
+      li {
+        list-style: decimal;
+        font-weight: 400;
       }
     }
 
@@ -67,9 +96,5 @@
         flex-shrink: 0;
       }
     }
-  }
-
-  .c-link-back-btn {
-    
   }
 }
