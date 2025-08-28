@@ -151,11 +151,11 @@
   // ----------------------------------------------//
   const categoryPurposeMapping = {
     'agricultural_machinery': ['spray_chemicals'], // 農業機械 → 薬剤/肥料をまく
-    'pump': ['high_pressure_motor', 'high_pressure_engine', 'high_pressure_hot_water', 'water_pressure_supply'], // ポンプ → 高圧洗浄系、水圧供給
-    'cleaning_machine': ['high_pressure_motor', 'high_pressure_engine', 'high_pressure_hot_water', 'wash_containers', 'wash_other_items', 'foam_wash'], // 洗浄機 → 各種洗浄
-    'attachment': ['wash_containers', 'wash_other_items'], // アタッチメント → 容器洗浄、その他洗浄
+    'pump': ['spray_chemicals', 'water_pressure_supply'], // ポンプ → 薬剤/肥料をまく、水圧を供給する
+    'cleaning_machine': ['spray_chemicals', 'high_pressure_motor', 'high_pressure_engine', 'high_pressure_hot_water', 'wash_containers', 'wash_other_items', 'foam_wash', 'other_purpose'], // ポンプ → 薬剤/肥料をまく、高圧洗浄系、容器/器具/パレット/部品を洗う、その他のものを洗う、泡で洗う、その他
+    'attachment': ['foam_wash'], // アタッチメント → 泡で洗う
     'mist': ['cooling_dust_deodorizing'], // ミスト → 冷却/防塵/消臭
-    'other_product': ['other_purpose'] // その他 → その他
+    'other_product': ['wash_other_items'] // その他 → その他のものを洗う
   };
 
 
