@@ -34,12 +34,22 @@
 
     p {
       font-weight: 400;
+
+      &.indent {
+        margin-top: 1rem;
+        margin-left: 1.4em;
+        text-indent: -1.4em;
+      }
     }
 
     > figure {
       width: fit-content;
       margin-inline: auto;
       border: 1px solid var(--color-gray);
+
+      &.non-border {
+        border: none;
+      }
     }
 
     ul {

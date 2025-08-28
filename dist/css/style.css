@@ -2892,11 +2892,19 @@ figure {
 .p-technology-classroom-row p {
   font-weight: 400;
 }
+.p-technology-classroom-row p.indent {
+  margin-top: 1rem;
+  margin-left: 1.4em;
+  text-indent: -1.4em;
+}
 .p-technology-classroom-row > figure {
   width: -moz-fit-content;
   width: fit-content;
   margin-inline: auto;
   border: 1px solid var(--color-gray);
+}
+.p-technology-classroom-row > figure.non-border {
+  border: none;
 }
 .p-technology-classroom-row ul {
   display: grid;
