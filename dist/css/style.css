@@ -2846,6 +2846,81 @@ figure {
   padding-left: 0;
 }
 
+.p-technology-tab {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.p-technology-tab .tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24.8rem;
+  height: 4.8rem;
+  padding: 1rem;
+  border: 1px solid var(--color-gray);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.p-technology-tab .tab.is-active {
+  background-color: var(--color-green);
+  color: var(--color-white);
+  border-color: var(--color-green);
+}
+@media (any-hover: hover) {
+  .p-technology-tab .tab:hover {
+    background-color: var(--color-green);
+    color: var(--color-white);
+    border-color: var(--color-green);
+  }
+}
+
+.p-technology-panel {
+  margin: 8rem 0 0;
+}
+.p-technology-panel ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem 1.8rem;
+}
+@media screen and (max-width: 1000px) {
+  .p-technology-panel ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-technology-panel ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.p-technology-panel ul a {
+  display: block;
+  padding: 2rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+@media (any-hover: hover) {
+  .p-technology-panel ul a:hover {
+    border-color: var(--color-green);
+  }
+}
+.p-technology-panel ul a h2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-inline: 1rem;
+  margin: 3rem 0 0;
+  font-size: 2rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.p-technology-panel ul a h2 .small {
+  font-size: 1.6rem;
+}
+
 .p-top-mv {
   position: relative;
 }
