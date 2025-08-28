@@ -2924,6 +2924,9 @@ figure {
   list-style: decimal;
   font-weight: 400;
 }
+.p-technology-classroom-row ol li > ol, .p-technology-classroom-row ol li > ul {
+  margin-top: 1rem;
+}
 .p-technology-classroom-row ol ul li {
   list-style: disc;
 }
@@ -2949,6 +2952,35 @@ figure {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 2rem;
+}
+.p-technology-classroom .image-text {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2rem;
+}
+.p-technology-classroom.classroom08 .c-table {
+  width: 77.8rem;
+}
+.p-technology-classroom.classroom08 .c-table.right ul {
+  display: initial;
+}
+.p-technology-classroom.classroom08 .c-table.right ul li {
+  margin-left: 2rem;
+  text-indent: initial;
+}
+.p-technology-classroom.classroom08 .c-table.right ul li::before {
+  display: none;
+}
+.p-technology-classroom.classroom08 .image-col {
+  align-items: flex-end;
+  gap: 5rem;
+  margin: 2rem 0 0;
+}
+.p-technology-classroom.classroom08 .image-col .yoko {
+  display: flex;
+  align-items: flex-end;
   gap: 2rem;
 }
 

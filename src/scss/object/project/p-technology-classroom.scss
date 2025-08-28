@@ -71,6 +71,10 @@
       li {
         list-style: decimal;
         font-weight: 400;
+
+        > ol, > ul {
+          margin-top: 1rem;
+        }
       }
 
       ul {
@@ -107,6 +111,46 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 2rem;
+    }
+  }
+
+  .image-text {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  &.classroom08 {
+    .c-table {
+      width: 77.8rem;
+
+      &.right {
+        ul {
+          display: initial;
+
+          li {
+            margin-left: 2rem;
+            text-indent: initial;
+
+            &::before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    .image-col {
+      align-items: flex-end;
+      gap: 5rem;
+      margin: 2rem 0 0;
+
+      .yoko {
+        display: flex;
+        align-items: flex-end;
+        gap: 2rem;
+      }
     }
   }
 }
