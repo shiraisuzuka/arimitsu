@@ -720,6 +720,24 @@ figure {
   width: 100%;
   border-collapse: collapse;
 }
+.c-table-scroll {
+  padding-bottom: 0.5rem;
+  overflow-x: auto;
+}
+.c-table-scroll .c-table {
+  width: 79.4rem;
+}
+.c-table-scroll .c-table th, .c-table-scroll .c-table td {
+  padding: 0.5rem 1rem;
+}
+.c-table-scroll .c-table th {
+  color: #FFF;
+  background-color: var(--color-green);
+  text-align: center;
+}
+.c-table-scroll .c-table.small {
+  width: auto;
+}
 .c-table th, .c-table td {
   padding: 1rem 2rem;
   font-size: 1.4rem;

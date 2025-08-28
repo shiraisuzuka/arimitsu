@@ -4,6 +4,29 @@
   width: 100%;
   border-collapse: collapse;
 
+  &-scroll {
+    padding-bottom: 0.5rem;
+    overflow-x: auto;
+
+    .c-table {
+      width: 79.4rem;
+
+      th, td {
+        padding: 0.5rem 1rem;
+      }
+
+      th {
+        color: #FFF;
+        background-color: var(--color-green);
+        text-align: center;
+      }
+
+      &.small {
+        width: auto;
+      }
+    }
+  }
+
   th, td {
     padding: 1rem 2rem;
     font-size: 1.4rem;
