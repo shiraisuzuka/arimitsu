@@ -172,6 +172,9 @@ function product_features_callback($post) {
     $features_text = get_post_meta($post->ID, '_product_features_text', true);
     $features_image1 = get_post_meta($post->ID, '_product_features_image1', true);
     $features_image2 = get_post_meta($post->ID, '_product_features_image2', true);
+    $features_image3 = get_post_meta($post->ID, '_product_features_image3', true);
+    $features_image4 = get_post_meta($post->ID, '_product_features_image4', true);
+    $features_image5 = get_post_meta($post->ID, '_product_features_image5', true);
     $video_link = get_post_meta($post->ID, '_product_video_link', true);
     ?>
     <table class="form-table">
@@ -205,6 +208,45 @@ function product_features_callback($post) {
                 </div>
                 <button type="button" class="button" onclick="openMediaUploader('product_features_image2', 'features_image2_preview')">画像を選択</button>
                 <button type="button" class="button" onclick="removeImage('product_features_image2', 'features_image2_preview')">画像を削除</button>
+            </td>
+        </tr>
+        <tr>
+            <th><label for="product_features_image3">画像3</label></th>
+            <td>
+                <input type="hidden" id="product_features_image3" name="product_features_image3" value="<?php echo esc_attr($features_image3); ?>" />
+                <div id="features_image3_preview">
+                    <?php if ($features_image3): ?>
+                        <img src="<?php echo wp_get_attachment_url($features_image3); ?>" style="max-width: 200px; height: auto;" />
+                    <?php endif; ?>
+                </div>
+                <button type="button" class="button" onclick="openMediaUploader('product_features_image3', 'features_image3_preview')">画像を選択</button>
+                <button type="button" class="button" onclick="removeImage('product_features_image3', 'features_image3_preview')">画像を削除</button>
+            </td>
+        </tr>
+        <tr>
+            <th><label for="product_features_image4">画像4</label></th>
+            <td>
+                <input type="hidden" id="product_features_image4" name="product_features_image4" value="<?php echo esc_attr($features_image4); ?>" />
+                <div id="features_image4_preview">
+                    <?php if ($features_image4): ?>
+                        <img src="<?php echo wp_get_attachment_url($features_image4); ?>" style="max-width: 200px; height: auto;" />
+                    <?php endif; ?>
+                </div>
+                <button type="button" class="button" onclick="openMediaUploader('product_features_image4', 'features_image4_preview')">画像を選択</button>
+                <button type="button" class="button" onclick="removeImage('product_features_image4', 'features_image4_preview')">画像を削除</button>
+            </td>
+        </tr>
+        <tr>
+            <th><label for="product_features_image5">画像5</label></th>
+            <td>
+                <input type="hidden" id="product_features_image5" name="product_features_image5" value="<?php echo esc_attr($features_image5); ?>" />
+                <div id="features_image5_preview">
+                    <?php if ($features_image5): ?>
+                        <img src="<?php echo wp_get_attachment_url($features_image5); ?>" style="max-width: 200px; height: auto;" />
+                    <?php endif; ?>
+                </div>
+                <button type="button" class="button" onclick="openMediaUploader('product_features_image5', 'features_image5_preview')">画像を選択</button>
+                <button type="button" class="button" onclick="removeImage('product_features_image5', 'features_image5_preview')">画像を削除</button>
             </td>
         </tr>
         <tr>
@@ -536,6 +578,15 @@ function save_product_custom_fields($post_id, $post, $update) {
     }
     if (isset($_POST['product_features_image2'])) {
         update_post_meta($post_id, '_product_features_image2', intval($_POST['product_features_image2']));
+    }
+    if (isset($_POST['product_features_image3'])) {
+        update_post_meta($post_id, '_product_features_image3', intval($_POST['product_features_image3']));
+    }
+    if (isset($_POST['product_features_image4'])) {
+        update_post_meta($post_id, '_product_features_image4', intval($_POST['product_features_image4']));
+    }
+    if (isset($_POST['product_features_image5'])) {
+        update_post_meta($post_id, '_product_features_image5', intval($_POST['product_features_image5']));
     }
     if (isset($_POST['product_video_link'])) {
         update_post_meta($post_id, '_product_video_link', esc_url_raw($_POST['product_video_link']));

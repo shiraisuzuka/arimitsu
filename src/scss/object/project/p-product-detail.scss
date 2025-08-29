@@ -59,9 +59,11 @@
     }
 
     &-images {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      // display: flex;
+      // align-items: center;
+      // justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
       margin: 2rem 0;
       @include mq(ovsp) {

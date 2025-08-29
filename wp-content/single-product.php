@@ -24,22 +24,34 @@
       $features_text = get_post_meta(get_the_ID(), '_product_features_text', true);
       $features_image1 = get_post_meta(get_the_ID(), '_product_features_image1', true);
       $features_image2 = get_post_meta(get_the_ID(), '_product_features_image2', true);
+      $features_image3 = get_post_meta(get_the_ID(), '_product_features_image3', true);
+      $features_image4 = get_post_meta(get_the_ID(), '_product_features_image4', true);
+      $features_image5 = get_post_meta(get_the_ID(), '_product_features_image5', true);
       $video_link = get_post_meta(get_the_ID(), '_product_video_link', true);
       
-      if ($features_text || $features_image1 || $features_image2 || $video_link): ?>
+      if ($features_text || $features_image1 || $features_image2 || $features_image3 || $features_image4 || $features_image5 || $video_link): ?>
       <div class="p-product-detail-future">
         <h2 class="p-product-detail-future-title">特徴</h2>
         <?php if ($features_text): ?>
           <p class="p-product-detail-future-text"><?php echo nl2br(esc_html($features_text)); ?></p>
         <?php endif; ?>
         
-        <?php if ($features_image1 || $features_image2): ?>
+        <?php if ($features_image1 || $features_image2 || $features_image3 || $features_image4 || $features_image5): ?>
         <div class="p-product-detail-future-images">
           <?php if ($features_image1): ?>
             <figure><img src="<?php echo esc_url(wp_get_attachment_url($features_image1)); ?>" alt="" loading="lazy" width="1600" height="1200"></figure>
           <?php endif; ?>
           <?php if ($features_image2): ?>
             <figure><img src="<?php echo esc_url(wp_get_attachment_url($features_image2)); ?>" alt="" loading="lazy" width="1600" height="1200"></figure>
+          <?php endif; ?>
+          <?php if ($features_image3): ?>
+            <figure><img src="<?php echo esc_url(wp_get_attachment_url($features_image3)); ?>" alt="" loading="lazy" width="1600" height="1200"></figure>
+          <?php endif; ?>
+          <?php if ($features_image4): ?>
+            <figure><img src="<?php echo esc_url(wp_get_attachment_url($features_image4)); ?>" alt="" loading="lazy" width="1600" height="1200"></figure>
+          <?php endif; ?>
+          <?php if ($features_image5): ?>
+            <figure><img src="<?php echo esc_url(wp_get_attachment_url($features_image5)); ?>" alt="" loading="lazy" width="1600" height="1200"></figure>
           <?php endif; ?>
         </div>
         <?php endif; ?>
