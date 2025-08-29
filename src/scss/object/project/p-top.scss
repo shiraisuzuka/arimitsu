@@ -151,12 +151,28 @@
         border: 1px solid var(--color-green);
         font-size: 1.1rem;
         @include mq(ovsp) {
-          padding: 0.5rem 1rem;
+          padding: 0.2rem 1rem;
           font-size: 1.4rem;
         }
 
         &-wrap {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
           grid-area: category;
+        }
+
+        &-new {
+          padding: 0.2rem 0.5rem;
+          border-radius: 0.4rem;
+          color: var(--color-red);
+          background-color: #FFF;
+          border: 1px solid var(--color-red);
+          font-size: 1.1rem;
+          @include mq(ovsp) {
+            padding: 0.2rem 1rem;
+            font-size: 1.4rem;
+          }
         }
       }
 
