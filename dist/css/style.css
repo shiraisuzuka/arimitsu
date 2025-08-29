@@ -92,6 +92,7 @@ select {
   --color-white:#FFF;
   --color-gray: #c8c8c8;
   --color-gray2: #787878;
+  --color-gray3: #a0a0a0;
   --color-gray-light: #fafafa;
   --color-gray-light2: #f0f0f0;
   --color-green: #64be37;
@@ -652,6 +653,9 @@ figure {
 .c-section-row .c-table {
   margin-top: 2rem;
 }
+.c-section-row .u-note {
+  margin-top: 2rem;
+}
 
 .c-sticky .l-section-inner {
   display: grid;
@@ -973,6 +977,11 @@ figure {
     color: var(--color-green);
     text-decoration: none;
   }
+}
+
+.u-note {
+  font-size: 1.4rem;
+  color: var(--color-gray2);
 }
 
 .l-header {
@@ -2861,6 +2870,80 @@ figure {
 
 .p-recruitment-panel .c-table a {
   padding-left: 0;
+}
+
+.p-session-list {
+  display: grid;
+  gap: 1rem;
+}
+.p-session-list li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 1rem 1rem 3rem;
+  background-color: var(--color-gray-light);
+  border-radius: 1.2rem;
+}
+.p-session-list li > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.p-session-list li .date, .p-session-list li .time {
+  font-size: 1.8rem;
+}
+.p-session-list li .number {
+  margin-inline: 1.5rem;
+  font-size: 1.4rem;
+  color: var(--color-gray2);
+}
+.p-session-list li .category {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.p-session-list li .category p {
+  padding: 0 1rem;
+  font-size: 1.4rem;
+  border: 2px solid var(--color-green);
+}
+.p-session-list li .category p.on {
+  color: #FFF;
+  background-color: var(--color-green);
+}
+.p-session-list li .category p.off {
+  color: var(--color-green);
+  background-color: #FFF;
+}
+.p-session-list li .status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 11.5rem;
+  height: 4.3rem;
+  margin-left: auto;
+  font-weight: 700;
+  background-color: #FFF;
+  color: var(--color-green);
+  border: 2px solid var(--color-green);
+  border-radius: 0.8rem;
+}
+.p-session-list li.end::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.2rem;
+  background-color: #FFF;
+  opacity: 0.8;
+}
+.p-session-list li.end .status {
+  color: var(--color-gray3);
+  border-color: var(--color-gray3);
 }
 
 @media screen and (min-width: 768px) {
