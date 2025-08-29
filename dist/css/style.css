@@ -1351,6 +1351,11 @@ figure {
   position: relative;
   padding-right: 1.8rem;
 }
+@media screen and (min-width: 768px) {
+  .l-header.recruit .l-header-nav-item a[target=_blank] {
+    font-size: 1.3rem;
+  }
+}
 .l-header.recruit .l-header-nav-item a[target=_blank]::after {
   content: "";
   position: absolute;
@@ -1375,7 +1380,7 @@ figure {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-left: 5rem;
+  margin-left: 3rem;
 }
 .l-header.recruit .recruit-btn {
   display: flex;

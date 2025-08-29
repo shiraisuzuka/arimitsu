@@ -456,6 +456,9 @@
     a[target="_blank"] {
       position: relative;
       padding-right: 1.8rem;
+      @include mq(ovsp) {
+        font-size: 1.3rem;
+      }
 
       &::after {
         content: "";
@@ -482,7 +485,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-left: 5rem;
+    margin-left: 3rem;
   }
 
   .recruit-btn {
