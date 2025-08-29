@@ -1,0 +1,46 @@
+@use 'foundation' as *;
+
+.p-news-detail {
+  padding: 6rem 0 0;
+
+  &-inner {
+    max-width: 79.4rem;
+    margin-inline: auto;
+  }
+
+  &-header {
+    time {
+      font-size: 1.4rem;
+      color: var(--color-gray2);
+    }
+
+    h1 {
+      padding: 2rem 0 1rem;
+      font-size: 3.6rem;
+      font-weight: 500;
+      line-height: 1.5;
+      border-bottom: 1px solid var(--color-gray);
+    }
+  }
+
+  &-contents {
+    margin: 4rem 0 0;
+    font-weight: 400;
+
+    > * + * {
+      margin-top: 4rem;
+    }
+
+    .col {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.8rem;
+    }
+
+    figure {
+      figcaption {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
