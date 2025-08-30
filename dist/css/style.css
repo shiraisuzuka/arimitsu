@@ -1531,6 +1531,202 @@ figure {
   }
 }
 
+.p-contact {
+  max-width: 79.5rem;
+  margin: 2rem auto 0;
+}
+.p-contact-row + .p-contact-row {
+  margin: 4rem 0 0;
+}
+.p-contact-row > * + * {
+  margin-top: 1rem;
+}
+.p-contact-row.col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.p-contact-row.col > * + * {
+  margin-top: 0;
+}
+.p-contact-row.col > div > * + * {
+  margin-top: 1rem;
+}
+.p-contact .required,
+.p-contact .any {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #FFF;
+  border-radius: 0.4rem;
+  margin-right: 1rem;
+}
+.p-contact .required {
+  background-color: var(--color-red);
+}
+.p-contact .any {
+  background-color: var(--color-gray);
+}
+.p-contact .radio-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 3rem;
+  background-color: var(--color-gray-light);
+}
+.p-contact .radio-list label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+.p-contact .checkbox-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 3rem;
+  background-color: var(--color-gray-light);
+}
+.p-contact .checkbox-list label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+.p-contact input[type=text],
+.p-contact input[type=number],
+.p-contact input[type=email],
+.p-contact textarea,
+.p-contact select {
+  width: 100%;
+  padding: 1rem 2rem;
+  border: 2px solid var(--color-gray);
+  border-radius: 0.4rem;
+}
+.p-contact input[type=radio] {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  margin: 0;
+  background-color: #FFF;
+  border: 2px solid var(--color-gray);
+  border-radius: 50%;
+  vertical-align: -2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+.p-contact input[type=radio]:checked {
+  border-color: var(--color-green);
+}
+.p-contact input[type=radio]:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: var(--color-green);
+}
+.p-contact input[type=checkbox] {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  margin: 0;
+  background-color: #FFF;
+  border: 2px solid var(--color-gray);
+  vertical-align: -2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+.p-contact input[type=checkbox]:checked {
+  border-color: var(--color-green);
+}
+.p-contact input[type=checkbox]:checked::before {
+  content: "";
+  position: absolute;
+  top: 0.3rem;
+  left: 0.3rem;
+  width: 1rem;
+  height: 0.7rem;
+  border: solid var(--color-green);
+  border-width: 0 0 0.2rem 0.2rem;
+  transform: rotate(-45deg);
+}
+.p-contact select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='レイヤー 2' viewBox='0 0 8.02 4.72'%3E%3Cpath d='M7.67.35 4.01 4.01.35.35' data-name='レイヤー 1' style='fill:none;stroke:%23000;stroke-miterlimit:10'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 1rem auto;
+  background-position: right 1.5rem center;
+  cursor: pointer;
+}
+.p-contact .post-code {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.p-contact .post-code input {
+  max-width: 18.5rem;
+}
+
+.p-contact-btn {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-inline: auto;
+}
+.p-contact-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 1.8rem;
+  display: inline-block;
+  transform: translateY(-50%);
+  width: 0.6rem;
+  height: 1rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='レイヤー 2' viewBox='0 0 5.78 8.73'%3E%3Cpath d='m.71.71 3.66 3.66L.71 8.02' data-name='レイヤー 1' style='fill:none;stroke:%23fff;stroke-miterlimit:10;stroke-width:2px'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  pointer-events: none;
+}
+.p-contact-btn button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 31.2rem;
+  height: 4.8rem;
+  padding: 0;
+  color: #FFF;
+  background-color: var(--color-green);
+  border: 1px solid var(--color-green);
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+@media (any-hover: hover) {
+  .p-contact-btn:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='レイヤー 2' viewBox='0 0 5.78 8.73'%3E%3Cpath d='m.71.71 3.66 3.66L.71 8.02' data-name='レイヤー 1' style='fill:none;stroke:%2364be37;stroke-miterlimit:10;stroke-width:2px'/%3E%3C/svg%3E");
+  }
+  .p-contact-btn:hover button {
+    color: var(--color-green);
+    background-color: #FFF;
+  }
+}
+.p-contact-btn-wrap {
+  margin: 8rem 0 0;
+}
+
 .p-history {
   display: grid;
   grid-template-columns: max-content 1fr;
