@@ -2,9 +2,13 @@
 
 .p-recruitment-list {
   > div {
-    padding-bottom: 4rem;
-    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
     border-bottom: 1px solid var(--color-gray);
+    @include mq(ovsp) {
+      padding-bottom: 4rem;
+      margin-bottom: 4rem;
+    }
   }
 
   dt {
