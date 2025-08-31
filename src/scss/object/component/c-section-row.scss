@@ -48,12 +48,16 @@
     }
 
     h3 {
-      padding-left: 1.6rem;
-      font-size: 2.8rem;
+      padding-left: 0.8rem;
+      font-size: 2.4rem;
       font-weight: 500;
       line-height: 1.3;
       color: var(--color-green);
       border-left: 0.8rem solid var(--color-green);
+      @include mq(ovsp) {
+        padding-left: 1.6rem;
+        font-size: 2.8rem;
+      }
 
       + p {
         margin-top: 2rem;

@@ -2,15 +2,21 @@
 
 .p-recruit-education {
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
+  @include mq(ovsp) {
+    gap: 1rem;
+  }
 
   > li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 3rem;
+    padding: 1.5rem;
     background-color: var(--color-gray-light);
     border-radius: 1.2rem;
+    @include mq(ovsp) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3rem;
+    }
     @media (min-width: 1101px) {
       padding: 3rem 7rem;
     }
@@ -19,13 +25,13 @@
   &-item {
     display: flex;
     align-items: center;
-    flex-direction: column;
     gap: 1rem 5.6rem;
     @include mq(tb) {
       gap: 1rem 3rem;
     }
-    @include mq(ovsp) {
-      flex-direction: row;
+    @include mq(sp) {
+      gap: 1rem 2rem;
+      padding-left: 1rem;
     }
 
     figure {
@@ -58,15 +64,24 @@
   }
 
   &-list {
-    flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 0.2rem;
-    min-height: 10.7rem;
-    padding-left: 3rem;
-    margin-left: 3rem;
-    border-left: 1px solid var(--color-gray);
+    @include mq(sp) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding-top: 2rem;
+      margin-top: 2rem;
+      border-top: 1px solid var(--color-gray);
+    }
+    @include mq(ovsp) {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 0.2rem;
+      flex-shrink: 0;
+      min-height: 10.7rem;
+      padding-left: 3rem;
+      margin-left: 3rem;
+      border-left: 1px solid var(--color-gray);
+    }
 
     li {
       display: flex;

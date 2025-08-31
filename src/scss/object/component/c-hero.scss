@@ -8,7 +8,7 @@
 
   &-inner {
     display: grid;
-    gap: 5rem 0;
+    gap: 4rem 0;
     @include mq(ovsp) {
       display: flex;
       justify-content: space-between;
@@ -26,6 +26,7 @@
   &-sub {
     display: block;
     color: var(--color-green);
+    font-size: 1.6rem;
   }
 
   &-title {
@@ -38,12 +39,13 @@
   }
 
   &-text {
-    margin: 5rem 0 0;
+    margin: 4rem 0 0;
     font-family: var(--font-biz);
     font-size: 1.6rem;
     line-height: calc(42/18);
     letter-spacing: 0.1em;
     @include mq(ovsp) {
+      margin: 5rem 0 0;
       font-size: 1.8rem;
     }
   }
