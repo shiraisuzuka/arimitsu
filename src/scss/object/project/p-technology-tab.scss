@@ -3,7 +3,10 @@
 .p-technology-tab {}
 
 .p-technology-panel {
-  margin: 8rem 0 0;
+  margin: 4rem 0 0;
+  @include mq(ovsp) {
+    margin: 8rem 0 0;
+  }
 
   ul {
     display: grid;
@@ -35,14 +38,32 @@
         align-items: center;
         justify-content: space-between;
         gap: 1rem;
-        padding-inline: 1rem;
         margin: 3rem 0 0;
-        font-size: 2rem;
+        font-size: 1.8rem;
         line-height: 1.5;
         font-weight: 500;
+        @include mq(ovsp) {
+          padding-inline: 1rem;
+          font-size: 2rem;
+        }
 
         .small {
-          font-size: 1.6rem;
+          font-size: 1.4rem;
+          @include mq(ovsp) {
+            font-size: 1.6rem;
+          }
+        }
+      }
+
+      .c-icon.arrow-right {
+        @include mq(sp) {
+          width: 2rem;
+          height: 2rem;
+
+          &::after {
+            width: 0.5rem;
+            height: 0.9rem;
+          }
         }
       }
     }

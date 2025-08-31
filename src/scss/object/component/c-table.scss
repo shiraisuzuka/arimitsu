@@ -4,25 +4,11 @@
   width: 100%;
   border-collapse: collapse;
 
-  tr {
-    &:not(:first-child) {
-      th {
-        @include mq(sp) {
-          border-top: none;
-        }
-      }
-    }
-  }
-
   th, td {
     padding: 1rem 2rem;
     font-size: 1.4rem;
     font-weight: 400;
     border: 1px solid var(--color-gray);
-    @include mq(sp) {
-      padding: 0.5rem 1.5rem;
-      display: block;
-    }
   }
 
   th {
@@ -31,13 +17,9 @@
     @include mq(ovsp) {
       width: 19.5rem;
     }
-    @include mq(sp) {
-      border-bottom: none;
-    }
   }
 
   td {
-
     ul {
       li {
         margin-left: 1em;
@@ -81,6 +63,31 @@
 
       &.small {
         width: auto;
+      }
+    }
+  }
+
+  &.sp-block {
+    tr {
+      &:not(:first-child) {
+        th {
+          @include mq(sp) {
+            border-top: none;
+          }
+        }
+      }
+    }
+
+    th, td {
+      @include mq(sp) {
+        padding: 0.5rem 1.5rem;
+        display: block;
+      }
+    }
+
+    th {
+      @include mq(sp) {
+        border-bottom: none;
       }
     }
   }

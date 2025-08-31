@@ -188,6 +188,7 @@ figure {
 
 .l-section {
   padding: 6rem 0;
+  overflow-x: clip;
 }
 @media screen and (min-width: 768px) {
   .l-section {
@@ -810,11 +811,16 @@ figure {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 24.8rem;
+  width: 16.5rem;
   height: 4.8rem;
   padding: 1rem;
   border: 1px solid var(--color-gray);
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+@media screen and (min-width: 768px) {
+  .c-tab .tab {
+    width: 24.8rem;
+  }
 }
 .c-tab .tab.is-active {
   background-color: var(--color-green);
@@ -833,22 +839,11 @@ figure {
   width: 100%;
   border-collapse: collapse;
 }
-@media screen and (max-width: 767px) {
-  .c-table tr:not(:first-child) th {
-    border-top: none;
-  }
-}
 .c-table th, .c-table td {
   padding: 1rem 2rem;
   font-size: 1.4rem;
   font-weight: 400;
   border: 1px solid var(--color-gray);
-}
-@media screen and (max-width: 767px) {
-  .c-table th, .c-table td {
-    padding: 0.5rem 1.5rem;
-    display: block;
-  }
 }
 .c-table th {
   text-align: left;
@@ -857,11 +852,6 @@ figure {
 @media screen and (min-width: 768px) {
   .c-table th {
     width: 19.5rem;
-  }
-}
-@media screen and (max-width: 767px) {
-  .c-table th {
-    border-bottom: none;
   }
 }
 .c-table td ul li {
@@ -899,6 +889,22 @@ figure {
 }
 .c-table-scroll .c-table.small {
   width: auto;
+}
+@media screen and (max-width: 767px) {
+  .c-table.sp-block tr:not(:first-child) th {
+    border-top: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .c-table.sp-block th, .c-table.sp-block td {
+    padding: 0.5rem 1.5rem;
+    display: block;
+  }
+}
+@media screen and (max-width: 767px) {
+  .c-table.sp-block th {
+    border-bottom: none;
+  }
 }
 .c-table .map {
   margin: 2rem 0 0;
@@ -3687,24 +3693,45 @@ figure {
 }
 
 .p-technology-classroom-row + .p-technology-classroom-row {
-  margin: 10rem 0 0;
+  margin: 6rem 0 0;
+}
+@media screen and (min-width: 768px) {
+  .p-technology-classroom-row + .p-technology-classroom-row {
+    margin: 10rem 0 0;
+  }
 }
 .p-technology-classroom-row h2 {
-  margin: 0 0 3rem;
+  margin: 0 0 2rem;
   padding: 0 0 1rem;
-  font-size: 3.6rem;
+  font-size: 2.4rem;
   line-height: 1.5;
   font-weight: 500;
   border-bottom: 1px solid var(--color-gray);
 }
+@media screen and (min-width: 768px) {
+  .p-technology-classroom-row h2 {
+    margin: 0 0 3rem;
+    font-size: 3.6rem;
+  }
+}
 .p-technology-classroom-row h3 {
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   line-height: 1.5;
   font-weight: 500;
   margin: 0 0 1rem;
 }
+@media screen and (min-width: 768px) {
+  .p-technology-classroom-row h3 {
+    font-size: 2.4rem;
+  }
+}
 .p-technology-classroom-row > * + * {
-  margin: 3rem 0 0;
+  margin: 2rem 0 0;
+}
+@media screen and (min-width: 768px) {
+  .p-technology-classroom-row > * + * {
+    margin: 3rem 0 0;
+  }
 }
 .p-technology-classroom-row p {
   font-weight: 400;
@@ -3753,16 +3780,37 @@ figure {
   background-color: var(--color-gray-light);
 }
 .p-technology-classroom-row .gray-box h4 {
-  margin: 0 0 2rem;
-  font-size: 2rem;
+  margin: 0 0 1rem;
+  font-size: 1.6rem;
   font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  .p-technology-classroom-row .gray-box h4 {
+    margin: 0 0 2rem;
+    font-size: 2rem;
+  }
 }
 .p-technology-classroom-row .col {
   display: flex;
-  gap: 0 2rem;
+  gap: 0 1rem;
+}
+@media screen and (min-width: 768px) {
+  .p-technology-classroom-row .col {
+    gap: 0 2rem;
+  }
 }
 .p-technology-classroom-row .col figure {
   flex-shrink: 0;
+}
+@media screen and (max-width: 767px) {
+  .p-technology-classroom-row .col.sp-row {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .p-technology-classroom-row .col.sp-row figure {
+    text-align: center;
+  }
 }
 .p-technology-classroom-row .image-col {
   display: flex;
@@ -3792,7 +3840,7 @@ figure {
 }
 .p-technology-classroom.classroom08 .image-col {
   align-items: flex-end;
-  gap: 5rem;
+  gap: 2rem 5rem;
   margin: 2rem 0 0;
 }
 .p-technology-classroom.classroom08 .image-col .yoko {
@@ -3802,7 +3850,12 @@ figure {
 }
 
 .p-technology-slide {
-  margin: 4rem 0 0;
+  margin: 3rem 0 0;
+}
+@media screen and (min-width: 768px) {
+  .p-technology-slide {
+    margin: 4rem 0 0;
+  }
 }
 .p-technology-slide .splide__slide {
   padding: 1rem;
@@ -3828,10 +3881,20 @@ figure {
   display: none;
 }
 .p-technology-slide .splide__arrow.splide__arrow--prev {
-  left: -3rem;
+  left: -2rem;
+}
+@media screen and (min-width: 768px) {
+  .p-technology-slide .splide__arrow.splide__arrow--prev {
+    left: -3rem;
+  }
 }
 .p-technology-slide .splide__arrow.splide__arrow--next {
-  right: -3rem;
+  right: -2rem;
+}
+@media screen and (min-width: 768px) {
+  .p-technology-slide .splide__arrow.splide__arrow--next {
+    right: -3rem;
+  }
 }
 .p-technology-slide .splide__arrow.splide__arrow--next::before {
   transform: rotate(180deg);
@@ -3854,18 +3917,43 @@ figure {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding-inline: 1rem;
   margin: 3rem 0 0;
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 1.5;
   font-weight: 500;
 }
+@media screen and (min-width: 768px) {
+  .p-technology-slide a h2 {
+    font-size: 2rem;
+    padding-inline: 1rem;
+  }
+}
 .p-technology-slide a h2 .small {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 768px) {
+  .p-technology-slide a h2 .small {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-technology-slide a .c-icon.arrow-right {
+    width: 2rem;
+    height: 2rem;
+  }
+  .p-technology-slide a .c-icon.arrow-right::after {
+    width: 0.5rem;
+    height: 0.9rem;
+  }
 }
 
 .p-technology-panel {
-  margin: 8rem 0 0;
+  margin: 4rem 0 0;
+}
+@media screen and (min-width: 768px) {
+  .p-technology-panel {
+    margin: 8rem 0 0;
+  }
 }
 .p-technology-panel ul {
   display: grid;
@@ -3900,14 +3988,34 @@ figure {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding-inline: 1rem;
   margin: 3rem 0 0;
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 1.5;
   font-weight: 500;
 }
+@media screen and (min-width: 768px) {
+  .p-technology-panel ul a h2 {
+    padding-inline: 1rem;
+    font-size: 2rem;
+  }
+}
 .p-technology-panel ul a h2 .small {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 768px) {
+  .p-technology-panel ul a h2 .small {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-technology-panel ul a .c-icon.arrow-right {
+    width: 2rem;
+    height: 2rem;
+  }
+  .p-technology-panel ul a .c-icon.arrow-right::after {
+    width: 0.5rem;
+    height: 0.9rem;
+  }
 }
 
 .p-top-mv {
