@@ -11,7 +11,12 @@
   }
 
   &-link {
-    flex-shrink: 0;
+    @include mq(sp) {
+      display: none;
+    }
+    @include mq(ovsp) {
+      flex-shrink: 0;
+    }
 
     ul {
       display: grid;

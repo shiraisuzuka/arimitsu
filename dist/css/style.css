@@ -300,6 +300,11 @@ figure {
 .c-hero {
   overflow: hidden;
 }
+@media screen and (max-width: 767px) {
+  .c-hero {
+    padding-bottom: 0;
+  }
+}
 .c-hero-inner {
   display: grid;
   gap: 5rem 0;
@@ -322,7 +327,7 @@ figure {
   color: var(--color-green);
 }
 .c-hero-title {
-  font-size: 3.2rem;
+  font-size: 4.6rem;
   font-weight: 700;
   line-height: 1.375;
 }
@@ -336,6 +341,7 @@ figure {
   font-family: var(--font-biz);
   font-size: 1.6rem;
   line-height: 2.3333333333;
+  letter-spacing: 0.1em;
 }
 @media screen and (min-width: 768px) {
   .c-hero-text {
@@ -343,14 +349,15 @@ figure {
   }
 }
 .c-hero figure {
-  width: 100%;
+  width: calc(100% + 1.5rem);
   aspect-ratio: 994/600;
-  border-radius: 2.4rem 0 0 2.4rem;
+  border-radius: 1.2rem 0 0 1.2rem;
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   .c-hero figure {
     width: 99.4rem;
+    border-radius: 2.4rem 0 0 2.4rem;
   }
 }
 .c-hero figure img {
@@ -358,7 +365,12 @@ figure {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 2.4rem 0 0 2.4rem;
+  border-radius: 1.2rem 0 0 1.2rem;
+}
+@media screen and (min-width: 768px) {
+  .c-hero figure img {
+    border-radius: 2.4rem 0 0 2.4rem;
+  }
 }
 
 .c-icon {
@@ -582,27 +594,47 @@ figure {
   }
 }
 .c-section-row + .c-section-row {
-  margin-top: 10rem;
+  margin-top: 6rem;
+}
+@media screen and (min-width: 768px) {
+  .c-section-row + .c-section-row {
+    margin-top: 10rem;
+  }
 }
 .c-section-row p {
   font-weight: 400;
 }
 .c-section-row > * + * {
-  margin-top: 4rem;
+  margin-top: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .c-section-row > * + * {
+    margin-top: 4rem;
+  }
 }
 .c-section-row-title {
   padding: 0 0 1rem;
-  font-size: 3.6rem;
+  font-size: 2.4rem;
   font-weight: 500;
   line-height: 1.5;
   border-bottom: 1px solid var(--color-gray);
+}
+@media screen and (min-width: 768px) {
+  .c-section-row-title {
+    font-size: 3.6rem;
+  }
 }
 .c-section-row-title span {
   font-size: 2.4rem;
   padding-left: 0.5rem;
 }
 .c-section-row-text > * + * {
-  margin-top: 3rem;
+  margin-top: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .c-section-row-text > * + * {
+    margin-top: 3rem;
+  }
 }
 .c-section-row-text h3 {
   padding-left: 1.6rem;
@@ -617,25 +649,46 @@ figure {
 }
 .c-section-row-president {
   display: flex;
-  align-items: flex-end;
-  gap: 3rem;
+  align-items: center;
+  gap: 1.8rem;
+}
+@media screen and (min-width: 768px) {
+  .c-section-row-president {
+    align-items: flex-end;
+    gap: 3rem;
+  }
 }
 .c-section-row-president img {
   width: 20.7rem;
 }
 .c-section-row-president .role {
   display: block;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1;
+}
+@media screen and (min-width: 768px) {
+  .c-section-row-president .role {
+    font-size: 1.4rem;
+  }
 }
 .c-section-row-president .name {
   display: block;
-  font-size: 2.4rem;
+  font-size: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .c-section-row-president .name {
+    font-size: 2.4rem;
+  }
 }
 .c-section-row-glbox {
-  padding: 3rem;
+  padding: 2rem;
   font-size: 1.4rem;
   background-color: var(--color-gray-light);
+}
+@media screen and (min-width: 768px) {
+  .c-section-row-glbox {
+    padding: 3rem;
+  }
 }
 .c-section-row-glbox > * + * {
   margin-top: 2rem;
@@ -674,8 +727,15 @@ figure {
     gap: 0 6rem;
   }
 }
-.c-sticky-link {
-  flex-shrink: 0;
+@media screen and (max-width: 767px) {
+  .c-sticky-link {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .c-sticky-link {
+    flex-shrink: 0;
+  }
 }
 .c-sticky-link ul {
   display: grid;
@@ -760,29 +820,22 @@ figure {
   width: 100%;
   border-collapse: collapse;
 }
-.c-table-scroll {
-  padding-bottom: 0.5rem;
-  overflow-x: auto;
-}
-.c-table-scroll .c-table {
-  width: 79.4rem;
-}
-.c-table-scroll .c-table th, .c-table-scroll .c-table td {
-  padding: 0.5rem 1rem;
-}
-.c-table-scroll .c-table th {
-  color: #FFF;
-  background-color: var(--color-green);
-  text-align: center;
-}
-.c-table-scroll .c-table.small {
-  width: auto;
+@media screen and (max-width: 767px) {
+  .c-table tr:not(:first-child) th {
+    border-top: none;
+  }
 }
 .c-table th, .c-table td {
   padding: 1rem 2rem;
   font-size: 1.4rem;
   font-weight: 400;
   border: 1px solid var(--color-gray);
+}
+@media screen and (max-width: 767px) {
+  .c-table th, .c-table td {
+    padding: 0.5rem 1.5rem;
+    display: block;
+  }
 }
 .c-table th {
   text-align: left;
@@ -791,6 +844,11 @@ figure {
 @media screen and (min-width: 768px) {
   .c-table th {
     width: 19.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .c-table th {
+    border-bottom: none;
   }
 }
 .c-table td ul li {
@@ -810,6 +868,24 @@ figure {
     text-decoration: none;
     color: var(--color-green);
   }
+}
+.c-table-scroll {
+  padding-bottom: 0.5rem;
+  overflow-x: auto;
+}
+.c-table-scroll .c-table {
+  width: 79.4rem;
+}
+.c-table-scroll .c-table th, .c-table-scroll .c-table td {
+  padding: 0.5rem 1rem;
+}
+.c-table-scroll .c-table th {
+  color: #FFF;
+  background-color: var(--color-green);
+  text-align: center;
+}
+.c-table-scroll .c-table.small {
+  width: auto;
 }
 .c-table .map {
   margin: 2rem 0 0;
@@ -1562,7 +1638,7 @@ figure {
 
 .p-company-link {
   display: grid;
-  gap: 4rem;
+  gap: 2rem 4rem;
 }
 @media screen and (min-width: 768px) {
   .p-company-link {
@@ -1573,10 +1649,9 @@ figure {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 12rem;
-  padding: 2rem 3rem 2rem 8rem;
+  height: 7rem;
   background-color: var(--color-gray-light);
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   font-weight: 500;
   border-radius: 1.2rem;
   border: 2px solid transparent;
@@ -1591,6 +1666,19 @@ figure {
 @media screen and (max-width: 1000px) {
   .p-company-link a {
     padding: 2rem 3rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-company-link a {
+    padding: 2rem 1.5rem;
+  }
+  .p-company-link a .c-icon.arrow-right {
+    width: 2rem;
+    height: 2rem;
+  }
+  .p-company-link a .c-icon.arrow-right::after {
+    width: 0.5rem;
+    height: 0.9rem;
   }
 }
 @media (any-hover: hover) {
