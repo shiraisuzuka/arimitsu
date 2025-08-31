@@ -1552,6 +1552,11 @@ figure {
 .p-contact-row.col > div > * + * {
   margin-top: 1rem;
 }
+.p-contact-title {
+  margin: 0 0 2rem;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
 .p-contact .required,
 .p-contact .any {
   display: inline-block;
@@ -1683,7 +1688,6 @@ figure {
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
-  margin-inline: auto;
 }
 .p-contact-btn::after {
   content: "";
@@ -1724,7 +1728,27 @@ figure {
   }
 }
 .p-contact-btn-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
   margin: 8rem 0 0;
+}
+.p-contact-btn.back-btn::after {
+  left: 1.8rem;
+  right: auto;
+  background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='レイヤー 2' viewBox='0 0 5.78 8.73'%3E%3Cpath d='M5.07 8.02 1.41 4.37 5.07.71' data-name='レイヤー 1' style='fill:none;stroke:%2364be37;stroke-miterlimit:10;stroke-width:2px'/%3E%3C/svg%3E");
+}
+.p-contact-btn.back-btn button {
+  background-color: #FFF;
+  color: var(--color-green);
+  transition: opacity 0.3s ease;
+}
+@media (any-hover: hover) {
+  .p-contact-btn.back-btn:hover button {
+    opacity: 0.7;
+  }
 }
 
 .p-history {
