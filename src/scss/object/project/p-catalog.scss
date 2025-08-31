@@ -4,4 +4,12 @@
   .l-section-inner {
     max-width: calc(133.6rem + 3rem * 2);
   }
+
+  &-tab {
+    .tab {
+      @include mq(sp) {
+        width: 10.8rem;
+      }
+    }
+  }
 }
