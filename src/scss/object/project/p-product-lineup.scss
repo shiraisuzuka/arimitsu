@@ -2,9 +2,6 @@
 
 .p-product-lineup {
   background-color: var(--color-gray-light);
-  @include mq(ovsp) {
-    padding-bottom: 15rem;
-  }
 
   &-inner {
     @include mq(ovsp) {

@@ -1,36 +1,6 @@
 @use 'foundation' as *;
 
-.p-technology-tab {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-
-  .tab {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24.8rem;
-    height: 4.8rem;
-    padding: 1rem;
-    border: 1px solid var(--color-gray);
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-
-    &.is-active {
-      background-color: var(--color-green);
-      color: var(--color-white);
-      border-color: var(--color-green);
-    }
-
-    @media (any-hover: hover) {
-      &:hover {
-        background-color: var(--color-green);
-        color: var(--color-white);
-        border-color: var(--color-green);
-      }
-    }
-  }
-}
+.p-technology-tab {}
 
 .p-technology-panel {
   margin: 8rem 0 0;

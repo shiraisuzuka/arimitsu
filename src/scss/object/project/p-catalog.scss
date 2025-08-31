@@ -1,0 +1,7 @@
+@use 'foundation' as *;
+
+.p-catalog {
+  .l-section-inner {
+    max-width: calc(133.6rem + 3rem * 2);
+  }
+}

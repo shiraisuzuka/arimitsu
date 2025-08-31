@@ -1,9 +1,9 @@
 @use 'foundation' as *;
 
 .p-product-wrapper {
-  padding: 2rem 0 6rem;
+  padding-top: 2rem;
   @include mq(ovsp) {
-    padding: 4rem 0 16rem;
+    padding-top: 4rem;
   }
 
   &-col {
