@@ -37,3 +37,9 @@
 		display: inline-block !important;
 	}
 }
+
+.u-sp-pt0 {
+  @include mq(sp) {
+    padding-top: 0 !important;
+  }
+}

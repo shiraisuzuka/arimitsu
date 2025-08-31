@@ -4,6 +4,9 @@
   justify-content: flex-start;
 
   .tab {
-    width: 12.3rem;
+    width: 10.8rem;
+    @include mq(ovsp) {
+      width: 12.3rem;
+    }
   }
 }

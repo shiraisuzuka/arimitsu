@@ -3,9 +3,14 @@
 .p-organization {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  // grid-template-rows: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 0.5rem;
   line-height: 1.5;
+  @include mq(ovsp) {
+    gap: 1rem;
+  }
+  @include mq(sp) {
+    font-size: 1rem;
+  }
 
   span {
     display: block;
@@ -36,16 +41,26 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 1rem 0;
-      margin: 1.5rem 0 0;
+      gap: 0.3rem;
+      margin: 0.8rem 0 0;
+      @include mq(ovsp) {
+        gap: 1rem 0;
+        margin: 1.5rem 0 0;
+      }
 
       > div {
         > div + div {
-          margin-top: 1rem;
+          margin-top: 0.5rem;
+          @include mq(ovsp) {
+            margin-top: 1rem;
+          }
         }
 
         ul {
-          padding-left: 2rem;
+          padding-left: 1rem;
+          @include mq(ovsp) {
+            padding-left: 2rem;
+          }
         }
       }
     }
@@ -56,37 +71,61 @@
     grid-row-start: 3;
 
     > * + * {
-      margin-top: 1rem;
+      margin-top: 0.5rem;
+      @include mq(ovsp) {
+        margin-top: 1rem;
+      }
     }
 
     > * {
       > * + * {
-        margin-top: 1rem;
+        margin-top: 0.5rem;
+        @include mq(ovsp) {
+          margin-top: 1rem;
+        }
       }
     }
   }
 
   .gl1 {
-    padding: 1rem 2rem;
+    padding: 0.5rem;
     background-color: #bde3aa;
+    @include mq(ovsp) {
+      padding: 1rem 2rem;
+    }
   }
 
   .gl2 {
-    padding: 1rem 2rem;
+    padding: 0.5rem;
     background-color: #c8eadc;
+    @include mq(ovsp) {
+      padding: 1rem 2rem;
+    }
   }
 
   .wh1 {
     color: #4a7850;
     background-color: #FFF;
-    padding: 0.5rem 1.5rem;
+    padding: 0.2rem 0.5rem;
+    @include mq(ovsp) {
+      padding: 0.5rem 1.5rem;
+    }
+    @include mq(sp) {
+      font-size: 0.8rem;
+    }
   }
 
   ul {
-    margin: 1rem 0 0;
+    margin: 0.5rem 0 0;
+    @include mq(ovsp) {
+      margin: 1rem 0 0;
+    }
 
     li {
-      font-size: 1.3rem;
+      font-size: 0.8rem;
+      @include mq(ovsp) {
+        font-size: 1.3rem;
+      }
 
       &::before {
         content: "";

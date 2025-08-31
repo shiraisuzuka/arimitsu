@@ -2,11 +2,18 @@
 
 .p-history {
   display: grid;
-  grid-template-columns: max-content 1fr;
-  gap: 0 2rem;
+  gap: 0.5rem 2rem;
+  @include mq(ovsp) {
+    grid-template-columns: max-content 1fr;
+  }
+  @include mq(sp) {
+    font-size: 1.6rem;
+  }
 
   &.fig {
-    grid-template-columns: max-content 1fr 16rem;
+    @include mq(ovsp) {
+      grid-template-columns: max-content 1fr 16rem;
+    }
   }
 
   &-year {
@@ -21,6 +28,9 @@
     width: 16rem;
     aspect-ratio: 160 / 120;
     overflow: hidden;
+    @include mq(sp) {
+      margin-inline: auto;
+    }
 
     img {
       width: 100%;

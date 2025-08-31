@@ -31,8 +31,11 @@
     }
 
     span {
-      font-size: 2.4rem;
+      font-size: 1.4rem;
       padding-left: 0.5rem;
+      @include mq(ovsp) {
+        font-size: 2.4rem;
+      }
     }
   }
 
