@@ -2486,18 +2486,34 @@ figure {
 
 .p-privacypolicy h1 {
   padding-bottom: 1rem;
-  margin-bottom: 4rem;
-  font-size: 3.6rem;
+  margin-bottom: 2rem;
+  font-size: 2.4rem;
   font-weight: 500;
   border-bottom: 1px solid var(--color-gray);
 }
+@media screen and (min-width: 768px) {
+  .p-privacypolicy h1 {
+    margin-bottom: 4rem;
+    font-size: 3.6rem;
+  }
+}
 .p-privacypolicy-row {
-  margin: 4rem 0 0;
+  margin: 2rem 0 0;
+}
+@media screen and (min-width: 768px) {
+  .p-privacypolicy-row {
+    margin: 4rem 0 0;
+  }
 }
 .p-privacypolicy-row h2 {
   margin-bottom: 1rem;
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  .p-privacypolicy-row h2 {
+    font-size: 2.4rem;
+  }
 }
 .p-privacypolicy-row p {
   font-weight: 400;
