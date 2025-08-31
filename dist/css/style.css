@@ -1458,10 +1458,42 @@ figure {
   background-color: var(--color-green);
 }
 .l-header.recruit .l-header-logo {
-  width: 18.6rem;
+  width: 13rem;
 }
-.l-header.recruit .l-header-nav-btn span {
-  background-color: #FFF;
+@media screen and (min-width: 768px) {
+  .l-header.recruit .l-header-logo {
+    width: 18.6rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .l-header.recruit .l-header-logo a {
+    position: relative;
+  }
+  .l-header.recruit .l-header-logo a::after {
+    content: "RECRUIT";
+    position: absolute;
+    top: 50%;
+    right: -1.5rem;
+    transform: translate(100%, -50%);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #FFF;
+  }
+}
+@media screen and (max-width: 767px) {
+  .l-header.recruit .l-header-nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 4.8rem;
+    height: 4.8rem;
+    background-color: #FFF;
+    border-radius: 0.4rem;
+  }
+  .l-header.recruit .l-header-nav-btn span:nth-child(2) {
+    margin-left: 0;
+  }
 }
 .l-header.recruit .l-header-nav-hamburger {
   padding: 4.5rem 1.5rem;
@@ -2955,14 +2987,16 @@ figure {
   display: flex;
   align-items: center;
   gap: 1.2rem;
-  padding: 3rem 2rem;
-  font-size: 1.8rem;
+  padding: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 500;
+  line-height: 1.5;
   cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .p-qanda-accordion-title {
     padding: 3rem;
+    font-size: 1.8rem;
   }
 }
 .p-qanda-accordion-title::before {
@@ -2971,17 +3005,25 @@ figure {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   font-family: var(--font-lato);
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #FFF;
   background-color: var(--color-green);
   border-radius: 50%;
 }
+@media screen and (min-width: 768px) {
+  .p-qanda-accordion-title::before {
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+  }
+}
 .p-qanda-accordion-title::after {
   content: "";
+  flex-shrink: 0;
   display: block;
   margin-left: auto;
   width: 1rem;
@@ -2995,19 +3037,29 @@ figure {
 }
 .p-qanda-accordion-content {
   position: relative;
-  padding: 3rem;
+  padding: 1.5rem;
   font-weight: 400;
   display: none;
+}
+@media screen and (min-width: 768px) {
+  .p-qanda-accordion-content {
+    padding: 3rem;
+  }
 }
 .p-qanda-accordion-content::before {
   content: "";
   position: absolute;
   top: 0;
   left: 50%;
-  width: calc(100% - 6rem);
+  width: calc(100% - 3rem);
   height: 1px;
   background-color: var(--color-gray);
   transform: translateX(-50%);
+}
+@media screen and (min-width: 768px) {
+  .p-qanda-accordion-content::before {
+    width: calc(100% - 6rem);
+  }
 }
 
 .p-recruit-education {
@@ -3540,9 +3592,14 @@ figure {
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  padding: 1rem 1rem 1rem 3rem;
+  padding: 1.5rem;
   background-color: var(--color-gray-light);
   border-radius: 1.2rem;
+}
+@media screen and (min-width: 768px) {
+  .p-session-list li {
+    padding: 1rem 1rem 1rem 3rem;
+  }
 }
 .p-session-list li > div {
   display: flex;
@@ -3551,22 +3608,43 @@ figure {
   gap: 0.5rem;
 }
 .p-session-list li .date, .p-session-list li .time {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 768px) {
+  .p-session-list li .date, .p-session-list li .time {
+    font-size: 1.8rem;
+  }
 }
 .p-session-list li .number {
-  margin-inline: 1.5rem;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: var(--color-gray2);
+}
+@media screen and (min-width: 768px) {
+  .p-session-list li .number {
+    margin-inline: 1.5rem;
+    font-size: 1.4rem;
+  }
 }
 .p-session-list li .category {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .p-session-list li .category {
+    gap: 1rem;
+  }
 }
 .p-session-list li .category p {
-  padding: 0 1rem;
-  font-size: 1.4rem;
+  padding: 0 0.7rem;
+  font-size: 1.2rem;
   border: 2px solid var(--color-green);
+}
+@media screen and (min-width: 768px) {
+  .p-session-list li .category p {
+    padding: 0 1rem;
+    font-size: 1.4rem;
+  }
 }
 .p-session-list li .category p.on {
   color: #FFF;
@@ -3582,12 +3660,16 @@ figure {
   justify-content: center;
   width: 11.5rem;
   height: 4.3rem;
-  margin-left: auto;
   font-weight: 700;
   background-color: #FFF;
   color: var(--color-green);
   border: 2px solid var(--color-green);
   border-radius: 0.8rem;
+}
+@media screen and (min-width: 768px) {
+  .p-session-list li .status {
+    margin-left: auto;
+  }
 }
 .p-session-list li.end::before {
   content: "";

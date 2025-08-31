@@ -22,12 +22,14 @@
       display: flex;
       align-items: center;
       gap: 1.2rem;
-      padding: 3rem 2rem;
-      font-size: 1.8rem;
+      padding: 1.5rem;
+      font-size: 1.6rem;
       font-weight: 500;
+      line-height: 1.5;
       cursor: pointer;
       @include mq(ovsp) {
         padding: 3rem;
+        font-size: 1.8rem;
       }
 
       &::before {
@@ -36,18 +38,24 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 4rem;
-        height: 4rem;
+        width: 3rem;
+        height: 3rem;
         font-family: var(--font-lato);
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 700;
         color: #FFF;
         background-color: var(--color-green);
         border-radius: 50%;
+        @include mq(ovsp) {
+          width: 4rem;
+          height: 4rem;
+          font-size: 2rem;
+        }
       }
 
       &::after {
         content: "";
+        flex-shrink: 0;
         display: block;
         margin-left: auto;
         width: 1rem;
@@ -66,19 +74,25 @@
 
     &-content {
       position: relative;
-      padding: 3rem;
+      padding: 1.5rem;
       font-weight: 400;
       display: none;
+      @include mq(ovsp) {
+        padding: 3rem;
+      }
 
       &::before {
         content: '';
         position: absolute;
         top: 0;
         left: 50%;
-        width: calc(100% - 3rem * 2);
+        width: calc(100% - 1.5rem * 2);
         height: 1px;
         background-color: var(--color-gray);
         transform: translateX(-50%);
+        @include mq(ovsp) {
+          width: calc(100% - 3rem * 2);
+        }
       }
     }
   }

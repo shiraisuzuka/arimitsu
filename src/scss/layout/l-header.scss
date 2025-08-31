@@ -403,12 +403,45 @@
   background-color: var(--color-green);
 
   .l-header-logo {
-    width: 18.6rem;
+    width: 13rem;
+    @include mq(ovsp) {
+      width: 18.6rem;
+    }
+
+    a {
+      @include mq(sp) {
+        position: relative;
+
+        &::after {
+          content: "RECRUIT";
+          position: absolute;
+          top: 50%;
+          right: -1.5rem;
+          transform: translate(100%, -50%);
+          font-size: 1.2rem;
+          font-weight: 500;
+          color: #FFF;
+        }
+      }
+    }
   }
 
   .l-header-nav-btn {
-    span {
+    @include mq(sp) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 4.8rem;
+      height: 4.8rem;
       background-color: #FFF;
+      border-radius: 0.4rem;
+
+      span {
+        &:nth-child(2) {
+          margin-left: 0;
+        }
+      }
     }
   }
 
