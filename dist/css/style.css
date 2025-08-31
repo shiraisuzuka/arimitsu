@@ -213,6 +213,11 @@ figure {
     padding-inline: 3rem;
   }
 }
+@media screen and (min-width: 768px) {
+  .l-section-inner.small {
+    max-width: 85.4rem;
+  }
+}
 
 .c-btn {
   position: relative;
@@ -1601,7 +1606,7 @@ figure {
 }
 
 .p-contact {
-  max-width: 79.5rem;
+  max-width: 79.4rem;
   margin: 2rem auto 0;
 }
 .p-contact-row + .p-contact-row {
@@ -2107,6 +2112,33 @@ figure {
 }
 .p-pagination .page-numbers.next.non-active::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='レイヤー 2' viewBox='0 0 5.78 8.73'%3E%3Cpath d='m.71.71 3.66 3.66L.71 8.02' data-name='レイヤー 1' style='fill:none;stroke:%23c8c8c8;stroke-miterlimit:10;stroke-width:2px'/%3E%3C/svg%3E");
+}
+
+.p-privacypolicy h1 {
+  padding-bottom: 1rem;
+  margin-bottom: 4rem;
+  font-size: 3.6rem;
+  font-weight: 500;
+  border-bottom: 1px solid var(--color-gray);
+}
+.p-privacypolicy-row {
+  margin: 4rem 0 0;
+}
+.p-privacypolicy-row h2 {
+  margin-bottom: 1rem;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.p-privacypolicy-row p {
+  font-weight: 400;
+}
+.p-privacypolicy-row ul {
+  margin: 1rem 0 0;
+  padding-left: 2rem;
+}
+.p-privacypolicy-row ul li {
+  list-style: disc;
+  font-weight: 400;
 }
 
 @media screen and (max-width: 767px) {
@@ -2710,11 +2742,6 @@ figure {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .p-qanda .l-section-inner {
-    max-width: 85.4rem;
-  }
-}
 .p-qanda-lead {
   font-weight: 400;
 }
@@ -3300,11 +3327,6 @@ figure {
   border-color: var(--color-gray3);
 }
 
-@media screen and (min-width: 768px) {
-  .p-technology-classroom .l-section-inner {
-    max-width: 85.4rem;
-  }
-}
 .p-technology-classroom-row + .p-technology-classroom-row {
   margin: 10rem 0 0;
 }

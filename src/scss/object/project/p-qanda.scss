@@ -2,12 +2,6 @@
 
 .p-qanda {
 
-  .l-section-inner {
-    @include mq(ovsp) {
-      max-width: calc(79.4rem + 3rem * 2);
-    }
-  }
-
   &-lead {
     font-weight: 400;
   }

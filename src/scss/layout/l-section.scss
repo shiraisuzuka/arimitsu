@@ -22,5 +22,11 @@
       max-width: calc(120rem + 3rem * 2);
       padding-inline: 3rem;
     }
+
+    &.small {
+      @include mq(ovsp) {
+        max-width: calc(79.4rem + 3rem * 2);
+      }
+    }
   }
 }

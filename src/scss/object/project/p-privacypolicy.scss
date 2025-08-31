@@ -1,0 +1,35 @@
+@use 'foundation' as *;
+
+.p-privacypolicy {  
+  h1 {
+    padding-bottom: 1rem;
+    margin-bottom: 4rem;
+    font-size: 3.6rem;
+    font-weight: 500;
+    border-bottom: 1px solid var(--color-gray);
+  }
+
+  &-row {
+    margin: 4rem 0 0;
+
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 2.4rem;
+      font-weight: 500;
+    }
+
+    p {
+      font-weight: 400;
+    }
+
+    ul {
+      margin: 1rem 0 0;
+      padding-left: 2rem;
+
+      li {
+        list-style: disc;
+        font-weight: 400;
+      }
+    }
+  }
+}

@@ -1,11 +1,6 @@
 @use 'foundation' as *;
 
 .p-technology-classroom {
-  .l-section-inner {
-    @include mq(ovsp) {
-      max-width: calc(79.4rem + 3rem * 2);
-    }
-  }
 
   &-row {
     & + & {
