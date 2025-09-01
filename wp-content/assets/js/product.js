@@ -206,7 +206,7 @@
         checkbox.checked = false;
         parentItem.classList.add('disabled');
         parentItem.classList.remove('is-checked');
-        parentItem.style.opacity = '0.5';
+        parentItem.style.opacity = '0.3';
         parentItem.style.pointerEvents = 'none';
       }
     });
@@ -230,7 +230,7 @@
           submitButton.style.cursor = 'pointer';
         } else {
           submitButton.disabled = true;
-          submitButton.style.opacity = '0.5';
+          submitButton.style.opacity = '0.3';
           submitButton.style.cursor = 'not-allowed';
         }
       }
@@ -289,7 +289,7 @@
               submitButton.style.cursor = 'pointer';
             } else {
               submitButton.disabled = true;
-              submitButton.style.opacity = '0.5';
+              submitButton.style.opacity = '0.3';
               submitButton.style.cursor = 'not-allowed';
             }
           }
@@ -325,7 +325,7 @@
           // 0件の場合はボタンを無効化
           if (count === 0) {
             submitButton.disabled = true;
-            submitButton.style.opacity = '0.5';
+            submitButton.style.opacity = '0.3';
             submitButton.style.cursor = 'not-allowed';
           } else {
             submitButton.disabled = false;
@@ -338,7 +338,7 @@
         console.error('Error:', error);
         submitButton.value = `検索する（0件）`;
         submitButton.disabled = true;
-        submitButton.style.opacity = '0.5';
+        submitButton.style.opacity = '0.3';
         submitButton.style.cursor = 'not-allowed';
       });
     }
