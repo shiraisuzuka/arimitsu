@@ -10,7 +10,7 @@ function breadcrumb() {
       <ol class="p-breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
         <li class="p-breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
           <a itemprop="item" href="<?php echo esc_url(home_url()); ?>">
-            <span itemprop="name">HOME</span>
+            <span itemprop="name">ホーム</span>
           </a>
           <meta itemprop="position" content="1">
         </li>

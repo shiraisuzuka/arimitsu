@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
-<section class="p-404">
-  <div class="wrapper">
-    <div class="inner">
-      <h1>お探しのページは見つかりませんでした。</h1>
-      <p>※3秒後に自動で遷移いたします。</p>
-    </div>
+<div class="l-section">
+  <div class="l-section-inner">
+    <hgroup class="p-lower-mv-title">
+      <h1>お探しのページは<br class="u-show-br-sp">見つかりませんでした。</h1>
+    </hgroup>
+    <p class="u-al-center">※3秒後に自動で遷移いたします。</p>
   </div>
-</section>
+</div>
 
 <?php get_footer(); ?>

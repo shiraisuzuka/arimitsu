@@ -74,6 +74,10 @@
   <?php elseif ( is_post_type_archive('product')  ): ?>
   <meta name="description" content="有光工業株式会社の製品一覧ページです。農業機械・産業機械を網羅し、検索機能を使って高圧ポンプ、洗浄機、泡洗浄装置など目的別・用途別に簡単に絞り込むことができます。">
   <meta property="og:description" content="有光工業株式会社の製品一覧ページです。農業機械・産業機械を網羅し、検索機能を使って高圧ポンプ、洗浄機、泡洗浄装置など目的別・用途別に簡単に絞り込むことができます。">
+
+  <?php elseif ( is_page('company')  ): ?>
+  <meta name="description" content="有光工業株式会社の企業情報がご覧いただける企業情報ページです。ごあいさつ、会社概要、沿革、組織体制、事業所一覧、環境保全活動、品質保証体制がご覧いただけます。">
+  <meta property="og:description" content="有光工業株式会社の企業情報がご覧いただける企業情報ページです。ごあいさつ、会社概要、沿革、組織体制、事業所一覧、環境保全活動、品質保証体制がご覧いただけます。">
   <?php endif; ?>
 
   <link rel="shortcut icon" href="<?php temp_path(); ?>/favicon.ico" type="image/vnd.microsoft.icon">
