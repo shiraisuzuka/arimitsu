@@ -2159,12 +2159,22 @@ figure {
   font-size: 2.4rem;
   font-weight: 500;
 }
+@media screen and (min-width: 768px) {
+  .p-lower-mv-title h1 {
+    font-size: 3.6rem;
+  }
+}
 .p-lower-mv-title p {
   font-family: var(--font-en);
   font-size: 1.2rem;
   font-weight: 700;
   text-transform: capitalize;
   color: var(--color-green);
+}
+@media screen and (min-width: 768px) {
+  .p-lower-mv-title p {
+    font-size: 1.5rem;
+  }
 }
 
 .p-news-category {
@@ -2249,12 +2259,12 @@ figure {
 }
 .p-news-detail-contents .col {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  gap: 2rem 1.5rem;
 }
 @media screen and (min-width: 768px) {
   .p-news-detail-contents .col {
-    gap: 1.8rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.8rem;
   }
 }
 .p-news-detail-contents figure figcaption {

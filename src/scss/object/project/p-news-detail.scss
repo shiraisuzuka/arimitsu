@@ -43,10 +43,10 @@
 
     .col {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
+      gap: 2rem 1.5rem;
       @include mq(ovsp) {
-        gap: 1.8rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem 1.8rem;
       }
     }
 

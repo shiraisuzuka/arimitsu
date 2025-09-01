@@ -142,6 +142,11 @@
   <script src="<?php assets_path(); ?>/js/jquery.matchHeight-min.js"></script>
   <?php endif; ?>
 
+  <?php if ( is_page('classroom01') || is_page('classroom02') || is_page('classroom03') || is_page('classroom04') || is_page('classroom05') || is_page('classroom06') || is_page('classroom07') || is_page('classroom08') ) : ?>
+  <script src="<?php assets_path(); ?>/js/splide.min.js"></script>
+  <script src="<?php assets_path(); ?>/js/technology.js"></script>
+  <?php endif; ?>
+
   <?php wp_footer(); ?>
 
 </body>

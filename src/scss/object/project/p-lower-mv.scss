@@ -18,6 +18,9 @@
     h1 {
       font-size: 2.4rem;
       font-weight: 500;
+      @include mq(ovsp) {
+        font-size: 3.6rem;
+      }
     }
 
     p {
@@ -26,6 +29,9 @@
       font-weight: 700;
       text-transform: capitalize;
       color: var(--color-green);
+      @include mq(ovsp) {
+        font-size: 1.5rem;
+      }
     }
   }
 }

@@ -78,6 +78,51 @@
   <?php elseif ( is_page('company')  ): ?>
   <meta name="description" content="有光工業株式会社の企業情報がご覧いただける企業情報ページです。ごあいさつ、会社概要、沿革、組織体制、事業所一覧、環境保全活動、品質保証体制がご覧いただけます。">
   <meta property="og:description" content="有光工業株式会社の企業情報がご覧いただける企業情報ページです。ごあいさつ、会社概要、沿革、組織体制、事業所一覧、環境保全活動、品質保証体制がご覧いただけます。">
+
+  <?php elseif ( is_page('about')  ): ?>
+  <meta name="description" content="有光工業株式会社の会社概要のページです。会社名、所在地、設立年、事業内容など、企業の基本情報を掲載しています。">
+  <meta property="og:description" content="有光工業株式会社の会社概要のページです。会社名、所在地、設立年、事業内容など、企業の基本情報を掲載しています。">
+
+  <?php elseif ( is_page('history')  ): ?>
+  <meta name="description" content="有光工業株式会社の沿革ページです。1923年の創業以来の歩みを年表形式でご紹介。">
+  <meta property="og:description" content="有光工業株式会社の沿革ページです。1923年の創業以来の歩みを年表形式でご紹介。">
+
+  <?php elseif ( is_page('technology')  ): ?>
+  <meta name="description" content="有光工業株式会社の技術情報を紹介するページです。ポンプのしくみ、調圧弁のしくみ、静電付加のしくみなどをわかりやすく解説しています。">
+  <meta property="og:description" content="有光工業株式会社の技術情報を紹介するページです。ポンプのしくみ、調圧弁のしくみ、静電付加のしくみなどをわかりやすく解説しています。">
+
+  <?php elseif ( is_page('classroom01')  ): ?>
+  <meta name="description" content="有光工業株式会社の技術情報を紹介するページです。ポンプのしくみをわかりやすく解説します。">
+  <meta property="og:description" content="有光工業株式会社の技術情報を紹介するページです。ポンプのしくみをわかりやすく解説します。">
+
+  <?php elseif ( is_page('classroom02')  ): ?>
+  <meta name="description" content="有光工業株式会社の技術情報を紹介するページです。ポンプ（オイル）についてをわかりやすく解説します。">
+  <meta property="og:description" content="有光工業株式会社の技術情報を紹介するページです。ポンプ（オイル）についてをわかりやすく解説します。">
+
+  <?php elseif ( is_page('classroom03')  ): ?>
+  <meta name="description" content="有光工業株式会社の技術情報を紹介するページです。調圧弁のしくみをわかりやすく解説します。">
+  <meta property="og:description" content="有光工業株式会社の技術情報を紹介するページです。調圧弁のしくみをわかりやすく解説します。">
+
+  <?php elseif ( is_page('classroom04')  ): ?>
+  <meta name="description" content="有光工業株式会社の技術情報を紹介するページです。アンローダバルブのしくみをわかりやすく解説します。">
+  <meta property="og:description" content="有光工業株式会社の技術情報を紹介するページです。アンローダバルブのしくみをわかりやすく解説します。">
+
+  <?php elseif ( is_page('classroom05')  ): ?>
+  <meta name="description" content="有光工業株式会社の技術情報を紹介するページです。静電付加をわかりやすく解説します。">
+  <meta property="og:description" content="有光工業株式会社の技術情報を紹介するページです。静電付加をわかりやすく解説します。">
+
+  <?php elseif ( is_page('classroom06')  ): ?>
+  <meta name="description" content="有光工業株式会社の技術情報を紹介するページです。圧力一定制御をわかりやすく解説します。">
+  <meta property="og:description" content="有光工業株式会社の技術情報を紹介するページです。圧力一定制御をわかりやすく解説します。">
+
+  <?php elseif ( is_page('classroom07')  ): ?>
+  <meta name="description" content="有光工業株式会社の技術情報を紹介するページです。フォームクリーニングをわかりやすく解説します。">
+  <meta property="og:description" content="有光工業株式会社の技術情報を紹介するページです。フォームクリーニングをわかりやすく解説します。">
+
+  <?php elseif ( is_page('classroom08')  ): ?>
+  <meta name="description" content="有光工業株式会社の技術情報を紹介するページです。少量散布をわかりやすく解説します。">
+  <meta property="og:description" content="有光工業株式会社の技術情報を紹介するページです。少量散布をわかりやすく解説します。">
+
   <?php endif; ?>
 
   <link rel="shortcut icon" href="<?php temp_path(); ?>/favicon.ico" type="image/vnd.microsoft.icon">
@@ -90,6 +135,10 @@
 
   <?php if ( is_singular('product') ) : ?>
   <!-- Splide -->
+  <link rel="stylesheet" href="<?php assets_path(); ?>/css/splide.min.css">
+  <?php endif; ?>
+
+  <?php if ( is_page('classroom01') || is_page('classroom02') || is_page('classroom03') || is_page('classroom04') || is_page('classroom05') || is_page('classroom06') || is_page('classroom07') || is_page('classroom08') ) : ?>
   <link rel="stylesheet" href="<?php assets_path(); ?>/css/splide.min.css">
   <?php endif; ?>
 
