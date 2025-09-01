@@ -40,7 +40,11 @@
 
       if ($news_query->have_posts()) :
         while ($news_query->have_posts()) : $news_query->the_post();
-          // カテゴリーを取得
+          // 投稿日から7日以内かチェック（NEW表示用）
+          $post_date = get_the_date('U');
+          $current_date = current_time('timestamp');
+          $is_new = (($current_date - $post_date) < (7 * 24 * 60 * 60));
+          
           $categories = get_the_terms(get_the_ID(), 'news_cat');
           $category_name = '';
           if ($categories && !is_wp_error($categories)) {
@@ -51,7 +55,12 @@
         <a href="<?php the_permalink(); ?>" class="p-top-news-item">
           <time datetime="<?php echo get_the_date('Y-m-d'); ?>" class="p-top-news-item-date"><?php echo get_the_date('Y.m.d'); ?></time>
           <?php if ($category_name) : ?>
-          <div class="p-top-news-item-category-wrap"><span class="p-top-news-item-category"><?php echo esc_html($category_name); ?></span></div>
+          <div class="p-top-news-item-category-wrap">
+            <span class="p-top-news-item-category"><?php echo esc_html($category_name); ?></span>
+            <?php if ($is_new) : ?>
+            <span class="p-top-news-item-category-new">NEW</span>
+            <?php endif; ?>
+          </div>
           <?php endif; ?>
           <h3 class="p-top-news-item-title"><?php the_title(); ?></h3>
         </a>

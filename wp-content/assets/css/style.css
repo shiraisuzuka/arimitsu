@@ -2267,6 +2267,12 @@ figure {
     gap: 2rem 1.8rem;
   }
 }
+.p-news-detail-contents .col figure {
+  width: 100%;
+}
+.p-news-detail-contents .col figure img {
+  width: 100%;
+}
 .p-news-detail-contents figure figcaption {
   font-size: 1.4rem;
 }

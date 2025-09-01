@@ -30,7 +30,7 @@ function create_news_post_type() {
     'hierarchical' => false,
     'menu_position' => 5,
     'menu_icon' => 'dashicons-admin-post',
-    'supports' => array('title', 'editor', 'excerpt', 'author', 'revisions', 'custom-fields'),
+    'supports' => array('title', 'editor', 'revisions'),
     'show_in_rest' => true,
     'taxonomies' => array('news_cat'),
   ));
@@ -73,15 +73,29 @@ add_action('init', 'create_news_taxonomy');
  */
 function create_default_news_categories() {
   $categories = array(
-    'お知らせ',
-    '展示会情報',
-    'マスコミ情報',
-    'その他'
+    array(
+      'name' => '採用情報',
+      'slug' => 'recruit'
+    ),
+    array(
+      'name' => 'マスコミ',
+      'slug' => 'media'
+    ),
+    array(
+      'name' => '展示会',
+      'slug' => 'exhibition'
+    ),
+    array(
+      'name' => 'その他',
+      'slug' => 'other'
+    )
   );
 
   foreach ($categories as $category) {
-    if (!term_exists($category, 'news_cat')) {
-      wp_insert_term($category, 'news_cat');
+    if (!term_exists($category['name'], 'news_cat')) {
+      wp_insert_term($category['name'], 'news_cat', array(
+        'slug' => $category['slug']
+      ));
     }
   }
 }
@@ -92,8 +106,17 @@ add_action('init', 'create_default_news_categories');
  */
 function add_news_meta_boxes() {
   add_meta_box(
+    'news_content',
+    '本文テキスト',
+    'news_content_callback',
+    'news',
+    'normal',
+    'high'
+  );
+  
+  add_meta_box(
     'news_images',
-    '画像アップロード（最大2枚）',
+    '画像アップロード',
     'news_images_callback',
     'news',
     'normal',
@@ -103,107 +126,87 @@ function add_news_meta_boxes() {
 add_action('add_meta_boxes', 'add_news_meta_boxes');
 
 /**
+ * 本文テキスト用メタボックスのコールバック
+ */
+function news_content_callback($post) {
+  wp_nonce_field('news_content_nonce', 'news_content_nonce');
+  
+  $content = get_post_meta($post->ID, '_news_content', true);
+  
+  ?>
+  <table class="form-table">
+    <tr>
+      <td>
+        <textarea id="news_content" name="news_content" rows="10" style="width: 100%;" required><?php echo esc_textarea($content); ?></textarea>
+        <p class="description">本文テキストを入力してください</p>
+      </td>
+    </tr>
+  </table>
+  <?php
+}
+
+/**
  * 画像アップロード用メタボックスのコールバック
  */
 function news_images_callback($post) {
   wp_nonce_field('news_images_nonce', 'news_images_nonce');
   
-  $image1 = get_post_meta($post->ID, '_news_image_1', true);
-  $image2 = get_post_meta($post->ID, '_news_image_2', true);
-  
   ?>
   <table class="form-table">
+    <?php for ($i = 1; $i <= 6; $i++): 
+      $image = get_post_meta($post->ID, '_news_image_' . $i, true);
+    ?>
     <tr>
-      <th><label for="news_image_1">画像1</label></th>
+      <th><label for="news_image_<?php echo $i; ?>">画像<?php echo $i; ?></label></th>
       <td>
-        <input type="hidden" id="news_image_1" name="news_image_1" value="<?php echo esc_attr($image1); ?>" />
-        <div id="news_image_1_preview">
-          <?php if ($image1): ?>
-            <img src="<?php echo esc_url(wp_get_attachment_url($image1)); ?>" style="max-width: 200px; height: auto;" />
+        <input type="hidden" id="news_image_<?php echo $i; ?>" name="news_image_<?php echo $i; ?>" value="<?php echo esc_attr($image); ?>" />
+        <div id="news_image_<?php echo $i; ?>_preview">
+          <?php if ($image): ?>
+            <img src="<?php echo esc_url(wp_get_attachment_url($image)); ?>" style="max-width: 200px; height: auto;" />
           <?php endif; ?>
         </div>
-        <button type="button" class="button" id="news_image_1_button">画像を選択</button>
-        <button type="button" class="button" id="news_image_1_remove" <?php echo $image1 ? '' : 'style="display:none;"'; ?>>画像を削除</button>
+        <button type="button" class="button" id="news_image_<?php echo $i; ?>_button">画像を選択</button>
+        <button type="button" class="button" id="news_image_<?php echo $i; ?>_remove" <?php echo $image ? '' : 'style="display:none;"'; ?>>画像を削除</button>
       </td>
     </tr>
-    <tr>
-      <th><label for="news_image_2">画像2</label></th>
-      <td>
-        <input type="hidden" id="news_image_2" name="news_image_2" value="<?php echo esc_attr($image2); ?>" />
-        <div id="news_image_2_preview">
-          <?php if ($image2): ?>
-            <img src="<?php echo esc_url(wp_get_attachment_url($image2)); ?>" style="max-width: 200px; height: auto;" />
-          <?php endif; ?>
-        </div>
-        <button type="button" class="button" id="news_image_2_button">画像を選択</button>
-        <button type="button" class="button" id="news_image_2_remove" <?php echo $image2 ? '' : 'style="display:none;"'; ?>>画像を削除</button>
-      </td>
-    </tr>
+    <?php endfor; ?>
   </table>
 
   <script>
   jQuery(document).ready(function($) {
-    // 画像1用
-    var mediaUploader1;
-    $('#news_image_1_button').click(function(e) {
-      e.preventDefault();
-      if (mediaUploader1) {
-        mediaUploader1.open();
-        return;
-      }
-      mediaUploader1 = wp.media({
-        title: '画像を選択',
-        button: {
-          text: '選択'
-        },
-        multiple: false
-      });
-      mediaUploader1.on('select', function() {
-        var attachment = mediaUploader1.state().get('selection').first().toJSON();
-        $('#news_image_1').val(attachment.id);
-        $('#news_image_1_preview').html('<img src="' + attachment.url + '" style="max-width: 200px; height: auto;" />');
-        $('#news_image_1_remove').show();
-      });
-      mediaUploader1.open();
-    });
+    for (var i = 1; i <= 6; i++) {
+      (function(index) {
+        var mediaUploader;
+        $('#news_image_' + index + '_button').click(function(e) {
+          e.preventDefault();
+          if (mediaUploader) {
+            mediaUploader.open();
+            return;
+          }
+          mediaUploader = wp.media({
+            title: '画像を選択',
+            button: {
+              text: '選択'
+            },
+            multiple: false
+          });
+          mediaUploader.on('select', function() {
+            var attachment = mediaUploader.state().get('selection').first().toJSON();
+            $('#news_image_' + index).val(attachment.id);
+            $('#news_image_' + index + '_preview').html('<img src="' + attachment.url + '" style="max-width: 200px; height: auto;" />');
+            $('#news_image_' + index + '_remove').show();
+          });
+          mediaUploader.open();
+        });
 
-    $('#news_image_1_remove').click(function(e) {
-      e.preventDefault();
-      $('#news_image_1').val('');
-      $('#news_image_1_preview').html('');
-      $(this).hide();
-    });
-
-    // 画像2用
-    var mediaUploader2;
-    $('#news_image_2_button').click(function(e) {
-      e.preventDefault();
-      if (mediaUploader2) {
-        mediaUploader2.open();
-        return;
-      }
-      mediaUploader2 = wp.media({
-        title: '画像を選択',
-        button: {
-          text: '選択'
-        },
-        multiple: false
-      });
-      mediaUploader2.on('select', function() {
-        var attachment = mediaUploader2.state().get('selection').first().toJSON();
-        $('#news_image_2').val(attachment.id);
-        $('#news_image_2_preview').html('<img src="' + attachment.url + '" style="max-width: 200px; height: auto;" />');
-        $('#news_image_2_remove').show();
-      });
-      mediaUploader2.open();
-    });
-
-    $('#news_image_2_remove').click(function(e) {
-      e.preventDefault();
-      $('#news_image_2').val('');
-      $('#news_image_2_preview').html('');
-      $(this).hide();
-    });
+        $('#news_image_' + index + '_remove').click(function(e) {
+          e.preventDefault();
+          $('#news_image_' + index).val('');
+          $('#news_image_' + index + '_preview').html('');
+          $(this).hide();
+        });
+      })(i);
+    }
   });
   </script>
   <?php
@@ -213,24 +216,36 @@ function news_images_callback($post) {
  * カスタムフィールドの保存
  */
 function save_news_meta($post_id) {
-  if (!isset($_POST['news_images_nonce']) || !wp_verify_nonce($_POST['news_images_nonce'], 'news_images_nonce')) {
-    return;
+  // コンテンツフィールドの保存
+  if (isset($_POST['news_content_nonce']) && wp_verify_nonce($_POST['news_content_nonce'], 'news_content_nonce')) {
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+      return;
+    }
+
+    if (!current_user_can('edit_post', $post_id)) {
+      return;
+    }
+
+    if (isset($_POST['news_content'])) {
+      update_post_meta($post_id, '_news_content', sanitize_textarea_field($_POST['news_content']));
+    }
   }
 
-  if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
-    return;
-  }
+  // 画像フィールドの保存
+  if (isset($_POST['news_images_nonce']) && wp_verify_nonce($_POST['news_images_nonce'], 'news_images_nonce')) {
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+      return;
+    }
 
-  if (!current_user_can('edit_post', $post_id)) {
-    return;
-  }
+    if (!current_user_can('edit_post', $post_id)) {
+      return;
+    }
 
-  if (isset($_POST['news_image_1'])) {
-    update_post_meta($post_id, '_news_image_1', sanitize_text_field($_POST['news_image_1']));
-  }
-
-  if (isset($_POST['news_image_2'])) {
-    update_post_meta($post_id, '_news_image_2', sanitize_text_field($_POST['news_image_2']));
+    for ($i = 1; $i <= 6; $i++) {
+      if (isset($_POST['news_image_' . $i])) {
+        update_post_meta($post_id, '_news_image_' . $i, sanitize_text_field($_POST['news_image_' . $i]));
+      }
+    }
   }
 }
 add_action('save_post', 'save_news_meta');
@@ -255,26 +270,29 @@ add_action('admin_enqueue_scripts', 'enqueue_news_admin_scripts');
 function get_news_images($post_id) {
   $images = array();
   
-  $image1_id = get_post_meta($post_id, '_news_image_1', true);
-  $image2_id = get_post_meta($post_id, '_news_image_2', true);
-  
-  if ($image1_id) {
-    $images[] = array(
-      'id' => $image1_id,
-      'url' => wp_get_attachment_url($image1_id),
-      'alt' => get_post_meta($image1_id, '_wp_attachment_image_alt', true)
-    );
-  }
-  
-  if ($image2_id) {
-    $images[] = array(
-      'id' => $image2_id,
-      'url' => wp_get_attachment_url($image2_id),
-      'alt' => get_post_meta($image2_id, '_wp_attachment_image_alt', true)
-    );
+  for ($i = 1; $i <= 6; $i++) {
+    $image_id = get_post_meta($post_id, '_news_image_' . $i, true);
+    
+    if ($image_id) {
+      $images[] = array(
+        'id' => $image_id,
+        'url' => wp_get_attachment_url($image_id),
+        'alt' => get_post_meta($image_id, '_wp_attachment_image_alt', true)
+      );
+    }
   }
   
   return $images;
+}
+
+/**
+ * 最新情報の本文テキストを取得する関数（改行を<br>に変換）
+ */
+function get_news_content($post_id) {
+  $content = get_post_meta($post_id, '_news_content', true);
+  
+  // 改行を<br>タグに変換
+  return nl2br(esc_html($content));
 }
 
 ?>
