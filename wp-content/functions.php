@@ -375,5 +375,10 @@ include get_template_directory() . '/inc/recruitment.php';
 */
 include get_template_directory() . '/inc/recruit-news.php';
 
+/*
+  inc/contact.php
+  - お問い合わせ 確認画面・完了画面への直接アクセスを防ぐ
+*/
+include get_template_directory() . '/inc/contact.php';
 
 ?>
