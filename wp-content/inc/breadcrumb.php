@@ -73,9 +73,18 @@ function breadcrumb() {
 
         <!-- タクソノミーのアーカイブページの場合 -->
         <?php elseif(is_tax()): ?>
+          <?php
+            $term = get_queried_object();
+            $taxonomy = get_taxonomy($term->taxonomy);
+            $post_types = $taxonomy->object_type;
+            $post_type = $post_types[0];
+          ?>
           <li class="p-breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemscope itemtype="https://schema.org/WebPage" itemprop="item" itemid="<?php echo get_post_type_archive_link(get_post_type()); ?>" href="<?php echo get_post_type_archive_link(get_post_type()); ?>">
-              <span itemprop="name"><?php echo esc_html(get_post_type_object(get_post_type())->label); ?></span>
+            <a itemscope itemtype="https://schema.org/WebPage" 
+              itemprop="item" 
+              itemid="<?php echo get_post_type_archive_link($post_type); ?>" 
+              href="<?php echo get_post_type_archive_link($post_type); ?>">
+              <span itemprop="name"><?php echo esc_html(get_post_type_object($post_type)->label); ?></span>
             </a>
             <meta itemprop="position" content="2">
           </li>
