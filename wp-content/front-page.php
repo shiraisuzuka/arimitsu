@@ -93,7 +93,7 @@
           <div class="p-top-product-header-btn">
             <a href="<?php page_path('product'); ?>" class="c-link-btn u-hide-sp">製品一覧<i class="c-icon arrow-right"></i></a>
             <a href="<?php page_path('catalog'); ?>" class="c-link-btn u-hide-sp">カタログ一覧<i class="c-icon arrow-right"></i></a>
-            <a href="DUMMY" target="_blank" class="c-link-btn u-hide-sp">動画一覧<i class="c-icon arrow-right"></i></a>
+            <a href="https://www.youtube.com/channel/UCIGZY9G9hTRGFn40E016o5Q" target="_blank" class="c-link-btn u-hide-sp">動画一覧<i class="c-icon arrow-right"></i></a>
           </div>
         </div>
         <ul class="p-top-product-list">
@@ -160,7 +160,7 @@
         </ul>
         <a href="<?php page_path('product'); ?>" class="c-link-btn u-hide-pc js-animation">製品一覧<i class="c-icon arrow-right"></i></a>
         <a href="<?php page_path('catalog'); ?>" class="c-link-btn u-hide-pc js-animation">カタログ一覧<i class="c-icon arrow-right"></i></a>
-        <a href="DUMMY" target="_blank" class="c-link-btn u-hide-pc js-animation">動画一覧<i class="c-icon arrow-right"></i></a>
+        <a href="https://www.youtube.com/channel/UCIGZY9G9hTRGFn40E016o5Q" target="_blank" class="c-link-btn u-hide-pc js-animation">動画一覧<i class="c-icon arrow-right"></i></a>
       </div>
     </div>
     <figure class="p-top-product-image js-animation">
