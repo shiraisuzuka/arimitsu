@@ -363,6 +363,12 @@ include get_template_directory() . '/inc/ajax.php';
 include get_template_directory() . '/inc/session.php';
 
 
+/*
+  inc/recruitment.php
+  - セッション・イベント管理のカスタムフィールド
+*/
+include get_template_directory() . '/inc/recruitment.php';
+
 
 
 ?>
