@@ -151,6 +151,10 @@
   <meta name="description" content="有光工業株式会社のカタログダウンロードページです。高圧ポンプ、洗浄機、泡洗浄装置など各種製品のカタログをPDF形式でダウンロードいただけます。">
   <meta property="og:description" content="有光工業株式会社のカタログダウンロードページです。高圧ポンプ、洗浄機、泡洗浄装置など各種製品のカタログをPDF形式でダウンロードいただけます。">
 
+  <?php elseif ( is_page('contact') || is_page('confirm') || is_page('complete') ): ?>
+  <meta name="description" content="有光工業株式会社のお問い合わせページです。製品に関するご質問、技術的なご相談、資料請求、採用に関するお問い合わせなどを、専用フォームから受け付けています。">
+  <meta property="og:description" content="有光工業株式会社のお問い合わせページです。製品に関するご質問、技術的なご相談、資料請求、採用に関するお問い合わせなどを、専用フォームから受け付けています。">
+
   <?php elseif ( is_page('privacypolicy')  ): ?>
   <meta name="description" content="有光工業株式会社のプライバシーポリシーです。個人情報の取得・利用・管理・第三者提供に関する方針を定め、適切な保護と安全管理に努めています。">
   <meta property="og:description" content="有光工業株式会社のプライバシーポリシーです。個人情報の取得・利用・管理・第三者提供に関する方針を定め、適切な保護と安全管理に努めています。">

@@ -376,5 +376,4 @@ include get_template_directory() . '/inc/recruitment.php';
 include get_template_directory() . '/inc/recruit-news.php';
 
 
-
 ?>

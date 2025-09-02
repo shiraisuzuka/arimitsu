@@ -35,6 +35,11 @@
           margin-top: 1rem;
         }
       }
+
+      p:last-child {
+        display: none;
+        margin-top: 0;
+      }
     }
   }
 
@@ -292,5 +297,99 @@
          }
       }
     }
+  }
+}
+
+/* 「MW WP Form」スタイル調整 */
+.p-contact .mw_wp_form .horizontal-item + .horizontal-item {
+  margin-left: 0;
+}
+
+.mw_wp_form_input {
+  .p-contact-btn {
+    &:last-child,
+    &.back-btn {
+      display: none;
+    }
+  }
+}
+
+.mw_wp_form_confirm {
+  .p-contact-row {
+    display: grid;
+    border: 1px solid var(--color-gray);
+    @include mq(ovsp) {
+      grid-template-columns: 19.5rem 1fr;
+    }
+
+    &.col {
+      display: block;
+
+      > div {
+        display: grid;
+        align-items: stretch;
+        padding: 0;
+        @include mq(ovsp) {
+          grid-template-columns: 19.5rem 1fr;
+        }
+
+        &:last-child {
+          border-top: 1px solid var(--color-gray);
+        }
+
+        > * {
+          padding: 1rem 2rem;
+        }
+
+        > * + * {
+          margin-top: 0;
+        }
+      }
+    }
+
+    > * {
+      display: flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
+
+    > * + * {
+      margin-top: 0;
+    }
+
+    P {
+      background-color: var(--color-gray-light);
+      border-right: 1px solid var(--color-gray);
+    }
+
+    .required, .any {
+      display: none;
+    }
+
+    .radio-list, .checkbox-list {
+      flex-direction: row;
+      background-color: transparent;
+      padding: 1rem 2rem;
+    }
+
+    .u-note, .u-al-right {
+      display: none;
+    }
+
+    .post-code {
+      gap: 0;
+
+      p {
+        background-color: transparent;
+        border-right: none;
+      }
+    }
+  }
+
+  .p-contact-row + .p-contact-row {
+    margin-top: 0;
+    border-top: none;
   }
 }

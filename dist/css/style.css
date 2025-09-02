@@ -1839,6 +1839,10 @@ figure {
 .p-contact-row.col > div > * + * {
   margin-top: 1rem;
 }
+.p-contact-row.col p:last-child {
+  display: none;
+  margin-top: 0;
+}
 .p-contact-title {
   margin: 0 0 2rem;
   font-size: 2.4rem;
@@ -2082,6 +2086,83 @@ figure {
   .p-contact-btn.back-btn:hover button {
     opacity: 0.7;
   }
+}
+
+/* 「MW WP Form」スタイル調整 */
+.p-contact .mw_wp_form .horizontal-item + .horizontal-item {
+  margin-left: 0;
+}
+
+.mw_wp_form_input .p-contact-btn:last-child, .mw_wp_form_input .p-contact-btn.back-btn {
+  display: none;
+}
+
+.mw_wp_form_confirm .p-contact-row {
+  display: grid;
+  border: 1px solid var(--color-gray);
+}
+@media screen and (min-width: 768px) {
+  .mw_wp_form_confirm .p-contact-row {
+    grid-template-columns: 19.5rem 1fr;
+  }
+}
+.mw_wp_form_confirm .p-contact-row.col {
+  display: block;
+}
+.mw_wp_form_confirm .p-contact-row.col > div {
+  display: grid;
+  align-items: stretch;
+  padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .mw_wp_form_confirm .p-contact-row.col > div {
+    grid-template-columns: 19.5rem 1fr;
+  }
+}
+.mw_wp_form_confirm .p-contact-row.col > div:last-child {
+  border-top: 1px solid var(--color-gray);
+}
+.mw_wp_form_confirm .p-contact-row.col > div > * {
+  padding: 1rem 2rem;
+}
+.mw_wp_form_confirm .p-contact-row.col > div > * + * {
+  margin-top: 0;
+}
+.mw_wp_form_confirm .p-contact-row > * {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.mw_wp_form_confirm .p-contact-row > * + * {
+  margin-top: 0;
+}
+.mw_wp_form_confirm .p-contact-row P {
+  background-color: var(--color-gray-light);
+  border-right: 1px solid var(--color-gray);
+}
+.mw_wp_form_confirm .p-contact-row .required, .mw_wp_form_confirm .p-contact-row .any {
+  display: none;
+}
+.mw_wp_form_confirm .p-contact-row .radio-list, .mw_wp_form_confirm .p-contact-row .checkbox-list {
+  flex-direction: row;
+  background-color: transparent;
+  padding: 1rem 2rem;
+}
+.mw_wp_form_confirm .p-contact-row .u-note, .mw_wp_form_confirm .p-contact-row .u-al-right {
+  display: none;
+}
+.mw_wp_form_confirm .p-contact-row .post-code {
+  gap: 0;
+}
+.mw_wp_form_confirm .p-contact-row .post-code p {
+  background-color: transparent;
+  border-right: none;
+}
+.mw_wp_form_confirm .p-contact-row + .p-contact-row {
+  margin-top: 0;
+  border-top: none;
 }
 
 .p-history {
