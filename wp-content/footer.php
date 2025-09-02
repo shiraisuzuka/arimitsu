@@ -109,6 +109,9 @@
                   <a href="<?php page_path('recruit/arimitsu'); ?>">有光を知る</a>
                 </li>
                 <li>
+                  <a href="<?php page_path('recruit/session'); ?>">説明会・イベント</a>
+                </li>
+                <li>
                   <a href="<?php page_path('recruit/qanda'); ?>">Q&A</a>
                 </li>
               </ul>
@@ -145,6 +148,10 @@
   <?php if ( is_page('classroom01') || is_page('classroom02') || is_page('classroom03') || is_page('classroom04') || is_page('classroom05') || is_page('classroom06') || is_page('classroom07') || is_page('classroom08') ) : ?>
   <script src="<?php assets_path(); ?>/js/splide.min.js"></script>
   <script src="<?php assets_path(); ?>/js/technology.js"></script>
+  <?php endif; ?>
+
+  <?php if ( is_page('recruitment') || is_page('qanda') ) : ?>
+  <script src="<?php assets_path(); ?>/js/recruit.js"></script>
   <?php endif; ?>
 
   <?php wp_footer(); ?>

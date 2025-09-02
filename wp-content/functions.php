@@ -356,6 +356,12 @@ include get_template_directory() . '/inc/news.php';
 */
 include get_template_directory() . '/inc/ajax.php';
 
+/*
+  inc/session.php
+  - セッション・イベント管理のカスタムフィールド
+*/
+include get_template_directory() . '/inc/session.php';
+
 
 
 
