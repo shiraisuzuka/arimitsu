@@ -150,7 +150,7 @@
   <script src="<?php assets_path(); ?>/js/technology.js"></script>
   <?php endif; ?>
 
-  <?php if ( is_page('recruitment') || is_page('qanda') ) : ?>
+  <?php if ( is_page('recruit') || is_page('recruitment') || is_page('qanda') ) : ?>
   <script src="<?php assets_path(); ?>/js/recruit.js"></script>
   <?php endif; ?>
 

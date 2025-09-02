@@ -18,6 +18,16 @@
       gap: 3rem;
     }
 
+    &.no-link {
+      pointer-events: none;
+
+      h3 {
+        &::after {
+          display: none;
+        }
+      }
+    }
+
     @media (any-hover: hover) {
       &:hover {
         h3 {

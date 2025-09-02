@@ -40,27 +40,7 @@
     <div class="c-sticky-contents">
       <div id="news" class="c-section-row">
         <h2 class="c-section-row-title">お知らせ</h2>
-        <ul class="p-recruit-news">
-          <li>
-            <a href="DUMMY">
-              <time datetime="2025-07-23">2025.07.23</time>
-              <h3>会社説明会の日程を更新しました！</h3>
-            </a>
-          </li>
-          <li>
-            <a href="DUMMY">
-              <time datetime="2025-07-23">2025.07.23</time>
-              <h3>新規福利厚生サービスを追加しました！</h3>
-            </a>
-          </li>
-          <li>
-            <a href="DUMMY">
-              <time datetime="2025-07-23">2025.07.23</time>
-              <h3>2026年度学卒者向けオープンカンパニーのご案内を追記しました！</h3>
-            </a>
-          </li>
-        </ul>
-        <button class="p-recruit-news-btn">もっと表示する</button>
+        <?php get_recruit_news_list(3); ?>
       </div>
       <div id="policy" class="c-section-row">
         <h2 class="c-section-row-title">採用方針<span>〜夢を持ち夢を追う人材を〜</span></h2>

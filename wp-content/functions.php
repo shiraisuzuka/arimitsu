@@ -369,6 +369,12 @@ include get_template_directory() . '/inc/session.php';
 */
 include get_template_directory() . '/inc/recruitment.php';
 
+/*
+  inc/recruit-news.php
+  - 採用お知らせのカスタム投稿タイプ
+*/
+include get_template_directory() . '/inc/recruit-news.php';
+
 
 
 ?>

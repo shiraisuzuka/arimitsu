@@ -3575,6 +3575,12 @@ figure {
     gap: 3rem;
   }
 }
+.p-recruit-news a.no-link {
+  pointer-events: none;
+}
+.p-recruit-news a.no-link h3::after {
+  display: none;
+}
 @media (any-hover: hover) {
   .p-recruit-news a:hover h3 {
     color: var(--color-green);

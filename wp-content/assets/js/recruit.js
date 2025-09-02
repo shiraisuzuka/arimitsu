@@ -66,4 +66,21 @@
       }
     });
   });
+
+  // 採用お知らせ「もっと表示する」機能
+  // ----------------------------------------------//
+  $(function () {
+    $('.js-recruit-news-more').on('click', function() {
+      const $button = $(this);
+      const $hiddenItems = $('.p-recruit-news li[data-hidden="true"]');
+      
+      // 非表示のアイテムをフェードインで表示
+      $hiddenItems.fadeIn(300, function() {
+        $(this).removeAttr('data-hidden');
+      });
+      
+      // ボタンを非表示にする
+      $button.fadeOut(300);
+    });
+  });
 })();
