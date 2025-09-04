@@ -41,8 +41,9 @@
       $features_image4 = get_post_meta(get_the_ID(), '_product_features_image4', true);
       $features_image5 = get_post_meta(get_the_ID(), '_product_features_image5', true);
       $video_link = get_post_meta(get_the_ID(), '_product_video_link', true);
+      $customer_voice_link = get_post_meta(get_the_ID(), '_product_customer_voice_link', true);
       
-      if ($features_text || $features_image1 || $features_image2 || $features_image3 || $features_image4 || $features_image5 || $video_link): ?>
+      if ($features_text || $features_image1 || $features_image2 || $features_image3 || $features_image4 || $features_image5 || $video_link || $customer_voice_link): ?>
       <div class="p-product-detail-future">
         <h2 class="p-product-detail-future-title">特徴</h2>
         <?php if ($features_text): ?>
@@ -69,8 +70,16 @@
         </div>
         <?php endif; ?>
         
-        <?php if ($video_link): ?>
-          <a href="<?php echo esc_url($video_link); ?>" target="_blank" class="c-link-btn"><span>動画を見る</span><i class="c-icon arrow-right"></i></a>
+        <?php if ($video_link || $customer_voice_link): ?>
+        <div class="p-product-detail-catalogs">
+          <?php if ($video_link): ?>
+            <a href="<?php echo esc_url($video_link); ?>" target="_blank" class="c-link-btn"><span>動画を見る</span><i class="c-icon arrow-right"></i></a>
+          <?php endif; ?>
+          
+          <?php if ($customer_voice_link): ?>
+            <a href="<?php echo esc_url($customer_voice_link); ?>" target="_blank" class="c-link-btn"><span>お客様の声</span><i class="c-icon arrow-right"></i></a>
+          <?php endif; ?>
+        </div>
         <?php endif; ?>
       </div>
       <?php endif; ?>

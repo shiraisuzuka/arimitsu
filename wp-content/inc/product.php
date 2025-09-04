@@ -190,6 +190,7 @@ function product_features_callback($post) {
     $features_image4 = get_post_meta($post->ID, '_product_features_image4', true);
     $features_image5 = get_post_meta($post->ID, '_product_features_image5', true);
     $video_link = get_post_meta($post->ID, '_product_video_link', true);
+    $customer_voice_link = get_post_meta($post->ID, '_product_customer_voice_link', true);
     ?>
     <table class="form-table">
         <tr>
@@ -267,6 +268,12 @@ function product_features_callback($post) {
             <th><label for="product_video_link">動画リンク</label></th>
             <td>
                 <input type="url" id="product_video_link" name="product_video_link" value="<?php echo esc_url($video_link); ?>" style="width: 100%;" />
+            </td>
+        </tr>
+        <tr>
+            <th><label for="product_customer_voice_link">お客様の声</label></th>
+            <td>
+                <input type="url" id="product_customer_voice_link" name="product_customer_voice_link" value="<?php echo esc_url($customer_voice_link); ?>" style="width: 100%;" />
             </td>
         </tr>
     </table>
@@ -610,6 +617,9 @@ function save_product_custom_fields($post_id, $post, $update) {
     }
     if (isset($_POST['product_video_link'])) {
         update_post_meta($post_id, '_product_video_link', esc_url_raw($_POST['product_video_link']));
+    }
+    if (isset($_POST['product_customer_voice_link'])) {
+        update_post_meta($post_id, '_product_customer_voice_link', esc_url_raw($_POST['product_customer_voice_link']));
     }
     
     // 製品画像
