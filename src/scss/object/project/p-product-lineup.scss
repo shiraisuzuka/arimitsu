@@ -62,13 +62,16 @@
 
     &-img {
       display: block;
-      aspect-ratio: 143 / 95;
-      overflow: hidden;
+      height: 9.5rem;
+      text-align: center;
+      // aspect-ratio: 143 / 95;
+      // overflow: hidden;
 
       img {
-        width: 100%;
+        width: auto;
         height: 100%;
-        object-fit: cover;
+        // height: 100%;
+        // object-fit: cover;
       }
     }
 

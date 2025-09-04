@@ -140,12 +140,12 @@
   <meta property="og:description" content="有光工業株式会社の新卒・中途採用向け募集要項ページです。募集職種、勤務地、勤務条件、選考フロー、応募方法など、採用に関する詳細情報をご案内します。">
 
   <?php elseif ( is_page('session')  ): ?>
-  <meta name="description" content="">
-  <meta property="og:description" content="">
+  <meta name="description" content="有光工業の会社説明会・採用イベント情報を掲載しています。事業内容や働き方を詳しく知りたい方はぜひご参加ください。">
+  <meta property="og:description" content="有光工業の会社説明会・採用イベント情報を掲載しています。事業内容や働き方を詳しく知りたい方はぜひご参加ください。">
 
   <?php elseif ( is_page('qanda')  ): ?>
-  <meta name="description" content="">
-  <meta property="og:description" content="">
+  <meta name="description" content="新卒・中途採用に関するよくある質問を掲載しています。応募方法や選考フロー、会社説明会の参加方法など、就職活動中の皆さまの疑問にお答えします。">
+  <meta property="og:description" content="新卒・中途採用に関するよくある質問を掲載しています。応募方法や選考フロー、会社説明会の参加方法など、就職活動中の皆さまの疑問にお答えします。">
 
   <?php elseif ( is_page('catalog')  ): ?>
   <meta name="description" content="有光工業株式会社のカタログダウンロードページです。高圧ポンプ、洗浄機、泡洗浄装置など各種製品のカタログをPDF形式でダウンロードいただけます。">
@@ -262,8 +262,8 @@ if ($current_page && isset($current_page->post_name)) {
         </li>
       </ul>
       <div class="l-header-nav-hamburger-contact">
-        <a href="DUMMY" class="recruit-btn">エントリー（新卒）</a>
-        <a href="DUMMY" class="recruit-btn">エントリー（中途）</a>
+        <a href="https://job.rikunabi.com/2026/company/r313312020/" target="_blank" class="recruit-btn">エントリー（新卒）</a>
+        <a href="https://doda.jp/DodaFront/View/CompanyJobs/j_id__10007455316/" target="_blank" class="recruit-btn">エントリー（中途）</a>
       </div>
     </nav>
     <nav class="l-header-nav">
@@ -286,10 +286,10 @@ if ($current_page && isset($current_page->post_name)) {
       </ul>
       <ul class="l-header-nav-recruit">
         <li>
-          <a href="DUMMY" class="recruit-btn">エントリー（新卒）</a>
+          <a href="https://job.rikunabi.com/2026/company/r313312020/" target="_blank" class="recruit-btn">エントリー（新卒）</a>
         </li>
         <li>
-          <a href="DUMMY" class="recruit-btn">エントリー（中途）</a>
+          <a href="https://doda.jp/DodaFront/View/CompanyJobs/j_id__10007455316/" target="_blank" class="recruit-btn">エントリー（中途）</a>
         </li>
       </ul>
     </nav>

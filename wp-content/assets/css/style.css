@@ -2662,6 +2662,10 @@ figure {
     font-size: 1.8rem;
   }
 }
+.p-product-detail-catalogs {
+  display: grid;
+  gap: 2rem;
+}
 .p-product-detail-future {
   margin: 3rem 0 0;
 }
@@ -2820,14 +2824,12 @@ figure {
 }
 .p-product-lineup-item-img {
   display: block;
-  aspect-ratio: 143/95;
-  overflow: hidden;
+  height: 9.5rem;
+  text-align: center;
 }
 .p-product-lineup-item-img img {
-  width: 100%;
+  width: auto;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .p-product-lineup-item-contents {
   margin: 1.5rem 0 0;

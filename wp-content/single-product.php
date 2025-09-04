@@ -17,8 +17,21 @@
       <?php endif; ?>
       <?php 
       $catalog_pdf = get_post_meta(get_the_ID(), '_product_catalog_pdf', true);
-      if ($catalog_pdf): ?>
-        <a href="<?php echo esc_url($catalog_pdf); ?>" target="_blank" class="c-link-btn">カタログを見る［PDF］<i class="c-icon arrow-right"></i></a>
+      $catalog_pdf2 = get_post_meta(get_the_ID(), '_product_catalog_pdf2', true);
+      $catalog_pdf3 = get_post_meta(get_the_ID(), '_product_catalog_pdf3', true);
+      
+      if ($catalog_pdf || $catalog_pdf2 || $catalog_pdf3): ?>
+        <div class="p-product-detail-catalogs">
+          <?php if ($catalog_pdf): ?>
+            <a href="<?php echo esc_url($catalog_pdf); ?>" target="_blank" class="c-link-btn">カタログを見る［PDF］<i class="c-icon arrow-right"></i></a>
+          <?php endif; ?>
+          <?php if ($catalog_pdf2): ?>
+            <a href="<?php echo esc_url($catalog_pdf2); ?>" target="_blank" class="c-link-btn">カタログを見る2［PDF］<i class="c-icon arrow-right"></i></a>
+          <?php endif; ?>
+          <?php if ($catalog_pdf3): ?>
+            <a href="<?php echo esc_url($catalog_pdf3); ?>" target="_blank" class="c-link-btn">カタログを見る3［PDF］<i class="c-icon arrow-right"></i></a>
+          <?php endif; ?>
+        </div>
       <?php endif; ?>
       <?php 
       $features_text = get_post_meta(get_the_ID(), '_product_features_text', true);
