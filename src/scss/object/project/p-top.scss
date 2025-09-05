@@ -357,7 +357,6 @@
     }
 
     &-item {
-      padding: 0.5rem 0;
       border-bottom: 1px solid var(--color-gray);
 
       &-inner {
@@ -399,6 +398,7 @@
         flex-shrink: 0;
         font-family: var(--font-en);
         font-size: 4.8rem;
+        line-height: 1.5;
         color: var(--color-green);
         @include mq(ovsp) {
           font-size: 6.4rem;
