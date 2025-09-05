@@ -2,10 +2,10 @@
 
 <div class="p-top-mv">
   <div class="p-top-mv-image">
-    <img src="<?php img_path(); ?>/img_mv.png" alt="" width="3213" height="2162">
-    <div class="p-top-mv-inner">
-      <p class="p-top-mv-title">私たちは、<br>次代に挑む<br>動力となる</p>
-    </div>
+    <picture>
+      <source srcset="<?php img_path(); ?>/img_mv.png" media="(min-width: 768px)" width="3213" height="2162">
+      <img src="<?php img_path(); ?>/sp/img_mv.png" alt="私たちは、次代に挑む動力となる" width="750" height="886">
+    </picture>
   </div>
 </div>
 
@@ -164,8 +164,8 @@
       </div>
     </div>
     <figure class="p-top-product-image js-animation">
-      <img src="<?php img_path(); ?>/img_product_01.jpg" alt="" loading="lazy" width="1600" height="1200">
-      <span class="p-top-product-image-text is-pc">washer</span>
+      <img src="<?php img_path(); ?>/img_product_01.png" alt="" loading="lazy" width="1600" height="1200">
+      <span class="p-top-product-image-text is-pc">agri</span>
     </figure>
   </div>
 </section>

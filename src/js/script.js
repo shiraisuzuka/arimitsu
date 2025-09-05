@@ -54,12 +54,12 @@
   
   // 各製品項目に対応する画像とテキストのデータ
   const productData = [
-    { image: 'images/img_product_01.jpg', text: 'agriculture' },
-    { image: 'images/img_product_02.jpg', text: 'pump' },
-    { image: 'images/img_product_03.jpg', text: 'washer' },
-    { image: 'images/img_product_04.jpg', text: 'attachment' },
-    { image: 'images/img_product_05.jpg', text: 'mist' },
-    { image: 'images/img_product_06.jpg', text: 'other' }
+    { image: 'images/img_product_01.png', text: 'agri' },
+    { image: 'images/img_product_02.png', text: 'pump' },
+    { image: 'images/img_product_03.png', text: 'washer' },
+    { image: 'images/img_product_04.png', text: 'attach' },
+    { image: 'images/img_product_05.png', text: 'mist' },
+    { image: 'images/img_product_06.png', text: 'etc.' }
   ];
 
   // デフォルトの画像とテキストを保存
