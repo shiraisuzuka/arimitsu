@@ -278,12 +278,15 @@ add_filter( 'upload_mimes', 'add_file_types_to_uploads' );
 function slug_auto_setting( $slug, $post_ID, $post_status, $post_type ) {
   $post = get_post($post_ID);
 
+  if ( !empty($slug) ) {
+    return $slug;
+  }
+
   if ( $post_type == 'news' && $post->post_date_gmt == '0000-00-00 00:00:00' ) {
     $slug = generate_news_sequential_slug();
     return $slug;
   }
 
-  // 製品投稿の場合は連番スラッグを生成
   if ( $post_type == 'product' && $post->post_date_gmt == '0000-00-00 00:00:00' ) {
     $slug = generate_product_sequential_slug();
     return $slug;
