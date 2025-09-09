@@ -34,4 +34,17 @@
       }
     }
   }
+
+  &-en-title {
+    margin: 2rem 0 0;
+    padding: 0 0 2rem;
+    color: var(--color-green);
+    font-size: 2.4rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-align: center;
+    @include mq(ovsp) {
+      font-size: 3.6rem;
+    }
+  }
 }

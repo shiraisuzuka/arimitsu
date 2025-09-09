@@ -1,0 +1,212 @@
+@use 'foundation' as *;
+
+.p-en-product {}
+
+.p-en-product-tab.c-tab {
+  text-transform: capitalize;
+  text-align: center;
+  @include mq(sp) {
+    position: relative;
+    display: block;
+    width: 100%;
+    border: 1px solid var(--color-gray);
+    border-radius: 0.4rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 2.2rem;
+      right: 1.2rem;
+      width: 0.8rem;
+      height: 0.8rem;
+      background: no-repeat 50% 50% / contain;
+      background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='レイヤー 2' viewBox='0 0 8.02 4.51'%3E%3Cpath d='M7.67.35 4.01 4.01.35.35' data-name='レイヤー 1' style='fill:none;stroke:%23ccc;stroke-linejoin:round'/%3E%3C/svg%3E");
+      transition: transform 0.3s ease;
+    }
+
+    li.tab {
+      position: relative;
+      display: none;
+      width: 100%;
+      height: auto;
+      padding: 1.2rem 1.6rem;
+      background-color: #FFF;
+      color: var(--color-black);
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  }
+  @include mq(ovsp) {
+    justify-content: flex-start;
+
+    li.tab {
+      width: 29.1rem;
+      flex-wrap: wrap;
+      padding: 0;
+      letter-spacing: 0;
+      line-height: 1.28;
+      border-radius: 0.4rem;
+
+      &:not(.is-active) {
+        color: var(--color-green);
+        border-color: var(--color-green);
+      }
+
+      &:nth-child(5),
+      &:nth-child(8) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+.p-en-product-tab-panel {
+  &.is-open {
+    .p-en-product-tab.c-tab {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+
+    li.tab {
+      border-bottom: 1px solid var(--color-gray);
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.p-en-product-panel {
+  margin: 4rem 0 0;
+
+  &-row {
+    & + & {
+      margin: 4rem 0 0;
+      @include mq(ovsp) {
+        margin: 6rem 0 0;
+      }
+    }
+  }
+
+  h2 {
+    margin: 0 0 3rem;
+    padding: 1.5rem 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--color-green);
+    background-color: rgba(var(--color-green-rgb), $alpha: 0.1);
+    @include mq(ovsp) {
+      margin: 0 0 4rem;
+    }
+  }
+
+  .col {
+    display: grid;
+    gap: 6rem;
+    @include mq(ovsp) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6rem 2rem;
+    }
+
+    + .col {
+      position: relative;
+      margin: 6rem 0 0;
+      @include mq(ovsp) {
+        margin: 8rem 0 0;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -3rem;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #e6e6e6;
+        @include mq(ovsp) {
+          top: -4rem;
+        }
+      }
+    }
+
+    li {
+      position: relative;
+    }
+
+    li + li {
+      @include mq(sp) {
+        &::before {
+          content: "";
+          position: absolute;
+          top: -3rem;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background-color: #e6e6e6;
+        }
+      }
+    }
+
+    .col-inner {
+      @include mq(ovsp) {
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+      }
+    }
+  }
+
+  figure {
+    width: 25rem;
+    aspect-ratio: 250 / 150;
+    margin: 0 auto 1.5rem;
+    @include mq(ovsp) {
+      flex-shrink: 0;
+      margin: 0;
+    }
+
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--color-green);
+  }
+
+  .feature {
+    > span {
+      display: block;
+      margin: 1rem 0 0;
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-transform: capitalize;
+      @include mq(ovsp) {
+        font-size: 1.6rem;
+      }
+    }
+
+    p {
+      font-size: 1.4rem;
+      @include mq(ovsp) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .c-btn {
+    margin: 2rem auto 0;
+    @include mq(ovsp) {
+      max-width: 44rem;
+      margin: 3rem auto 0;
+    }
+  }
+}

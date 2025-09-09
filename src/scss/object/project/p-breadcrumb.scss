@@ -25,4 +25,8 @@
       }
     }
   }
+
+  &.en {
+    text-transform: capitalize;
+  }
 }
