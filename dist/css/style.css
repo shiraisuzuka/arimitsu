@@ -2942,6 +2942,7 @@ figure {
 }
 .p-product-detail-future-images figure {
   aspect-ratio: 167/112;
+  text-align: center;
   overflow: hidden;
 }
 .p-product-detail-future-images figure img {
@@ -2989,6 +2990,7 @@ figure {
 .p-product-detail-images .splide__slide img {
   width: auto;
   height: 100%;
+  max-height: 38.7rem;
 }
 .p-product-detail-images .splide__track--nav > .splide__list > .splide__slide {
   border: 1px solid var(--color-gray);
