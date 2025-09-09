@@ -15,25 +15,7 @@
         <h1><?php the_title(); ?></h1>
       </div>
       <div class="p-news-detail-contents">
-        <?php
-        $content = get_news_content(get_the_ID());
-        if ($content) {
-          echo '<p>' . $content . '</p>';
-        }
-        
-        $images = get_news_images(get_the_ID());
-        if (!empty($images)) {
-          $image_groups = array_chunk($images, 2);
-          
-          foreach ($image_groups as $group) {
-            echo '<div class="col">';
-            foreach ($group as $image) {
-              echo '<figure><img src="' . esc_url($image['url']) . '" alt="' . esc_attr($image['alt']) . '" loading="lazy"></figure>';
-            }
-            echo '</div>';
-          }
-        }
-        ?>
+        <?php the_content(); ?>
       </div>
     </div>
   </div>

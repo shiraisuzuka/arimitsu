@@ -2594,6 +2594,9 @@ figure {
 .p-news-detail-contents figure figcaption {
   font-size: 1.4rem;
 }
+.p-news-detail-contents .wp-block-columns {
+  gap: 2rem;
+}
 
 .p-news-list {
   max-width: 79.4rem;

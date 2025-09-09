@@ -124,7 +124,7 @@ remove_action('wp_head', 'wp_shortlink_wp_head');
  * ブロックエディタのCSSの削除
  */
 add_action('wp_enqueue_scripts', function(){
-	wp_dequeue_style('wp-block-library');
+	// wp_dequeue_style('wp-block-library');
 	wp_dequeue_style('global-styles');
 });
 
