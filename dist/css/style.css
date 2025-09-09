@@ -2937,8 +2937,13 @@ figure {
     margin: 4rem 0;
   }
 }
+.p-product-detail-future-images figure {
+  aspect-ratio: 167/112;
+  overflow: hidden;
+}
 .p-product-detail-future-images figure img {
-  width: 100%;
+  width: auto;
+  height: 100%;
 }
 .p-product-detail-future .c-link-btn span::after {
   content: "";
@@ -2956,7 +2961,13 @@ figure {
 }
 .p-product-detail-images-main {
   width: 100%;
+  aspect-ratio: 345/231;
   border: 1px solid var(--color-gray);
+}
+@media screen and (min-width: 768px) {
+  .p-product-detail-images-main {
+    aspect-ratio: 580/387;
+  }
 }
 .p-product-detail-images-thumbnail {
   max-width: 27rem;
