@@ -610,3 +610,93 @@
     }
   }
 }
+
+
+.l-main.en {
+  .p-top-company-text {
+    font-family: var(--font-base);
+    font-weight: 400;
+    letter-spacing: 0;
+    @include mq(ovsp) {
+      font-size: 2.8rem;
+    }
+  }
+}
+
+.p-top-english {
+  &-col {
+    display: grid;
+    gap: 3rem 4rem;
+    @include mq(ovsp) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+
+  .image {
+    position: relative;
+
+    img {
+      width: 100%;
+      aspect-ratio: 580 / 260;
+      border-radius: 1.2rem;
+    }
+  }
+
+  h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    font-family: var(--font-roboto);
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+    color: #FFF;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 10px #000;
+    @include mq(ovsp) {
+      font-size: 3.6rem;
+    }
+  }
+
+  &-link {
+    display: block;
+    margin: 4rem 0 0;
+    
+    img {
+      @include mq(ovsp) {
+        aspect-ratio: 1200 / 260 !important;
+      }
+    }
+  }  
+}
+
+.p-top-english-contact {
+  background-color: var(--color-gray-light);
+
+  h2 {
+    color: var(--color-green);
+    font-size: 3.6rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+  }
+
+  .text {
+    margin: 2rem 0 0;
+    font-weight: 700;
+    letter-spacing: 0;
+    @include mq(ovsp) {
+      text-align: center;
+    }
+  }
+}

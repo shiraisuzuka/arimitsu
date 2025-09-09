@@ -2690,6 +2690,7 @@ figure {
 .p-product-detail-future-images {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: center;
   gap: 1rem;
   margin: 2rem 0;
 }

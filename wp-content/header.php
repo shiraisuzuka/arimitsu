@@ -355,6 +355,9 @@ if ($current_page && isset($current_page->post_name)) {
             <li>
               <a href="<?php page_path('catalog'); ?>">カタログダウンロード</a>
             </li>
+            <li>
+              <a href="https://www.youtube.com/channel/UCIGZY9G9hTRGFn40E016o5Q" target="_blank">動画一覧</a>
+            </li>
           </ul>
         </li>
         <li class="l-header-nav-hamburger-item">
@@ -472,6 +475,9 @@ if ($current_page && isset($current_page->post_name)) {
             </li>
             <li>
               <a href="catalog">カタログダウンロード</a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/channel/UCIGZY9G9hTRGFn40E016o5Q" target="_blank">動画一覧</a>
             </li>
           </ul>
         </li>

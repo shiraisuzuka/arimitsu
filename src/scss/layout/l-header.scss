@@ -565,3 +565,15 @@
     }
   }
 }
+
+.l-header.en {
+  .l-header-nav-item {
+    text-transform: capitalize;
+
+    > *:not(ul) {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

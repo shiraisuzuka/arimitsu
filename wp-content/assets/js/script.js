@@ -157,17 +157,19 @@
 
   // 言語選択による遷移
   // ----------------------------------------------//
-  const languageSelect = document.querySelector('.l-header-nav-select');
+  const languageSelects = document.querySelectorAll('.l-header-nav-select');
   
-  if (languageSelect) {
-    languageSelect.addEventListener('change', function() {
-      const selectedValue = this.value;
-      
-      if (selectedValue === 'en') {
-        window.location.href = '/english';
-      } else if (selectedValue === 'jp') {
-        window.location.href = '/';
-      }
+  if (languageSelects.length > 0) {
+    languageSelects.forEach(function(select) {
+      select.addEventListener('change', function() {
+        const selectedValue = this.value;
+        
+        if (selectedValue === 'en') {
+          window.location.href = '/english';
+        } else if (selectedValue === 'jp') {
+          window.location.href = '/';
+        }
+      });
     });
   }
 

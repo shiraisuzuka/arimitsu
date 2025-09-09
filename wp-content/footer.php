@@ -52,6 +52,9 @@
                 <li>
                   <a href="catalog">カタログダウンロード</a>
                 </li>
+                <li>
+                  <a href="https://www.youtube.com/channel/UCIGZY9G9hTRGFn40E016o5Q" target="_blank">動画一覧</a>
+                </li>
               </ul>
             </li>
             <li class="l-footer-nav-item">
