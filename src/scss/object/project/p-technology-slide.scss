@@ -54,6 +54,7 @@
 
   a {
     display: block;
+    height: 100%;
     padding: 2rem;
     border-radius: 1.2rem;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
@@ -89,6 +90,7 @@
     }
 
     .c-icon.arrow-right {
+      flex-shrink: 0;
       @include mq(sp) {
         width: 2rem;
         height: 2rem;
@@ -97,6 +99,19 @@
           width: 0.5rem;
           height: 0.9rem;
         }
+      }
+    }
+  }
+}
+
+.p-technology-slide.en {
+  text-transform: capitalize;
+
+  a {
+    h2 {
+      font-size: 1.3rem;
+      @include mq(ovsp) {
+        font-size: 1.4rem;
       }
     }
   }

@@ -477,6 +477,7 @@ figure {
   align-items: center;
   gap: 1rem;
   transition: color 0.3s ease;
+  text-transform: capitalize;
 }
 @media (any-hover: hover) {
   .c-link-back-btn:hover {
@@ -4450,6 +4451,16 @@ figure {
   align-items: flex-end;
   gap: 2rem;
 }
+.p-technology-classroom.classroom08 .image-col.en {
+  text-align: center;
+}
+.p-technology-classroom.classroom08 .image-col.en p {
+  text-align: left;
+}
+
+.p-technology-classroom.en h2, .p-technology-classroom.en h3, .p-technology-classroom.en h4 {
+  text-transform: capitalize;
+}
 
 .p-technology-slide {
   margin: 3rem 0 0;
@@ -4503,6 +4514,7 @@ figure {
 }
 .p-technology-slide a {
   display: block;
+  height: 100%;
   padding: 2rem;
   border-radius: 1.2rem;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
@@ -4538,6 +4550,9 @@ figure {
     font-size: 1.6rem;
   }
 }
+.p-technology-slide a .c-icon.arrow-right {
+  flex-shrink: 0;
+}
 @media screen and (max-width: 767px) {
   .p-technology-slide a .c-icon.arrow-right {
     width: 2rem;
@@ -4546,6 +4561,18 @@ figure {
   .p-technology-slide a .c-icon.arrow-right::after {
     width: 0.5rem;
     height: 0.9rem;
+  }
+}
+
+.p-technology-slide.en {
+  text-transform: capitalize;
+}
+.p-technology-slide.en a h2 {
+  font-size: 1.3rem;
+}
+@media screen and (min-width: 768px) {
+  .p-technology-slide.en a h2 {
+    font-size: 1.4rem;
   }
 }
 

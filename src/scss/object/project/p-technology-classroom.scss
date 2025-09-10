@@ -1,7 +1,6 @@
 @use 'foundation' as *;
 
 .p-technology-classroom {
-
   &-row {
     & + & {
       margin: 6rem 0 0;
@@ -178,6 +177,20 @@
         align-items: flex-end;
         gap: 2rem;
       }
+
+      &.en {
+        text-align: center;
+        
+        p {
+          text-align: left;
+        }
+      }
     }
+  }
+}
+
+.p-technology-classroom.en {
+  h2, h3, h4 {
+    text-transform: capitalize;
   }
 }

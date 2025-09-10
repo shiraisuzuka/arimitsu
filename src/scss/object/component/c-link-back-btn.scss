@@ -5,6 +5,7 @@
   align-items: center;
   gap: 1rem;
   transition: color 0.3s ease;
+  text-transform: capitalize;
 
   @media (any-hover: hover) {
     &:hover {
