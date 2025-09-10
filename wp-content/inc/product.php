@@ -158,9 +158,9 @@ function product_basic_info_callback($post) {
             </td>
         </tr>
         <tr>
-            <th><label for="product_catalog_pdf">カタログのPDFリンク <span style="color: red;">*</span></label></th>
+            <th><label for="product_catalog_pdf">カタログのPDFリンク</label></th>
             <td>
-                <input type="url" id="product_catalog_pdf" name="product_catalog_pdf" value="<?php echo esc_url($catalog_pdf); ?>" style="width: 100%;" required />
+                <input type="url" id="product_catalog_pdf" name="product_catalog_pdf" value="<?php echo esc_url($catalog_pdf); ?>" style="width: 100%;" />
             </td>
         </tr>
         <tr>
@@ -369,7 +369,7 @@ function product_lineup_callback($post) {
                                 </td>
                             </tr>
                             <tr>
-                                <th><label>リンク設定 <span style="color: red;">*</span></label></th>
+                                <th><label>リンク設定</label></th>
                                 <td>
                                     <input type="url" name="product_lineup[<?php echo $index; ?>][link]" value="<?php echo esc_url($entry['link']); ?>" style="width: 100%;" class="lineup-link" />
                                 </td>
@@ -544,9 +544,6 @@ function save_product_custom_fields($post_id, $post, $update) {
         if (empty($_POST['product_basic_copy']) || !trim($_POST['product_basic_copy'])) {
             $errors[] = 'コピーは必須項目です。';
         }
-        if (empty($_POST['product_catalog_pdf']) || !trim($_POST['product_catalog_pdf'])) {
-            $errors[] = 'カタログのPDFリンクは必須項目です。';
-        }
         
         // 製品ラインナップのバリデーション
         if (isset($_POST['product_lineup']) && is_array($_POST['product_lineup'])) {
@@ -557,9 +554,6 @@ function save_product_custom_fields($post_id, $post, $update) {
                     $lineup_num = $index + 1;
                     if (empty($lineup['image']) || $lineup['image'] === '0' || !intval($lineup['image'])) {
                         $errors[] = "製品ラインナップ {$lineup_num} の画像は必須項目です。";
-                    }
-                    if (empty($lineup['link']) || !trim($lineup['link'])) {
-                        $errors[] = "製品ラインナップ {$lineup_num} のリンク設定は必須項目です。";
                     }
                 }
             }
@@ -779,7 +773,7 @@ function product_admin_scripts() {
                                 </td>
                             </tr>
                             <tr>
-                                <th><label>リンク設定 <span style="color: red;">*</span></label></th>
+                                <th><label>リンク設定</label></th>
                                 <td>
                                     <input type="url" name="product_lineup[${lineupIndex}][link]" value="" style="width: 100%;" class="lineup-link" />
                                 </td>
@@ -907,10 +901,6 @@ function product_admin_scripts() {
                     hasError = true;
                     errorMessages.push('コピーは必須項目です。');
                 }
-                if (!catalogPdf || !catalogPdf.trim()) {
-                    hasError = true;
-                    errorMessages.push('カタログのPDFリンクは必須項目です。');
-                }
                 
                 // 製品ラインナップのバリデーション（公開時のみ）
                 $('.lineup-entry').each(function(index) {
@@ -928,10 +918,7 @@ function product_admin_scripts() {
                             hasError = true;
                             errorMessages.push('製品ラインナップ ' + lineupNum + ' の画像は必須項目です。');
                         }
-                        if (!link || !link.trim()) {
-                            hasError = true;
-                            errorMessages.push('製品ラインナップ ' + lineupNum + ' のリンク設定は必須項目です。');
-                        }
+
                     }
                 });
                 

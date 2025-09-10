@@ -181,7 +181,28 @@
           $category_post_ids = $category_search_query->posts;
           
           if (!empty($category_post_ids)) {
-            $keyword_search_args = array(
+            // 製品ラインナップの配列データ内を検索するためのカスタムクエリ
+            $lineup_search_ids = array();
+            
+            // 製品ラインナップデータから検索
+            $lineup_query = new WP_Query(array(
+              'post_type' => 'product',
+              'posts_per_page' => -1,
+              'post_status' => 'publish',
+              'post__in' => $category_post_ids,
+              'fields' => 'ids',
+              'meta_query' => array(
+                array(
+                  'key' => '_product_lineup_data',
+                  'value' => $search_keyword,
+                  'compare' => 'LIKE'
+                )
+              )
+            ));
+            $lineup_search_ids = $lineup_query->posts;
+            
+            // 旧形式のデータも検索（後方互換性）
+            $legacy_lineup_query = new WP_Query(array(
               'post_type' => 'product',
               'posts_per_page' => -1,
               'post_status' => 'publish',
@@ -198,16 +219,29 @@
                   'key' => '_product_lineup_name',
                   'value' => $search_keyword,
                   'compare' => 'LIKE'
-                ),
+                )
+              )
+            ));
+            $legacy_lineup_ids = $legacy_lineup_query->posts;
+            
+            // 基本コピーからの検索
+            $basic_copy_query = new WP_Query(array(
+              'post_type' => 'product',
+              'posts_per_page' => -1,
+              'post_status' => 'publish',
+              'post__in' => $category_post_ids,
+              'fields' => 'ids',
+              'meta_query' => array(
                 array(
                   'key' => '_product_basic_copy',
                   'value' => $search_keyword,
                   'compare' => 'LIKE'
                 )
               )
-            );
-            $keyword_meta_query = new WP_Query($keyword_search_args);
-            $keyword_meta_ids = $keyword_meta_query->posts;
+            ));
+            $basic_copy_ids = $basic_copy_query->posts;
+            
+            $keyword_meta_ids = array_unique(array_merge($lineup_search_ids, $legacy_lineup_ids, $basic_copy_ids));
             
             $title_search_args = array(
               'post_type' => 'product',
@@ -225,7 +259,24 @@
             $all_post_ids = array();
           }
         } else {
-          $keyword_meta_args = array(
+          // 製品ラインナップの配列データ内を検索
+          $lineup_search_query = new WP_Query(array(
+            'post_type' => 'product',
+            'posts_per_page' => -1,
+            'post_status' => 'publish',
+            'fields' => 'ids',
+            'meta_query' => array(
+              array(
+                'key' => '_product_lineup_data',
+                'value' => $search_keyword,
+                'compare' => 'LIKE'
+              )
+            )
+          ));
+          $lineup_search_ids = $lineup_search_query->posts;
+          
+          // 旧形式のデータも検索（後方互換性）
+          $legacy_lineup_query = new WP_Query(array(
             'post_type' => 'product',
             'posts_per_page' => -1,
             'post_status' => 'publish',
@@ -241,16 +292,28 @@
                 'key' => '_product_lineup_name',
                 'value' => $search_keyword,
                 'compare' => 'LIKE'
-              ),
+              )
+            )
+          ));
+          $legacy_lineup_ids = $legacy_lineup_query->posts;
+          
+          // 基本コピーからの検索
+          $basic_copy_query = new WP_Query(array(
+            'post_type' => 'product',
+            'posts_per_page' => -1,
+            'post_status' => 'publish',
+            'fields' => 'ids',
+            'meta_query' => array(
               array(
                 'key' => '_product_basic_copy',
                 'value' => $search_keyword,
                 'compare' => 'LIKE'
               )
             )
-          );
-          $keyword_meta_query = new WP_Query($keyword_meta_args);
-          $keyword_meta_ids = $keyword_meta_query->posts;
+          ));
+          $basic_copy_ids = $basic_copy_query->posts;
+          
+          $keyword_meta_ids = array_unique(array_merge($lineup_search_ids, $legacy_lineup_ids, $basic_copy_ids));
           
           $title_search_args = array(
             'post_type' => 'product',
