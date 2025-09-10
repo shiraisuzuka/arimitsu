@@ -224,24 +224,7 @@
             ));
             $legacy_lineup_ids = $legacy_lineup_query->posts;
             
-            // 基本コピーからの検索
-            $basic_copy_query = new WP_Query(array(
-              'post_type' => 'product',
-              'posts_per_page' => -1,
-              'post_status' => 'publish',
-              'post__in' => $category_post_ids,
-              'fields' => 'ids',
-              'meta_query' => array(
-                array(
-                  'key' => '_product_basic_copy',
-                  'value' => $search_keyword,
-                  'compare' => 'LIKE'
-                )
-              )
-            ));
-            $basic_copy_ids = $basic_copy_query->posts;
-            
-            $keyword_meta_ids = array_unique(array_merge($lineup_search_ids, $legacy_lineup_ids, $basic_copy_ids));
+            $keyword_meta_ids = array_unique(array_merge($lineup_search_ids, $legacy_lineup_ids));
             
             $title_search_args = array(
               'post_type' => 'product',
@@ -297,23 +280,7 @@
           ));
           $legacy_lineup_ids = $legacy_lineup_query->posts;
           
-          // 基本コピーからの検索
-          $basic_copy_query = new WP_Query(array(
-            'post_type' => 'product',
-            'posts_per_page' => -1,
-            'post_status' => 'publish',
-            'fields' => 'ids',
-            'meta_query' => array(
-              array(
-                'key' => '_product_basic_copy',
-                'value' => $search_keyword,
-                'compare' => 'LIKE'
-              )
-            )
-          ));
-          $basic_copy_ids = $basic_copy_query->posts;
-          
-          $keyword_meta_ids = array_unique(array_merge($lineup_search_ids, $legacy_lineup_ids, $basic_copy_ids));
+          $keyword_meta_ids = array_unique(array_merge($lineup_search_ids, $legacy_lineup_ids));
           
           $title_search_args = array(
             'post_type' => 'product',
