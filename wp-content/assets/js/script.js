@@ -158,14 +158,24 @@
   // 言語選択による遷移
   // ----------------------------------------------//
   const languageSelects = document.querySelectorAll('.l-header-nav-select');
+    
+  // 現在のページが英語ページかどうかを判定
+  const isEnglishPage = window.location.pathname.includes('/english');
   
   if (languageSelects.length > 0) {
-    languageSelects.forEach(function(select) {
+    languageSelects.forEach(function(select, index) {
+      
+      if (isEnglishPage) {
+        select.value = 'en';
+      } else {
+        select.value = 'jp';
+      }
+      
       select.addEventListener('change', function() {
         const selectedValue = this.value;
         
         if (selectedValue === 'en') {
-          window.location.href = '/english';
+          window.location.href = '/english/';
         } else if (selectedValue === 'jp') {
           window.location.href = '/';
         }
