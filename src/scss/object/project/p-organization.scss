@@ -7,6 +7,10 @@
   line-height: 1.5;
   @include mq(ovsp) {
     gap: 1rem;
+    font-size: 1.2rem;
+  }
+  @media (min-width: 1041px) {
+    font-size: 1.5rem;
   }
   @include mq(sp) {
     font-size: 1rem;
@@ -91,6 +95,9 @@
     padding: 0.5rem;
     background-color: #bde3aa;
     @include mq(ovsp) {
+      padding: 1rem 0.5rem;
+    }
+    @media (min-width: 1041px) {
       padding: 1rem 2rem;
     }
   }
@@ -99,6 +106,9 @@
     padding: 0.5rem;
     background-color: #c8eadc;
     @include mq(ovsp) {
+      padding: 1rem 0.5rem;
+    }
+    @media (min-width: 1041px) {
       padding: 1rem 2rem;
     }
   }
@@ -108,6 +118,9 @@
     background-color: #FFF;
     padding: 0.2rem 0.5rem;
     @include mq(ovsp) {
+      padding: 0.5rem;
+    }
+    @media (min-width: 1041px) {
       padding: 0.5rem 1.5rem;
     }
     @include mq(sp) {
@@ -124,6 +137,9 @@
     li {
       font-size: 0.8rem;
       @include mq(ovsp) {
+        font-size: 1rem;
+      }
+      @media (min-width: 1041px) {
         font-size: 1.3rem;
       }
 

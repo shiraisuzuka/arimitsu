@@ -2612,6 +2612,12 @@ figure {
 @media screen and (min-width: 768px) {
   .p-organization {
     gap: 1rem;
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1041px) {
+  .p-organization {
+    font-size: 1.5rem;
   }
 }
 @media screen and (max-width: 767px) {
@@ -2694,6 +2700,11 @@ figure {
 }
 @media screen and (min-width: 768px) {
   .p-organization .gl1 {
+    padding: 1rem 0.5rem;
+  }
+}
+@media (min-width: 1041px) {
+  .p-organization .gl1 {
     padding: 1rem 2rem;
   }
 }
@@ -2702,6 +2713,11 @@ figure {
   background-color: #c8eadc;
 }
 @media screen and (min-width: 768px) {
+  .p-organization .gl2 {
+    padding: 1rem 0.5rem;
+  }
+}
+@media (min-width: 1041px) {
   .p-organization .gl2 {
     padding: 1rem 2rem;
   }
@@ -2712,6 +2728,11 @@ figure {
   padding: 0.2rem 0.5rem;
 }
 @media screen and (min-width: 768px) {
+  .p-organization .wh1 {
+    padding: 0.5rem;
+  }
+}
+@media (min-width: 1041px) {
   .p-organization .wh1 {
     padding: 0.5rem 1.5rem;
   }
@@ -2733,6 +2754,11 @@ figure {
   font-size: 0.8rem;
 }
 @media screen and (min-width: 768px) {
+  .p-organization ul li {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1041px) {
   .p-organization ul li {
     font-size: 1.3rem;
   }
