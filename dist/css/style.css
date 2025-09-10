@@ -894,6 +894,9 @@ figure {
     border-color: var(--color-green);
   }
 }
+.c-tab.en .tab {
+  text-transform: capitalize;
+}
 
 .c-table {
   width: 100%;
@@ -4546,6 +4549,13 @@ figure {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .p-technology-tab.en .tab {
+    padding: 1rem 0.5rem;
+    font-size: 1.2rem;
+  }
+}
+
 .p-technology-panel {
   margin: 4rem 0 0;
 }
@@ -4571,6 +4581,7 @@ figure {
 }
 .p-technology-panel ul a {
   display: block;
+  height: 100%;
   padding: 2rem;
   border-radius: 1.2rem;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
@@ -4615,6 +4626,11 @@ figure {
     width: 0.5rem;
     height: 0.9rem;
   }
+}
+
+.p-technology-panel.en ul a h2 {
+  font-size: 1.4rem;
+  text-transform: capitalize;
 }
 
 .p-top-mv {

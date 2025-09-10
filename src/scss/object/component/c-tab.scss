@@ -33,4 +33,10 @@
       }
     }
   }
+
+  &.en {
+    .tab {
+      text-transform: capitalize;
+    }
+  }
 }
