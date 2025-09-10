@@ -3301,13 +3301,12 @@ figure {
 .p-product-list-item-img {
   display: block;
   aspect-ratio: 143/95;
+  text-align: center;
   overflow: hidden;
 }
 .p-product-list-item-img img {
-  width: 100%;
+  width: auto;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .p-product-list-item-text {
   margin: 1.5rem 0 0;

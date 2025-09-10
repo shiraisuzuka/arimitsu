@@ -67,12 +67,12 @@
     &-img {
       display: block;
       aspect-ratio: 143 / 95;
+      text-align: center;
       overflow: hidden;
 
       img {
-        width: 100%;
+        width: auto;
         height: 100%;
-        object-fit: cover;
       }
     }
 
