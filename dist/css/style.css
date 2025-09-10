@@ -2243,13 +2243,20 @@ figure {
     color: var(--color-green);
     border-color: var(--color-green);
   }
-  .p-en-product-tab.c-tab li.tab:nth-child(5), .p-en-product-tab.c-tab li.tab:nth-child(8) {
-    font-size: 1.4rem;
-  }
 }
 @media screen and (min-width: 768px) and (any-hover: hover) {
   .p-en-product-tab.c-tab li.tab:hover {
     color: #FFF;
+  }
+}
+@media screen and (min-width: 768px) {
+  .p-en-product-tab.c-tab.agr li.tab:nth-child(5), .p-en-product-tab.c-tab.agr li.tab:nth-child(8) {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .p-en-product-tab.c-tab.ind li.tab:nth-child(2), .p-en-product-tab.c-tab.ind li.tab:nth-child(3), .p-en-product-tab.c-tab.ind li.tab:nth-child(5), .p-en-product-tab.c-tab.ind li.tab:nth-child(6), .p-en-product-tab.c-tab.ind li.tab:nth-child(8), .p-en-product-tab.c-tab.ind li.tab:nth-child(9), .p-en-product-tab.c-tab.ind li.tab:nth-child(10) {
+    font-size: 1.4rem;
   }
 }
 
@@ -2278,6 +2285,7 @@ figure {
   margin: 0 0 3rem;
   padding: 1.5rem 2rem;
   font-size: 2rem;
+  line-height: 1.1;
   font-weight: 500;
   text-transform: capitalize;
   color: var(--color-green);
@@ -2346,6 +2354,7 @@ figure {
   width: 25rem;
   aspect-ratio: 250/150;
   margin: 0 auto 1.5rem;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .p-en-product-panel figure {
@@ -2360,6 +2369,7 @@ figure {
 .p-en-product-panel h3 {
   font-size: 1.8rem;
   font-weight: 500;
+  line-height: 1.5;
   text-transform: capitalize;
   color: var(--color-green);
 }
