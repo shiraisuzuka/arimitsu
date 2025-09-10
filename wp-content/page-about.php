@@ -405,18 +405,18 @@
           </div>
           <div class="col3">
             <span class="gl2">
-              <span>サービス部</span>
+              <span>カスタマー<br class="u-show-br-sp">サービス部</span>
               <ul>
                 <li>大阪サービス</li>
                 <li>関東サービス</li>
               </ul>
             </span>
             <span class="gl2">
-              <span>物流部</span>
-              <ul>
-                <li>大阪物流</li>
-                <li>関東物流</li>
-              </ul>
+              <span>SCM部</span>
+                <ul>
+                  <li>大阪SCM<br>　(大阪センター)</li>
+                  <li>関東SCM</li>
+                </ul>
             </span>
             <span class="gl2">
               <span>生産本部</span>

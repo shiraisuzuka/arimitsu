@@ -477,6 +477,7 @@ figure {
   align-items: center;
   gap: 1rem;
   transition: color 0.3s ease;
+  text-transform: capitalize;
 }
 @media (any-hover: hover) {
   .c-link-back-btn:hover {
@@ -652,6 +653,9 @@ figure {
     font-size: 2.4rem;
   }
 }
+.c-section-row-title.en {
+  text-transform: capitalize;
+}
 .c-section-row-text > * + * {
   margin-top: 2rem;
 }
@@ -708,6 +712,39 @@ figure {
 @media screen and (min-width: 768px) {
   .c-section-row-president .name {
     font-size: 2.4rem;
+  }
+}
+.c-section-row-president .en {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.5rem 0 0;
+  text-transform: capitalize;
+}
+@media screen and (min-width: 768px) {
+  .c-section-row-president .en {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+.c-section-row-president .en span {
+  display: block;
+  line-height: 1;
+}
+.c-section-row-president .en span:nth-child(1) {
+  font-size: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .c-section-row-president .en span:nth-child(1) {
+    font-size: 1.1rem;
+  }
+}
+.c-section-row-president .en span:nth-child(2) {
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 768px) {
+  .c-section-row-president .en span:nth-child(2) {
+    font-size: 1.4rem;
   }
 }
 .c-section-row-glbox {
@@ -767,10 +804,17 @@ figure {
     flex-shrink: 0;
   }
 }
+.c-sticky-link-en {
+  min-width: 34.8rem;
+}
+.c-sticky-link.en a {
+  text-transform: capitalize;
+}
 .c-sticky-link ul {
   display: grid;
   gap: 2rem;
   min-width: 34.8rem;
+  max-width: 34.8rem;
   padding: 4rem 3rem;
   background-color: #FFF;
   border-radius: 2.4rem;
@@ -779,6 +823,7 @@ figure {
 @media screen and (max-width: 1000px) {
   .c-sticky-link ul {
     min-width: 27rem;
+    max-width: 27rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -849,6 +894,9 @@ figure {
     color: var(--color-white);
     border-color: var(--color-green);
   }
+}
+.c-tab.en .tab {
+  text-transform: capitalize;
 }
 
 .c-table {
@@ -941,6 +989,9 @@ figure {
   .c-title-ja {
     font-size: 3.6rem;
   }
+}
+.c-title-ja.en {
+  text-transform: capitalize;
 }
 .c-title-en {
   font-family: var(--font-en);
@@ -1786,6 +1837,7 @@ figure {
   background-color: var(--color-gray-light);
   font-size: 1.6rem;
   font-weight: 500;
+  text-transform: capitalize;
   border-radius: 1.2rem;
   border: 2px solid transparent;
   transition: border-color 0.3s ease;
@@ -1829,6 +1881,11 @@ figure {
 @media screen and (min-width: 768px) {
   .p-company-tab .tab {
     width: 12.3rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .p-company-tab.en .tab {
+    width: 14rem;
   }
 }
 
@@ -2243,7 +2300,19 @@ figure {
     color: var(--color-green);
     border-color: var(--color-green);
   }
-  .p-en-product-tab.c-tab li.tab:nth-child(5), .p-en-product-tab.c-tab li.tab:nth-child(8) {
+}
+@media screen and (min-width: 768px) and (any-hover: hover) {
+  .p-en-product-tab.c-tab li.tab:hover {
+    color: #FFF;
+  }
+}
+@media screen and (min-width: 768px) {
+  .p-en-product-tab.c-tab.agr li.tab:nth-child(5), .p-en-product-tab.c-tab.agr li.tab:nth-child(8) {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .p-en-product-tab.c-tab.ind li.tab:nth-child(2), .p-en-product-tab.c-tab.ind li.tab:nth-child(3), .p-en-product-tab.c-tab.ind li.tab:nth-child(5), .p-en-product-tab.c-tab.ind li.tab:nth-child(6), .p-en-product-tab.c-tab.ind li.tab:nth-child(8), .p-en-product-tab.c-tab.ind li.tab:nth-child(9), .p-en-product-tab.c-tab.ind li.tab:nth-child(10) {
     font-size: 1.4rem;
   }
 }
@@ -2273,6 +2342,7 @@ figure {
   margin: 0 0 3rem;
   padding: 1.5rem 2rem;
   font-size: 2rem;
+  line-height: 1.1;
   font-weight: 500;
   text-transform: capitalize;
   color: var(--color-green);
@@ -2341,6 +2411,7 @@ figure {
   width: 25rem;
   aspect-ratio: 250/150;
   margin: 0 auto 1.5rem;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .p-en-product-panel figure {
@@ -2355,6 +2426,7 @@ figure {
 .p-en-product-panel h3 {
   font-size: 1.8rem;
   font-weight: 500;
+  line-height: 1.5;
   text-transform: capitalize;
   color: var(--color-green);
 }
@@ -2612,6 +2684,12 @@ figure {
 @media screen and (min-width: 768px) {
   .p-organization {
     gap: 1rem;
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1041px) {
+  .p-organization {
+    font-size: 1.5rem;
   }
 }
 @media screen and (max-width: 767px) {
@@ -2694,6 +2772,11 @@ figure {
 }
 @media screen and (min-width: 768px) {
   .p-organization .gl1 {
+    padding: 1rem 0.5rem;
+  }
+}
+@media (min-width: 1041px) {
+  .p-organization .gl1 {
     padding: 1rem 2rem;
   }
 }
@@ -2702,6 +2785,11 @@ figure {
   background-color: #c8eadc;
 }
 @media screen and (min-width: 768px) {
+  .p-organization .gl2 {
+    padding: 1rem 0.5rem;
+  }
+}
+@media (min-width: 1041px) {
   .p-organization .gl2 {
     padding: 1rem 2rem;
   }
@@ -2712,6 +2800,11 @@ figure {
   padding: 0.2rem 0.5rem;
 }
 @media screen and (min-width: 768px) {
+  .p-organization .wh1 {
+    padding: 0.5rem;
+  }
+}
+@media (min-width: 1041px) {
   .p-organization .wh1 {
     padding: 0.5rem 1.5rem;
   }
@@ -2733,6 +2826,11 @@ figure {
   font-size: 0.8rem;
 }
 @media screen and (min-width: 768px) {
+  .p-organization ul li {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1041px) {
   .p-organization ul li {
     font-size: 1.3rem;
   }
@@ -3203,13 +3301,12 @@ figure {
 .p-product-list-item-img {
   display: block;
   aspect-ratio: 143/95;
+  text-align: center;
   overflow: hidden;
 }
 .p-product-list-item-img img {
-  width: 100%;
+  width: auto;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .p-product-list-item-text {
   margin: 1.5rem 0 0;
@@ -4353,6 +4450,16 @@ figure {
   align-items: flex-end;
   gap: 2rem;
 }
+.p-technology-classroom.classroom08 .image-col.en {
+  text-align: center;
+}
+.p-technology-classroom.classroom08 .image-col.en p {
+  text-align: left;
+}
+
+.p-technology-classroom.en h2, .p-technology-classroom.en h3, .p-technology-classroom.en h4 {
+  text-transform: capitalize;
+}
 
 .p-technology-slide {
   margin: 3rem 0 0;
@@ -4406,6 +4513,7 @@ figure {
 }
 .p-technology-slide a {
   display: block;
+  height: 100%;
   padding: 2rem;
   border-radius: 1.2rem;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
@@ -4441,6 +4549,9 @@ figure {
     font-size: 1.6rem;
   }
 }
+.p-technology-slide a .c-icon.arrow-right {
+  flex-shrink: 0;
+}
 @media screen and (max-width: 767px) {
   .p-technology-slide a .c-icon.arrow-right {
     width: 2rem;
@@ -4449,6 +4560,25 @@ figure {
   .p-technology-slide a .c-icon.arrow-right::after {
     width: 0.5rem;
     height: 0.9rem;
+  }
+}
+
+.p-technology-slide.en {
+  text-transform: capitalize;
+}
+.p-technology-slide.en a h2 {
+  font-size: 1.3rem;
+}
+@media screen and (min-width: 768px) {
+  .p-technology-slide.en a h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .p-technology-tab.en .tab {
+    padding: 1rem 0.5rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -4477,6 +4607,7 @@ figure {
 }
 .p-technology-panel ul a {
   display: block;
+  height: 100%;
   padding: 2rem;
   border-radius: 1.2rem;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
@@ -4521,6 +4652,11 @@ figure {
     width: 0.5rem;
     height: 0.9rem;
   }
+}
+
+.p-technology-panel.en ul a h2 {
+  font-size: 1.4rem;
+  text-transform: capitalize;
 }
 
 .p-top-mv {
