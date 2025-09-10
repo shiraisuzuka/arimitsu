@@ -9,4 +9,12 @@
       width: 12.3rem;
     }
   }
+
+  &.en {
+    .tab {
+      @include mq(ovsp) {
+        width: 14rem;
+      }
+    }
+  }
 }

@@ -7,6 +7,10 @@
     @include mq(ovsp) {
       font-size: 3.6rem;
     }
+
+    &.en {
+      text-transform: capitalize;
+    }
   }
 
   &-en {

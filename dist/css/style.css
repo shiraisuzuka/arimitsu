@@ -986,6 +986,9 @@ figure {
     font-size: 3.6rem;
   }
 }
+.c-title-ja.en {
+  text-transform: capitalize;
+}
 .c-title-en {
   font-family: var(--font-en);
   font-size: 1.2rem;
@@ -1874,6 +1877,11 @@ figure {
 @media screen and (min-width: 768px) {
   .p-company-tab .tab {
     width: 12.3rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .p-company-tab.en .tab {
+    width: 14rem;
   }
 }
 
