@@ -57,6 +57,12 @@
       &:nth-child(8) {
         font-size: 1.4rem;
       }
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: #FFF; 
+        }
+      }
     }
   }
 }

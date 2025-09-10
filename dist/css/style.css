@@ -2247,6 +2247,11 @@ figure {
     font-size: 1.4rem;
   }
 }
+@media screen and (min-width: 768px) and (any-hover: hover) {
+  .p-en-product-tab.c-tab li.tab:hover {
+    color: #FFF;
+  }
+}
 
 .p-en-product-tab-panel.is-open .p-en-product-tab.c-tab::after {
   transform: rotate(180deg);
