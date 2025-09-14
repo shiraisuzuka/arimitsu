@@ -191,10 +191,16 @@
 <?php 
 // recruitページまたはその子ページかどうかを判定
 $is_recruit_page = false;
+$is_english_page = false;
 
 // 現在のページがrecruitの固定ページかチェック
 if (is_page('recruit')) {
     $is_recruit_page = true;
+}
+
+// 現在のページがenglishの固定ページかチェック
+if (is_page('english')) {
+    $is_english_page = true;
 }
 
 // 現在のページがrecruitの子ページかチェック
@@ -209,13 +215,31 @@ if ($current_page && isset($current_page->post_parent)) {
         }
     }
 }
+if ($current_page && isset($current_page->post_parent)) {
+    $ancestors = get_post_ancestors($current_page->ID);
+    foreach ($ancestors as $ancestor_id) {
+        $ancestor = get_post($ancestor_id);
+        if ($ancestor && $ancestor->post_name === 'english') {
+            $is_english_page = true;
+            break;
+        }
+    }
+}
 
-// 現在のページのスラッグがrecruitで始まるかチェック（recruit/arimitsu等）
+
+// 現在のページのスラッグがrecruitで始まるかチェック
 if ($current_page && isset($current_page->post_name)) {
     $post_slug = $current_page->post_name;
     $uri = $_SERVER['REQUEST_URI'];
     if (strpos($uri, '/recruit/') !== false || strpos($uri, '/recruit') !== false) {
         $is_recruit_page = true;
+    }
+}
+if ($current_page && isset($current_page->post_name)) {
+    $post_slug = $current_page->post_name;
+    $uri = $_SERVER['REQUEST_URI'];
+    if (strpos($uri, '/english/') !== false || strpos($uri, '/english') !== false) {
+        $is_english_page = true;
     }
 }
 ?>
@@ -290,6 +314,60 @@ if ($current_page && isset($current_page->post_name)) {
         </li>
         <li>
           <a href="https://doda.jp/DodaFront/View/CompanyJobs/j_id__10007455316/" target="_blank" class="recruit-btn">エントリー（中途）</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<?php elseif ($is_english_page): ?>
+<header class="l-header en">
+  <div class="l-header-inner">
+    <h1 class="l-header-logo">
+      <a href="<?php page_path('english'); ?>"><img src="<?php img_path(); ?>/logo_color.svg" alt="有光工業株式会社" loading="lazy" width="336" height="29"></a>
+    </h1>
+    <button class="l-header-nav-btn">
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="l-header-nav-hamburger">
+      <div class="l-header-nav-hamburger-select">
+        <select name="" id="" class="l-header-nav-select">
+          <option value="jp">JP</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
+      <ul class="l-header-nav-hamburger-list">
+        <li class="l-header-nav-hamburger-item">
+          <a href="<?php page_path('english/company'); ?>">about us</a>
+        </li>
+        <li class="l-header-nav-hamburger-item">
+          <a href="<?php page_path('english/agricultural-machinery'); ?>">agricultural machinery</a>
+        </li>
+
+        <li class="l-header-nav-hamburger-item">
+          <a href="<?php page_path('english/industrial-machinery'); ?>">industrial machinery</a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="l-header-nav">
+      <ul class="l-header-nav-list">
+        <li class="l-header-nav-item">
+          <a href="<?php page_path('english/company'); ?>">about us</a>
+        </li>
+        <li class="l-header-nav-item">
+          <a href="<?php page_path('english/agricultural-machinery'); ?>">agricultural machinery</a>
+        </li>
+        <li class="l-header-nav-item">
+          <a href="<?php page_path('english/industrial-machinery'); ?>">industrial machinery</a>
+        </li>
+      </ul>
+      <ul class="l-header-nav-btns">
+        <li>
+          <select name="" id="" class="l-header-nav-select">
+            <option value="jp">JP</option>
+            <option value="en">EN</option>
+          </select>
         </li>
       </ul>
     </nav>
