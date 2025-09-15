@@ -8,7 +8,7 @@ if ($parent && $parent->post_name === 'english') {
 } else {
     // 日本語版 company
     get_template_part('template-parts/company');
-    get_template_part('template-parts/cta');
+    get_template_part('parts/cta');
 }
 ?>
 

@@ -10,7 +10,7 @@ if ($top_parent && $top_parent->post_name === 'english') {
 } else {
     // 日本語版 about
     get_template_part('template-parts/about');
-    get_template_part('template-parts/cta');
+    get_template_part('parts/cta');
 }
 ?>
 

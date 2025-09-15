@@ -10,7 +10,7 @@ if ($top_parent && $top_parent->post_name === 'english') {
 } else {
     // 日本語版 history
     get_template_part('template-parts/history');
-    get_template_part('template-parts/cta');
+    get_template_part('parts/cta');
 }
 ?>
 

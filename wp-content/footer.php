@@ -1,7 +1,7 @@
 </main>
 
 <?php 
-// rcruitページまたはその子ページかどうかを判定
+// englishページまたはその子ページかどうかを判定
 $is_english_page = false;
 
 // 現在のページがenglishの固定ページかチェック

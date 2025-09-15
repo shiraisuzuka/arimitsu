@@ -1,22 +1,6 @@
 <div class="p-lower-mv">
   <div class="l-section-inner">
-    <div class="p-breadcrumb en">
-      <ol class="p-breadcrumb-list">
-        <li class="p-breadcrumb-item">
-          <a href="<?php page_path('english'); ?>">
-            <span>home</span>
-          </a>
-        </li>
-        <li class="p-breadcrumb-item">
-          <a href="<?php page_path('english/company'); ?>">
-            <span>about us</span>
-          </a>
-        </li>
-        <li class="p-breadcrumb-item">
-          <span>corporate profile</span>
-        </li>
-      </ol>
-    </div>
+  <?php english_breadcrumb(); ?>
   </div>
 </div>
 

@@ -340,6 +340,7 @@ add_filter( 'wp_unique_post_slug', 'slug_auto_setting', 10, 4 );
   - パンくずリストの設定
 */
 include get_template_directory() . '/inc/breadcrumb.php';
+include get_template_directory() . '/inc/english_breadcrumb.php';
 
 /*
   inc/product.php
