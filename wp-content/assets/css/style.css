@@ -1688,6 +1688,9 @@ figure {
 .l-header.en .l-header-nav-item > *:not(ul)::after {
   display: none;
 }
+.l-header.en .l-header-nav-hamburger-item {
+  text-transform: capitalize;
+}
 
 .p-breadcrumb-list {
   display: flex;

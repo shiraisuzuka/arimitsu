@@ -20,15 +20,16 @@ function english_breadcrumb() {
     }
     $filtered_ancestors[] = $ancestor_id;
   }
+
+  // 英語サイトのルートURLを固定で生成（テスト環境でも本番でもOK）
+  $english_home = home_url('/english/');
   ?>
   <div class="p-breadcrumb en">
     <ol class="p-breadcrumb-list">
       <!-- ルート -->
-      <?php if (strpos($_SERVER['REQUEST_URI'], '/english/') === 0) : ?>
-        <li class="p-breadcrumb-item">
-          <a href="<?php echo home_url('/english/'); ?>"><span>home</span></a>
-        </li>
-      <?php endif; ?>
+      <li class="p-breadcrumb-item">
+        <a href="<?php echo esc_url($english_home); ?>"><span>home</span></a>
+      </li>
 
       <!-- 中間階層 -->
       <?php foreach ($filtered_ancestors as $ancestor_id) : ?>
@@ -57,14 +58,12 @@ function english_breadcrumb() {
   $position = 1;
 
   // ルート
-  if (strpos($_SERVER['REQUEST_URI'], '/english/') === 0) {
-    $breadcrumb["itemListElement"][] = [
-      "@type" => "ListItem",
-      "position" => $position++,
-      "name" => "home",
-      "item" => home_url('/english/')
-    ];
-  }
+  $breadcrumb["itemListElement"][] = [
+    "@type" => "ListItem",
+    "position" => $position++,
+    "name" => "home",
+    "item" => $english_home
+  ];
 
   // 中間階層
   foreach ($filtered_ancestors as $ancestor_id) {

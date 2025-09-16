@@ -332,7 +332,7 @@ if ($current_page && isset($current_page->post_name)) {
     </button>
     <nav class="l-header-nav-hamburger">
       <div class="l-header-nav-hamburger-select">
-        <select name="" id="" class="l-header-nav-select">
+        <select class="l-header-nav-select" data-url-jp="<?php echo esc_url( home_url('/') ); ?>" data-url-en="<?php echo esc_url( home_url('/english/') ); ?>">
           <option value="jp">JP</option>
           <option value="en">EN</option>
         </select>
@@ -364,7 +364,7 @@ if ($current_page && isset($current_page->post_name)) {
       </ul>
       <ul class="l-header-nav-btns">
         <li>
-          <select name="" id="" class="l-header-nav-select">
+          <select class="l-header-nav-select" data-url-jp="<?php echo esc_url( home_url('/') ); ?>" data-url-en="<?php echo esc_url( home_url('/english/') ); ?>">
             <option value="jp">JP</option>
             <option value="en">EN</option>
           </select>
@@ -386,7 +386,7 @@ if ($current_page && isset($current_page->post_name)) {
     </button>
     <nav class="l-header-nav-hamburger">
       <div class="l-header-nav-hamburger-select">
-        <select name="" id="" class="l-header-nav-select">
+        <select class="l-header-nav-select" data-url-jp="<?php echo esc_url( home_url('/') ); ?>" data-url-en="<?php echo esc_url( home_url('/english/') ); ?>">
           <option value="jp">JP</option>
           <option value="en">EN</option>
         </select>
@@ -626,7 +626,7 @@ if ($current_page && isset($current_page->post_name)) {
           <a href="<?php page_path('contact'); ?>" class="l-header-nav-contact c-btn">お問い合わせ</a>
         </li>
         <li>
-          <select name="" id="" class="l-header-nav-select">
+          <select class="l-header-nav-select" data-url-jp="<?php echo esc_url( home_url('/') ); ?>" data-url-en="<?php echo esc_url( home_url('/english/') ); ?>">
             <option value="jp">JP</option>
             <option value="en">EN</option>
           </select>
