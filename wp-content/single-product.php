@@ -26,10 +26,10 @@
             <a href="<?php echo esc_url($catalog_pdf); ?>" target="_blank" class="c-link-btn">カタログを見る［PDF］<i class="c-icon arrow-right"></i></a>
           <?php endif; ?>
           <?php if ($catalog_pdf2): ?>
-            <a href="<?php echo esc_url($catalog_pdf2); ?>" target="_blank" class="c-link-btn">カタログを見る2［PDF］<i class="c-icon arrow-right"></i></a>
+            <a href="<?php echo esc_url($catalog_pdf2); ?>" target="_blank" class="c-link-btn">カタログを見る［PDF］<i class="c-icon arrow-right"></i></a>
           <?php endif; ?>
           <?php if ($catalog_pdf3): ?>
-            <a href="<?php echo esc_url($catalog_pdf3); ?>" target="_blank" class="c-link-btn">カタログを見る3［PDF］<i class="c-icon arrow-right"></i></a>
+            <a href="<?php echo esc_url($catalog_pdf3); ?>" target="_blank" class="c-link-btn">カタログを見る［PDF］<i class="c-icon arrow-right"></i></a>
           <?php endif; ?>
         </div>
       <?php endif; ?>
