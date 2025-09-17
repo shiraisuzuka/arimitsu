@@ -20,36 +20,7 @@
       </ul>
       <div class="p-catalog-panel">
         <div class="panel tab-1 is-show">
-          <div class="p-catalog-list-row">
-            <h2 class="p-catalog-list-title">ピックアップ</h2>
-            <ul class="p-catalog-list">
-              <li>
-                <figure><img src="<?php img_path(); ?>/catalog/img01_14.jpg" alt="" loading="lazy" width="198" height="280"></figure>
-                <h3>自走式動噴<br>セット動墳</h3>
-                <p>更新日：2024/10/08</p>
-                <a href="https://ebook.wisebook4.jp/html/arimitsu/54655/#1" target="_blank" class="c-btn">ダウンロード</a>
-              </li>
-              <li>
-                <figure><img src="<?php img_path(); ?>/catalog/img01_13.jpg" alt="" loading="lazy" width="198" height="280"></figure>
-                <h3>ハイワイヤー<br>オートランナー</h3>
-                <p>更新日：2019/01/01</p>
-                <a href="https://ebook.wisebook4.jp/html/arimitsu/19602/#1" target="_blank" class="c-btn">ダウンロード</a>
-              </li>
-              <li>
-                <figure><img src="<?php img_path(); ?>/catalog/img02_09.jpg" alt="" loading="lazy" width="198" height="280"></figure>
-                <h3>移動式温水<br>高圧洗浄機</h3>
-                <p>更新日：2019/01/01</p>
-                <a href="https://ebook.wisebook4.jp/html/arimitsu/21107/#1" target="_blank" class="c-btn">ダウンロード</a>
-              </li>
-              <li>
-                <figure><img src="<?php img_path(); ?>/catalog/img02_10.jpg" alt="" loading="lazy" width="198" height="280"></figure>
-                <h3>移動式温水<br>高圧洗浄機</h3>
-                <p>更新日：2024/09/12</p>
-                <a href="https://ebook.wisebook4.jp/html/arimitsu/25667/#1" target="_blank" class="c-btn">ダウンロード</a>
-              </li>
-            </ul>
-          </div>
-          <div class="p-catalog-list-row">
+        <div class="p-catalog-list-row">
             <h2 class="p-catalog-list-title">カタログ</h2>
             <ul class="p-catalog-list">
               <li>
@@ -187,8 +158,6 @@
               </li>
             </ul>
           </div>
-        </div>
-        <div class="panel tab-2">
           <div class="p-catalog-list-row">
             <h2 class="p-catalog-list-title">ピックアップ</h2>
             <ul class="p-catalog-list">
@@ -204,9 +173,23 @@
                 <p>更新日：2019/01/01</p>
                 <a href="https://ebook.wisebook4.jp/html/arimitsu/19602/#1" target="_blank" class="c-btn">ダウンロード</a>
               </li>
+              <li>
+                <figure><img src="<?php img_path(); ?>/catalog/img02_09.jpg" alt="" loading="lazy" width="198" height="280"></figure>
+                <h3>移動式温水<br>高圧洗浄機</h3>
+                <p>更新日：2019/01/01</p>
+                <a href="https://ebook.wisebook4.jp/html/arimitsu/21107/#1" target="_blank" class="c-btn">ダウンロード</a>
+              </li>
+              <li>
+                <figure><img src="<?php img_path(); ?>/catalog/img02_10.jpg" alt="" loading="lazy" width="198" height="280"></figure>
+                <h3>ポータブル細霧</h3>
+                <p>更新日：2024/09/12</p>
+                <a href="https://ebook.wisebook4.jp/html/arimitsu/25667/#1" target="_blank" class="c-btn">ダウンロード</a>
+              </li>
             </ul>
-          </div>
-          <div class="p-catalog-list-row">
+          </div>     
+        </div>
+        <div class="panel tab-2">
+        <div class="p-catalog-list-row">
             <h2 class="p-catalog-list-title">カタログ</h2>
             <ul class="p-catalog-list">
               <li>
@@ -278,29 +261,29 @@
                 <p>更新日：2025/02/12</p>
                 <p>コード：K・G-23I-25.02</p>
                 <a href="https://ebook.wisebook4.jp/html/arimitsu/19423/#1" target="_blank" class="c-btn">ダウンロード</a>
+              </li>
+            </ul>
+          </div>
+          <div class="p-catalog-list-row">
+            <h2 class="p-catalog-list-title">ピックアップ</h2>
+            <ul class="p-catalog-list">
+              <li>
+                <figure><img src="<?php img_path(); ?>/catalog/img01_14.jpg" alt="" loading="lazy" width="198" height="280"></figure>
+                <h3>自走式動噴<br>セット動墳</h3>
+                <p>更新日：2024/10/08</p>
+                <a href="https://ebook.wisebook4.jp/html/arimitsu/54655/#1" target="_blank" class="c-btn">ダウンロード</a>
+              </li>
+              <li>
+                <figure><img src="<?php img_path(); ?>/catalog/img01_13.jpg" alt="" loading="lazy" width="198" height="280"></figure>
+                <h3>ハイワイヤー<br>オートランナー</h3>
+                <p>更新日：2019/01/01</p>
+                <a href="https://ebook.wisebook4.jp/html/arimitsu/19602/#1" target="_blank" class="c-btn">ダウンロード</a>
               </li>
             </ul>
           </div>
         </div>
         <div class="panel tab-3">
-          <div class="p-catalog-list-row">
-            <h2 class="p-catalog-list-title">ピックアップ</h2>
-            <ul class="p-catalog-list">
-              <li>
-                <figure><img src="<?php img_path(); ?>/catalog/img02_09.jpg" alt="" loading="lazy" width="198" height="280"></figure>
-                <h3>移動式温水<br>高圧洗浄機</h3>
-                <p>更新日：2019/01/01</p>
-                <a href="https://ebook.wisebook4.jp/html/arimitsu/21107/#1" target="_blank" class="c-btn">ダウンロード</a>
-              </li>
-              <li>
-                <figure><img src="<?php img_path(); ?>/catalog/img02_10.jpg" alt="" loading="lazy" width="198" height="280"></figure>
-                <h3>移動式温水<br>高圧洗浄機</h3>
-                <p>更新日：2024/09/12</p>
-                <a href="https://ebook.wisebook4.jp/html/arimitsu/25667/#1" target="_blank" class="c-btn">ダウンロード</a>
-              </li>
-            </ul>
-          </div>
-          <div class="p-catalog-list-row">
+        <div class="p-catalog-list-row">
             <h2 class="p-catalog-list-title">カタログ</h2>
             <ul class="p-catalog-list">
               <li>
@@ -365,6 +348,23 @@
                 <p>更新日：2024/05/13</p>
                 <p>コード：K・S-44H-24.05</p>
                 <a href="https://ebook.wisebook4.jp/html/arimitsu/19610/#1" target="_blank" class="c-btn">ダウンロード</a>
+              </li>
+            </ul>
+          </div>
+          <div class="p-catalog-list-row">
+            <h2 class="p-catalog-list-title">ピックアップ</h2>
+            <ul class="p-catalog-list">
+              <li>
+                <figure><img src="<?php img_path(); ?>/catalog/img02_09.jpg" alt="" loading="lazy" width="198" height="280"></figure>
+                <h3>移動式温水<br>高圧洗浄機</h3>
+                <p>更新日：2019/01/01</p>
+                <a href="https://ebook.wisebook4.jp/html/arimitsu/21107/#1" target="_blank" class="c-btn">ダウンロード</a>
+              </li>
+              <li>
+                <figure><img src="<?php img_path(); ?>/catalog/img02_10.jpg" alt="" loading="lazy" width="198" height="280"></figure>
+                <h3>ポータブル細霧</h3>
+                <p>更新日：2024/09/12</p>
+                <a href="https://ebook.wisebook4.jp/html/arimitsu/25667/#1" target="_blank" class="c-btn">ダウンロード</a>
               </li>
             </ul>
           </div>
