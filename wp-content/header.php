@@ -413,22 +413,22 @@ if ($current_page && isset($current_page->post_name)) {
               <a href="<?php page_path('product'); ?>">製品一覧</a>
             </li>
             <li>
-              <a href="DUMMY">01農業機械</a>
+              <a href="DUMMY">01 農業機械</a>
             </li>
             <li>
-              <a href="DUMMY">02ポンプ</a>
+              <a href="DUMMY">02 ポンプ</a>
             </li>
             <li>
-              <a href="DUMMY">03洗浄機</a>
+              <a href="DUMMY">03 洗浄機</a>
             </li>
             <li>
-              <a href="DUMMY">04アタッチメント<span>（洗浄機のノズル等）</span></a>
+              <a href="DUMMY">04 アタッチメント<span>（洗浄機のノズル等）</span></a>
             </li>
             <li>
-              <a href="DUMMY">05ミスト</a>
+              <a href="DUMMY">05 ミスト</a>
             </li>
             <li>
-              <a href="DUMMY">06その他<span>（オートマット、トルミング等）</span></a>
+              <a href="DUMMY">06 その他<span>（オートマット、トルミング等）</span></a>
             </li>
             <li>
               <a href="<?php page_path('catalog'); ?>">カタログダウンロード</a>
@@ -534,22 +534,22 @@ if ($current_page && isset($current_page->post_name)) {
               <a href="<?php page_path('product'); ?>">製品一覧</a>
             </li>
             <li>
-              <a href="<?php echo esc_url(get_post_type_archive_link('product') . '?product_categories[]=agricultural_machinery'); ?>">01農業機械</a>
+              <a href="<?php echo esc_url(get_post_type_archive_link('product') . '?product_categories[]=agricultural_machinery'); ?>">01 農業機械</a>
             </li>
             <li>
-              <a href="<?php echo esc_url(get_post_type_archive_link('product') . '?product_categories[]=pump'); ?>">02ポンプ</a>
+              <a href="<?php echo esc_url(get_post_type_archive_link('product') . '?product_categories[]=pump'); ?>">02 ポンプ</a>
             </li>
             <li>
-              <a href="<?php echo esc_url(get_post_type_archive_link('product') . '?product_categories[]=cleaning_machine'); ?>">03洗浄機</a>
+              <a href="<?php echo esc_url(get_post_type_archive_link('product') . '?product_categories[]=cleaning_machine'); ?>">03 洗浄機</a>
             </li>
             <li>
-              <a href="<?php echo esc_url(get_post_type_archive_link('product') . '?product_categories[]=attachment'); ?>">04アタッチメント<span>（洗浄機のノズル等）</span></a>
+              <a href="<?php echo esc_url(get_post_type_archive_link('product') . '?product_categories[]=attachment'); ?>">04 アタッチメント<span>（洗浄機のノズル等）</span></a>
             </li>
             <li>
-              <a href="<?php echo esc_url(get_post_type_archive_link('product') . '?product_categories[]=mist'); ?>">05ミスト</a>
+              <a href="<?php echo esc_url(get_post_type_archive_link('product') . '?product_categories[]=mist'); ?>">05 ミスト</a>
             </li>
             <li>
-              <a href="<?php echo esc_url(get_post_type_archive_link('product') . '?product_categories[]=other_product'); ?>">06その他<span>（オートマット、トルミング等）</span></a>
+              <a href="<?php echo esc_url(get_post_type_archive_link('product') . '?product_categories[]=other_product'); ?>">06 その他<span>（オートマット、トルミング等）</span></a>
             </li>
             <li>
               <a href="catalog">カタログダウンロード</a>
