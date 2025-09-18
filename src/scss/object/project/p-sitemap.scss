@@ -1,0 +1,139 @@
+@use 'foundation' as *;
+
+.p-sitemap {
+  &-wrap {
+    display: grid;
+    gap: 6rem 5rem;
+    @include mq(ovsp) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: min-content;
+    }
+  }
+
+  &-row {
+    @include mq(ovsp) {
+      &.company {
+        grid-column-start: 1;
+        grid-row-start: 2;
+      }
+
+      &.product {
+        grid-column: span 2 / span 2;
+        grid-row: span 4 / span 4;
+        grid-column-start: 2;
+        grid-row-start: 1;
+      }
+
+      &.technology {
+        grid-row-start: 3;
+      }
+
+      &.recruit {
+        grid-row-start: 4;
+      }
+
+      &.contact {
+        grid-row-start: 5;
+      }
+
+      &.news {
+        grid-column-start: 1;
+        grid-row-start: 6;
+      }
+
+      &.privacypolicy {
+        grid-column-start: 2;
+        grid-row-start: 5;
+      }
+
+      &.sitemap {
+        grid-column-start: 2;
+        grid-row-start: 6;
+      }
+
+      &.english {
+        grid-column-start: 3;
+        grid-row-start: 5;
+      }
+    }
+
+    a {
+      transition: color 0.3s ease;
+      @media (any-hover: hover) {
+        &:hover {
+          color: var(--color-green);
+        }
+      }
+    }
+
+    > a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 0 1rem;
+      border-bottom: 1px solid var(--color-gray);
+
+      &::after {
+        content: '';
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        background: no-repeat 50% 50% / contain;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='レイヤー 2' viewBox='0 0 5.78 8.73'%3E%3Cpath d='m.71.71 3.66 3.66L.71 8.02' data-name='レイヤー 1' style='fill:none;stroke:%2364be37;stroke-miterlimit:10;stroke-width:2px'/%3E%3C/svg%3E");
+      }
+
+      h2 {
+        font-size: 1.6rem;
+        font-weight: 500;
+        text-transform: capitalize;
+        @include mq(ovsp) {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+
+  &-product {
+    @include mq(ovsp) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: start;
+      gap: 5rem;
+    }
+  }
+
+  &-list {
+    display: grid;
+    gap: 1rem;
+    margin: 2rem 0 0;
+
+    & + & {
+      margin: 1rem 0 0;
+      @include mq(ovsp) {
+        margin: 2rem 0 0;
+      }
+    }
+
+    li {
+      a {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+
+        &::before {
+          content: "・";
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          width: 0.6rem;
+          height: 1rem;
+          margin-left: auto;
+          background: no-repeat 50% 50% / contain;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='レイヤー 2' viewBox='0 0 4.51 8.02'%3E%3Cpath d='m.35.35 3.66 3.66L.35 7.67' data-name='レイヤー 1' style='fill:none;stroke:%23000;stroke-linejoin:round'/%3E%3C/svg%3E");
+        }
+      }
+    }
+  }
+}
