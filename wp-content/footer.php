@@ -198,6 +198,13 @@ if ($current_page && isset($current_page->post_name)) {
 <script src="<?php assets_path(); ?>/js/recruit.js"></script>
 <?php endif; ?>
 
+<?php if ( is_page('catalog') ) : ?>
+<!-- jQuery Match Height -->
+<script src="<?php assets_path(); ?>/js/jquery.matchHeight-min.js"></script>
+
+<script src="<?php assets_path(); ?>/js/catalog.js"></script>
+<?php endif; ?>
+
 <?php if ($is_english_page): if ( is_page('agricultural-machinery') || is_page('industrial-machinery') ) : ?>
 <script src="<?php assets_path(); ?>/js/english.js"></script>
 <?php endif; endif; ?>
