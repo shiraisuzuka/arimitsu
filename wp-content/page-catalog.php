@@ -25,7 +25,7 @@
             <ul class="p-catalog-list">
               <li>
                 <figure><img src="<?php img_path(); ?>/catalog/img01_01.jpg" alt="" loading="lazy" width="198" height="280"></figure>
-                <h3>総合カタログ</h3>
+                <h3>農業機械総合カタログ</h3>
                 <p>更新日：2024/12/27</p>
                 <p>コード：K・G-66-25.01</p>
                 <a href="https://ebook.wisebook4.jp/html/arimitsu/19417/#1" target="_blank" class="c-btn">ダウンロード</a>
@@ -67,7 +67,7 @@
               </li>
               <li>
                 <figure><img src="<?php img_path(); ?>/catalog/img01_08.jpg" alt="" loading="lazy" width="198" height="280"></figure>
-                <h3>洗浄機</h3>
+                <h3>洗浄機（農業用途）</h3>
                 <p>更新日：2024/04/02</p>
                 <p>コード：K・G-34M-24.04</p>
                 <a href="https://ebook.wisebook4.jp/html/arimitsu/19419/#1" target="_blank" class="c-btn">ダウンロード</a>
@@ -95,42 +95,42 @@
               </li>
               <li>
                 <figure><img src="<?php img_path(); ?>/catalog/img02_01.jpg" alt="" loading="lazy" width="198" height="280"></figure>
-                <h3>総合カタログ</h3>
+                <h3>産業機械総合カタログ</h3>
                 <p>更新日：2024/12/27</p>
                 <p>コード：K・G-66-25.01</p>
                 <a href="https://ebook.wisebook4.jp/html/arimitsu/51166/#1" target="_blank" class="c-btn">ダウンロード</a>
               </li>
               <li>
                 <figure><img src="<?php img_path(); ?>/catalog/img02_02.jpg" alt="" loading="lazy" width="198" height="280"></figure>
-                <h3>モーター</h3>
+                <h3>高圧洗浄機（モータータイプ）</h3>
                 <p>更新日：2024/10/22</p>
                 <p>コード：K・S-42J-24.10</p>
                 <a href="https://ebook.wisebook4.jp/html/arimitsu/19436/#1" target="_blank" class="c-btn">ダウンロード</a>
               </li>
               <li>
                 <figure><img src="<?php img_path(); ?>/catalog/img02_03.jpg" alt="" loading="lazy" width="198" height="280"></figure>
-                <h3>エンジン</h3>
+                <h3>高圧洗浄機（エンジンタイプ）</h3>
                 <p>更新日：2024/05/07</p>
                 <p>コード：K・S-43G-24.05</p>
                 <a href="https://ebook.wisebook4.jp/html/arimitsu/19435/#1" target="_blank" class="c-btn">ダウンロード</a>
               </li>
               <li>
                 <figure><img src="<?php img_path(); ?>/catalog/img02_04.jpg" alt="" loading="lazy" width="198" height="280"></figure>
-                <h3>温水</h3>
+                <h3>高圧洗浄機（温水タイプ）</h3>
                 <p>更新日：2025/01/20</p>
                 <p>コード：K・S-32O-25.01</p>
                 <a href="https://ebook.wisebook4.jp/html/arimitsu/19434/#1" target="_blank" class="c-btn">ダウンロード</a>
               </li>
               <li>
                 <figure><img src="<?php img_path(); ?>/catalog/img02_05.jpg" alt="" loading="lazy" width="198" height="280"></figure>
-                <h3>フォームクリーニング</h3>
+                <h3>フォーミング洗浄機</h3>
                 <p>更新日：2023/11/07</p>
                 <p>コード：K・S-33H-23.11</p>
                 <a href="https://ebook.wisebook4.jp/html/arimitsu/19424/#1" target="_blank" class="c-btn">ダウンロード</a>
               </li>
               <li>
                 <figure><img src="<?php img_path(); ?>/catalog/img02_06.jpg" alt="" loading="lazy" width="198" height="280"></figure>
-                <h3>細霧システム</h3>
+                <h3>細霧システム（ミスト）</h3>
                 <p>更新日：2024/08/11</p>
                 <p>コード：なし</p>
                 <a href="https://ebook.wisebook4.jp/html/arimitsu/19439/#1" target="_blank" class="c-btn">ダウンロード</a>
@@ -151,7 +151,7 @@
               </li>
               <li>
                 <figure><img src="<?php img_path(); ?>/catalog/img02_11.jpg" alt="" loading="lazy" width="198" height="280"></figure>
-                <h3>食品工場へのご提案</h3>
+                <h3>食品工場向け製品</h3>
                 <p>更新日：2024/05/13</p>
                 <p>コード：K・S-44H-24.05</p>
                 <a href="https://ebook.wisebook4.jp/html/arimitsu/19610/#1" target="_blank" class="c-btn">ダウンロード</a>
@@ -194,7 +194,7 @@
             <ul class="p-catalog-list">
               <li>
                 <figure><img src="<?php img_path(); ?>/catalog/img01_01.jpg" alt="" loading="lazy" width="198" height="280"></figure>
-                <h3>総合カタログ</h3>
+                <h3>農業機械総合カタログ</h3>
                 <p>更新日：2024/12/27</p>
                 <p>コード：K・G-66-25.01</p>
                 <a href="https://ebook.wisebook4.jp/html/arimitsu/19417/#1" target="_blank" class="c-btn">ダウンロード</a>
@@ -236,7 +236,7 @@
               </li>
               <li>
                 <figure><img src="<?php img_path(); ?>/catalog/img01_08.jpg" alt="" loading="lazy" width="198" height="280"></figure>
-                <h3>洗浄機</h3>
+                <h3>洗浄機（農業用途）</h3>
                 <p>更新日：2024/04/02</p>
                 <p>コード：K・G-34M-24.04</p>
                 <a href="https://ebook.wisebook4.jp/html/arimitsu/19419/#1" target="_blank" class="c-btn">ダウンロード</a>
@@ -288,42 +288,42 @@
             <ul class="p-catalog-list">
               <li>
                 <figure><img src="<?php img_path(); ?>/catalog/img02_01.jpg" alt="" loading="lazy" width="198" height="280"></figure>
-                <h3>総合カタログ</h3>
+                <h3>産業機械総合カタログ</h3>
                 <p>更新日：2024/12/27</p>
                 <p>コード：K・G-66-25.01</p>
                 <a href="https://ebook.wisebook4.jp/html/arimitsu/51166/#1" target="_blank" class="c-btn">ダウンロード</a>
               </li>
               <li>
                 <figure><img src="<?php img_path(); ?>/catalog/img02_02.jpg" alt="" loading="lazy" width="198" height="280"></figure>
-                <h3>モーター</h3>
+                <h3>高圧洗浄機（モータータイプ）</h3>
                 <p>更新日：2024/10/22</p>
                 <p>コード：K・S-42J-24.10</p>
                 <a href="https://ebook.wisebook4.jp/html/arimitsu/19436/#1" target="_blank" class="c-btn">ダウンロード</a>
               </li>
               <li>
                 <figure><img src="<?php img_path(); ?>/catalog/img02_03.jpg" alt="" loading="lazy" width="198" height="280"></figure>
-                <h3>エンジン</h3>
+                <h3>高圧洗浄機（エンジンタイプ）</h3>
                 <p>更新日：2024/05/07</p>
                 <p>コード：K・S-43G-24.05</p>
                 <a href="https://ebook.wisebook4.jp/html/arimitsu/19435/#1" target="_blank" class="c-btn">ダウンロード</a>
               </li>
               <li>
                 <figure><img src="<?php img_path(); ?>/catalog/img02_04.jpg" alt="" loading="lazy" width="198" height="280"></figure>
-                <h3>温水</h3>
+                <h3>高圧洗浄機（温水タイプ）</h3>
                 <p>更新日：2025/01/20</p>
                 <p>コード：K・S-32O-25.01</p>
                 <a href="https://ebook.wisebook4.jp/html/arimitsu/19434/#1" target="_blank" class="c-btn">ダウンロード</a>
               </li>
               <li>
                 <figure><img src="<?php img_path(); ?>/catalog/img02_05.jpg" alt="" loading="lazy" width="198" height="280"></figure>
-                <h3>フォームクリーニング</h3>
+                <h3>フォーミング洗浄機</h3>
                 <p>更新日：2023/11/07</p>
                 <p>コード：K・S-33H-23.11</p>
                 <a href="https://ebook.wisebook4.jp/html/arimitsu/19424/#1" target="_blank" class="c-btn">ダウンロード</a>
               </li>
               <li>
                 <figure><img src="<?php img_path(); ?>/catalog/img02_06.jpg" alt="" loading="lazy" width="198" height="280"></figure>
-                <h3>細霧システム</h3>
+                <h3>細霧システム（ミスト）</h3>
                 <p>更新日：2024/08/11</p>
                 <p>コード：なし</p>
                 <a href="https://ebook.wisebook4.jp/html/arimitsu/19439/#1" target="_blank" class="c-btn">ダウンロード</a>
@@ -344,7 +344,7 @@
               </li>
               <li>
                 <figure><img src="<?php img_path(); ?>/catalog/img02_11.jpg" alt="" loading="lazy" width="198" height="280"></figure>
-                <h3>食品工場へのご提案</h3>
+                <h3>食品工場向け製品</h3>
                 <p>更新日：2024/05/13</p>
                 <p>コード：K・S-44H-24.05</p>
                 <a href="https://ebook.wisebook4.jp/html/arimitsu/19610/#1" target="_blank" class="c-btn">ダウンロード</a>
