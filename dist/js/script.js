@@ -54,11 +54,11 @@
   
   // 各製品項目に対応する画像とテキストのデータ
   const productData = [
-    { image: 'images/img_product_01.png', text: 'agri' },
-    { image: 'images/img_product_02.png', text: 'pump' },
-    { image: 'images/img_product_03.png', text: 'washer' },
-    { image: 'images/img_product_04.png', text: 'attach' },
-    { image: 'images/img_product_05.png', text: 'mist' },
+    { image: 'images/img_product_01.png', text: 'AGRI' },
+    { image: 'images/img_product_02.png', text: 'PUMP' },
+    { image: 'images/img_product_03.png', text: 'WASHER' },
+    { image: 'images/img_product_04.png', text: 'ATTACH' },
+    { image: 'images/img_product_05.png', text: 'MIST' },
     { image: 'images/img_product_06.png', text: 'etc.' }
   ];
 

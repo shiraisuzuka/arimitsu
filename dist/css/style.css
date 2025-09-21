@@ -5128,7 +5128,6 @@ figure {
   font-weight: 700;
   line-height: 1;
   color: #FFF;
-  text-transform: uppercase;
 }
 @media screen and (min-width: 768px) {
   .p-top-product-image-text {

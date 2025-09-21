@@ -165,7 +165,7 @@
     </div>
     <figure class="p-top-product-image js-animation">
       <img src="<?php img_path(); ?>/img_product_01.png" alt="" loading="lazy" width="1600" height="1200">
-      <span class="p-top-product-image-text is-pc">agri</span>
+      <span class="p-top-product-image-text is-pc">AGRI</span>
     </figure>
   </div>
 </section>
