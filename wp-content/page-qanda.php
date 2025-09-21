@@ -31,7 +31,7 @@
       <li>
         <h3 class="p-qanda-accordion-title js-accordion-title">社員寮はありますか？</h3>
         <div class="p-qanda-accordion-content">
-          <p>自宅からの通勤が不可能な場合は､借り上げ社宅を用意します｡</p>
+          <p>自宅からの通勤が不可能な場合は､社内規定の範囲で借り上げ社宅を用意します｡</p>
         </div>
       </li>
       <li>
@@ -67,7 +67,7 @@
       <li>
         <h3 class="p-qanda-accordion-title js-accordion-title">採用試験はどのような方法で行われますか？</h3>
         <div class="p-qanda-accordion-content">
-          <p>当社の入社試験は､以下の通りです。<br>・適性検査（一部常識問題を含みます）<br>・作文 （原稿用紙3枚程度）<br>・面接 （2次まで）</p>
+          <p>当社の入社試験は､以下の通りです。<br>・適性検査（一部常識問題を含みます）<br>・面接 （2次まで）</p>
         </div>
       </li>
       <li>
