@@ -339,6 +339,16 @@ figure {
 .c-hero-contents {
   flex-shrink: 0;
 }
+@media screen and (min-width: 768px) {
+  .c-hero-contents.en {
+    max-width: 29.6rem;
+  }
+}
+@media screen and (min-width: 1601px) {
+  .c-hero-contents.en {
+    max-width: 45rem;
+  }
+}
 .c-hero-sub {
   display: block;
   color: var(--color-green);
@@ -366,6 +376,11 @@ figure {
     margin: 5rem 0 0;
     font-size: 1.8rem;
   }
+}
+.c-hero-text.en {
+  font-family: var(--font-base);
+  font-size: 1.6rem;
+  line-height: 1.7;
 }
 .c-hero figure {
   width: calc(100% + 1.5rem);

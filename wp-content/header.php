@@ -637,4 +637,4 @@ if ($current_page && isset($current_page->post_name)) {
 </header>
 <?php endif; ?>
 
-<main class="l-main">
+<main class="l-main<?php if ($is_english_page): ?> en<?php endif; ?>">
