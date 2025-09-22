@@ -162,24 +162,24 @@
               <table class="c-table sp-block">
                 <tbody>
                   <tr>
-                    <th>Tokyo</th>
-                    <td>7F N.B. Building, 2-15-10, Iwamotocho, Chiyoda-ku, Tokyo 101-0032<a href="https://maps.app.goo.gl/Xp5Yv4PjGUpGwfkP9" target="_blank">【Map】</a></td>
-                  </tr>
-                  <tr>
-                    <th>Tel</th>
-                    <td>TEL:03-5835-3974<br>FAX:03-3865-3086</td>
-                  </tr>
-                </tbody>
-              </table>
-              <table class="c-table sp-block">
-                <tbody>
-                  <tr>
                     <th>Kanto</th>
                     <td>NO. 1211, Kamikocho, Omiya-ku, Saitama City 330-0855<a href="https://maps.app.goo.gl/jNSxzvK5o22LayXS9" target="_blank">【Map】</a></td>
                   </tr>
                   <tr>
                     <th>Tel</th>
                     <td>TEL:048-649-7100<br>FAX:048-649-7411<br>TEL:048-644-2147<br>FAX:048-644-9292</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="c-table sp-block">
+                <tbody>
+                  <tr>
+                    <th>Tokyo</th>
+                    <td>7F N.B. Building, 2-15-10, Iwamotocho, Chiyoda-ku, Tokyo 101-0032<a href="https://maps.app.goo.gl/Xp5Yv4PjGUpGwfkP9" target="_blank">【Map】</a></td>
+                  </tr>
+                  <tr>
+                    <th>Tel</th>
+                    <td>TEL:03-5835-3974<br>FAX:03-3865-3086</td>
                   </tr>
                 </tbody>
               </table>

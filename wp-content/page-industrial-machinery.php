@@ -1,0 +1,1180 @@
+<?php get_header(); ?>
+
+<div class="p-lower-mv">
+  <div class="l-section-inner">
+    <?php english_breadcrumb(); ?>
+    <h1 class="p-lower-mv-en-title">industrial machinery</h1>
+  </div>
+</div>
+
+<section class="p-en-product l-section">
+  <div class="l-section-inner">
+    <div class="p-en-product-tab-panel js-tab-panel">
+      <ul class="p-en-product-tab c-tab ind">
+        <li class="tab tab-1 is-active">all</li>
+        <li class="tab tab-2">pressure washer / high pressure jet cleaners 100V(electric motor type)</li>
+        <li class="tab tab-3">pressure washer / high pressure jet cleaners 200V(electric motor type)</li>
+        <li class="tab tab-4">plunger pump units</li>
+        <li class="tab tab-5">super high pressure <br class="u-show-br-pc">plunger pump unit</li>
+        <li class="tab tab-6">pressure washer / high pressure jet <br class="u-show-br-pc">cleaners(engine type)</li>
+        <li class="tab tab-7">hot cleaners</li>
+        <li class="tab tab-8">invertor pressure washer<br class="u-show-br-pc">(stationary piping pressure washer)</li>
+        <li class="tab tab-9">foaming cleaner <br class="u-show-br-pc">(foaming washing machine)</li>
+        <li class="tab tab-10">container washing machine･<br class="u-show-br-pc">parts box washing machine</li>
+        <li class="tab tab-11">parts cleaner</li>
+        <li class="tab tab-12">plunger pumps</li>
+        <li class="tab tab-13">marine pump</li>
+        <li class="tab tab-14">forming system</li>
+        </li>
+      </ul>
+      <div class="p-en-product-panel">
+        <div class="panel tab-1 is-show">
+          <div class="p-en-product-panel-row">
+            <h2>pressure washer / high pressure jet cleaners 100V(electric motor type)</h2>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img01.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>pressure washer / high pressure jet cleaners (electric motor type)<br>single phase 100V type</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>Our power sprayer pumps are available in a wide range of sizes to meet specific horsepower reqirements. All our power Sprayers are equipped with ceramic plungers for extra durability and are excellent for high pressure use.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Pressure-Washer-_-High-Pressure-Jet-Cleaners-Electric-Motor-TypeSingle-Phase-100V-Type.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+          </div>
+          <div class="p-en-product-panel-row">
+            <h2>pressure washer / high pressure jet cleaners 200V(electric motor type)</h2>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img02.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>pressure washer / high pressure jet cleaners (electric motor type)<br>1.5kW(2PS)-5.5kW(7PS)</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>The best-seller series debuts with new functions!<br>･Automatic operation on/off with trigger.<br>･Stainless handle and bolts are used which is rustless !<br>･High pressure hose made by urethane<br>which does not dirty the floor.<br>Hose Reel:Option</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Pressure-Washer-_-High-Pressure-Jet-Cleaners-Electric-Motor-Type1.5kW2PS-5.5kW7PS.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img03.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>pressure washer / high pressure jet cleaners (electric motor type)<br>TA / FH type</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>It is a small size and economical Jet Cleaner. Stainless chassis type is the best for food factory.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Pressure-Washer-_-High-Pressure-Jet-Cleaners-Electric-Motor-TypeTA-FH-Type.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img04.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>pressure washer / high pressure jet cleaners (electric motor type)<br>try type with tank</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>Movable type Jet Cleaner with stainless steel tank. (100 Liter)</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Pressure-Washer-_-High-Pressure-Jet-Cleaners-Electric-Motor-TypeTry-Type-With-Tank.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img05.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>pressure washer / high pressure jet cleaners (electric motor type)<br>5.5kW(7PS)-7.5kW (10PS)</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>Pressure：5.9-19.6MPa(60-200kgf/cm2)<br>
+                        Discharge Volume：19.5-61.4ℓ/min<br>
+                        Hose reel is equipped on standard.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Pressure-Washer-_-High-Pressure-Jet-Cleaners-Electric-Motor-Type5.5kW7PS-7.5kW-10PS.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img06.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>pressure washer / high pressure jet cleaners (electric motor type)<br>11kW (15PS)</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>Pressure：4.9-34.3MPa(50-350kgf/cm2)<br>
+                        Discharge Volume：15.3-106.2ℓ/min</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Pressure-Washer-_-High-Pressure-Jet-Cleaners-Electric-Motor-Type11kW-15PS.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img07.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>pressure washer / high pressure jet cleaners (electric motor type)<br>FB type</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>Pressure：4.9MPa(50kgf/cm2)<br>
+                        Discharge Volume：69.4-106.2ℓ/min</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Pressure-Washer-_-High-Pressure-Jet-Cleaners-Motor-TypeFB-Type.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img08.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>pressure washer / high pressure jet cleaners (electric motor type)<br>15kW (20PS)-55kW (75PS)</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>Output：15-55kW(20-75PS)<br>
+                        We have various sizes and types of pressure washers.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Pressure-Washer-_-High-Pressure-Jet-Cleaners-Electric-Motor-Type15kW-20PS-55kW-75PS-scaled.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+          </div>
+          <div class="p-en-product-panel-row">
+            <h2>plunger pump units</h2>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img09.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>plunger pump units</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>Pressure：4.9-98.1MPa(50-1000kgf/cm2)<br>
+                        Discharge Volume：10.9-802ℓ/min(Special type 1000ℓ/min)<br>
+                        We have various sizes and types of pressure washers.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Plunger-Pump-Units.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+          </div>        
+          <div class="p-en-product-panel-row">
+            <h2>super high pressure plunger pump unit</h2>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img10.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>super high pressure plunger pump unit</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>Super High Pressure : 98.1 - 147MPa (1000 - 1500kgf/cm2)
+                        It is usable for exfoliation work/cutting work.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Super-High-Pressure-Plunger-Pump-Unit.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+          </div>
+          <div class="p-en-product-panel-row">
+            <h2>pressure washer / high pressure jet cleaners(engine type)</h2>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img11.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>pressure washer / high pressure jet cleaners(engine type)<br>direct coupling type</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>It is easy to move because of light weight and compact design.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Pressure-Washer-_-High-Pressure-Jet-CleanersEngine-TypeDirect-Coupling-Type.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img12.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>pressure washer / high pressure jet cleaners(engine type)<br>belt driven type</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>Hose reel is equipped on standard and it is easy to move with direction-free wheel.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Pressure-Washer-_-High-Pressure-Jet-Cleaners-Engine-TypeBelt-Driven-Type.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img13.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>pressure washer / high pressure jet cleaners(engine type)<br>Soundproof 3.7kW (5.0PS)-5.5kW (7.5PS)</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>It is good for outside works with low noise and easy to move because of light weight and compact design.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Pressure-Washer-_-High-Pressure-Jet-Cleaners-Engine-TypeSoundproof-3.7kW-5.0PS-5.5kW-7.5PS.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+          </div>
+          <div class="p-en-product-panel-row">
+            <h2>hot cleaners</h2>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img14.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>hot cleaners 1.5kW(2ps)-3.7kW(5ps)</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>Hot water discharge removes grease, grime and oil.Versatile - changeover switch for hot or cold water operation.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Hot-Cleaners-1.5kW2ps-3.7kW5ps.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img15.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>hot cleaners 2.2kW(3PS)</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>Energy saving ･ Slim body ･ Simple operation!
+                        The discharge of pressurized hot water removes grease, grime and oil. Versatile - changeover switch for hot or cold water operation.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Hot-Cleaners-2.2kW3PS.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img16.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>hot cleaners 1.5kW<br>(Super Hot Cleaner Type)</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>It is easier to wash out smudge with hot water.It makes bacteria elimination and sterilization.AHC-22SHW has the stainless body and good for food industries.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Hot-CleanersSuper-Hot-Cleaner-Type.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img17.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>hot cleaners 3.7kW-11kW</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>It made the steady hot water supply with High efficiency、accumulator type stainless boiler.<br>it is easier to wash out smudge with hot cleaner.<br>30℃-80℃<br>Cold Water - Hot Water Changeable.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Hot-Cleaners-3.7kW-11kW.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+          </div>
+          <div class="p-en-product-panel-row">
+            <h2>invertor pressure washer(stationary piping pressure washer)</h2>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img18.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>invertor pressure washer(stationary piping pressure washer) <span style="text-transform: lowercase;">w</span>ithout tank</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>No necessity of preparation on washing due to the centralized piping system.Whenever you want to wash, it is possible to make the quick washing.This is the good efficiency system which is for the energy saving washing machine.(electricity bill, water service charges, maintenance administrative expense).</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Invertor-Pressure-WasherStationary-Piping-Pressure-Washer-without-Tank.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img19.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>invertor pressure washer(stationary piping pressure washer) <span style="text-transform: lowercase;">w</span>ith tank</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>No necessity of preparation on washing due to the centralized piping system.Whenever you want to wash, it is possible to make the quick washing.This is the good efficiency system which is for the energy saving washing machine.(electricity bill, water service charges, maintenance administrative expense).</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Invertor-Pressure-WasherStationary-Piping-Pressure-Washer-with-Tank.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+          </div>
+          <div class="p-en-product-panel-row">
+            <h2>foaming cleaner (foaming washing machine)</h2>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img20.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>portable foaming <span style="text-transform: lowercase;">w</span>ashing <span style="text-transform: lowercase;">u</span>nit</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>This is high-power 60 kilos motor type.User can make the comfortable works due to the low noise motor. A forming washing unit comes up with PJ-01G.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Portable-Foaming-washing-unit.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img21.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>foaming cleaner (foaming washing machine)</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>A little washing agent/sterilizer foam and can spray it on the wide range economically without waste.Bubble shows an effect for a long time and it spreads among the gaps and can confirm the omission of dispersion at first sight.It is possible to make the foam washing at the various places because of stationary piping.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Foaming-Cleaner-Foaming-Washing-Machine.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+          </div>
+          <div class="p-en-product-panel-row">
+            <h2>container washing machine･parts box washing machine</h2>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img22.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>container washing machine･parts box washing machine batch type</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>Washing by alone is OK.User can perform other work while washing.<br>Many options are prepared for standard model and the design is changeable for multipurpose.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Container-Washing-Machine･Parts-Box-Washing-Machine-Batch-Type.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img23.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>container washing machines parts parts box washing machines, consecutive washing type</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>This is most suitable type for the spot where mass processing capacity is required.<br>Many options are prepared for standard model and the design is changeable for multipurpose.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Container-Washing-Machines-Parts-Box-Washing-MachinesConsecutive-Washing-types.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img24.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>container washing machines parts parts box washing machines, consecutive washings･dryer types</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>This Model has the Hot Wind and the Dryer Function and it is quick until user use it after washing.<br>This is most suitable type for the spot where mass processing capacity is required.<br>Many options are prepared for standard model and the design is changeable for multipurpose.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Container-Washing-Machines-Parts-Box-Washing-MachinesConsecutive-Washings･Dryer-Types.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+          </div>
+          <div class="p-en-product-panel-row">
+            <h2>parts cleaner</h2>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img25.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>parts cleaner</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>This machine has the parallel swing nozzle(Table turn + Nozzle swing) and it works without the blind spot (Washing and Air Blow).<br>*** Except model AJC-65・AJC-80-2・AJC-400</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Parts-Cleaner.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+          </div>
+          <div class="p-en-product-panel-row">
+            <h2>plunger pumps</h2>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img26.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>PLUNGER PUMPS RG-3 SERIES</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>The small - large sized pumps are available for your needs.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/PLUNGER-PUMPS-RG-3-SERIES.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img27.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>PLUNGER PUMPS TR-5 SERIES</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>The small - large sized pumps are available for your needs.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/PLUNGER-PUMPS-TR-5-SERIES.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img28.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>PLUNGER PUMPS TR(RG)-7 SERIES</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>The small - large sized pumps are available for your needs.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/PLUNGER-PUMPS-TRRG-7-SERIES.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img29.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>PLUNGER PUMPS TR-11 SERIES</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>The small - large sized pumps are available for your needs.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/PLUNGER-PUMPS-TR-11-SERIES.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img30.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>PLUNGER PUMPS T-TYPE PUMP SERIES</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>The small - large sized pumps are available for your needs.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/PLUNGER-PUMPS-T-TYPE-PUMP-SERIES.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img31.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>PLUNGER PUMPS C-TYPE PUMP SERIES</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>The small - large sized pumps are available for your needs.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/PLUNGER-PUMPS-C-TYPE-PUMP-SERIES.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+          </div>
+          <div class="p-en-product-panel-row">
+            <h2>marine pump</h2>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img32.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>MARINE PUMPS</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>Distinguished corresion resistance with Seawater-resistant.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/MARINE-PUMPS.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+          </div>
+          <div class="p-en-product-panel-row">
+            <h2>forming system</h2>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img33.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>Fully Automatic Floor Cleaning System</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>・Compact 100V model<br>・Can be installed in complex locations<br>・High-pressure washing mechanism (optional)<br>・Optional switching unit enables alternating cleaning of two areas at staggered times<br>・Easily switch between manual and automatic modes using the touch panel</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/FJ-03B-1-scaled.jpg" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img34.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>Foam Washer</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>・One-component, ultra-compact 100V type<br>・Body constructed with corrosion-resistant stainless steel<br>・Easily switch between manual and automatic modes using the touch panel</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/FJ-10-4-2-scaled.jpg" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img35.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>Foam Washer</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>・Provides peace of mind with easy-to-understand panel displays<br>・Body constructed with corrosion-resistant stainless steel</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/FJ-15-scaled.jpg" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img36.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>Foam Washer</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>・High-pressure washing mechanism (3.4MPa)<br>・Touch panel standard equipment<br>・High-pressure washing also possible with gun nozzle<br>・Corrosion-resistant stainless steel body</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/FCS-22-scaled.jpg" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel tab-2">
+          <div class="p-en-product-panel-row">
+            <h2>pressure washer / high pressure jet cleaners 100V(electric motor type)</h2>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img01.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>pressure washer / high pressure jet cleaners (electric motor type)<br>single phase 100V type</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>Our power sprayer pumps are available in a wide range of sizes to meet specific horsepower reqirements. All our power Sprayers are equipped with ceramic plungers for extra durability and are excellent for high pressure use.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Pressure-Washer-_-High-Pressure-Jet-Cleaners-Electric-Motor-TypeSingle-Phase-100V-Type.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel tab-3">
+          <div class="p-en-product-panel-row">
+            <h2>pressure washer / high pressure jet cleaners 200V(electric motor type)</h2>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img02.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>pressure washer / high pressure jet cleaners (electric motor type)<br>1.5kW(2PS)-5.5kW(7PS)</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>The best-seller series debuts with new functions!<br>･Automatic operation on/off with trigger.<br>･Stainless handle and bolts are used which is rustless !<br>･High pressure hose made by urethane<br>which does not dirty the floor.<br>Hose Reel:Option</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Pressure-Washer-_-High-Pressure-Jet-Cleaners-Electric-Motor-Type1.5kW2PS-5.5kW7PS.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img03.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>pressure washer / high pressure jet cleaners (electric motor type)<br>TA / FH type</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>It is a small size and economical Jet Cleaner. Stainless chassis type is the best for food factory.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Pressure-Washer-_-High-Pressure-Jet-Cleaners-Electric-Motor-TypeTA-FH-Type.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img04.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>pressure washer / high pressure jet cleaners (electric motor type)<br>try type with tank</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>Movable type Jet Cleaner with stainless steel tank. (100 Liter)</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Pressure-Washer-_-High-Pressure-Jet-Cleaners-Electric-Motor-TypeTry-Type-With-Tank.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img05.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>pressure washer / high pressure jet cleaners (electric motor type)<br>5.5kW(7PS)-7.5kW (10PS)</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>Pressure：5.9-19.6MPa(60-200kgf/cm2)<br>
+                        Discharge Volume：19.5-61.4ℓ/min<br>
+                        Hose reel is equipped on standard.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Pressure-Washer-_-High-Pressure-Jet-Cleaners-Electric-Motor-Type5.5kW7PS-7.5kW-10PS.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img06.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>pressure washer / high pressure jet cleaners (electric motor type)<br>11kW (15PS)</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>Pressure：4.9-34.3MPa(50-350kgf/cm2)<br>
+                        Discharge Volume：15.3-106.2ℓ/min</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Pressure-Washer-_-High-Pressure-Jet-Cleaners-Electric-Motor-Type11kW-15PS.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img07.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>pressure washer / high pressure jet cleaners (electric motor type)<br>FB type</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>Pressure：4.9MPa(50kgf/cm2)<br>
+                        Discharge Volume：69.4-106.2ℓ/min</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Pressure-Washer-_-High-Pressure-Jet-Cleaners-Motor-TypeFB-Type.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img08.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>pressure washer / high pressure jet cleaners (electric motor type)<br>15kW (20PS)-55kW (75PS)</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>Output：15-55kW(20-75PS)<br>
+                        We have various sizes and types of pressure washers.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Pressure-Washer-_-High-Pressure-Jet-Cleaners-Electric-Motor-Type15kW-20PS-55kW-75PS-scaled.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel tab-4">
+          <div class="p-en-product-panel-row">
+            <h2>plunger pump units</h2>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img09.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>plunger pump units</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>Pressure：4.9-98.1MPa(50-1000kgf/cm2)<br>
+                        Discharge Volume：10.9-802ℓ/min(Special type 1000ℓ/min)<br>
+                        We have various sizes and types of pressure washers.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Plunger-Pump-Units.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel tab-5">
+          <div class="p-en-product-panel-row">
+            <h2>super high pressure plunger pump unit</h2>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img10.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>super high pressure plunger pump unit</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>Super High Pressure : 98.1 - 147MPa (1000 - 1500kgf/cm2)
+                        It is usable for exfoliation work/cutting work.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Super-High-Pressure-Plunger-Pump-Unit.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel tab-6">
+          <div class="p-en-product-panel-row">
+            <h2>pressure washer / high pressure jet cleaners(engine type)</h2>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img11.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>pressure washer / high pressure jet cleaners(engine type)<br>direct coupling type</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>It is easy to move because of light weight and compact design.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Pressure-Washer-_-High-Pressure-Jet-CleanersEngine-TypeDirect-Coupling-Type.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img12.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>pressure washer / high pressure jet cleaners(engine type)<br>belt driven type</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>Hose reel is equipped on standard and it is easy to move with direction-free wheel.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Pressure-Washer-_-High-Pressure-Jet-Cleaners-Engine-TypeBelt-Driven-Type.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img13.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>pressure washer / high pressure jet cleaners(engine type)<br>Soundproof 3.7kW (5.0PS)-5.5kW (7.5PS)</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>It is good for outside works with low noise and easy to move because of light weight and compact design.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Pressure-Washer-_-High-Pressure-Jet-Cleaners-Engine-TypeSoundproof-3.7kW-5.0PS-5.5kW-7.5PS.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel tab-7">
+          <div class="p-en-product-panel-row">
+            <h2>hot cleaners</h2>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img14.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>hot cleaners 1.5kW(2ps)-3.7kW(5ps)</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>Hot water discharge removes grease, grime and oil.Versatile - changeover switch for hot or cold water operation.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Hot-Cleaners-1.5kW2ps-3.7kW5ps.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img15.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>hot cleaners 2.2kW(3PS)</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>Energy saving ･ Slim body ･ Simple operation!
+                        The discharge of pressurized hot water removes grease, grime and oil. Versatile - changeover switch for hot or cold water operation.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Hot-Cleaners-2.2kW3PS.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img16.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>hot cleaners 1.5kW<br>(Super Hot Cleaner Type)</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>It is easier to wash out smudge with hot water.It makes bacteria elimination and sterilization.AHC-22SHW has the stainless body and good for food industries.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Hot-CleanersSuper-Hot-Cleaner-Type.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img17.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>hot cleaners 3.7kW-11kW</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>It made the steady hot water supply with High efficiency、accumulator type stainless boiler.<br>it is easier to wash out smudge with hot cleaner.<br>30℃-80℃<br>Cold Water - Hot Water Changeable.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Hot-Cleaners-3.7kW-11kW.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel tab-8">
+          <div class="p-en-product-panel-row">
+            <h2>invertor pressure washer(stationary piping pressure washer)</h2>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img18.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>invertor pressure washer(stationary piping pressure washer) <span style="text-transform: lowercase;">w</span>ithout tank</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>No necessity of preparation on washing due to the centralized piping system.Whenever you want to wash, it is possible to make the quick washing.This is the good efficiency system which is for the energy saving washing machine.(electricity bill, water service charges, maintenance administrative expense).</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Invertor-Pressure-WasherStationary-Piping-Pressure-Washer-without-Tank.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img19.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>invertor pressure washer(stationary piping pressure washer) <span style="text-transform: lowercase;">w</span>ith tank</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>No necessity of preparation on washing due to the centralized piping system.Whenever you want to wash, it is possible to make the quick washing.This is the good efficiency system which is for the energy saving washing machine.(electricity bill, water service charges, maintenance administrative expense).</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Invertor-Pressure-WasherStationary-Piping-Pressure-Washer-with-Tank.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel tab-9">
+          <div class="p-en-product-panel-row">
+            <h2>foaming cleaner (foaming washing machine)</h2>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img20.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>portable foaming <span style="text-transform: lowercase;">w</span>ashing <span style="text-transform: lowercase;">u</span>nit</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>This is high-power 60 kilos motor type.User can make the comfortable works due to the low noise motor. A forming washing unit comes up with PJ-01G.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Portable-Foaming-washing-unit.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img21.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>foaming cleaner (foaming washing machine)</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>A little washing agent/sterilizer foam and can spray it on the wide range economically without waste.Bubble shows an effect for a long time and it spreads among the gaps and can confirm the omission of dispersion at first sight.It is possible to make the foam washing at the various places because of stationary piping.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Foaming-Cleaner-Foaming-Washing-Machine.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel tab-10">
+          <div class="p-en-product-panel-row">
+            <h2>container washing machine･parts box washing machine</h2>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img22.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>container washing machine･parts box washing machine batch type</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>Washing by alone is OK.User can perform other work while washing.<br>Many options are prepared for standard model and the design is changeable for multipurpose.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Container-Washing-Machine･Parts-Box-Washing-Machine-Batch-Type.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img23.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>container washing machines parts parts box washing machines, consecutive washing type</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>This is most suitable type for the spot where mass processing capacity is required.<br>Many options are prepared for standard model and the design is changeable for multipurpose.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Container-Washing-Machines-Parts-Box-Washing-MachinesConsecutive-Washing-types.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img24.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>container washing machines parts parts box washing machines, consecutive washings･dryer types</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>This Model has the Hot Wind and the Dryer Function and it is quick until user use it after washing.<br>This is most suitable type for the spot where mass processing capacity is required.<br>Many options are prepared for standard model and the design is changeable for multipurpose.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Container-Washing-Machines-Parts-Box-Washing-MachinesConsecutive-Washings･Dryer-Types.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel tab-11">
+          <div class="p-en-product-panel-row">
+            <h2>parts cleaner</h2>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img25.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>parts cleaner</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>This machine has the parallel swing nozzle(Table turn + Nozzle swing) and it works without the blind spot (Washing and Air Blow).<br>*** Except model AJC-65・AJC-80-2・AJC-400</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/Parts-Cleaner.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel tab-12">
+          <div class="p-en-product-panel-row">
+            <h2>plunger pumps</h2>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img26.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>PLUNGER PUMPS RG-3 SERIES</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>The small - large sized pumps are available for your needs.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/PLUNGER-PUMPS-RG-3-SERIES.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img27.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>PLUNGER PUMPS TR-5 SERIES</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>The small - large sized pumps are available for your needs.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/PLUNGER-PUMPS-TR-5-SERIES.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img28.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>PLUNGER PUMPS TR(RG)-7 SERIES</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>The small - large sized pumps are available for your needs.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/PLUNGER-PUMPS-TRRG-7-SERIES.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img29.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>PLUNGER PUMPS TR-11 SERIES</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>The small - large sized pumps are available for your needs.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/PLUNGER-PUMPS-TR-11-SERIES.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img30.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>PLUNGER PUMPS T-TYPE PUMP SERIES</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>The small - large sized pumps are available for your needs.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/PLUNGER-PUMPS-T-TYPE-PUMP-SERIES.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img31.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>PLUNGER PUMPS C-TYPE PUMP SERIES</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>The small - large sized pumps are available for your needs.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/PLUNGER-PUMPS-C-TYPE-PUMP-SERIES.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel tab-13">
+          <div class="p-en-product-panel-row">
+            <h2>marine pump</h2>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img32.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>MARINE PUMPS</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>Distinguished corresion resistance with Seawater-resistant.</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/MARINE-PUMPS.png" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel tab-14">
+          <div class="p-en-product-panel-row">
+            <h2>forming system</h2>
+            <ul class="col">
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img33.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>Fully Automatic Floor Cleaning System</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>・Compact 100V model<br>・Can be installed in complex locations<br>・High-pressure washing mechanism (optional)<br>・Optional switching unit enables alternating cleaning of two areas at staggered times<br>・Easily switch between manual and automatic modes using the touch panel</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/FJ-03B-1-scaled.jpg" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img34.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>Foam Washer</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>・One-component, ultra-compact 100V type<br>・Body constructed with corrosion-resistant stainless steel<br>・Easily switch between manual and automatic modes using the touch panel</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/FJ-10-4-2-scaled.jpg" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img35.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>Foam Washer</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>・Provides peace of mind with easy-to-understand panel displays<br>・Body constructed with corrosion-resistant stainless steel</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/FJ-15-scaled.jpg" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+              <li>
+                <div class="col-inner">
+                  <figure><img src="<?php img_path(); ?>/english/ind/img36.jpg" alt="" loading="lazy" width="250" height="150"></figure>
+                  <div>
+                    <h3>Foam Washer</h3>
+                    <div class="feature">
+                      <span>features</span>
+                      <p>・High-pressure washing mechanism (3.4MPa)<br>・Touch panel standard equipment<br>・High-pressure washing also possible with gun nozzle<br>・Corrosion-resistant stainless steel body</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://www.arimitsu.co.jp/cms/wp-content/uploads/2025/09/FCS-22-scaled.jpg" target="_blank" class="c-btn -download">Specifications</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<?php get_footer(); ?>
