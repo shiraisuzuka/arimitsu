@@ -133,9 +133,12 @@ function product_basic_info_callback($post) {
     
     $listing_image = get_post_meta($post->ID, '_product_listing_image', true);
     $basic_copy = get_post_meta($post->ID, '_product_basic_copy', true);
-    $catalog_pdf = get_post_meta($post->ID, '_product_catalog_pdf', true);
-    $catalog_pdf2 = get_post_meta($post->ID, '_product_catalog_pdf2', true);
-    $catalog_pdf3 = get_post_meta($post->ID, '_product_catalog_pdf3', true);
+    $catalog_name1 = get_post_meta($post->ID, '_product_catalog_name1', true);
+    $catalog_link1 = get_post_meta($post->ID, '_product_catalog_pdf', true);
+    $catalog_name2 = get_post_meta($post->ID, '_product_catalog_name2', true);
+    $catalog_link2 = get_post_meta($post->ID, '_product_catalog_pdf2', true);
+    $catalog_name3 = get_post_meta($post->ID, '_product_catalog_name3', true);
+    $catalog_link3 = get_post_meta($post->ID, '_product_catalog_pdf3', true);
     ?>
     <table class="form-table">
         <tr>
@@ -158,21 +161,39 @@ function product_basic_info_callback($post) {
             </td>
         </tr>
         <tr>
-            <th><label for="product_catalog_pdf">カタログのPDFリンク</label></th>
+            <th><label for="product_catalog_name1">カタログ名1</label></th>
             <td>
-                <input type="url" id="product_catalog_pdf" name="product_catalog_pdf" value="<?php echo esc_url($catalog_pdf); ?>" style="width: 100%;" />
+                <input type="text" id="product_catalog_name1" name="product_catalog_name1" value="<?php echo esc_attr($catalog_name1); ?>" style="width: 100%;" />
             </td>
         </tr>
         <tr>
-            <th><label for="product_catalog_pdf2">カタログのPDFリンク2</label></th>
+            <th><label for="product_catalog_pdf">カタログリンク1</label></th>
             <td>
-                <input type="url" id="product_catalog_pdf2" name="product_catalog_pdf2" value="<?php echo esc_url($catalog_pdf2); ?>" style="width: 100%;" />
+                <input type="url" id="product_catalog_pdf" name="product_catalog_pdf" value="<?php echo esc_url($catalog_link1); ?>" style="width: 100%;" />
             </td>
         </tr>
         <tr>
-            <th><label for="product_catalog_pdf3">カタログのPDFリンク3</label></th>
+            <th><label for="product_catalog_name2">カタログ名2</label></th>
             <td>
-                <input type="url" id="product_catalog_pdf3" name="product_catalog_pdf3" value="<?php echo esc_url($catalog_pdf3); ?>" style="width: 100%;" />
+                <input type="text" id="product_catalog_name2" name="product_catalog_name2" value="<?php echo esc_attr($catalog_name2); ?>" style="width: 100%;" />
+            </td>
+        </tr>
+        <tr>
+            <th><label for="product_catalog_pdf2">カタログリンク2</label></th>
+            <td>
+                <input type="url" id="product_catalog_pdf2" name="product_catalog_pdf2" value="<?php echo esc_url($catalog_link2); ?>" style="width: 100%;" />
+            </td>
+        </tr>
+        <tr>
+            <th><label for="product_catalog_name3">カタログ名3</label></th>
+            <td>
+                <input type="text" id="product_catalog_name3" name="product_catalog_name3" value="<?php echo esc_attr($catalog_name3); ?>" style="width: 100%;" />
+            </td>
+        </tr>
+        <tr>
+            <th><label for="product_catalog_pdf3">カタログリンク3</label></th>
+            <td>
+                <input type="url" id="product_catalog_pdf3" name="product_catalog_pdf3" value="<?php echo esc_url($catalog_link3); ?>" style="width: 100%;" />
             </td>
         </tr>
     </table>
@@ -521,7 +542,7 @@ function save_product_custom_fields($post_id, $post, $update) {
     
     if (!current_user_can('edit_post', $post_id)) return;
     
-    if (!isset($_POST['product_listing_image']) && !isset($_POST['product_basic_copy']) && !isset($_POST['product_catalog_pdf']) && !isset($_POST['product_catalog_pdf2']) && !isset($_POST['product_catalog_pdf3'])) {
+    if (!isset($_POST['product_listing_image']) && !isset($_POST['product_basic_copy']) && !isset($_POST['product_catalog_name1']) && !isset($_POST['product_catalog_pdf']) && !isset($_POST['product_catalog_name2']) && !isset($_POST['product_catalog_pdf2']) && !isset($_POST['product_catalog_name3']) && !isset($_POST['product_catalog_pdf3'])) {
         return;
     }
     
@@ -580,11 +601,20 @@ function save_product_custom_fields($post_id, $post, $update) {
     if (isset($_POST['product_basic_copy'])) {
         update_post_meta($post_id, '_product_basic_copy', sanitize_textarea_field($_POST['product_basic_copy']));
     }
+    if (isset($_POST['product_catalog_name1'])) {
+        update_post_meta($post_id, '_product_catalog_name1', sanitize_text_field($_POST['product_catalog_name1']));
+    }
     if (isset($_POST['product_catalog_pdf'])) {
         update_post_meta($post_id, '_product_catalog_pdf', esc_url_raw($_POST['product_catalog_pdf']));
     }
+    if (isset($_POST['product_catalog_name2'])) {
+        update_post_meta($post_id, '_product_catalog_name2', sanitize_text_field($_POST['product_catalog_name2']));
+    }
     if (isset($_POST['product_catalog_pdf2'])) {
         update_post_meta($post_id, '_product_catalog_pdf2', esc_url_raw($_POST['product_catalog_pdf2']));
+    }
+    if (isset($_POST['product_catalog_name3'])) {
+        update_post_meta($post_id, '_product_catalog_name3', sanitize_text_field($_POST['product_catalog_name3']));
     }
     if (isset($_POST['product_catalog_pdf3'])) {
         update_post_meta($post_id, '_product_catalog_pdf3', esc_url_raw($_POST['product_catalog_pdf3']));

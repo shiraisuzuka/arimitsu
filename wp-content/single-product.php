@@ -16,20 +16,23 @@
         <p class="p-product-detail-lead"><?php echo nl2br(esc_html($basic_copy)); ?></p>
       <?php endif; ?>
       <?php 
-      $catalog_pdf = get_post_meta(get_the_ID(), '_product_catalog_pdf', true);
-      $catalog_pdf2 = get_post_meta(get_the_ID(), '_product_catalog_pdf2', true);
-      $catalog_pdf3 = get_post_meta(get_the_ID(), '_product_catalog_pdf3', true);
+      $catalog_name1 = get_post_meta(get_the_ID(), '_product_catalog_name1', true);
+      $catalog_link1 = get_post_meta(get_the_ID(), '_product_catalog_pdf', true);
+      $catalog_name2 = get_post_meta(get_the_ID(), '_product_catalog_name2', true);
+      $catalog_link2 = get_post_meta(get_the_ID(), '_product_catalog_pdf2', true);
+      $catalog_name3 = get_post_meta(get_the_ID(), '_product_catalog_name3', true);
+      $catalog_link3 = get_post_meta(get_the_ID(), '_product_catalog_pdf3', true);
       
-      if ($catalog_pdf || $catalog_pdf2 || $catalog_pdf3): ?>
+      if ($catalog_link1 || $catalog_link2 || $catalog_link3): ?>
         <div class="p-product-detail-catalogs">
-          <?php if ($catalog_pdf): ?>
-            <a href="<?php echo esc_url($catalog_pdf); ?>" target="_blank" class="c-link-btn">カタログを見る［PDF］<i class="c-icon arrow-right"></i></a>
+          <?php if ($catalog_link1): ?>
+            <a href="<?php echo esc_url($catalog_link1); ?>" target="_blank" class="c-link-btn"><?php echo esc_html($catalog_name1 ? $catalog_name1 : 'カタログを見る［PDF］'); ?><i class="c-icon arrow-right"></i></a>
           <?php endif; ?>
-          <?php if ($catalog_pdf2): ?>
-            <a href="<?php echo esc_url($catalog_pdf2); ?>" target="_blank" class="c-link-btn">カタログを見る［PDF］<i class="c-icon arrow-right"></i></a>
+          <?php if ($catalog_link2): ?>
+            <a href="<?php echo esc_url($catalog_link2); ?>" target="_blank" class="c-link-btn"><?php echo esc_html($catalog_name2 ? $catalog_name2 : 'カタログを見る［PDF］'); ?><i class="c-icon arrow-right"></i></a>
           <?php endif; ?>
-          <?php if ($catalog_pdf3): ?>
-            <a href="<?php echo esc_url($catalog_pdf3); ?>" target="_blank" class="c-link-btn">カタログを見る［PDF］<i class="c-icon arrow-right"></i></a>
+          <?php if ($catalog_link3): ?>
+            <a href="<?php echo esc_url($catalog_link3); ?>" target="_blank" class="c-link-btn"><?php echo esc_html($catalog_name3 ? $catalog_name3 : 'カタログを見る［PDF］'); ?><i class="c-icon arrow-right"></i></a>
           <?php endif; ?>
         </div>
       <?php endif; ?>
