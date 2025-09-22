@@ -1879,11 +1879,20 @@ figure {
   justify-content: flex-start;
 }
 .p-company-tab .tab {
+  line-height: 1.3;
   width: 10.8rem;
 }
 @media screen and (min-width: 768px) {
   .p-company-tab .tab {
     width: 12.3rem;
+  }
+}
+.p-company-tab .tab:nth-child(4), .p-company-tab .tab:nth-child(5) {
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 768px) {
+  .p-company-tab .tab:nth-child(4), .p-company-tab .tab:nth-child(5) {
+    font-size: 1.4rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -2714,7 +2723,12 @@ figure {
   grid-row-start: 3;
 }
 .p-organization .col1 > * + * {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .p-organization .col1 > * + * {
+    margin-top: 1rem;
+  }
 }
 .p-organization .col2 {
   grid-column: span 2/span 2;
@@ -2723,12 +2737,12 @@ figure {
 .p-organization .col2 .col {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.3rem;
+  gap: 0.2rem;
   margin: 0.8rem 0 0;
 }
 @media screen and (min-width: 768px) {
   .p-organization .col2 .col {
+    flex-wrap: wrap;
     gap: 1rem 0;
     margin: 1.5rem 0 0;
   }
@@ -2742,7 +2756,7 @@ figure {
   }
 }
 .p-organization .col2 .col > div ul {
-  padding-left: 1rem;
+  padding-left: 0.2rem;
 }
 @media screen and (min-width: 768px) {
   .p-organization .col2 .col > div ul {
@@ -2814,7 +2828,7 @@ figure {
 }
 @media screen and (max-width: 767px) {
   .p-organization .wh1 {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 }
 .p-organization ul {
@@ -2826,10 +2840,12 @@ figure {
   }
 }
 .p-organization ul li {
-  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  font-size: 0.7rem;
 }
 @media screen and (min-width: 768px) {
   .p-organization ul li {
+    margin-top: 0.5rem;
     font-size: 1rem;
   }
 }
@@ -2845,7 +2861,12 @@ figure {
   height: 0.8rem;
   background-color: #FFF;
   border-radius: 50%;
-  margin-right: 0.8rem;
+  margin-right: 0.3rem;
+}
+@media screen and (min-width: 768px) {
+  .p-organization ul li::before {
+    margin-right: 0.8rem;
+  }
 }
 
 .p-pagination {
