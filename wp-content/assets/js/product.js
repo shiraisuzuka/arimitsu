@@ -150,7 +150,7 @@
   // 製品カテゴリーと目的・用途の対応関係
   // ----------------------------------------------//
   const categoryPurposeMapping = {
-    'agricultural_machinery': ['spray_chemicals'], // 農業機械 → 薬剤/肥料をまく
+    'agricultural_machinery': ['spray_chemicals', 'other_purpose'], // 農業機械 → 薬剤/肥料をまく、その他
     'pump': ['spray_chemicals', 'water_pressure_supply'], // ポンプ → 薬剤/肥料をまく、水圧を供給する
     'cleaning_machine': ['spray_chemicals', 'high_pressure_motor', 'high_pressure_engine', 'high_pressure_hot_water', 'wash_containers', 'wash_other_items', 'foam_wash', 'other_purpose'], // ポンプ → 薬剤/肥料をまく、高圧洗浄系、容器/器具/パレット/部品を洗う、その他のものを洗う、泡で洗う、その他
     'attachment': ['foam_wash'], // アタッチメント → 泡で洗う
