@@ -181,6 +181,10 @@ if ($current_page && isset($current_page->post_name)) {
 <script src="<?php assets_path(); ?>/js/gsap.min.js"></script>
 <script src="<?php assets_path(); ?>/js/ScrollTrigger.min.js"></script>
 
+<?php if ( is_front_page() ) : ?>
+<script src="<?php assets_path(); ?>/js/splide.min.js"></script>
+<?php endif; ?>
+
 <?php if ( is_singular('product') ) : ?>
 <!-- Splide -->
 <script src="<?php assets_path(); ?>/js/splide.min.js"></script>
@@ -201,7 +205,6 @@ if ($current_page && isset($current_page->post_name)) {
 <?php if ( is_page('catalog') ) : ?>
 <!-- jQuery Match Height -->
 <script src="<?php assets_path(); ?>/js/jquery.matchHeight-min.js"></script>
-
 <script src="<?php assets_path(); ?>/js/catalog.js"></script>
 <?php endif; ?>
 

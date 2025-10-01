@@ -5177,6 +5177,37 @@ figure {
     font-size: 7rem;
   }
 }
+.p-top-product-image-sp {
+  position: relative;
+  width: 100%;
+  max-width: 36rem;
+  aspect-ratio: 1/1;
+  margin: 2rem 0 0 auto;
+  border-radius: 30rem 0 0 30rem;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .p-top-product-image-sp {
+    display: none;
+  }
+}
+.p-top-product-image-sp img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 30rem 0 0 30rem;
+}
+.p-top-product-image-sp-text {
+  position: absolute;
+  bottom: -1rem;
+  right: 0;
+  font-family: var(--font-en);
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #FFF;
+}
 .p-top-product-list {
   margin: 3rem 0 0;
 }

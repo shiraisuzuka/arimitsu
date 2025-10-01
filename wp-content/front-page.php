@@ -163,10 +163,40 @@
         <a href="https://www.youtube.com/channel/UCIGZY9G9hTRGFn40E016o5Q" target="_blank" class="c-link-btn u-hide-pc js-animation">動画一覧<i class="c-icon arrow-right"></i></a>
       </div>
     </div>
-    <figure class="p-top-product-image js-animation">
+    <figure class="p-top-product-image js-animation u-hide-sp">
       <img src="<?php img_path(); ?>/img_product_01.png" alt="" loading="lazy" width="1600" height="1200">
       <span class="p-top-product-image-text is-pc">AGRI</span>
     </figure>
+    <div class="p-top-product-image-sp splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <img src="<?php img_path(); ?>/img_product_01.png" alt="" width="1600" height="1200">
+            <span class="p-top-product-image-text">AGRI</span>
+          </li>
+          <li class="splide__slide">
+            <img src="<?php img_path(); ?>/img_product_02.png" alt="" width="1600" height="1200">
+            <span class="p-top-product-image-text">PUMP</span>
+          </li>
+          <li class="splide__slide">
+            <img src="<?php img_path(); ?>/img_product_03.png" alt="" width="1600" height="1200">
+            <span class="p-top-product-image-text">WASHER</span>
+          </li>
+          <li class="splide__slide">
+            <img src="<?php img_path(); ?>/img_product_04.png" alt="" width="1600" height="1200">
+            <span class="p-top-product-image-text">ATTACH</span>
+          </li>
+          <li class="splide__slide">
+            <img src="<?php img_path(); ?>/img_product_05.png" alt="" width="1600" height="1200">
+            <span class="p-top-product-image-text">MIST</span>
+          </li>
+          <li class="splide__slide">
+            <img src="<?php img_path(); ?>/img_product_06.png" alt="" width="1600" height="1200">
+            <span class="p-top-product-image-text">etc.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 

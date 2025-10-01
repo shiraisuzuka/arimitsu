@@ -174,7 +174,7 @@
   <link rel="stylesheet" href="<?php assets_path(); ?>/css/splide.min.css">
   <?php endif; ?>
 
-  <?php if ( is_page('classroom01') || is_page('classroom02') || is_page('classroom03') || is_page('classroom04') || is_page('classroom05') || is_page('classroom06') || is_page('classroom07') || is_page('classroom08') ) : ?>
+  <?php if ( is_front_page() || is_page('classroom01') || is_page('classroom02') || is_page('classroom03') || is_page('classroom04') || is_page('classroom05') || is_page('classroom06') || is_page('classroom07') || is_page('classroom08') ) : ?>
   <link rel="stylesheet" href="<?php assets_path(); ?>/css/splide.min.css">
   <?php endif; ?>
 

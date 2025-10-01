@@ -446,6 +446,28 @@
     handleHashNavigation();
   });
 
+  
+  // 製品情報 スライドの設定
+  // ----------------------------------------------//
+  const SlideElement = document.querySelector(".p-top-product-image-sp");
+
+  if (SlideElement) {
+    const splide = new Splide('.p-top-product-image-sp', {
+      type: "fade",
+      rewind: true,
+      autoplay: true,
+      interval: 4000,
+      speed: 1000,
+      pauseOnHover: false,
+      pagination: false,
+      arrows: false,
+      fixedWidth: '36rem',
+      fixedHeight: '36rem',
+    });
+    
+    splide.mount();
+  }
+
 
 })();
 

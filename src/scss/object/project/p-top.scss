@@ -351,6 +351,37 @@
       }
     }
 
+    &-image-sp {
+      position: relative;
+      width: 100%;
+      max-width: 36rem;
+      aspect-ratio: 1 / 1;
+      margin: 2rem 0 0 auto;
+      border-radius: 30rem 0 0 30rem;
+      overflow: hidden;
+      @include mq(ovsp) {
+        display: none;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 30rem 0 0 30rem;
+      }
+
+      &-text {
+        position: absolute;
+        bottom: -1rem;
+        right: 0;
+        font-family: var(--font-en);
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: 1;
+        color: #FFF;
+      }
+    }
+
     &-list {
       margin: 3rem 0 0;
     }
