@@ -427,7 +427,7 @@
   }
 
   .l-header-nav-btn {
-    @include mq(sp) {
+    @media (max-width: 1180px) {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -562,6 +562,10 @@
     .recruit-btn {
       width: 100%;
       height: 5.6rem;
+      margin-inline: auto;
+      @include mq(ovsp) {
+        max-width: 30rem;
+      }
     }
   }
 }

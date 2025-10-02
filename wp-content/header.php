@@ -178,7 +178,8 @@
   <link rel="stylesheet" href="<?php assets_path(); ?>/css/splide.min.css">
   <?php endif; ?>
 
-  <!-- <link rel="preload" as="image" href="<?php img_path(); ?>/images/img_mv.jpg"> -->
+  <link rel="preload" as="image" href="<?php img_path(); ?>/img_mv.png">
+  <link rel="preload" as="image" href="<?php img_path(); ?>/sp/img_mv.png">
 
   <?php if (is_404()) : ?>
   <meta http-equiv="refresh" content=" 3; url=<?php page_path(''); ?>">
@@ -248,7 +249,7 @@ if ($current_page && isset($current_page->post_name)) {
 <header class="l-header recruit">
   <div class="l-header-inner">
     <div class="l-header-logo">
-      <a href="<?php page_path('recruit'); ?>"><img src="<?php img_path(); ?>/logo_white.svg" alt="有光工業株式会社" loading="lazy" width="336" height="29"></a>
+      <a href="<?php page_path(''); ?>"><img src="<?php img_path(); ?>/logo_white.svg" alt="有光工業株式会社" loading="lazy" width="336" height="29"></a>
     </div>
     <button class="l-header-nav-btn">
       <span></span>
@@ -260,7 +261,7 @@ if ($current_page && isset($current_page->post_name)) {
           <span class="no-arrow">採用情報</span>
           <ul>
             <li>
-              <a href="<?php page_path('recruit'); ?>">採用情報</a>
+              <a href="<?php page_path('recruit'); ?>">採用情報トップ</a>
             </li>
             <li>
               <a href="<?php page_path('recruit/recruitment'); ?>">募集要項</a>
@@ -293,6 +294,9 @@ if ($current_page && isset($current_page->post_name)) {
     <nav class="l-header-nav">
       <ul class="l-header-nav-list">
         <li class="l-header-nav-item">
+          <a href="<?php page_path('recruit'); ?>">採用情報トップ</a>
+        </li>
+        <li class="l-header-nav-item">
           <a href="<?php page_path('recruit/recruitment'); ?>">募集要項</a>
         </li>
         <li class="l-header-nav-item">
@@ -303,9 +307,6 @@ if ($current_page && isset($current_page->post_name)) {
         </li>
         <li class="l-header-nav-item">
           <a href="<?php page_path('recruit/qanda'); ?>">Q&A</a>
-        </li>
-        <li class="l-header-nav-item">
-          <a href="<?php page_path('') ?>" target="_blank">コーポレートサイト</a>
         </li>
       </ul>
       <ul class="l-header-nav-recruit">
