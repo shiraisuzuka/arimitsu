@@ -414,22 +414,22 @@ if ($current_page && isset($current_page->post_name)) {
               <a href="<?php page_path('product'); ?>">製品一覧</a>
             </li>
             <li>
-              <a href="DUMMY">01 農業機械</a>
+              <a href="<?php echo esc_url(get_post_type_archive_link('product') . '?product_categories[]=agricultural_machinery'); ?>">01 農業機械</a>
             </li>
             <li>
-              <a href="DUMMY">02 ポンプ</a>
+              <a href="<?php echo esc_url(get_post_type_archive_link('product') . '?product_categories[]=pump'); ?>">02 ポンプ</a>
             </li>
             <li>
-              <a href="DUMMY">03 洗浄機</a>
+              <a href="<?php echo esc_url(get_post_type_archive_link('product') . '?product_categories[]=cleaning_machine'); ?>">03 洗浄機</a>
             </li>
             <li>
-              <a href="DUMMY">04 アタッチメント<span>（洗浄機のノズル等）</span></a>
+              <a href="<?php echo esc_url(get_post_type_archive_link('product') . '?product_categories[]=attachment'); ?>">04 アタッチメント<span>（洗浄機のノズル等）</span></a>
             </li>
             <li>
-              <a href="DUMMY">05 ミスト</a>
+              <a href="<?php echo esc_url(get_post_type_archive_link('product') . '?product_categories[]=mist'); ?>">05 ミスト</a>
             </li>
             <li>
-              <a href="DUMMY">06 その他<span>（オートマット、トルミング等）</span></a>
+              <a href="<?php echo esc_url(get_post_type_archive_link('product') . '?product_categories[]=other_product'); ?>">06 その他<span>（オートマット、トルミング等）</span></a>
             </li>
             <li>
               <a href="<?php page_path('catalog'); ?>">カタログダウンロード</a>
@@ -553,7 +553,7 @@ if ($current_page && isset($current_page->post_name)) {
               <a href="<?php echo esc_url(get_post_type_archive_link('product') . '?product_categories[]=other_product'); ?>">06 その他<span>（オートマット、トルミング等）</span></a>
             </li>
             <li>
-              <a href="catalog">カタログダウンロード</a>
+              <a href="<?php page_path('catalog'); ?>">カタログダウンロード</a>
             </li>
             <li>
               <a href="https://www.youtube.com/channel/UCIGZY9G9hTRGFn40E016o5Q" target="_blank">動画一覧</a>
