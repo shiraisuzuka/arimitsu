@@ -66,4 +66,14 @@
       }
     });
   });
+
+  // インタビュータイトルの高さを揃える
+  // ----------------------------------------------//
+  $(function () {
+    if (document.querySelector('.p-recruit-interview-department')) {
+      $(document).ready(function() {
+        $('.p-recruit-interview-department').matchHeight();
+      });
+    }
+  });
 })();

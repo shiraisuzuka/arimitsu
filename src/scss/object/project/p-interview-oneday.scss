@@ -1,0 +1,88 @@
+@use 'foundation' as *;
+
+.p-interview-oneday {
+  background-color: var(--color-gray-light);
+  @include mq(ovsp) {
+    padding-bottom: 16rem;
+  }
+
+  &-box {
+    padding: 3rem;
+    border-radius: 1.2rem;
+    background-color: #FFF;
+    @include mq(ovsp) {
+      max-width: 79.4rem;
+      padding: 4rem 4rem 6rem;
+      margin-inline: auto;
+    }
+
+    & + & {
+      margin: 3rem 0 0;
+      @include mq(ovsp) {
+        margin: 3rem auto 0;
+      }
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 500;
+      text-align: center;
+      @include mq(ovsp) {
+        font-size: 2rem;
+      }
+    }
+
+    ul {
+      margin: 3rem 0 0;
+      @include mq(ovsp) {
+        padding-inline: 5rem;
+        margin: 4rem 0 0;
+      }
+
+      li {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.6rem;
+
+        + li {
+          margin: 2rem 0 0;
+        }
+
+        .circle {
+          flex-shrink: 0;
+          display: block;
+          width: 1.2rem;
+          height: 1.2rem;
+          border-radius: 50%;
+          background-color: var(--color-green);
+          transform: translateY(0.7rem);
+        }
+
+        .time {
+          flex-shrink: 0;
+          min-width: 4.5rem;
+          display: block;
+          font-family: var(--font-en);
+          font-size: 1.6rem;
+          font-weight: 700;
+          color: var(--color-green);
+          @include mq(ovsp) {
+            min-width: 6rem;
+          }
+        }
+
+        .text {
+          font-size: 1.6rem;
+          font-weight: 400;
+          line-height: calc(22/16);
+        }
+      }
+    }
+
+    &.interview-01 {
+      .time {
+        min-width: 10.5rem !important;
+      }
+    }
+  }
+}

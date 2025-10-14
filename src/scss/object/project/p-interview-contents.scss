@@ -1,0 +1,69 @@
+@use 'foundation' as *;
+
+.p-interview-contents {
+  .row {
+    + .row {
+      margin: 5.6rem 0 0;
+      @include mq(ovsp) {
+        margin: 7rem 0 0;
+      }
+    }
+
+    .fig {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1.6rem 2rem;
+      @include mq(ovsp) {
+        align-items: flex-start;
+        flex-direction: row;
+      }
+
+      &.reverse {
+        @include mq(ovsp) {
+          flex-direction: row-reverse;
+        }
+      }
+
+      img {
+        flex-shrink: 0;
+        max-width: 23rem;
+        margin-inline: auto;
+
+        @include mq(sp) {
+          order: 2;
+        }
+      }
+    }
+
+    p {
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: calc(29/16);
+      @include mq(ovsp) {
+        font-size: 1.8rem;
+      }
+
+      &.title {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin: 0 0 1rem;
+        font-weight: 500;
+        line-height: calc(22/16);
+        @include mq(ovsp) {
+          margin: 0 0 3rem;
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          width: 5rem;
+          height: 1px;
+          background-color: var(--color-black);
+        }
+      }
+    }
+  }
+}
