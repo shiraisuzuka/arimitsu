@@ -39,28 +39,31 @@
 .c-header-interview {
   &-link {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     margin: 0 0 4rem;
     padding-inline: 2rem;
     @include mq(ovsp) {
       display: flex;
       flex-wrap: wrap;
-      max-width: calc(79.4rem + 3rem * 2);
+      width: fit-content;
+      // max-width: calc(79.4rem + 3rem * 2);
       margin: 0 auto 6rem;
       padding-inline: 3rem;
     }
 
     li {
       a {
-        min-height: 4.8rem;
+        min-height: 6rem;
         display: flex;
         align-items: center;
         justify-content: center;
         border: 1px solid var(--color-gray);
         font-size: 1.6rem;
+        line-height: 1.5;
+        text-align: center;
         @include mq(ovsp) {
-          width: 12.4rem;
+          width: 16rem;
         }
 
         &.current {

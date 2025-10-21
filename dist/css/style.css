@@ -316,7 +316,7 @@ figure {
 
 .c-header-interview-link {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin: 0 0 4rem;
   padding-inline: 2rem;
@@ -325,22 +325,25 @@ figure {
   .c-header-interview-link {
     display: flex;
     flex-wrap: wrap;
-    max-width: 85.4rem;
+    width: -moz-fit-content;
+    width: fit-content;
     margin: 0 auto 6rem;
     padding-inline: 3rem;
   }
 }
 .c-header-interview-link li a {
-  min-height: 4.8rem;
+  min-height: 6rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid var(--color-gray);
   font-size: 1.6rem;
+  line-height: 1.5;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .c-header-interview-link li a {
-    width: 12.4rem;
+    width: 16rem;
   }
 }
 .c-header-interview-link li a.current {
