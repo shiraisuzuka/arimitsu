@@ -17,16 +17,24 @@ function breadcrumb() {
 
         <!-- 固定ページの子ページの場合 -->
         <?php if(is_page() && $post && $post->post_parent): ?>
-          <li class="p-breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemscope itemtype="https://schema.org/WebPage" itemprop="item" itemid="<?php echo get_page_link($post->post_parent); ?>" href="<?php echo get_page_link($post->post_parent); ?>">
-              <span itemprop="name"><?php echo get_the_title($post->post_parent); ?></span>
-            </a>
-            <meta itemprop="position" content="2">
-          </li>
+          <?php
+            // すべての祖先ページを取得（親 → 子の順に）
+            $ancestors = get_post_ancestors($post);
+            $ancestors = array_reverse($ancestors); // 親 → 子の順に並べ替え
+            $position = 2;
+          ?>
+          <?php foreach($ancestors as $ancestor_id): ?>
+            <li class="p-breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <a itemscope itemtype="https://schema.org/WebPage" itemprop="item" itemid="<?php echo get_page_link($ancestor_id); ?>" href="<?php echo get_page_link($ancestor_id); ?>">
+                <span itemprop="name"><?php echo get_the_title($ancestor_id); ?></span>
+              </a>
+              <meta itemprop="position" content="<?php echo $position++; ?>">
+            </li>
+          <?php endforeach; ?>
 
           <li class="p-breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <span itemprop="name"><?php echo get_the_title(); ?></span>
-            <meta itemprop="position" content="3">
+            <meta itemprop="position" content="<?php echo $position; ?>">
           </li>
 
         <!-- 固定ページの場合 -->

@@ -22,60 +22,60 @@
   <div class="l-section-inner">
     <div class="c-sticky-link">
       <ul>
-        <!-- <li><a href="#interview">社員インタビュー</a></li> -->
+        <li><a href="#interview">社員インタビュー</a></li>
         <li><a href="#business">ビジネスモデル</a></li>
         <li><a href="#event">社内イベント</a></li>
       </ul>
     </div>
     <div class="c-sticky-contents">
-      <!-- <div id="interview" class="c-section-row">
+      <div id="interview" class="c-section-row">
         <h2 class="c-section-row-title">社員インタビュー</h2>
         <p>日々の業務内容、やりがい、今後の展望まで<br>有光工業で活躍する先輩社員たちのリアルな声をご紹介します！</p>
         <ul class="p-recruit-interview">
           <li>
-            <a href="detail">
-              <p class="p-recruit-interview-department">営業部</p>
-              <figure><img src="<?php img_path(); ?>/dummy/img_dummy_recruit_01.jpg" alt="" loading="lazy" width="422" height="302"></figure>
-              <h3>2008年入社（新卒採用）<br>営業部　U.Nさん</h3>
+            <a href="interview-01">
+              <p class="p-recruit-interview-department">営業職</p>
+              <figure><img src="<?php img_path(); ?>/recruit/arimitsu/img_interview_01.jpg" alt="" loading="lazy" width="422" height="302"></figure>
+              <h3>K.Yさん</h3>
             </a>
           </li>
           <li>
-            <a href="detail">
-              <p class="p-recruit-interview-department">開発室</p>
-              <figure><img src="<?php img_path(); ?>/dummy/img_dummy_recruit_02.jpg" alt="" loading="lazy" width="422" height="302"></figure>
-              <h3>2008年入社（新卒採用）<br>開発室　U.Nさん</h3>
+            <a href="interview-02">
+              <p class="p-recruit-interview-department">技術開発職</p>
+              <figure><img src="<?php img_path(); ?>/recruit/arimitsu/img_interview_02.jpg" alt="" loading="lazy" width="422" height="302"></figure>
+              <h3>K.Tさん</h3>
             </a>
           </li>
           <li>
-            <a href="detail">
-              <p class="p-recruit-interview-department">技術部</p>
-              <figure><img src="<?php img_path(); ?>/dummy/img_dummy_recruit_01.jpg" alt="" loading="lazy" width="422" height="302"></figure>
-              <h3>2008年入社（新卒採用）<br>技術部　U.Nさん</h3>
+            <a href="interview-03">
+              <p class="p-recruit-interview-department">製造部組立職</p>
+              <figure><img src="<?php img_path(); ?>/recruit/arimitsu/img_interview_03.jpg" alt="" loading="lazy" width="422" height="302"></figure>
+              <h3>I.Mさん</h3>
             </a>
           </li>
           <li>
-            <a href="detail">
-              <p class="p-recruit-interview-department">購買部</p>
-              <figure><img src="<?php img_path(); ?>/dummy/img_dummy_recruit_02.jpg" alt="" loading="lazy" width="422" height="302"></figure>
-              <h3>2008年入社（新卒採用）<br>購買部　U.Nさん</h3>
+            <a href="interview-04">
+              <p class="p-recruit-interview-department">営業職</p>
+              <figure><img src="<?php img_path(); ?>/recruit/arimitsu/img_interview_04.jpg" alt="" loading="lazy" width="422" height="302"></figure>
+              <h3>A.Yさん</h3>
             </a>
           </li>
           <li>
-            <a href="detail">
-              <p class="p-recruit-interview-department">製造部</p>
-              <figure><img src="<?php img_path(); ?>/dummy/img_dummy_recruit_01.jpg" alt="" loading="lazy" width="422" height="302"></figure>
-              <h3>2008年入社（新卒採用）<br>製造部　U.Nさん</h3>
+            <a href="interview-05">
+              <p class="p-recruit-interview-department">事務系総合職<br><span>（セールスサポート）</span></p>
+              <figure><img src="<?php img_path(); ?>/recruit/arimitsu/img_interview_05.jpg" alt="" loading="lazy" width="422" height="302"></figure>
+              <h3>K.Rさん</h3>
             </a>
           </li>
           <li>
-            <a href="detail">
-              <p class="p-recruit-interview-department">サービス部</p>
-              <figure><img src="<?php img_path(); ?>/dummy/img_dummy_recruit_02.jpg" alt="" loading="lazy" width="422" height="302"></figure>
-              <h3>2008年入社（新卒採用）<br>サービス部　U.Nさん</h3>
+            <a href="interview-06">
+              <p class="p-recruit-interview-department">事務系総合職<br><span>（サプライチェーンマネジメント）</span></p>
+              <figure><img src="<?php img_path(); ?>/recruit/arimitsu/img_interview_06.jpg" alt="" loading="lazy" width="422" height="302"></figure>
+              <h3>M.Aさん　N.Kさん</h3>
             </a>
           </li>
         </ul>
-      </div> -->
+      </div>
       <div id="business" class="c-section-row">
         <h2 class="c-section-row-title">ビジネスモデル</h2>
         <picture>

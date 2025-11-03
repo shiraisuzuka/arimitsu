@@ -2,22 +2,23 @@
 <html lang="ja">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-WW5J3CT8');</script>
-  <!-- End Google Tag Manager -->
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FTDZ710PSH"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WW5J3CT8');</script>
+<!-- End Google Tag Manager -->
+	
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTDZ710PSH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    gtag('config', 'G-FTDZ710PSH');
-  </script>
-
+  gtag('config', 'G-FTDZ710PSH');
+</script>
+	
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -44,6 +45,7 @@
       echo '「私たちは、次代に挑む動力となる」有光工業株式会社のWebサイトです。企業情報、農業機械、産業機械、採用情報などの情報がご覧いただけます。"';
     }
   ?>">
+  <meta name="keywords" content="有光,アリミツ,有光工業,ARIMITSU,企業情報,農業機械,産業機械,機械,採用,新着情報,動画,泡,泡洗浄,発泡,除菌,自動洗浄,床洗浄,フォームクリーニング,ミスト">
   <meta property="og:locale:alternate" content="ja_JP">
   <meta property="og:url" content="<?php echo get_permalink(); ?>">
   <meta property="og:site_name" content="<?php echo get_bloginfo('name'); ?>">
@@ -53,6 +55,7 @@
   <title><?php echo the_title(); ?>｜<?php echo get_bloginfo('name'); ?></title>
   <meta property="og:title" content="<?php echo the_title(); ?>｜<?php echo get_bloginfo('name'); ?>">
   <meta property="og:type" content="article">
+  <meta name="keywords" content="有光,アリミツ,有光工業,ARIMITSU,企業情報,農業機械,産業機械,機械,採用,新着情報,動画,泡,泡洗浄,発泡,除菌,自動洗浄,床洗浄,フォームクリーニング,ミスト">
   <meta property="og:locale:alternate" content="ja_JP">
   <meta property="og:url" content="<?php echo get_permalink(); ?>">
   <meta property="og:site_name" content="<?php echo get_bloginfo('name'); ?>">
@@ -62,6 +65,7 @@
   <title><?php the_archive_title(); ?>｜<?php echo get_bloginfo('name'); ?></title>
   <meta property="og:title" content="<?php the_archive_title(); ?>｜<?php echo get_bloginfo('name'); ?>">
   <meta property="og:type" content="article">
+  <meta name="keywords" content="有光,アリミツ,有光工業,ARIMITSU,企業情報,農業機械,産業機械,機械,採用,新着情報,動画,泡,泡洗浄,発泡,除菌,自動洗浄,床洗浄,フォームクリーニング,ミスト">
   <meta property="og:locale:alternate" content="ja_JP">
   <meta property="og:url" content="<?php echo get_permalink(); ?>">
   <meta property="og:site_name" content="<?php echo get_bloginfo('name'); ?>">
@@ -71,6 +75,7 @@
   <title><?php echo the_title(); ?>｜<?php echo get_bloginfo('name'); ?></title>
   <meta property="og:title" content="<?php echo the_title(); ?>｜<?php echo get_bloginfo('name'); ?>">
   <meta property="og:type" content="article">
+  <meta name="keywords" content="有光,アリミツ,有光工業,ARIMITSU,企業情報,農業機械,産業機械,機械,採用,新着情報,動画,泡,泡洗浄,発泡,除菌,自動洗浄,床洗浄,フォームクリーニング,ミスト">
   <meta property="og:locale:alternate" content="ja_JP">
   <meta property="og:url" content="<?php echo get_permalink(); ?>">
   <meta property="og:site_name" content="<?php echo get_bloginfo('name'); ?>">
@@ -152,6 +157,30 @@
   <meta name="description" content="有光工業株式会社の会社概要のページです。会社名、所在地、設立年、事業内容など、企業の基本情報を掲載しています。">
   <meta property="og:description" content="有光工業株式会社の会社概要のページです。会社名、所在地、設立年、事業内容など、企業の基本情報を掲載しています。">
 
+  <?php elseif ( is_page('interview-01')  ): ?>
+  <meta name="description" content="産業機械の営業として活躍する社員が、アリミツを選んだ理由や仕事のやりがい、印象に残るエピソードを語ります。現場の声から見える職場の魅力を紹介。">
+  <meta property="og:description" content="産業機械の営業として活躍する社員が、アリミツを選んだ理由や仕事のやりがい、印象に残るエピソードを語ります。現場の声から見える職場の魅力を紹介。">
+
+  <?php elseif ( is_page('interview-02')  ): ?>
+  <meta name="description" content="高圧ポンプの技術を軸に製品開発を行う技術職社員が、アリミツを選んだ理由や設計へのこだわり、開発のやりがいを語ります。現場の声から技術部門の魅力を紹介。">
+  <meta property="og:description" content="高圧ポンプの技術を軸に製品開発を行う技術職社員が、アリミツを選んだ理由や設計へのこだわり、開発のやりがいを語ります。現場の声から技術部門の魅力を紹介。">
+
+  <?php elseif ( is_page('interview-03')  ): ?>
+  <meta name="description" content="ポンプや洗浄機の組立を担当する社員が、仕事のやりがいや職場の雰囲気を語ります。日々のモノづくりで感じる達成感や誇りが伝わる現場の声を紹介。">
+  <meta property="og:description" content="ポンプや洗浄機の組立を担当する社員が、仕事のやりがいや職場の雰囲気を語ります。日々のモノづくりで感じる達成感や誇りが伝わる現場の声を紹介。">
+
+  <?php elseif ( is_page('interview-04')  ): ?>
+  <meta name="description" content="四国エリアの営業を担当する社員が、アリミツを選んだ理由や営業のやりがい、印象に残る出張エピソードを語ります。お客様との信頼関係づくりや職場の雰囲気が伝わるインタビューです。">
+  <meta property="og:description" content="四国エリアの営業を担当する社員が、アリミツを選んだ理由や営業のやりがい、印象に残る出張エピソードを語ります。お客様との信頼関係づくりや職場の雰囲気が伝わるインタビューです。">
+
+  <?php elseif ( is_page('interview-05')  ): ?>
+  <meta name="description" content="事務職として受注管理や業務改善に取り組む社員が、アリミツを選んだ理由や仕事のやりがい、職場の雰囲気を語ります。協力し合う環境で成長できる現場の声を紹介。">
+  <meta property="og:description" content="事務職として受注管理や業務改善に取り組む社員が、アリミツを選んだ理由や仕事のやりがい、職場の雰囲気を語ります。協力し合う環境で成長できる現場の声を紹介。">
+
+  <?php elseif ( is_page('interview-06')  ): ?>
+  <meta name="description" content="物流・事務業務を担当する社員が、アリミツを選んだ理由や業務のやりがい、職場の雰囲気を語ります。電話対応から出荷業務まで幅広く関わり、お客様の信頼を得られる現場の声を紹介。">
+  <meta property="og:description" content="物流・事務業務を担当する社員が、アリミツを選んだ理由や業務のやりがい、職場の雰囲気を語ります。電話対応から出荷業務まで幅広く関わり、お客様の信頼を得られる現場の声を紹介。">
+
   <?php elseif ( is_page('recruitment')  ): ?>
   <meta name="description" content="有光工業株式会社の新卒・中途採用向け募集要項ページです。募集職種、勤務地、勤務条件、選考フロー、応募方法など、採用に関する詳細情報をご案内します。">
   <meta property="og:description" content="有光工業株式会社の新卒・中途採用向け募集要項ページです。募集職種、勤務地、勤務条件、選考フロー、応募方法など、採用に関する詳細情報をご案内します。">
@@ -209,7 +238,7 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WW5J3CT8"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-
+	
 <?php 
 // recruitページまたはその子ページかどうかを判定
 $is_recruit_page = false;
