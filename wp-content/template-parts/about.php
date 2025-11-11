@@ -211,24 +211,24 @@
               <table class="c-table sp-block">
                 <tbody>
                   <tr>
-                    <th>名古屋</th>
-                    <td>〒456-0053 愛知県名古屋市熱田区一番3-8-10<a href="https://maps.app.goo.gl/69sdA2mcX4eQPaVq6" target="_blank">【マップ】</a></td>
-                  </tr>
-                  <tr>
-                    <th>電話番号</th>
-                    <td>TEL:052-678-1110<br>TEL:052-678-1120<br>FAX:052-671-0330</td>
-                  </tr>
-                </tbody>
-              </table>
-              <table class="c-table sp-block">
-                <tbody>
-                  <tr>
                     <th>静岡</th>
                     <td>〒424-0205 静岡市清水区興津本町54-1<a href="https://maps.app.goo.gl/jVZ59kUWgy5QWb9k8" target="_blank">【マップ】</a></td>
                   </tr>
                   <tr>
                     <th>電話番号</th>
                     <td>TEL:054-369-2727<br>TEL:054-369-2742<br>FAX:054-369-2836</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="c-table sp-block">
+                <tbody>
+                  <tr>
+                    <th>名古屋</th>
+                    <td>〒456-0053 愛知県名古屋市熱田区一番3-8-10<a href="https://maps.app.goo.gl/69sdA2mcX4eQPaVq6" target="_blank">【マップ】</a></td>
+                  </tr>
+                  <tr>
+                    <th>電話番号</th>
+                    <td>TEL:052-678-1110<br>TEL:052-678-1120<br>FAX:052-671-0330</td>
                   </tr>
                 </tbody>
               </table>

@@ -78,10 +78,7 @@
       </div>
       <div id="business" class="c-section-row">
         <h2 class="c-section-row-title">ビジネスモデル</h2>
-        <picture>
-          <source srcset="<?php img_path(); ?>/recruit/arimitsu/img_business.jpg" media="(min-width: 768px)" width="1352" height="1386">
-          <img src="<?php img_path(); ?>/recruit/arimitsu/sp/img_business.jpg" alt="ビジネスモデル" loading="lazy" width="690" height="706">
-        </picture>
+        <img src="<?php img_path(); ?>/recruit/arimitsu/img_business.jpg" alt="ビジネスモデル" loading="lazy" width="690" height="706">
       </div>
       <div id="event" class="c-section-row">
         <h2 class="c-section-row-title">社内イベント</h2>

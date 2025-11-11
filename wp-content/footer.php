@@ -202,6 +202,12 @@ if ($current_page && isset($current_page->post_name)) {
 <script src="<?php assets_path(); ?>/js/recruit.js"></script>
 <?php endif; ?>
 
+<?php if ( is_page('arimitsu') ) : ?>
+<!-- jQuery Match Height -->
+<script src="<?php assets_path(); ?>/js/jquery.matchHeight-min.js"></script>
+<script src="<?php assets_path(); ?>/js/recruit.js"></script>
+<?php endif; ?>
+
 <?php if ( is_page('catalog') ) : ?>
 <!-- jQuery Match Height -->
 <script src="<?php assets_path(); ?>/js/jquery.matchHeight-min.js"></script>

@@ -67,20 +67,13 @@
     });
   });
 
-  // 採用お知らせ「もっと表示する」機能
+  // インタビュータイトルの高さを揃える
   // ----------------------------------------------//
   $(function () {
-    $('.js-recruit-news-more').on('click', function() {
-      const $button = $(this);
-      const $hiddenItems = $('.p-recruit-news li[data-hidden="true"]');
-      
-      // 非表示のアイテムをフェードインで表示
-      $hiddenItems.fadeIn(300, function() {
-        $(this).removeAttr('data-hidden');
+    if (document.querySelector('.p-recruit-interview-department')) {
+      $(document).ready(function() {
+        $('.p-recruit-interview-department').matchHeight();
       });
-      
-      // ボタンを非表示にする
-      $button.fadeOut(300);
-    });
+    }
   });
 })();
